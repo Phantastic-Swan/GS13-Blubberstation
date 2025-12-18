@@ -277,3 +277,12 @@
 	greyscale_colors = "#004B8F"
 	armor_type = /datum/armor/clothing_under/rank_captain
 	flags_1 = 0		// make it non-recolorable
+
+/obj/item/clothing/under/color/grey/test
+	name = "test grey jumpsuit (Modular)"
+	desc = "Grey only in name"
+	greyscale_colors = "#004B8F"
+	armor_type = /datum/armor/clothing_under/rank_captain
+	flags_1 = 0		// make it non-recolorable
+	modular_icon_location = 'modular_gs/icons/mob/modclothes/graymodular_bra.dmi'
+	body_parts_covered = CHEST
