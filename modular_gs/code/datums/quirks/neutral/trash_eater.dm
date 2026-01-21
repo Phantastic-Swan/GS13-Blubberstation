@@ -24,9 +24,9 @@
 	set category = "Vore"	//No Abilities?
 	set desc = "Consume held garbage."
 
-	var/datum/component/vore/belly_selected = GetComponent(/datum/component/vore)
+	var/datum/component/vore/vore_component = GetComponent(/datum/component/vore)
 
-	if(!belly_selected)
+	if(!vore_component.selected_belly)
 		to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
 		return
 
@@ -100,7 +100,7 @@
 				return
 		*/
 		dropItemToGround(I)
-		I.forceMove(belly_selected)
+		I.forceMove(vore_component.selected_belly)
 		// updateVRPanel()
 
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")

@@ -113,8 +113,8 @@
 				to_chat(living_parent, span_notice("Prey will now go into [selected_belly]."))
 			. = TRUE
 		if("click_prey")
-			var/mob/prey = locate(params["ref"])
-			if(istype(prey))
+			var/prey = locate(params["ref"])
+			if(!isnull(prey))
 				click_prey(prey)
 			. = TRUE
 		if("edit_belly")
