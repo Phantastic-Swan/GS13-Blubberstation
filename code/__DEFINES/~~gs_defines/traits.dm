@@ -48,6 +48,7 @@
 #define TRAIT_MILKY				"milky" //basically faster milk production
 #define TRAIT_BIOFUEL			"biofuel_processor"
 #define TRAIT_LARGE_SURFACE_AREA	"too_fat_to_slip"
+#define TRAIT_TRASHCAN			"trash_eater"
 
 //GS13 helplessness quirks
 #define TRAIT_HELPLESS_IMMOBILITY		"immobile_helpless"

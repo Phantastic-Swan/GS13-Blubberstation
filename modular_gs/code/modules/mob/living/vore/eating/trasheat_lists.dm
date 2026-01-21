@@ -2,18 +2,14 @@
 // path for a global lists file when there's code/_global_vars/lists as a directory. Im just putting this here for now. -Reo
 
 //Blacklist to exclude items from object ingestion. Digestion blacklist located in digest_act_vr.dm
-GLOBAL_LIST_INIT(item_vore_blacklist, list(
-		/obj/item/hand_tele,
-		//obj/item/weapon/card/id/gold/captain/spare, //Hugbox
-		/obj/item/gun,
-		/obj/item/pinpointer,
-		/obj/item/clothing/shoes/magboots,
-		/obj/item/areaeditor/blueprints,
-		/obj/item/clothing/head/helmet/space,
-		/obj/item/disk/nuclear
-		//obj/item/clothing/suit/storage/hooded/wintercoat/roiz //You fluff decrease
-		)
-)
+GLOBAL_LIST_INIT(item_vore_blacklist, list(/obj/item/hand_tele,
+	/obj/item/gun,
+	/obj/item/pinpointer,
+	/obj/item/clothing/shoes/magboots,
+	/obj/item/blueprints,
+	/obj/item/clothing/head/helmet/space,
+	/obj/item/disk/nuclear
+))
 
 // Remember kids, some trash is okay to eat!
 GLOBAL_LIST_INIT(edible_trash, list(
@@ -28,8 +24,8 @@ GLOBAL_LIST_INIT(edible_trash, list(
 				/obj/item/aicard, //Repathed from /obj/item/device/aicard
 				/obj/item/flashlight,
 				/obj/item/mmi/posibrain,
-				/obj/item/paicard,
-				/obj/item/pda,
+				/obj/item/pai_card,
+				/obj/item/modular_computer/pda,
 				/obj/item/radio/headset,
 				///obj/item/device/starcaster_news,		//Doesnt exist
 				///obj/item/inflatable/torn,			//Doesnt exist
@@ -57,8 +53,8 @@ GLOBAL_LIST_INIT(edible_trash, list(
 				/obj/item/paperplane,
 				/obj/item/pen,
 				/obj/item/photo,
-				/obj/item/reagent_containers/food,
-				/obj/item/reagent_containers/rag,
+				/obj/item/food,
+				/obj/item/rag,
 				/obj/item/soap,
 				/obj/item/stack/spacecash,
 				/obj/item/storage/box/matches,
@@ -72,7 +68,6 @@ GLOBAL_LIST_INIT(edible_trash, list(
 				///obj/item/weapon/bikehorn/tinytether,	//Doesnt exist
 				///obj/item/capture_crystal,			//Still doesnt exist.
 				/obj/item/kitchen,
-				/obj/item/storage/box/mre,
 				///obj/item/storage/mrebag,				//Doesnt exist
 				///obj/item/weapon/storage/fancy/crackers,	//Doesnt exist
 				///obj/item/weapon/storage/fancy/heartbox,	//Doesnt exist
@@ -85,13 +80,12 @@ GLOBAL_LIST_INIT(edible_trash, list(
 				/obj/item/clothing/neck/scarf,
 				///obj/item/clothing/accessory/bracelet,	//Doesnt exist
 				///obj/item/clothing/accessory/locket,	//Doesnt exist
-				/obj/item/storage/book/bible,
+				/obj/item/book/bible,
 				/obj/item/bikehorn,
 				//obj/item/inflatable/door/torn,	//Doesnt exist
-				/obj/item/reagent_containers/rag/towel,	//Repath from /obj/item/towel
+				/obj/item/towel,
 				/obj/item/folder,
 				/obj/item/clipboard,
 				/obj/item/coin,
 				/obj/item/clothing/ears
-				)
-)
+))
