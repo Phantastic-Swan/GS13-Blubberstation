@@ -285,4 +285,10 @@
 	armor_type = /datum/armor/clothing_under/rank_captain
 	flags_1 = 0		// make it non-recolorable
 	modular_icon_location = 'modular_gs/icons/mob/modclothes/graymodular_bra.dmi'
-	body_parts_covered = CHEST
+	body_parts_covered = 0
+
+/obj/item/clothing/under/color/grey/one_piece_swimsuit
+	name = "modular swimsuit"
+	desc = "some desc"
+	greyscale_colors = "#004B8F"
+	modular_icon_location = 'modular_gs/icons/mob/modclothes/bikini.dmi'
