@@ -1,0 +1,173 @@
+2026-01-17:
+  Evilew:
+  - map: 'updated the Lavaland Persistence Outpost: changed the Prisoner room a bit,
+      adding new options for expansion content, and limiting the role to 2 slots (now
+      with bigger rooms)'
+  - rscadd: added a new note to the Syndicate Persistence Hostage, mentioning the
+      newly added expansion content (basically a mention that the role isn't solely
+      focused on expansion content, it caters to both and expansion stuff is optional)
+  - map: 'added a new Virtual Domain for bitrunning: Calorite Temple. Easy difficulty,
+      provides a few pieces of calorite upon completion (no further mechanics at the
+      moment)'
+  - map: cage 4 for Biodome will now feature chocolate slimes instead of cockroaches.
+      Shoddy implementation but should be fine
+  - map: 'various small tweaks to Meta, Box, Biodome and a few other maps: mostly
+      adding stuff like missing consoles, public autolathes, broken turbine floors
+      on Biodome broken airlocks or making something look better'
+  - map: GATOified Biodome map, also improving some of the visuals, like the main
+      Service area, dorms, corridors and whatnot
+  - bugfix: GATOified Newscasters and console computer screens
+  - map: GATOified Tramstation map
+  - map: 'New expansion content area for the Ghost Cafe: Evil Feeder Basement'
+  - map: Changed and expanded Calorite Temple area in Ghost Cafe
+  - rscadd: added dual-tone jumpsuits for most of the roles into loadouts
+  - bugfix: added directional calorite windows as a mapping prefab
+  - map: added Xenoarch map. Currently not implemented yet, mostly added so it's there
+      and can be worked on more easily
+  OzzyMcPseudonym:
+  - bugfix: Calorite Slimes no longer form invisible, deadly babies if you kill them
+      when they're an adult.
+  Sam:
+  - rscadd: 'Added bursting mechanics: You can now enable bursting for your character
+      by setting the Blueberry inflation bursting limit. This is the limit in units
+      of blueberry juice that your character can take before popping. You will not
+      burst immediately as you will get a pop-up that will asks for confirmation to
+      burst now, or to delay the bursting. Delaying it will add a 5 minute timeout
+      to bursting mechanics before it gets triggered again. NOTE: Nothing will happen
+      until you press that burst now button, so you can use this time to finish an
+      RP sentence, or emote your downfall. When you burst, all the juice within you
+      gets splattered on the floor, possible knocking back bystanders.'
+  - rscadd: 'Added preferences to be able to fall victim off, and to see bursting
+      mechanics: There are 3 new preferences added. One is to enable bursting and
+      setting your maximum capacity before you pop "Blueberry inflation bursting".
+      Setting this to 0 will disable bursting and its mechanics. The second one is
+      "Safe bursting" which will determine if your character dies (gets gibbed) after
+      bursting, or if you''ll just lose all the juice (volume of blueberry juice inside
+      of you set to 0). When you do not have Safe Bursting enabled, you will get an
+      extra confirmation when you click burst that notifies you your character will
+      die. The last option is "See bursting", which when disabled prevents people
+      in your view to start the bursting process (including yourself). The about-to-be-burster
+      will get a notification that someone with the pref disabled is nearby, so they
+      know that they need to move location (or scare you away).'
+  - rscadd: 'Added flavour for blueberry inflation: When your character''s got juice
+      in them, they''ll start exhibiting more symptoms depending on how close to their
+      bursting point they are. From flavour text, to sounds, to dripping streaks of
+      blueberry, and finally leaking actual juice that forms puddles on the ground.
+      NOTE: At this time, viruses are transmissible via streaks (the decals) and getting
+      hit by gibs when someone else bursts and dies. The puddles of blueberry juice
+      do, as of now, not infect you with viruses.'
+  Swan:
+  - rscadd: Adds the caloray. It is a weapon which can either discharge a cell to
+      fatten someone up, or thin someone down while charging a powercell. It uses
+      a continous beam which latches onto the target. It is available from the nutri-tech
+      weapons research node. Sprites were made by Clumpy.
+  - balance: lowers the material cost of fatorays and al-T rays 10x - because using
+      13 calorite sheets for a gun is a bit much.
+  - rscadd: added breast feeding mechanics. Players will now be allowed to drink milk
+      directly from their own, or another player's breasts, as well as feed other
+      players, providing some conditions are met (prefs, tits, lactation from them
+      etc)
+  - rscadd: breasts now produce milk directly after spawning in, not just after being
+      stimulated
+  - rscadd: you can now choose the reagents your breasts will produce from a list
+      of approved reagents
+  - rscadd: alien honey, which has the stats of regular honey, but doesn't heal nor
+      add sugar (so no sugar overdose)
+  - code_imp: adds a new interaction usage, for interactions only meant to work on
+      the player performing them
+  - qol: addict traits (smoker, junkie, alcoholic) should be a lot less painful, while
+      also activating it's effects less often
+  - qol: the oversized trait no longer causes the player to be unable to be closed
+      in machines
+  - qol: the oversized trait no longer makes the player break any chair they sit on
+      - that behavior is now reserved for the real fat asses
+  - qol: small/micro quirks no longer make you trip when passing any other mob
+  - balance: High metabolization of nitrium no longer scales it's toxin damage with
+      time
+  - bugfix: fixes HFRs damage from too high moles no longer scales quadratically with
+      time
+  - bugfix: fixes micro calorite not clearing it's effects at very low concentrations
+  - bugfix: fixes a piece of addiction code I broke some time ago. Whoops.
+  - rscadd: added the thick neck pref and quirk, which will prevent you from wearing
+      items around your neck slot
+  - rscadd: added the reduced FOV helplessness pref - reduces the player's FOV to
+      180 degrees in front at the weight set in the pref, and to 90 degrees in the
+      front when exceeding double the set value.
+  - rscdel: nearsightedness helplessness pref was removed
+  - bugfix: fixes perma fat not properly scaling with WG/L rate modifiers
+  - code_imp: '`adjust_perma` and `adjust_fatness` procs now return the amount of
+      fat they applied onto their targets'
+  - rscadd: ports the adipoelectric generator - this machine turns fat into electrical
+      power
+  - rscadd: ports the adipoelectric transformer - this machine turns electricity into
+      fat
+  - balance: allows for the primitive BS belt to be craftable at round start, provided
+      silver is available
+  - balance: increases the power draw of the primitive BS belt
+  - bugfix: fixes beanbags not being craftable
+  - rscadd: GS13 changelogs will now display in game
+  - code_imp: updated code for automatic changelog generation to tag our PR files
+      with a `gs13` tag
+  - code_imp: updated code for changelog compilation to compile our changelogs, and
+      only those with the `gs13` tag
+  Swan and Reny:
+  - rscadd: adds the hotbar. It combines the functionalities of the plant and food
+      smartfridge. Credit to Reny for the sprites.
+  smerglemzerb:
+  - bugfix: Fixes player muscle examines showing up with player fat examines
+2026-01-18:
+  evilew:
+  - map: added Xenoarch level that has its own 2 layer map, no ash storms and several
+      locations to explode (including the base outpost)
+  - map: added Xenoarch teleporters to all maps and the Mining Outpost
+  - map: GATOified & tweaked KiloStation
+  - map: fixed TramStation's broken GS13 related locations (like a calorite altar)
+  - map: fixing some screwed details in Ghost Cafe (blocked passages etc)
+  - map: fixed broken decal work on lavaland persistence
+  - bugfix: 'changed the contents of all Space Law books: they will now point towards
+      GS13 GitHub wiki (if someone has a prettier implementation than this, please
+      go ahead and tweak it, it''s barebones)'
+  - bugfix: moved the bloat censer cargo pack to an appropriate file
+  - rscadd: 'added a new supply pack: Hardlight Wheelchair Emitter'
+  - map: fixed errors in SM air loop on Biodome
+  - bugfix: prevented Lone Operative antag from spawning
+  - bugfix: fixed Fatoray Turrets not working properly
+2026-01-31:
+  Swan:
+  - rscadd: adds cream, blueberry juice, succubus milk and incubus draft as selectable
+      breast produce
+  - rscadd: adds a pref for maximum breasts, belly and butt sizes. They can be updated
+      mid round by using the SAD.
+  - qol: changes the mutant colors trait name to body colors
+  - bugfix: fixes max weight pref being capped between 0-100
+  - rscadd: adds memento calori. Based off the memento mori, but centered around fattywank
+      content. One is available in each of the candyland areas.
+  - balance: adipoelectric generators now use more BFI to generate the same amount
+      of power, and the amount of BFI they take ignores WG/L rates.
+  - balance: adipoelectric transformers now turn power into fat about 4 times faster
+  - bugfix: fixes adipoelectric generator not being unwrenchable after being used
+  - bugfix: fixes adipoelectric transformer not being unwrenchable
+  - code_imp: adjust_fatness now properly reports on weight changed when the change
+      would bring the fatness value to 0
+  - refactor: refactors adipoelectric machines code. They should now have a more reliable
+      behavior and be easier to bugfix, at least a bit.
+  - rscadd: lipoplasty surgery now removes BFI
+  - rscadd: the fat sucker machine now removes BFI
+  - rscadd: 'security can now order a special large donut box crate: it''s 10% cheaper
+      (per box) than the one available to everyone, requires sec access to open, and
+      can be ordered from the security cargo console.'
+  - bugfix: Mealdor donuts are finally fixed. It's an end of an era, really
+  - bugfix: fixes munchies weed turning invisible when modified in the DNA manipulator
+  sheepishgoat:
+  - rscadd: re-enables plushies from Skyrat and Bubber
+  - bugfix: updates maps to match with upstream changes. This should lead to less
+      floating cameras and other oddities.
+  - rscdel: (hopefully) removes a few quadraped borg models.
+  smerglemzerb:
+  - balance: buffs points given by negative traits "Weak legs" (from -1 to -4) and
+      "Very weak legs" (from -6 to -7)
+  Clumpy:
+  - image: made the sprite for the memento calori
+  - image: made backfat sprites for the dual tone jumpsuit
+  - image: made permafat hammer sprites
+  - image: made naked belly sprites symmetrical

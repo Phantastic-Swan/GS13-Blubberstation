@@ -1,3 +1,29 @@
+
+/datum/ai_controller/basic_controller/feedermob
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic/feedermob,
+		BB_TARGET_MINIMUM_STAT = UNCONSCIOUS,
+		BB_EMOTE_KEY = "glunk",
+		BB_EMOTE_CHANCE = 40,
+	)
+
+	ai_traits = DEFAULT_AI_FLAGS | STOP_MOVING_WHEN_PULLED
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/escape_captivity,
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+	)
+
+/datum/targeting_strategy/basic/feedermob/can_attack(mob/living/living_mob, atom/the_target, vision_range)
+	. = ..()
+	if isanimal_or_basicmob(the_target)
+		return FALSE
+	
+	return .
+
 /mob/living/simple_animal/hostile/feed
 	var/food_per_feeding = 5
 	var/food_fed = /datum/reagent/consumable/nutriment
@@ -35,7 +61,7 @@
 
 	if(!belly)
 		return FALSE
-	
+
 	if(soon_to_be_fatty.is_mouth_covered())
 		return FALSE
 
@@ -48,6 +74,7 @@
 	icon_state = "a_c_slime"
 	icon_living = "a_c_slime"
 	icon_dead = "a_c_slime_dead"
+	ai_controller = /datum/ai_controller/basic_controller/feedermob
 	speak_emote = list("blorbles")
 	emote_hear = list("blorbles")
 	speak_chance = 5
@@ -59,10 +86,10 @@
 	obj_damage = 0
 	melee_damage_lower = 0.001
 	melee_damage_upper = 0.001
-	faction = list("slime")
 	pass_flags = PASSTABLE
 	move_to_delay = 7
 	attack_sound = 'sound/items/eatfood.ogg'
+	faction = list(ROLE_WIZARD, FACTION_FEEDER, FACTION_SLIME)
 	unique_name = 1
 	gold_core_spawnable = HOSTILE_SPAWN
 	see_in_dark = 3
@@ -83,6 +110,7 @@
 	move_to_delay = 10
 	projectiletype = /obj/projectile/beam/fattening/icecream
 	projectilesound = 'sound/items/weapons/pierce.ogg'
+	faction = list(ROLE_WIZARD, FACTION_FEEDER)
 	ranged = 1
 	ranged_message = "schlorps"
 	ranged_cooldown_time = 30
@@ -96,7 +124,7 @@
 	turns_per_move = 5
 	blood_volume = 0
 	gold_core_spawnable = HOSTILE_SPAWN
-	butcher_results = list(/obj/item/food/icecream = 4)
+	butcher_results = list(/obj/item/food/icecreamsandwich = 4)
 
 /obj/projectile/beam/fattening/icecream //might as well make use of this thing to not make ton of different variants of the same thing
 	name = "ice cream blob"
@@ -137,6 +165,7 @@
 	icon_state = "fathand"
 	icon_living = "fathand"
 	icon_dead = "fathand_dead"
+	ai_controller = /datum/ai_controller/basic_controller/feedermob
 	speak_emote = list("crackles")
 	emote_hear = list("crackles")
 	speak_chance = 5
@@ -160,12 +189,12 @@
 	move_to_delay = 2 //very fast
 	attack_sound = 'sound/items/weapons/pulse.ogg'
 	unique_name = 1
-	faction = list(ROLE_WIZARD)
 	lighting_cutoff = LIGHTING_CUTOFF_LOW
 	// atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 0
 	minbodytemp = 0
 	maxbodytemp = INFINITY
+	faction = list(ROLE_WIZARD, FACTION_FEEDER)
 
 /mob/living/simple_animal/hostile/fatten/AttackingTarget()
 	. = ..()

@@ -88,6 +88,9 @@
 	if(target_body.stat != DEAD)
 		target_body.grab_ghost(TRUE)
 
+	// GS13 EDIT: Remove the body from a carrier, if they are in one.
+	remove_body_from_carrier(target_body)
+
 /mob/living/soulcatcher_soul/Destroy()
 	log_message("[key_name(src)] has exited a soulcatcher.", LOG_GAME)
 	var/datum/component/carrier_user/soul_component = GetComponent(/datum/component/carrier_user)

@@ -159,3 +159,27 @@
 	value = 1
 	gain_text = span_notice("You are hungry for slime! Yummy!")
 	lose_text = span_notice("You no longer feel hungry for slimes. Yuck...")
+
+/datum/quirk/large_surface_area
+	name = "Large surface area"
+	desc = "All this weight may slow you down, but at least all that contact area you got with the ground makes it hard to fall down..."
+	icon = "fa-shoe-prints"
+	value = 1
+	quirk_flags = QUIRK_HIDE_FROM_SCAN | QUIRK_PROCESSES
+	medical_record_text = "Patient is incapable of slipping at higher weights."
+
+/datum/quirk/large_surface_area/process(seconds_per_tick)
+	// make sure it has fatness
+	if (!iscarbon(quirk_holder))
+		return
+
+	var/mob/living/carbon/fatty = quirk_holder
+
+	if (fatty.fatness >= FATNESS_LEVEL_IMMOBILE)
+		ADD_TRAIT(fatty, TRAIT_NO_SLIP_WATER, TRAIT_LARGE_SURFACE_AREA)
+		ADD_TRAIT(fatty, TRAIT_NO_SLIP_ICE, TRAIT_LARGE_SURFACE_AREA)
+		ADD_TRAIT(fatty, TRAIT_NO_SLIP_SLIDE, TRAIT_LARGE_SURFACE_AREA)
+	else
+		REMOVE_TRAIT(fatty, TRAIT_NO_SLIP_WATER, TRAIT_LARGE_SURFACE_AREA)
+		REMOVE_TRAIT(fatty, TRAIT_NO_SLIP_ICE, TRAIT_LARGE_SURFACE_AREA)
+		REMOVE_TRAIT(fatty, TRAIT_NO_SLIP_SLIDE, TRAIT_LARGE_SURFACE_AREA)

@@ -13,7 +13,7 @@
 	faction = list(NEST_FACTION)
 	var/spawn_delay = 0
 	/// What mob to spawn
-	var/list/monster_types = list(/mob/living/simple_animal/hostile/blackmesa/xen/headcrab)
+	var/list/monster_types = list(/mob/living/basic/blackmesa/xen/headcrab)
 	/// How many mobs can we spawn?
 	var/max_mobs = 3
 	var/spawned_mobs = 0
@@ -73,7 +73,7 @@
 		spawn_delay = world.time + spawn_cooldown
 		spawn_mob()
 
-/obj/structure/mob_spawner/proc/proximity_trigger(datum/source, atom/movable/AM)
+/obj/structure/mob_spawner/proc/proximity_trigger(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs) // Bubber edit ORG: /obj/structure/mob_spawner/proc/proximity_trigger(datum/source, atom/movable/AM)
 	SIGNAL_HANDLER
 	if(spawned_mobs >= max_mobs)
 		return
@@ -81,10 +81,10 @@
 		return
 	spawn_delay = world.time + spawn_cooldown
 
-	if(!isliving(AM))
+	if(!isliving(arrived))
 		return
 
-	var/mob/living/entered_mob = AM
+	var/mob/living/entered_mob = arrived
 
 	if((NEST_FACTION in entered_mob.faction))
 		return

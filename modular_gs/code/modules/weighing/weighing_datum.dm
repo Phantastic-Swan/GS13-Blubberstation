@@ -77,10 +77,10 @@
 	muscle_real_pounds = target_mob.calculate_muscle_weight_in_pounds(muscle_real)
 	muscle_other_pounds = target_mob.calculate_muscle_weight_in_pounds(muscle_other)
 
-	weight_gain_rate = target_mob.get_weight_gain_rate()
-	weight_loss_rate = target_mob.get_weight_loss_rate()
-	muscle_gain_rate = target_mob.muscle_gain_rate
-	muscle_loss_rate = target_mob.muscle_loss_rate
+	weight_gain_rate = round(target_mob.get_weight_gain_rate(), 0.0001)
+	weight_loss_rate = round(target_mob.get_weight_loss_rate(), 0.0001)
+	muscle_gain_rate = round(target_mob.muscle_gain_rate, 0.0001)
+	muscle_loss_rate = round(target_mob.muscle_loss_rate, 0.0001)
 
 	return TRUE
 

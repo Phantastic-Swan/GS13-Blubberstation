@@ -1,9 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "caps breast size at 18"
-  - rscadd: "minimum belly and ass size can now be 1"
-  - qol: "makes fat affinity less spamy"
-  - bugfix: "fixes breast size oscilating with the dual tone suit"
-  - bugfix: "fixes breasts disappearing at very large sizes"
-  - bugfix: "items that display weight now correctly take height into consideration"

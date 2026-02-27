@@ -234,7 +234,7 @@
 				if(is_type_in_list(disease_symptom, GLOB.no_random_cure_symptoms))
 					skip_recovery = TRUE
 
-		if(recovery_prob && !skip_recovery) //GS13 EDIT END
+		if(recovery_prob && !skip_recovery) //GS13 EDIT END Original:		if(recovery_prob)
 			if(SPT_PROB(recovery_prob, seconds_per_tick))
 				if(stage == 1 && prob(cure_chance * DISEASE_FINAL_CURE_CHANCE_MULTIPLIER)) //if we reduce FROM stage == 1, cure the virus - after defeating its cure_chance in a final battle
 					if(!HAS_TRAIT(affected_mob, TRAIT_NOHUNGER) && (affected_mob.satiety < 0 || affected_mob.nutrition < NUTRITION_LEVEL_STARVING))

@@ -1,6 +1,19 @@
 //GS13 - markings, ported or our own (preferably mark where you took them from)
 
 
+
+/datum/sprite_accessory/taur/fatdrake
+	name = "Fat Drake"
+	icon = 'modular_gs/icons/mob/markings/fat_taur.dmi'
+	icon_state = "fatdrake"
+	taur_mode = STYLE_TAUR_PAW
+	can_lay_down = TRUE
+	laydown_offset = -3
+
+
+/*
+old taur bodies from Cit
+
 /datum/sprite_accessory/taur/gator //ported from Vorestation
 	name = "Gator"
 	icon = 'modular_gs/icons/mob/markings/mam_taur.dmi'
@@ -83,3 +96,6 @@
 	color_src = MATRIXED
 	matrixed_sections = MATRIX_ALL
 	taur_mode = STYLE_PAW_TAURIC
+
+old taur bodies from Cit - END
+*/

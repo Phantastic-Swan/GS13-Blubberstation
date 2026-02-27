@@ -98,13 +98,16 @@
 	icon_state = "primitive_belt"
 	//inhand_icon_state = "primitive_belt"
 
-	var/cell_type = /obj/item/stock_parts/power_store/cell/high
+	var/cell_type = /obj/item/stock_parts/power_store/cell
 	var/obj/item/stock_parts/power_store/cell/cell
-	var/power_drain = 3
+	var/power_drain = 10
 	var/mob/living/carbon/user		// the fatass who's weight we must track for power drain calcs
 	var/overloaded = FALSE		// is it EMP'ed?
 
-	// RegisterSignal(user, COMSIG_MOB_CLICKON, PROC_REF(on_clicked), TRUE)
+/obj/item/bluespace_belt/primitive/empty
+	cell = null
+	cell_type = null
+	icon_state = "primitive_belt_off"
 
 /obj/item/bluespace_belt/primitive/examine(mob/user)
 	. = ..()
@@ -226,7 +229,7 @@
 	user = null
 	equipped = FALSE
 
-/obj/item/bluespace_belt/primitive/process()
+/obj/item/bluespace_belt/primitive/process(seconds_per_tick)
 	if(isnull(user))
 		return
 
@@ -242,8 +245,7 @@
 		STOP_PROCESSING(SSprocessing, src)
 		return
 
-	power_drain = min(power_drain, cell.charge)
-	cell.use(power_drain)
+	cell.use(power_drain * seconds_per_tick, TRUE)
 	cell.update_icon()
 
 /obj/item/bluespace_belt/primitive/ui_interact(mob/user, datum/tgui/ui)

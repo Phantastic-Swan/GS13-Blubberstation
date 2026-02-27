@@ -1,106 +1,66 @@
-/datum/quirk/water_sponge
-	name = "Water Sponge"
-	desc = "You can hold lots of water in you! Careful with showers!"
-	value = 0 //ERP quirk
-	gain_text = "<span class='notice'>You feel absorbant.</span>"
-	lose_text = "<span class='notice'>You don't feel absorbant anymore.</span>"
-	// HEY NERD, PUT IN MEDICAL TEXT IF YOU ADD THIS BACK!
-	mob_trait = TRAIT_WATER_SPONGE
-
+// The quirk handling all of this is defined in [modular_gs/code/datums/quirks/neutral/water_sponde.dm]
 /datum/reagent/water
 	var/bloat_coeff = 3.5
 
-/datum/reagent/water/on_mob_add(mob/living/L, amount)
-	if(HAS_TRAIT(L, TRAIT_WATER_SPONGE))
-		if(iscarbon(L))
-			var/mob/living/carbon/C = L
-			C.hider_add(src)
+/datum/reagent/water/on_mob_add(mob/living/living, amount)
+	if(HAS_TRAIT(living, TRAIT_WATER_SPONGE))
+		if(iscarbon(living))
+			var/mob/living/carbon/carbon = living
+			carbon.hider_add(src)
 	. = ..()
 
-/datum/reagent/water/on_mob_delete(mob/living/L)
-	if(HAS_TRAIT(L, TRAIT_WATER_SPONGE))
-		if(iscarbon(L))
-			var/mob/living/carbon/C = L
-			C.hider_remove(src)
+/datum/reagent/water/on_mob_delete(mob/living/living)
+	if(HAS_TRAIT(living, TRAIT_WATER_SPONGE))
+		if(iscarbon(living))
+			var/mob/living/carbon/carbon = living
+			carbon.hider_remove(src)
 	. = ..()
 
-/datum/reagent/water/reaction_mob(mob/living/M, method, reac_volume)
+/datum/reagent/water/expose_atom(atom/exposed_atom, reac_volume, methods)
 	. = ..()
-	if(HAS_TRAIT(M, TRAIT_WATER_SPONGE))
-		if(method == TOUCH)
-			M.reagents.add_reagent(/datum/reagent/water, reac_volume/2)
-		if(method == VAPOR)
-			M.reagents.add_reagent(/datum/reagent/water, reac_volume/3)
-
+	if (!iscarbon(exposed_atom))
+		return
+	var/mob/living/carbon/carbon = exposed_atom
+	if(HAS_TRAIT(carbon, TRAIT_WATER_SPONGE))
+		if(methods & TOUCH)
+			carbon.reagents.add_reagent(/datum/reagent/water, reac_volume/2)
+		if(methods & VAPOR)
+			carbon.reagents.add_reagent(/datum/reagent/water, reac_volume/3)
 
 /datum/reagent/water/proc/fat_hide(mob/living/carbon/user)
 	return volume * bloat_coeff
 
-/obj/machinery/shower/process()
+/obj/machinery/shower/process(seconds_per_tick)
 	..()
-	for(var/atom/movable/AM in loc)
-		if(iscarbon(AM))
-			if(HAS_TRAIT(AM, TRAIT_WATER_SPONGE))
-				var/mob/living/carbon/L = AM
-				L.reagents.add_reagent(/datum/reagent/water, 3)
+	for(var/atom/movable/moveable_atom in loc)
+		if(iscarbon(moveable_atom))
+			if(HAS_TRAIT(moveable_atom, TRAIT_WATER_SPONGE))
+				var/mob/living/carbon/living = moveable_atom
+				living.reagents.add_reagent(/datum/reagent/water, 3 * seconds_per_tick)
 
+/obj/item/organ/lungs/Initialize(mapload)
+	. = ..()
+	add_gas_reaction(/datum/gas/water_vapor, while_present = PROC_REF(consume_water_vapor))
 
-/obj/item/organ/lungs/proc/water_check(datum/gas_mixture/breath, mob/living/carbon/human/H)
-	if(HAS_TRAIT(H, TRAIT_WATER_SPONGE))
+/obj/item/organ/lungs/proc/consume_water_vapor(mob/living/carbon/breather, datum/gas_mixture/breath, water_vapor_pp, old_water_vapor_pp)
+	if(HAS_TRAIT(breather, TRAIT_WATER_SPONGE))
 		if(breath)
-			var/pressure = breath.return_pressure()
-			var/total_moles = breath.total_moles()
-			//#define PP_MOLES(X) ((X / total_moles) * pressure)
-			#define PP(air, gas) PP_MOLES(air.get_moles(gas))
-			var/gas_breathed = PP(breath,GAS_H2O)
+			var/gas_breathed = breathe_gas_volume(breath, /datum/gas/water_vapor)
 			if(gas_breathed > 0)
-				H.reagents.add_reagent(/datum/reagent/water, gas_breathed)
-				breath.adjust_moles(GAS_H2O, -gas_breathed)
+				breather.reagents.add_reagent(/datum/reagent/water, gas_breathed)
 
-/obj/item/organ/lungs/check_breath(datum/gas_mixture/breath, mob/living/carbon/human/H)
-	water_check(breath, H)
-	. = ..()
+/datum/status_effect/fire_handler/wet_stacks/tick(seconds_between_ticks)
+	if (stacks <= 0)
+		return ..()
+	
+	if (HAS_TRAIT(owner, TRAIT_WATER_SPONGE))
+		owner.reagents.add_reagent(/datum/reagent/water, 3 * seconds_between_ticks)
 
-/datum/reagent/water/overdose_start(mob/living/M)
-	. = 1
+	return ..()
 
-/obj/structure/sink
-	var/mob/living/attached
-
-/obj/structure/sink/MouseDrop(mob/living/target)
-	. = ..()
-	if(!ishuman(usr) || !usr.canUseTopic(src, BE_CLOSE) || !isliving(target))
-		return
-	if(attached)
-		visible_message("<span class='warning'>[attached] is detached from [src].</span>")
-		attached = null
-		return
-	if(Adjacent(target) && usr.Adjacent(target))
-		usr.visible_message("<span class='warning'>[usr] attaches [target] to [src].</span>", "<span class='notice'>You attach [target] to [src].</span>")
-		add_fingerprint(usr)
-		attached = target
-		START_PROCESSING(SSobj, src)
-
-/obj/structure/sink/process()
-	if(!(get_dist(src, attached) <= 1 && isturf(attached.loc)))
-		to_chat(attached, "<span class='userdanger'>[attached] is ripped from the sink!</span>") // GS13
-		attached = null
-		return PROCESS_KILL
-	if(attached)
-		playsound(attached, 'sound/vore/pred/swallow_02.ogg', rand(10,50), 1)
-		attached.reagents.add_reagent(/datum/reagent/water, 5)
-	else
-		return PROCESS_KILL
-
-/obj/structure/sink/attack_hand(mob/living/user)
-	if(attached)
-		visible_message("[attached] is detached from [src]")
-		attached = null
-		return
-
-/obj/machinery/pool/controller/process_reagents()
-	for(var/turf/open/pool/W in linked_turfs)
-		for(var/mob/living/carbon/human/swimee in W)
-			if(HAS_TRAIT(swimee, TRAIT_WATER_SPONGE))
-				swimee.reagents.add_reagent(/datum/reagent/water, 5)
-	..()
+// /obj/machinery/pool/controller/process_reagents()
+// 	for(var/turf/open/pool/W in linked_turfs)
+// 		for(var/mob/living/carbon/human/swimee in W)
+// 			if(HAS_TRAIT(swimee, TRAIT_WATER_SPONGE))
+// 				swimee.reagents.add_reagent(/datum/reagent/water, 5)
+// 	..()

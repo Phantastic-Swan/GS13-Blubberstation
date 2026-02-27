@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - qol: "Moved our prefs to a new, separate tab in the character creator menu"
-  - bugfix: "makes WG sources individual for each character"

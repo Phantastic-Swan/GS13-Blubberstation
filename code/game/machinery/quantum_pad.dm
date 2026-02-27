@@ -23,9 +23,7 @@
 	if(map_pad_id)
 		mapped_quantum_pads[map_pad_id] = src
 
-	AddComponent(/datum/component/usb_port, list(
-		/obj/item/circuit_component/quantumpad,
-	))
+	AddComponent(/datum/component/usb_port, typecacheof(list(/obj/item/circuit_component/quantumpad), only_root_path = TRUE))
 
 /obj/machinery/quantumpad/Destroy()
 	mapped_quantum_pads -= map_pad_id
@@ -178,7 +176,7 @@
 		if(isliving(ROI))
 			var/mob/living/living_subject = ROI
 			//only TP living mobs buckled to non anchored items
-			if(!check_mob_teleportability(living_subject)|| (living_subject.buckled && living_subject.buckled.anchored)) //GS13 EDIT END
+			if(!check_mob_teleportability(living_subject)|| (living_subject.buckled && living_subject.buckled.anchored)) //GS13 EDIT ORIGINAL:			if(living_subject.buckled && living_subject.buckled.anchored)
 				continue
 
 		do_teleport(ROI, get_turf(target_pad), no_effects = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)

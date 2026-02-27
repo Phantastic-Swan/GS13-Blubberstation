@@ -55,6 +55,11 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(target == user && usage == INTERACTION_OTHER)
 		return FALSE
 
+	// GS13 EDIT interactions that can only be used on the player performing them
+	if(target != user && usage == INTERACTION_ONLY_SELF)
+		return FALSE
+	// GS13 END EDIT
+
 	if(user_required_parts.len)
 		for(var/thing in user_required_parts)
 			var/obj/item/organ/genital/required_part = user.get_organ_slot(thing)

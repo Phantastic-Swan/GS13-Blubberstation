@@ -31,6 +31,7 @@
 	density = TRUE
 	active_power_usage = 240 KILO WATTS
 	idle_power_usage = 24 KILO WATTS
+	ignore_size = TRUE
 	/// Is someone being processed inside of the machine?
 	var/processing = FALSE
 	/// How long does the machine take to work?
@@ -213,8 +214,11 @@
 	var/mob/living/carbon/human/patient = occupant
 	var/original_name = patient.dna.real_name
 
+	var/patient_fatness = patient.fatness_real	// GS13 EDIT: prevents the SAD from adding weight on pref read
 	patient.client?.prefs?.safe_transfer_prefs_to_with_damage(patient, visuals_only = TRUE)
+	patient.fatness_real = patient_fatness	// GS13 EDIT: prevents the SAD from adding weight on pref read. Yes, this is a filthy touch to the actual var, but I have to here. (also technically I am not changing it, but rather making sure it DOESN'T change)
 	patient.dna.update_dna_identity()
+	patient.updateappearance()
 	patient.wash(CLEAN_SCRUB)
 	if(patient.dna.real_name != original_name)
 		log_game("[key_name(patient)] has used the Self-Actualization Device at [loc_name(src)], changed the name of their character. \

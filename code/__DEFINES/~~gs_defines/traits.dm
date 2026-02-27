@@ -11,6 +11,10 @@
 #define TRAIT_NO_FAT_SLOWDOWN "no_fat_slowdown"
 #define HELPLESSNESS_TRAIT "helplessness"
 #define TRAIT_NO_HELPLESSNESS "no_helplessness"
+#define TRAIT_NO_NECK "no_neck"
+#define TRAIT_WEAK_LUNGS	"fat_lungs"
+#define TRAIT_LOW_FOV "fat_blocking_view"
+#define TRAIT_VERY_LOW_FOV "fat_blocking_view_HARD"
 
 #define TRAIT_RADRESONANCE "radresonance" //FIX THIS LATER
 #define COMSIG_MICRO_PICKUP_FEET "micro_force_grabbed"			//From /datum/element/mob_holder/micro
@@ -35,7 +39,8 @@
 #define TRAIT_FAT_GOOD_SELF		"fat_good_self"
 #define TRAIT_FAT_BAD			"fat_bad"
 #define TRAIT_FAT_BAD_SELF		"fat_bad_self"
-#define TRAIT_LIPOLICIDE_TOLERANCE "lipolicide_tolerance"
+#define TRAIT_LIPOLICIDE_TOLERANCE	"lipolicide_tolerance"
+#define TRAIT_MACERINIC_TOLERANCE	"macerinic_tolerance"
 #define TRAIT_WEAKLEGS			"weak_legs"
 #define TRAIT_STRONGLEGS		"strong_legs"
 #define TRAIT_METAL_CRUNCHER 	"metal_cruncher"
@@ -43,6 +48,9 @@
 #define TRAIT_FATROUSAL         "fatrousal"
 #define TRAIT_MILKY				"milky" //basically faster milk production
 #define TRAIT_BIOFUEL			"biofuel_processor"
+#define TRAIT_LARGE_SURFACE_AREA	"too_fat_to_slip"
+
+#define TRAIT_DEMONIC	"demonic"
 
 //GS13 helplessness quirks
 #define TRAIT_HELPLESS_IMMOBILITY		"immobile_helpless"
@@ -56,6 +64,8 @@
 #define TRAIT_HELPLESS_NO_BUCKLE		"no_buckle_helpless"
 #define TRAIT_HELPLESS_CHAIR_DESTROYER	"chair_breaking_helpless"
 #define TRAIT_HELPLESS_STUCKAGE			"stuckage_helpless"
+#define TRAIT_HELPLESS_THICK_NECK		"thick_neck"
+#define TRAIT_HELPLESS_WEAK_LUNGS		"weak_lungs"
 
 // GS13 positive quirks
 #define TRAIT_BLOB_BED					"blob_bed"

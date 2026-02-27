@@ -10,20 +10,22 @@
  * explicitly equal 0 for all compatible wildcard slots.
  */
 
-/// Wildcard slot define for basic grey cards. Only hold 4 common wildcards.
-//GS13 EDIT - ACCESS LIMITING IS DUMB! - ORIGINAL : #define WILDCARD_LIMIT_GREY list(WILDCARD_NAME_COMMON = list(limit = 4, usage = list()))
+// GS13 EDIT ID access changes
+
 #define WILDCARD_LIMIT_GREY list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
+#define WILDCARD_LIMIT_SILVER list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
+#define WILDCARD_LIMIT_PLATINUM list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
+
+/*
+Original:
+/// Wildcard slot define for basic grey cards. Only hold 4 common wildcards.
+#define WILDCARD_LIMIT_GREY list(WILDCARD_NAME_COMMON = list(limit = 4, usage = list()))
 /// Wildcard slot define for Head of Staff silver cards. Can hold 6 common, 2 command and 1 private command.
-/* GS13 EDIT START
 #define WILDCARD_LIMIT_SILVER list( \
 	WILDCARD_NAME_COMMON = list(limit = 6, usage = list()), \
 	WILDCARD_NAME_COMMAND = list(limit = 2, usage = list()), \
 	WILDCARD_NAME_PRV_COMMAND = list(limit = 1, usage = list()) \
 )
-*/
-#define WILDCARD_LIMIT_SILVER list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
-
-/*
 /// The Platinum card, an in between of silver and gold, which can have infinite common but is still limited in command
 #define WILDCARD_LIMIT_PLATINUM list( \
 	WILDCARD_NAME_COMMON = list(limit = -1, usage = list()), \
@@ -31,8 +33,6 @@
 	WILDCARD_NAME_PRV_COMMAND = list(limit = 1, usage = list()) \
 )
 */
-#define WILDCARD_LIMIT_PLATINUM list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))
-// GS13 EDIT END
 
 /// Wildcard slot define for Captain gold cards. Can hold infinite of any Captain level wildcard.
 #define WILDCARD_LIMIT_GOLD list(WILDCARD_NAME_CAPTAIN = list(limit = -1, usage = list()))

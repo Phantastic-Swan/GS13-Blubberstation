@@ -5,6 +5,8 @@
 #define SODA_FIZZINESS_THROWN 15
 /// How much fizziness is added to the can of soda by shaking it, in percentage points
 #define SODA_FIZZINESS_SHAKE 5
+/// At what atmospheric pressure do we burst a soda can? Empirical evidance (one googled experiment video) states that ~67.458 kPa is where a can bursts.
+#define SODA_EXPLOSION_PRESSURE 67.458
 
 /obj/item/reagent_containers/cup/soda_cans
 	name = "soda can"
@@ -16,7 +18,7 @@
 	custom_price = PAYCHECK_CREW * 0.9
 	obj_flags = CAN_BE_HIT
 	possible_transfer_amounts = list(5, 10, 15, 25, 30)
-	volume = 40 //GS13 EDIT, up the size of drinks. original = 30
+	volume = 40 //GS13 EDIT, up the size of drinks. original = 30	volume = 30
 	throwforce = 12 // set to 0 upon being opened. Have you ever been domed by a soda can? Those things fucking hurt
 	/// If the can hasn't been opened yet, this is the measure of how fizzed up it is from being shaken or thrown around. When opened, this is rolled as a percentage chance to burst
 	var/fizziness = 0
@@ -24,6 +26,7 @@
 /obj/item/reagent_containers/cup/soda_cans/Initialize(mapload, vol)
 	. = ..()
 	AddElement(/datum/element/slapcrafting, string_list(list(/datum/crafting_recipe/improv_explosive)))
+	AddElement(/datum/element/atmos_sensitive, mapload) //Enables soda cans to explode in vaccuum.
 
 /obj/item/reagent_containers/cup/soda_cans/random/Initialize(mapload)
 	..()
@@ -170,8 +173,16 @@
 		. += span_notice("<i>You examine [src] closer, and note the following...</i>")
 		. += "\t[span_warning("You get a menacing aura of fizziness from it...")]"
 
+/obj/item/reagent_containers/cup/soda_cans/should_atmos_process(datum/gas_mixture/air, exposed_temperature)
+	return ((air.return_pressure() <= SODA_EXPLOSION_PRESSURE) && !(reagents.flags & OPENCONTAINER))
+
+/obj/item/reagent_containers/cup/soda_cans/atmos_expose(datum/gas_mixture/air, exposed_temperature)
+	if(reagents.total_volume && !(reagents.flags & OPENCONTAINER))
+		burst_soda(loc)
+
 #undef SODA_FIZZINESS_THROWN
 #undef SODA_FIZZINESS_SHAKE
+#undef SODA_EXPLOSION_PRESSURE
 
 /obj/item/reagent_containers/cup/soda_cans/cola
 	name = "Space Cola"

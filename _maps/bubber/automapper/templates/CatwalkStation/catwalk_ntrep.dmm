@@ -130,7 +130,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -211,8 +211,8 @@
 /area/station/hallway/primary/starboard)
 "Iv" = (
 /obj/machinery/fax{
-	fax_name = "Nanotrasen Consultant's Office";
-	name = "Nanotrasen Consultant's Fax Machine"
+	fax_name = "GATO Consultant's Office";
+	name = "GATO Consultant's Fax Machine"
 	},
 /obj/structure/table/wood,
 /turf/open/floor/carpet/green,
@@ -286,7 +286,7 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_x = 8;
 	pixel_y = 8
 	},
@@ -318,7 +318,7 @@
 	name = "Tactical Privacy Shutter";
 	desc = "Heavy duty, airtight mechanical shutters for the most demanding enterprise resource planning."
 	},
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 4
 	},
 /turf/open/floor/wood,

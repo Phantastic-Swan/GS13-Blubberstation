@@ -119,6 +119,31 @@
 	else
 		.=..()
 
+// Overwrites death(gibbed) so that it'll actually work with calorite slimes and not produce invisible death balls
+/mob/living/basic/slime/calorite/death(gibbed)
+	if(stat == DEAD)
+		return
+	if(!gibbed && life_stage == SLIME_LIFE_STAGE_ADULT)
+		var/mob/living/basic/slime/calorite/new_slime = new(drop_location(), slime_type.type)
+
+		new_slime.ai_controller?.set_blackboard_key(BB_SLIME_RABID, TRUE)
+		new_slime.regenerate_icons()
+
+		//revives us as a baby
+		set_life_stage(SLIME_LIFE_STAGE_BABY)
+		revive(HEAL_ALL)
+		regenerate_icons()
+		update_name()
+		return
+
+	if(buckled)
+		stop_feeding(silent = TRUE) //releases ourselves from the mob we fed on.
+
+	cut_overlays()
+
+	return ..(gibbed)
+
+
 //Slight change to AI so it will immediately begin feeding on humans
 /datum/ai_controller/basic_controller/slime/calorite
 	planning_subtrees = list(
@@ -157,7 +182,7 @@
 
 //If our target is a human we do our custom behavior. Otherwise it'll be business as usual so it doesn't try to fatten monkeys
 /datum/status_effect/slime_leech/calorite/tick(seconds_between_ticks)
-	if(ishuman(owner))
+	if(ishuman(owner) && !ismonkey(owner))
 		if(owner.stat == DEAD)
 			our_slime.stop_feeding(silent = TRUE)
 			return
@@ -178,7 +203,7 @@
 				to_chat(owner, span_userdanger(pick(pain_lines)))
 
 		our_slime.adjust_nutrition(1.8 * damage)
-		our_slime.adjustBruteLoss(-1.5 * seconds_between_ticks)
+		our_slime.adjust_brute_loss(-1.5 * seconds_between_ticks)
 		return
 
 	. = ..()
@@ -245,7 +270,6 @@
 	icon = 'modular_gs/icons/mob/slimes.dmi'
 	icon_state = "calorite-core"
 	//crossbreed_modification = "symbiont" - Let's not do crossbred cores JUST yet
-	activate_reagents = list(/datum/reagent/toxin/plasma)
 
 /obj/item/slime_extract/calorite/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)

@@ -34,7 +34,7 @@ ADMIN_VERB(lorecaster_story_manager, R_ADMIN, "Lorecaster Stories", "Open the Lo
 
 		// the TGUI needs _all_ of these to work
 		if(!("title" in uncompiled_stories[story]))
-			uncompiled_stories[story]["title"] = "Nanotrasen News Broadcast"
+			uncompiled_stories[story]["title"] = "GATO News Broadcast" //gs13 - GATOified newscaters			uncompiled_stories[story]["title"] = "Nanotrasen News Broadcast"
 		if(!("text" in uncompiled_stories[story]))
 			uncompiled_stories[story]["text"] = "Someone forgot to fill out the article!"
 		if(!("year" in uncompiled_stories[story]))

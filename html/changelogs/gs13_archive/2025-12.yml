@@ -1,0 +1,194 @@
+2025-12-30:
+  Swan:
+  - bugfix: fixed genitals sometimes showing despite clothes being put on
+  - bugfix: fixed some suits on taurs being offset to the side
+  - bugfix: fixed genitals ignoring their set size with weight updates
+  - bugfix: fixed bellies and butts going over the maximum size allowed by the sprites
+      we have
+  - bugfix: there were bugs related to the way genital_sizes updated with weight,
+      which should be fixed now
+  - rscadd: re-enabled support for round belly shapes for the modular suits
+  - code_imp: added a `update_size_from_weight` proc to `/obj/item/organ/genital`
+      for easy update of genital size based on weight, that's uniform between all
+      genitals
+  - rscadd: ports persistent and permanent weight
+  - rscadd: ports galbanic compound, it's effects, overdose and addiction
+  - rscadd: ports macerinic solution, it's effects and overdose
+  - bugfix: fixes addictions not properly switching stages
+  - bugfix: fixes Calorite not showing up on the mining scanner
+  - bugfix: fixes vending machine boards not allowing mealdors to be constructed
+  - bugfix: fixes Weight Gain/Loss Rate not being floats
+  - bugfix: fixes modular jumpsuits not being properly colored upon spawning - though
+      you will still have to re-equip them
+  - rscadd: Ports helplessness prefs
+  - balance: Takes away the mini fire extinguisher and gas analyzer from the CE's
+      backpack, adds the hand drill, large fuel tank welding tool and the sci JoL
+      (that cannot force open doors) to their belt.
+  - bugfix: fixes the spade not removing plants from hydro trays
+  - bugfix: properly fixes modular jumpsuits not coloring themselves correctly
+  - bugfix: fixes perma and persistent weight not properly saving/loading
+  - bugfix: adds recipes for lipoifier, as well as fizulphite, extilphite and flatulose
+  - rscadd: adds fat and fullness examine texts
+  - rscadd: adds stuckage functionality to mineral doors
+  - code_imp: adds 2 new procs for displaying weight and fullness stage examine texts
+  - code_imp: cleans up the perma fat file to throw away unused comments
+  - code_imp: adds a `force_update` argument to `update_modular_overlays` proc to
+      allow for forcing updates
+  - rscadd: adds helplessness quirks
+  - rscadd: 'Immobility quirk, which immobilizes it''s owner at the immobile weight
+      stage. Cost: -8 points'
+  - rscadd: 'clumsy from weight quirk, which makes it''s owner clumsy at morbidly
+      obese weight stage. Cost: -7 points'
+  - rscadd: 'Big cheeks quirk, which makes the user nearsighted and hides their face
+      at blob weight stage. Cost: -3 points'
+  - rscadd: 'Mute quirk, which makes the user mute at blob weight stage. Cost: -3
+      points'
+  - rscadd: 'immobile arms quirk, which immobilizes the users arms at barely mobile
+      weight stage. Cost: -8 points'
+  - rscadd: 'clothing bursting quirk, which causes the user to burst out of their
+      jumpsuit at immobile weight stage, and have their gloves, boots and exo suits
+      come off at barely mobile weight stage. Cost: -8 points'
+  - rscadd: 'belt bursting quirk, which causes the user to be unable to wear belts
+      at morbidly obese weight stage. Cost: -5 points'
+  - rscadd: 'backpack quirk, which makes the user unable to wear backpacks at barely
+      mobile weight stage. Cost: -8 points'
+  - rscadd: 'no buckle quirk, which makes the user unable to buckle at extremely obese
+      weight stage. Cost: -1 point'
+  - rscadd: 'chair breakage quirk, which makes the user break any chair they sit on
+      at barely mobile weight stage. Cost: -3 points'
+  - rscadd: 'stuckage quirk, which makes the user get stuck in airlocks at extremely
+      obese weight stage. Cost: -6 points'
+  - code_imp: '`TRAIT_UNIVERSAL_GAINER'' has been repurposed to be a trait that overrides
+      most prefs - the only way to obtain it is through the negative helplessness
+      quirks.'
+  - qol: Moved our prefs to a new, separate tab in the character creator menu
+  - bugfix: makes WG sources individual for each character
+  - rscadd: ports the dual tone jumpsuit, with a variant available for (almost?) all
+      roles. They are available in your jobs clothes vendor (engivend, atmosvend,
+      lawdrobe etc) or garment bag.
+  - rscadd: "white dual tone jumpsuit in the loadout menu. There is a bug where the\
+      \ icon is just the zipper, however upon selecting it it will display properly\
+      \ on your character. The suit can be recolored to anything you want, but you\
+      \ will not keep the armor values associated with the job these colors belong\
+      \ to.\n/\U0001F191"
+  - code_imp: makes the autotransfer vote default to continuing the round on tiebreak
+  - code_imp: allows the autotransfer vote to accept ghost votes
+  - config: allows ghosts to vote and start votes
+  - config: enables autotransfer
+  - config: removes the limit on autotransfer votes
+  - code_imp: changes the pathway of some items in the wand of gluttony. Still not
+      implemented since it's broken and no time.
+  - rscadd: Ports chocolate slimes
+  - rscadd: Ports creambeasts
+  - rscadd: Ports mage hands
+  - rscadd: ports treadmill
+  - map: added xenoarch/demone/donut factory areas - basically all of our areas from
+      cit
+  - rscadd: ports back lipoifium
+  - rscadd: allows for calorite to be crafted through the crystalizer in atmos
+  - rscadd: added BFI thresholds to helplessness quirks description
+  - rscadd: made the chair breaking and no buckle helplessness quirks mutually exclusive
+  - rscadd: added a red variant of security's dual tone suit
+  - rscadd: weighting machines and punching bags now reduce fatness
+  - rscadd: Fat affinity quirk now triggers at `FATNESS_LEVEL_FATTER` instead of `FATNESS_LEVEL_FAT`
+  - qol: enables LOOC for ghosts and dead people
+  - balance: made helplessness quirks give 1-2 points less
+  - bugfix: fixes `TRAIT_FAT` being applied onto characters at the lowest weight stage
+  - bugfix: fixes the stuckage quirk applying the wrong trait
+  - bugfix: changed the way persistent and perma fat is saved, it SHOULD correctly
+      save now
+  - bugfix: fixes security modular outfits missing from their clothes vendor
+  - bugfix: fixes the white dual tone jumpsuit showing up as just the zipper in the
+      loadout menu of character creator
+  - code_imp: added `TRAIT_ROUNDED` instead of `TRAIT_FAT` to represent the lowest
+      weight stage
+  - code_imp: made the application and removal of universal gainer trait much more
+      sane
+  - rscadd: makes the maximum character size 200%
+  - rscadd: makes ghosts able to see LOOC
+  - bugfix: fixes not being able to relabel canisters as lipoifium
+  - bugfix: fixes lipoifium not having a sell price
+  - bugfix: fixes calorite not having a sell price
+  - bugfix: fixes a lot of initialization runtimes with calorite walls, floors and
+      doors
+  - bugfix: fixes exoskeleton MOD suit not helping when somebody has the helplessness
+      quirks
+  - bugfix: fixes lipoifium not showing up on gas filters
+  - rscadd: ports fat and perma fat damage
+  - rscadd: Adds calorite glass
+  - rscadd: Adds calorite windows. Any laser projectile passing through them will
+      gain some fattening power, regardless of whether it had any initially or not.
+  - rscadd: Adds calorite reflectors. Those are single side reflectors that add fattening
+      power to projectiles that bounce off of them
+  - rscadd: adds calorite glass shard. It deals fattening damage type
+  - rscadd: picking up calorite and calorite glass without gloves will cause a small
+      amount of weight gain.
+  - code_imp: makes all projectiles have the `fat_to_add` variable, set to 0 by default.
+      This allows literally every projectile to be capable of fattening someone on
+      top of doing normal damage
+  - code_imp: adds a new fattening component. Adding it onto an object causes that
+      object to fatten a person interacting with it depending on the flags. Right
+      now supports touching with bare hand, touching with items and bumping into
+  - rscadd: caps breast size at 18
+  - rscadd: minimum belly and ass size can now be 1
+  - qol: makes fat affinity less spamy
+  - bugfix: fixes breast size oscilating with the dual tone suit
+  - bugfix: fixes breasts disappearing at very large sizes
+  - bugfix: items that display weight now correctly take height into consideration
+  - rscadd: syndicate colored dual tone jumpsuit preset
+  - rscadd: GATO styled supplypods
+  - rscadd: feeding someone else will now repeat automatically, same as when you are
+      eating food yourself
+  - rscadd: shortened the time required to feed someone from 3 to 2 seconds
+  - bugfix: fixes dual tone suits disappearing at high weights and fullness stages
+  - bugfix: feeding other people now has the same fullness limit as feeding ourselves
+  - bugfix: voracious trait no longer slows down your eating speed
+  - map: Updated atmos on meta
+  - map: updated the AI/T-comms sat on meta, there is now an alternate route to the
+      T-Comms control room that doesn't take you through the beepsky/turret room.
+  - map: fixed the cabling error on meta
+  - rscadd: adds micro calorite poisoning. It is a persistent debuff applied onto
+      the character upon consuming the micro calorite reagent. It has various effects
+      based on it's value, in a range from 0 to 100. It's effects include increasing
+      weight gain and decreasing weight loss rate, random stomach gurgles, increasing
+      hunger, removal of the fat aversion trait, mood debuffs when a character is
+      below a certain fullness level, addition of the fat affinity trait, a movespeed
+      debuff, and passive gaining of real and perma fat. It's value increases and
+      decreases very slowly, likely requiring multiple rounds to take full effect.
+      Current gain rate is 10 points per hour, assuming micro calorite is inside a
+      character for the entire hour.
+  - rscadd: allows the health analyzer to report on calorite poisoning in the subject.
+      The advanced one will give slightly more detailed information
+  - rscadd: adds a severe fatness penalty pref, for more extreme effects of fattening
+      items
+  - rscadd: micro calorite will now slowly increase the value of micro calorite poisoning
+  - rscadd: fatoray shots will now reduce the value of micro calorite poisoning in
+      exchange for adding a significant amount of perma fat onto the subject
+  - balance: speeds up the rate at which lipoifium is formed
+  - bugfix: fixes a typo with the health analyzer BFI readout
+  - bugfix: makes sure we won't have problems with saving micro calorite poisoning
+  - balance: '`UNIVERSAL_GAINER` trait (obtained through helplessness quirks) now
+      locks the starting WL rate to any value BELOW 0.5'
+  - map: removes the atmos project area from moon's atmos
+  - map: compresses atmos piping on moon so that it doesn't take up as much space
+  - map: makes piping on moon atmos better
+  - map: connects some disconnected pipenets
+  - map: improves the piping leading to the turbine and engine
+  - rscadd: adds macerinic tolerance trait. Makes it so macerinic works a lot worse
+  - rscadd: large surface area trait. Prevents people from slipping and sliding if
+      they are fat enough
+  - rscadd: godhead heavy industries poster
+  - rscadd: eating calorite now makes it add lipoifier and micro calorite to the eater
+  - rscadd: calorite to the bluespace miner
+  - balance: calorite now gives 2 lipoifier and 1 MC per sheet grinded/eaten, from
+      2 lipoifier and 0.5 MC
+  - balance: reduces the maximum hunger value
+  - balance: halves the hunger gain from micro calorite poisoning
+  - spellcheck: fixes a typo in the large surface area trait
+  sheepishgoat:
+  - rscadd: Modular Jumpsuits are now available through the loadout and clothesmate
+  - rscadd: There is now a pocket crowbar in the loadout
+  - balance: The cost for the voracious quirk is reduced
+  - balance: A few research designs are now able to be printed by multiple departments
+  - rscadd: Eating makes you fat
+  - rscdel: disables dogborgs

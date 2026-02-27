@@ -8,6 +8,7 @@
 	max_integrity = 250
 	integrity_failure = 25
 	layer = OBJ_LAYER
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 10)
 
 	var/buildstacktype = /obj/item/stack/sheet/iron
 	var/buildstackamount = 3

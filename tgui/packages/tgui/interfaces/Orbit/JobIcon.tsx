@@ -12,7 +12,7 @@ const customJobs = [
   'Corrections Officer',
   'Customs Agent',
   'Engineering Guard',
-  'Nanotrasen Consultant',
+  'GATO Consultant', //GS13 EDIT
   'Orderly',
   'Science Guard',
   'Security Medic',

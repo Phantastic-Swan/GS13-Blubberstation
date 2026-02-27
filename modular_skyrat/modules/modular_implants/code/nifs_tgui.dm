@@ -101,11 +101,6 @@
 		if("toggle_blood_drain")
 			toggle_blood_drain()
 
-		// GS13 EDIT START
-		if("toggle_fatness_drain")
-			toggle_fatness_drain()
-		// GS13 EDIT END
-
 		if("change_examine_text")
 			var/text_to_use = html_encode(params["new_text"])
 			var/datum/component/nif_examine/examine_datum = linked_mob.GetComponent(/datum/component/nif_examine)

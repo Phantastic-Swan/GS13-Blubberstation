@@ -1,5 +1,6 @@
-/* GS13 EDIT
+/* GS13 EDIT remove redundant quirks
 /datum/quirk/overweight
+
 	name = "Overweight"
 	desc = "You weigh more than an average person of your size. Being fat from food still bothers you."
 	gain_text = span_notice("Your body feels heavy.")

@@ -28,6 +28,7 @@
 		"Colonist",
 		"Contractor",
 		"Civilian",
+		"Duchess",
 		"Duke",
 		"Diplomat",
 		"Entertainer",
@@ -54,6 +55,7 @@
 		"Firefighter",
 		"Life Support Technician",
 		"HVAC Engineer",
+		"Habitability Technician",
 	)
 
 /datum/job/barber
@@ -93,6 +95,7 @@
 		"Blueshield",
 		"Command Bodyguard",
 		"Executive Protection Agent",
+		"Command Security Specialist",
 		"Command Protection Officer",
 		"Henchman",
 	)
@@ -135,6 +138,7 @@
 		"Site Manager",
 		"Station Commander",
 		"Facility Director",
+		"Chief Executive Officer",
 	)
 
 /datum/job/cargo_technician
@@ -194,6 +198,7 @@
 		"Head Crystallomancer",
 		"Engineering Foreman",
 		"Head of Engineering",
+		"Chief Technical Officer",
 	)
 
 /datum/job/chief_medical_officer
@@ -266,6 +271,7 @@
 		"Cyborg",
 		"Android",
 		"Robot",
+		"Synthetic",
 	)
 
 /datum/job/detective
@@ -275,6 +281,7 @@
 		"Forensic Technician",
 		"Private Investigator",
 		"CID Officer",
+		"Criminal Investigator",
 		"Gumshoe",
 	)
 
@@ -293,17 +300,14 @@
 		"Junior Pathologist",
 	)
 
-/datum/job/engineering_guard //see orderly
-	alt_titles = list(
-		"Engineering Guard",
-	)
-
 /datum/job/geneticist
 	alt_titles = list(
 		"Geneticist",
 		"Genemancer",
 		"Gene Tailor",
 		"Mutation Researcher",
+		"Genetics Researcher",
+		"Genetic Engineer",
 	)
 
 /datum/job/head_of_personnel
@@ -322,7 +326,9 @@
 		"Chief Constable",
 		"Chief of Security",
 		"Security Commander",
+		"Chief Security Officer",
 		"Sheriff",
+		"Security Commissioner",
 	)
 
 /datum/job/janitor
@@ -358,18 +364,21 @@
 
 /datum/job/nanotrasen_consultant
 	alt_titles = list(
-		"Nanotrasen Consultant",
-		"Nanotrasen Advisor",
-		"Nanotrasen Diplomat",
+		//GS13 EDIT START (GATOFICATION)
+		"GATO Consultant",
+		"GATO Advisor",
+		"GATO Diplomat",
+		"GATO Representative",
+		"GATO Liason",
 		"Nanotrasen Representative",
-		"Nanotrasen Liason",
-		"Central Command Consultant",
-		"Central Command Advisor",
-		"Central Command Diplomat",
-		"Central Command Representative",
-		"Central Command Liason",
-		"Corporate Liason",
-		"Corporate Consultant",
+		"Nanotrasen Consultant",
+		//GS13 EDIT END
+		"Command Consultant",
+		"Command Advisor",
+		"Corporate Diplomat",
+		"Corporate Representative",
+		"Corporate Liaison",
+		"Corporate Interest Officer",
 	)
 
 /datum/job/orderly
@@ -495,6 +504,7 @@
 		"EVA Technician",
 		"Mechanic",
 		"Apprentice Engineer",
+		"Repairs Technician",
 	)
 
 /datum/job/telecomms_specialist

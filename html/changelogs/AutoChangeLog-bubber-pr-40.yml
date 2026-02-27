@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "ports back lipoifium"
-  - rscadd: "allows for calorite to be crafted through the crystalizer in atmos"

@@ -1,0 +1,5 @@
+author: "Phantastic-Swan"
+delete-after: True
+changes:
+  - rscadd: "gatoifies the main menu"
+  - rscdel: "removes the swap server and internet routing relay option from the topbar"

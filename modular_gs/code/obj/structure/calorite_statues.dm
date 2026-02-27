@@ -1,6 +1,14 @@
 /obj/structure/statue/calorite
-	icon = 'modular_gs/icons/obj/statue.dmi'
+	icon =  'modular_gs/icons/obj/structure/statue.dmi'
+	max_integrity = 200
+	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT*5)
+
+/obj/structure/statue/calorite/pillar
+	name = "Calorite pillar"
+	desc = "A support pillar made out of calorite."
+	icon_state = "pillar"
 	max_integrity = 400
+	anchored = TRUE
 	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT*5)
 
 /obj/structure/statue/calorite/fatty
@@ -85,7 +93,7 @@
 /obj/structure/statue/calorite/fatty/fattha
 	name = "statue of a sitting fatty"
 	desc = "A statue of some obscure deity, laden in calorite."
-	icon =  'modular_gs/icons/obj/structure/statues.dmi'
+	icon =  'modular_gs/icons/obj/structure/statue.dmi'
 	icon_state = "fattha_statue"
 	anchored = TRUE
 
@@ -94,8 +102,8 @@
 	desc = "A vast, sprawling monument portraying a faceless blob, packed full of calorite-laden lard. It's strangely enticing."
 	icon =  'modular_gs/icons/obj/structure/statue_64x64.dmi'
 	icon_state = "hugecalorite"
+	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT*15)
+	max_integrity = 600
 	anchored = TRUE
 	pixel_y = -16
 	pixel_x = -16
-
-

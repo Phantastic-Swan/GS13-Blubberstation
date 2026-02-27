@@ -362,7 +362,7 @@
 	if(!master_carrier)
 		current_carrier_room.master_carrier = null
 
-	var/datum/component/carrier/soulcatcher/master_soulcatcher
+	var/datum/component/carrier/soulcatcher/master_soulcatcher = master_carrier //GS13 EDIT - Fix missing code(?)
 	if(istype(master_soulcatcher))
 		data["communicate_as_parent"] = master_soulcatcher.communicate_as_parent
 

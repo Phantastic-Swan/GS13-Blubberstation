@@ -11,12 +11,12 @@
 	allow_custom = TRUE
 	products = list(
 
-	            /obj/item/food/pizza/margherita = 10,
-	            /obj/item/food/butterdog = 6,
+				/obj/item/food/pizza/margherita = 10,
+				/obj/item/food/butterdog = 6,
 				/obj/item/food/fries = 10,
-				/obj/item/food/donut = 10,
+				/obj/item/food/donut/plain = 10,
 				/obj/item/food/burrito = 8,
-	            /obj/item/food/pie/plump_pie = 4,
+				/obj/item/food/pie/plump_pie = 4,
 				/obj/item/food/cake/pound_cake = 10,
 				/obj/item/food/cake/cheese = 6,
 				/obj/item/food/cake/pumpkinspice = 3,
@@ -30,7 +30,7 @@
 				/obj/item/clothing/head/utility/chefhat = 5,
 				/obj/item/food/cookie = 10,
 				/obj/item/food/salad/fruit = 15,
-	            /obj/item/food/dough = 10
+				/obj/item/food/dough = 10
 				///obj/item/food/blueberry_gum = 5
 				)
 	premium = list(
@@ -53,15 +53,15 @@
 	product_slogans = "Meow~, time for some cola!"
 	vend_reply = "Meow~ Meow~"
 	products = list(
-	            /obj/item/reagent_containers/cup/soda_cans/cola = 10,
-	            /obj/item/reagent_containers/cup/soda_cans/dr_gibb = 10,
+				/obj/item/reagent_containers/cup/soda_cans/cola = 10,
+				/obj/item/reagent_containers/cup/soda_cans/dr_gibb = 10,
 				/obj/item/reagent_containers/cup/soda_cans/starkist = 10,
 				/obj/item/reagent_containers/cup/soda_cans/space_up = 10,
 				/obj/item/reagent_containers/cup/soda_cans/pwr_game = 10,
 				/obj/item/reagent_containers/cup/bigbottle/starkist = 6,
 				/obj/item/reagent_containers/cup/bigbottle/cola = 6,
 				/obj/item/reagent_containers/cup/bigbottle/spaceup = 6,
-	            /obj/item/reagent_containers/cup/glass/bottle/orangejuice = 10,
+				/obj/item/reagent_containers/cup/glass/bottle/orangejuice = 10,
 	            ///obj/item/reagent_containers/cup/glass/bottle/pineapplejuice = 10,
 	            ///obj/item/reagent_containers/cup/glass/bottle/strawberryjuice = 10,
 				)
@@ -131,7 +131,6 @@
 	products = list(
 				/obj/item/toy/plush/gs13/gatito = 6,
 				/obj/item/soap/gato = 6,
-				/obj/item/book/manual/gato_spacelaw = 6,
 				/obj/item/book/manual/fatty_chems = 6,
 				/obj/item/book/lorebooks/welcome_to_gato = 6,
 				/obj/item/storage/fancy/cigarettes/gatito = 8,

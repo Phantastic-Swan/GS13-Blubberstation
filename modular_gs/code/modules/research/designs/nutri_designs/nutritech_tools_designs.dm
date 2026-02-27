@@ -4,7 +4,7 @@
 	id = "bluespace_belt"
 	build_type = PROTOLATHE
 	construction_time = 100
-	materials = list(/datum/material/silver = 200, /datum/material/gold = 200, /datum/material/bluespace = 100, )
+	materials = list(/datum/material/silver = SHEET_MATERIAL_AMOUNT * 2 / 10, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2 / 10, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT / 10, )
 	build_path = /obj/item/bluespace_belt
 	category = list(
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL
@@ -17,8 +17,8 @@
 	id = "primitive_bluespace_belt"
 	build_type = PROTOLATHE
 	construction_time = 100
-	materials = list(/datum/material/iron = 200, /datum/material/silver = 100, )
-	build_path = /obj/item/bluespace_belt/primitive
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2 / 10, /datum/material/silver = SHEET_MATERIAL_AMOUNT / 10, )
+	build_path = /obj/item/bluespace_belt/primitive/empty
 	category = list(
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL
 	)

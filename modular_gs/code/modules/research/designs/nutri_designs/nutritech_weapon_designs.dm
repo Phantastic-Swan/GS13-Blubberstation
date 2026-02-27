@@ -2,7 +2,7 @@
 	name = "Basic Fatoray"
 	id = "fatoray_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 400, /datum/material/glass = 300, /datum/material/calorite = 500)
+	materials = list(/datum/material/iron = 40, /datum/material/glass = 30, /datum/material/calorite = 50)
 	construction_time = 75
 	build_path = /obj/item/gun/energy/fatoray/weak
 	category = list(
@@ -14,7 +14,7 @@
 	name = "Basic Cannonshot Fatoray"
 	id = "fatoray_cannon_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1000)
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 40, /datum/material/calorite = 100)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/fatoray/cannon_weak
 	category = list(
@@ -26,7 +26,7 @@
 	name = "AL-T-Ray: Metabolism"
 	id = "alter_ray_metabolism"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1300)
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 40, /datum/material/calorite = 130)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/gainrate
 	category = list(
@@ -39,7 +39,7 @@
 	name = "AL-T-Ray: Reverser"
 	id = "alter_ray_reverser"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1300)
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 40, /datum/material/calorite = 130)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/noloss
 	category = list(
@@ -76,3 +76,15 @@
 // 	if (.)
 // 		var/obj/item/gun/energy/fatoray/weak/cyborg/S = locate() in R.module
 // 		R.module.remove_module(S, TRUE)
+
+/datum/design/caloray
+	name = "Caloray"
+	id = "caloray"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 40, /datum/material/calorite = 80)
+	construction_time = 200
+	build_path = /obj/item/gun/medbeam/caloray
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY

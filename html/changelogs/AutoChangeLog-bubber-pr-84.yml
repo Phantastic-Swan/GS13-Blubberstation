@@ -1,6 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - map: "Updated atmos on meta"
-  - map: "updated the AI/T-comms sat on meta, there is now an alternate route to the T-Comms control room that doesn't take you through the beepsky/turret room."
-  - map: "fixed the cabling error on meta"

@@ -13,6 +13,7 @@
 	glass_type = /obj/item/stack/sheet/calorite_glass
 	rad_insulation = RAD_MEDIUM_INSULATION
 	glass_material_datum = /datum/material/alloy/calorite_glass
+	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/calorite/Initialize(mapload, direct)
 	// fattening amount half that of a calorite wall - because you can push it,
@@ -30,7 +31,7 @@
 	. = ..()
 	if (!.)
 		return
-	
+
 	if (istype(mover, /obj/projectile/beam))
 		var/obj/projectile/laser = mover
 		var/fat_power_to_add = max(laser.fat_added + 25, laser.fat_added * 1.1)
@@ -39,6 +40,10 @@
 
 /obj/structure/window/calorite/unanchored
 	anchored = FALSE
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/calorite/spawner, 0)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/calorite/unanchored/spawner, 0)
+
 
 /obj/structure/window/calorite/fulltile
 	name = "full tile calorite window"
@@ -54,6 +59,7 @@
 	smoothing_groups = SMOOTH_GROUP_WINDOW_FULLTILE
 	glass_amount = 2
 	max_integrity = 60
+	custom_materials = list(/datum/material/calorite = 2 * SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT)
 
 /obj/structure/window/calorite/fulltile/unanchored
 	anchored = FALSE

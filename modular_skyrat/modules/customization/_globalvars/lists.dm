@@ -19,6 +19,9 @@ GLOBAL_LIST_INIT(breast_size_translation, list(
 	"14" = BREAST_SIZE_N,
 	"15" = BREAST_SIZE_O,
 	"16" = BREAST_SIZE_P,
+	"17" = BREAST_SIZE_Q,
+	"18" = BREAST_SIZE_R,
+	"19" = BREAST_SIZE_S,
 	))
 
 GLOBAL_LIST_INIT(breast_size_to_number, list(
@@ -39,6 +42,9 @@ GLOBAL_LIST_INIT(breast_size_to_number, list(
 	BREAST_SIZE_N = 14,
 	BREAST_SIZE_O = 15,
 	BREAST_SIZE_P = 16,
+	BREAST_SIZE_Q = 17,
+	BREAST_SIZE_R = 18,
+	BREAST_SIZE_S = 19,
 	))
 
 GLOBAL_LIST_INIT(balls_size_translation, list(
@@ -109,4 +115,17 @@ GLOBAL_LIST_INIT(color_list_ghoul, list( \
 	"Rotting Tan" = "c4af7c", \
 	"Plutonium Blue" = "a5cfcc", \
 	"Marked Red" = "f05b68" \
+))
+
+//blood colours
+GLOBAL_LIST_INIT(custom_blood_colors, list(
+	"Red/Human" = BLOOD_COLOR_RED,
+	"D.Green/Lizard" = BLOOD_COLOR_LIZARD,
+	"Green" = BLOOD_COLOR_GREEN,
+	"Lime/Xeno" = BLOOD_COLOR_XENO,
+	"Violet/Avali" = BLOOD_COLOR_VIOLET,
+	"Cyan/Vox" = BLOOD_COLOR_CYAN,
+	"Teal/Skrell" = BLOOD_COLOR_COPPER,
+	"White/Nanites" = BLOOD_COLOR_NANITE_SLURRY,
+	"Black" = BLOOD_COLOR_BLACK,
 ))

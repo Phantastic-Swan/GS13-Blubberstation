@@ -1,0 +1,10 @@
+author: "evilew"
+delete-after: True
+changes:
+  - map: "added the Blueberry Shrine lavaland ruin: doesn't have any interesting loot atm, but might as well add it"
+  - rscadd: "made a proper variant of calorite with vulcanic turf"
+  - map: "fixed some guaranteed calorite ore spawns having an asteroid turf rather than vulcanic turfs"
+  - map: "removed Xenoarch Digger machine from the outpost (it was OP to have it at start)"
+  - bugfix: "new belchtrap sprite by @cowlamari"
+  - bugfix: "new donut factory sign by @cowlamari"
+  - map: "added aforementioned sign to Xenoarch donut factory (along with more donuts!!)"

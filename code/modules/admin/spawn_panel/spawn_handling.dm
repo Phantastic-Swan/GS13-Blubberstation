@@ -104,7 +104,7 @@
 
 	var/use_droppod = where_target_type == WHERE_SUPPLY_BELOW_MOB || where_target_type == WHERE_TARGETED_LOCATION_POD
 
-	var/obj/structure/closet/supplypod/gato/pod	// GS13 EDIT - changes default pod to GATO
+	var/obj/structure/closet/supplypod/gato/pod	// GS13 EDIT - changes default pod to GATO	var/obj/structure/closet/supplypod/centcompod/pod
 	if(use_droppod)
 		pod = new()
 

@@ -382,7 +382,7 @@ GLOBAL_VAR_INIT(DNR_trait_overlay, generate_DNR_trait_overlay())
 	mob_trait = TRAIT_SENSITIVESNOUT
 	icon = FA_ICON_FINGERPRINT
 
-/*
+/* GS13 EDIT - Remove Overweight Quirk
 /datum/quirk/overweight
 	name = "Overweight"
 	desc = "You weigh more than an average person at your size, you've gotten used to it by now."
@@ -409,5 +409,4 @@ GLOBAL_VAR_INIT(DNR_trait_overlay, generate_DNR_trait_overlay())
 		mood_change = 0 // They are probably used to it, no reason to be viscerally upset about it.
 		description = "<b>I'm fat.</b>"
 	return TRUE
-
 */

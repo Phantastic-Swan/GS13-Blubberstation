@@ -80,7 +80,7 @@
 	return
 
 /datum/preference/toggle/blueberry_inflation
-	category = WG_PREFERENCES
+	category = BLUEBERRY_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "blueberry_inflation"
 	default_value = FALSE

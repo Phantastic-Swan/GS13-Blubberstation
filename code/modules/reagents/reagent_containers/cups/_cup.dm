@@ -23,10 +23,13 @@
 	var/reagent_consumption_method = INGEST
 	///What sound does our consumption play on consuming from the container?
 	var/consumption_sound = 'sound/items/drink.ogg'
+	///Whether to allow heating up the contents with a source of flame.
+	var/heatable = TRUE
 
 /obj/item/reagent_containers/cup/Initialize(mapload, vol)
 	. = ..()
-	AddElement(/datum/element/reagents_item_heatable)
+	if(heatable)
+		AddElement(/datum/element/reagents_item_heatable)
 
 /obj/item/reagent_containers/cup/examine(mob/user)
 	. = ..()
@@ -69,6 +72,14 @@
 	if(!canconsume(target_mob, user))
 		return ITEM_INTERACT_BLOCKING
 
+	//GS13 EDIT - Bluespace collar addition and interception
+	var/obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter/bs_collar_trans = 0
+	if(istype(target_mob, /mob/living/carbon/human))
+		var/mob/living/carbon/human/human_eater = target_mob
+		bs_collar_trans = human_eater.wear_neck
+	//GS13 END EDIT
+
+	user.changeNext_move(CLICK_CD_MELEE)
 	if(target_mob != user)
 		target_mob.visible_message(
 			span_danger("[user] attempts to feed [target_mob] something from [src]."),
@@ -84,27 +95,36 @@
 		)
 		log_combat(user, target_mob, "fed", reagents.get_reagent_log_string())
 	else
-		to_chat(user, span_notice("You swallow a gulp of [src]."))
+		//GS13 EDIT - Bluespace collar addition and interception
+		if (istype(bs_collar_trans, /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter) && bs_collar_trans.islinked())
+			to_chat(user, span_notice("You effortlessly swallow a gulp of [src]. It feels like you haven't drank anything at all."))
+		else
+			to_chat(user, span_notice("You swallow a gulp of [src]."))
+		//GS13 END EDIT
 
 	. = ITEM_INTERACT_SUCCESS
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, target_mob, user)
 	SEND_SIGNAL(target_mob, COMSIG_GLASS_DRANK, src, user) // SKYRAT EDIT ADDITION - Hemophages can't casually drink what's not going to regenerate their blood
 	var/fraction = min(gulp_size/reagents.total_volume, 1)
-	reagents.trans_to(target_mob, gulp_size, transferred_by = user, methods = reagent_consumption_method)
-	checkLiked(fraction, target_mob)
-	playsound(target_mob.loc, consumption_sound, rand(10,50), TRUE)
-	if(!iscarbon(target_mob))
-		return .
-	var/mob/living/carbon/carbon_drinker = target_mob
-	var/list/diseases = carbon_drinker.get_static_viruses()
-	if(!LAZYLEN(diseases))
-		return .
-	var/list/datum/disease/diseases_to_add = list()
-	for(var/datum/disease/malady as anything in diseases)
-		if(malady.spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS)
-			diseases_to_add += malady
-	if(LAZYLEN(diseases_to_add))
-		AddComponent(/datum/component/infective, diseases_to_add)
+	//GS13 EDIT - Bluespace collar addition and interception
+	if (!(istype(bs_collar_trans, /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter) && bs_collar_trans.transpose_container(src, target_mob, user)))
+		// All code below up until the GS13 END EDIT tag is original code, just indented.
+		reagents.trans_to(target_mob, gulp_size, transferred_by = user, methods = reagent_consumption_method)
+		checkLiked(fraction, target_mob)
+		playsound(target_mob.loc, consumption_sound, rand(10,50), TRUE)
+		if(!iscarbon(target_mob))
+			return .
+		var/mob/living/carbon/carbon_drinker = target_mob
+		var/list/diseases = carbon_drinker.get_static_viruses()
+		if(!LAZYLEN(diseases))
+			return .
+		var/list/datum/disease/diseases_to_add = list()
+		for(var/datum/disease/malady as anything in diseases)
+			if(malady.spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS)
+				diseases_to_add += malady
+		if(LAZYLEN(diseases_to_add))
+			AddComponent(/datum/component/infective, diseases_to_add)
+	//GS13 END EDIT
 	return .
 
 /obj/item/reagent_containers/cup/interact_with_atom(atom/target, mob/living/user, list/modifiers)
@@ -211,6 +231,7 @@
 	name = "x-large beaker"
 	desc = "An extra-large beaker. Can hold up to 120 units."
 	icon_state = "beakerwhite"
+	inhand_icon_state = "beaker_white"
 	custom_materials = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5)
 	volume = 120
 	amount_per_transfer_from_this = 10
@@ -221,6 +242,7 @@
 	name = "metamaterial beaker"
 	desc = "A large beaker. Can hold up to 180 units."
 	icon_state = "beakergold"
+	inhand_icon_state = "beaker_gold"
 	custom_materials = list(/datum/material/glass=SHEET_MATERIAL_AMOUNT*1.25, /datum/material/plastic=SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/gold=HALF_SHEET_MATERIAL_AMOUNT, /datum/material/titanium=HALF_SHEET_MATERIAL_AMOUNT)
 	volume = 180
 	amount_per_transfer_from_this = 10
@@ -232,6 +254,7 @@
 	desc = "A cryostasis beaker that allows for chemical storage without \
 		reactions. Can hold up to 50 units."
 	icon_state = "beakernoreact"
+	inhand_icon_state = "beaker_cryo"
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT * 1.5)
 	initial_reagent_flags = OPENCONTAINER | NO_REACT
 	volume = 50
@@ -243,6 +266,7 @@
 		and Element Cuban combined with the Compound Pete. Can hold up to \
 		300 units."
 	icon_state = "beakerbluespace"
+	inhand_icon_state = "beaker_bluespace"
 	custom_materials = list(/datum/material/glass =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/plasma =SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/diamond =HALF_SHEET_MATERIAL_AMOUNT, /datum/material/bluespace =HALF_SHEET_MATERIAL_AMOUNT)
 	volume = 300
 	amount_per_transfer_from_this = 10
@@ -311,7 +335,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
 	fill_icon_state = "bucket"
 	fill_icon_thresholds = list(50, 90)
-	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT * 2)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 2)
 	w_class = WEIGHT_CLASS_NORMAL
 	amount_per_transfer_from_this = 20
 	possible_transfer_amounts = list(5,10,15,20,25,30,50,100) //SKYRAT EDIT CHANGE
@@ -331,6 +355,10 @@
 		ITEM_SLOT_DEX_STORAGE
 	)
 
+/obj/item/reagent_containers/cup/bucket/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/cuffable_item)
+
 /datum/armor/cup_bucket
 	melee = 10
 	fire = 75
@@ -340,7 +368,7 @@
 	name = "wooden bucket"
 	icon_state = "woodbucket"
 	inhand_icon_state = "woodbucket"
-	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 2)
+	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 3)
 	resistance_flags = FLAMMABLE
 	armor_type = /datum/armor/bucket_wooden
 
@@ -412,6 +440,7 @@
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "pestle"
 	force = 7
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT)
 
 /obj/item/reagent_containers/cup/mortar
 	name = "mortar"
@@ -421,7 +450,7 @@
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50, 100)
 	volume = 100
-	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT)
+	custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 3)
 	resistance_flags = FLAMMABLE
 	initial_reagent_flags = OPENCONTAINER
 	var/obj/item/grinded
@@ -442,7 +471,7 @@
 		if(!grinded)
 			to_chat(user, span_warning("There is nothing to grind!"))
 			return ITEM_INTERACT_BLOCKING
-		if(user.getStaminaLoss() > 50)
+		if(user.get_stamina_loss() > 50)
 			to_chat(user, span_warning("You are too tired to work!"))
 			return ITEM_INTERACT_BLOCKING
 		var/list/choose_options = list(
@@ -455,7 +484,7 @@
 		to_chat(user, span_notice("You start grinding..."))
 		if(!do_after(user, 2.5 SECONDS, target = src))
 			return ITEM_INTERACT_BLOCKING
-		user.adjustStaminaLoss(40)
+		user.adjust_stamina_loss(40)
 		switch(picked_option)
 			if("Juice")
 				return juice_item(grinded, user) ? ITEM_INTERACT_BLOCKING : ITEM_INTERACT_SUCCESS

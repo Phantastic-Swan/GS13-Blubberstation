@@ -53,15 +53,13 @@
 		qdel(source.GetComponent(/datum/component/fattening))
 		return ..()
 
-/obj/item/stack/ore/calorite //GS13
+/obj/item/stack/ore/calorite
 	name = "calorite ore"
 	singular_name = "calorite ore chunk"
 	icon = 'modular_gs/icons/obj/mining.dmi'
 	icon_state = "calorite ore"
-	//inhand_icon_state = "calorite ore"
 	singular_name = "Calorite ore chunk"
 	points = 40
-	// custom_materials = list(/datum/material/calorite=MINERAL_MATERIAL_AMOUNT)
 	mats_per_unit = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/calorite
 	mine_experience = 20
@@ -72,12 +70,8 @@
 	name = "calorite"
 	icon = 'modular_gs/icons/obj/stack_objects.dmi'
 	icon_state = "sheet-calorite"
-	//inhand_icon_state = "sheet-calorite"
 	singular_name = "calorite sheet"
-	// novariants = FALSE
-	grind_results = list(/datum/reagent/consumable/lipoifier = 2, /datum/reagent/micro_calorite = 0.5)
-	// point_value = 40
-	// custom_materials = list(/datum/material/calorite=MINERAL_MATERIAL_AMOUNT)
+	grind_results = list(/datum/reagent/consumable/lipoifier = 2, /datum/reagent/micro_calorite = 1)
 	mats_per_unit = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/calorite
 	material_type = /datum/material/calorite
@@ -109,15 +103,21 @@
 	material_id = /datum/material/calorite
 	message = "cm3 of calorite"
 
-/turf/closed/mineral/calorite //GS13
+/turf/closed/mineral/calorite
 	mineralType = /obj/item/stack/ore/calorite
 	scan_state = "rock_Calorite"
 
+/turf/closed/mineral/calorite/volcanic //for mapping
+	mineralType = /obj/item/stack/ore/calorite
+	scan_state = "rock_Calorite"
+	turf_type = /turf/open/misc/asteroid/basalt/lava_land_surface
+	baseturfs = /turf/open/misc/asteroid/basalt/lava_land_surface
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
 GLOBAL_LIST_INIT(calorite_recipes, list ( \
 	new/datum/stack_recipe("calorite tile", /obj/item/stack/tile/mineral/calorite, 1, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
-	/*new/datum/stack_recipe("Calorite Ingots", /obj/item/ingot/calorite, time = 30), \*/
 	new/datum/stack_recipe("Fatty statue", /obj/structure/statue/calorite/fatty, 5, time = 10 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ON_SOLID_GROUND | CRAFT_ONE_PER_TURF),\
-	new/datum/stack_recipe("Calorite doors", /obj/structure/mineral_door/calorite, 5, time = 5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND | CRAFT_APPLIES_MATS, category = CAT_DOORS),\
+	new/datum/stack_recipe("Calorite doors", /obj/structure/mineral_door/calorite, 5, time = 5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_DOORS),\
 	))
 
 /obj/item/ingot/calorite

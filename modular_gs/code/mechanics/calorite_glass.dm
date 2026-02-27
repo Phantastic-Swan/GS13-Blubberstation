@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(calorite_glass_recipes, list ( \
 	lefthand_file = 'modular_gs/icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'modular_gs/icons/mob/inhands/melee_righthand.dmi'
 	// inhand_icon_state = "shard-calorite"
-	custom_materials = list(/datum/material/alloy/calorite_glass = SHEET_MATERIAL_AMOUNT)
+	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT)
 	// icon_prefix = "calorite"
 	weld_material = /obj/item/stack/sheet/calorite_glass
 	shiv_type = null

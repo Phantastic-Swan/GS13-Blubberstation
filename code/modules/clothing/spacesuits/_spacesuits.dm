@@ -56,7 +56,7 @@
 	icon = 'icons/obj/clothing/suits/spacesuit.dmi'
 	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
-	worn_icon = 'icons/mob/clothing/suits/spacesuit.dmi'
+	worn_icon = 'modular_gs/icons/mob/clothing/suits/spacesuit.dmi'		// GS13 EDIT added "modular_gs/" to the beggining of path
 	inhand_icon_state = "s_suit"
 	w_class = WEIGHT_CLASS_BULKY
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
@@ -64,7 +64,7 @@
 	allowed = list(
 		/obj/item/flashlight,
 		/obj/item/tank/internals,
-		/obj/item/tank/jetpack/oxygen/captain,
+		/obj/item/tank/jetpack/captain,
 		)
 	slowdown = 1
 	armor_type = /datum/armor/suit_space

@@ -69,6 +69,11 @@
 	///You can use this var to tone down the strength of the highlight for less shiny types of plastic.
 	var/highlight_strenght = 1.0
 
+/obj/item/reagent_containers/cup/jerrycan/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/cuffable_item)
+	update_appearance()
+
 /obj/item/reagent_containers/cup/jerrycan/update_overlays()
 	. = ..()
 
@@ -92,10 +97,6 @@
 		. += inhand_reagent_filling
 	if(cap_type)
 		. += mutable_appearance(icon_file, "[base_icon_state]_cap_[cap_type]")
-
-/obj/item/reagent_containers/cup/jerrycan/Initialize(mapload)
-	. = ..()
-	update_appearance()
 
 /obj/item/reagent_containers/cup/jerrycan/opaque
 	fill_icon_thresholds = null
@@ -164,9 +165,8 @@
 
 /obj/item/reagent_containers/cup/jerrycan/milk
 	name = "milk jug"
-	icon = 'modular_gs/icons/obj/medical.dmi'
-	label_type = LABEL_GT //GS13 - NT to GATO
-	cap_type = CAP_BLACK //GS13 - NT to GATO
+	label_type = LABEL_GT //GS13 - NT to GATO	label_type = LABEL_NT_MINI
+	cap_type = CAP_BLACK //GS13 - NT to GATO	cap_type = CAP_BLUE
 	desc = "A jug of most wholesome milk."
 	list_reagents = list(/datum/reagent/consumable/milk = 200)
 
@@ -176,8 +176,6 @@
 #undef LABEL_INFLAMMABLE
 #undef LABEL_NT
 #undef LABEL_NT_MINI
-#undef LABEL_GT
-#undef LABEL_GT_MINI
 #undef LABEL_SUSPICIOUS
 #undef LABEL_SUSPICIOUS_BLACK
 #undef LABEL_SUSPICIOUS_MINI
@@ -191,3 +189,5 @@
 #undef CAP_RED
 #undef CAP_GREEN
 #undef CAP_BLUE
+#undef LABEL_GT
+#undef LABEL_GT_MINI

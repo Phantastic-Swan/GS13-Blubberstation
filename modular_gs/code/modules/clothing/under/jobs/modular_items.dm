@@ -17,7 +17,7 @@
 
 
 // Called by handle_fatness, this is called periodically to tell all items to check for sprites and, if needed, build new ones
-/mob/living/carbon/proc/handle_modular_items(adjustment_amount, type_of_fattening = FATTENING_TYPE_ITEM)
+/mob/living/carbon/proc/handle_modular_items()
 	for(var/obj/item/item in modular_items)
 		item.update_modular_overlays(src)
 

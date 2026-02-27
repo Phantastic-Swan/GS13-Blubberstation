@@ -12,7 +12,7 @@
 	var/crunch_value = 0
 
 /obj/item/stack/attack(mob/living/cruncher, mob/living/user)
-	if(HAS_TRAIT(cruncher, TRAIT_METAL_CRUNCHER) || istype(src, /obj/item/stack/sheet/mineral/calorite))
+	if(HAS_TRAIT(cruncher, TRAIT_METAL_CRUNCHER))
 		if(crunch_value > 0)
 			if(cruncher == user)
 				user.visible_message("<span class='notice'>[user] crunches on some of [src].</span>", "<span class='notice'>You crunch on some of [src].</span>")
@@ -25,6 +25,19 @@
 			//	cruncher.changeNext_move(CLICK_CD_MELEE * 0.5)
 		return
 	. = ..()
+
+/obj/item/stack/sheet/mineral/calorite/attack(mob/living/cruncher, mob/living/user)
+	var/obj/item/organ/stomach/stomach = cruncher.get_organ_slot(ORGAN_SLOT_STOMACH)
+	stomach.reagents.add_reagent(/datum/reagent/micro_calorite, 1)
+	stomach.reagents.add_reagent(/datum/reagent/consumable/lipoifier, 2)
+	
+	if(cruncher == user)
+		user.visible_message("<span class='notice'>[user] crunches on some of [src].</span>", "<span class='notice'>You crunch on some of [src].</span>")
+	else
+		cruncher.visible_message("<span class='danger'>[user] attempts to feed some of [src] to [cruncher].</span>", "<span class='userdanger'>[user] attempts to feed some of [src] to [cruncher].</span>")
+	playsound(cruncher,'sound/items/eatfood.ogg', rand(10,50), 1)
+	use(1)
+	cruncher.nutrition += crunch_value
 
 /obj/item/stack/cable_coil
 	crunch_value = 2

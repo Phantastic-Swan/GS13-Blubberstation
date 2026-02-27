@@ -395,10 +395,6 @@
 /obj/structure/flora/bush/grassy,
 /turf/open/floor/grass,
 /area/station/asteroid)
-"Vh" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/grass,
-/area/station/asteroid)
 "Vs" = (
 /turf/open/misc/asteroid,
 /area/station/asteroid)
@@ -1299,7 +1295,7 @@ nm
 nm
 cn
 vr
-Vh
+tD
 tD
 tD
 tD

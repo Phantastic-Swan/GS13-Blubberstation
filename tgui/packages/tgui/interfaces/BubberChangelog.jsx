@@ -118,13 +118,15 @@ const DateDropdown = (props) => {
 };
 
 const ChangelogList = (props) => {
-  const { contents, bubberContents } = props;
+  const { contents, bubberContents, gs13Contents } = props;
 
   const combinedDates = {};
   Object.assign(
     combinedDates,
     typeof contents === 'object' ? contents : {},
     typeof bubberContents === 'object' ? bubberContents : {},
+    //GS13 EDIT
+    typeof gs13Contents === 'object' ? gs13Contents : {},
   );
 
   if (Object.keys(combinedDates).length < 1) {
@@ -152,6 +154,13 @@ const ChangelogList = (props) => {
             <Section mt={-1}>
               {Object.entries(contents[date]).map(([name, changes]) => (
                 <ChangelogEntry key={name} author={name} changes={changes} />
+              ))}
+            </Section>
+          )}
+          {gs13Contents[date] && (
+            <Section mt={-1}>
+              {Object.entries(gs13Contents[date]).map(([name, changes]) => (
+                <GS13ChangelogEntry key={name} author={name} changes={changes} />
               ))}
             </Section>
           )}
@@ -209,6 +218,57 @@ const BubberChangelogEntry = (props) => {
   );
 };
 
+//GS13 EDIT
+const GS13ChangelogEntry = (props) => {
+  const { author, changes } = props;
+
+  return (
+    <Stack.Item mb={-1} pb={1} key={author}>
+      <Box>
+        <h4>
+          <Image verticalAlign="bottom" src={resolveAsset('gs_16.png')} />{' '}
+          {author} changed:
+        </h4>
+      </Box>
+      <Box ml={3} mt={-0.2}>
+        <Table>
+          {changes.map((change) => {
+            const changeType = Object.keys(change)[0];
+            return (
+              <Table.Row key={changeType + change[changeType]}>
+                <Table.Cell
+                  className={classes([
+                    'Changelog__Cell',
+                    'Changelog__Cell--Icon',
+                  ])}
+                >
+                  <Icon
+                    color={
+                      icons[changeType]
+                        ? icons[changeType].color
+                        : icons.unknown.color
+                    }
+                    name={
+                      icons[changeType]
+                        ? icons[changeType].icon
+                        : icons.unknown.icon
+                    }
+                    verticalAlign="middle"
+                  />
+                </Table.Cell>
+                <Table.Cell className="Changelog__Cell">
+                  {change[changeType]}
+                </Table.Cell>
+              </Table.Row>
+            );
+          })}
+        </Table>
+      </Box>
+    </Stack.Item>
+  );
+};
+//GS13 EDIT - END
+
 const ChangelogEntry = (props) => {
   const { author, changes } = props;
 
@@ -263,12 +323,16 @@ export const BubberChangelog = (props) => {
   const { dates } = data;
   const [contents, setContents] = useState('');
   const [bubberContents, setBubberContents] = useState('');
+  //GS13 EDIT
+  const [gs13Contents, setGS13Contents] = useState('');
   const [selectedDate, setSelectedDate] = useState(dates[0]);
   const [selectedDateIndex, setSelectedDateIndex] = useState(0);
 
   useEffect(() => {
     setContents('Loading changelog data...');
     setBubberContents('Loading changelog data...');
+    //GS13 EDIT
+    setGS13Contents('Loading changelog data...');
     getData(selectedDate);
   }, [selectedDate]);
 
@@ -286,17 +350,27 @@ export const BubberChangelog = (props) => {
     Promise.all([
       fetch(resolveAsset(`${date}.yml`)),
       fetch(resolveAsset(`bubber_${date}.yml`)),
+      //GS13 EDIT
+      fetch(resolveAsset(`gs13_${date}.yml`)),
     ]).then(async (links) => {
       const result = await links[0].text();
       const bubberResult = await links[1].text();
+      //GS13 EDIT
+      const gs13Result = await links[2].text();
 
-      if (links[0].status !== 200 && links[1].status !== 200) {
+      //GS13 EDIT
+      if (links[0].status !== 200 && links[1].status !== 200 && links[2].status !== 200) {
         const timeout = 50 + attemptNumber * 50;
 
         setContents(`Loading changelog data${'.'.repeat(attemptNumber + 3)}`);
         setBubberContents(
           `Loading changelog data${'.'.repeat(attemptNumber + 3)}`,
         );
+        //GS13 EDIT
+        setGS13Contents(
+          `Loading changelog data${'.'.repeat(attemptNumber + 3)}`,
+        );
+        //GS13 EDIT
         setTimeout(() => {
           getData(date, attemptNumber + 1);
         }, timeout);
@@ -309,21 +383,37 @@ export const BubberChangelog = (props) => {
             yaml.load(bubberResult, { schema: yaml.CORE_SCHEMA }),
           );
         }
+        //GS13 EDIT
+        if (links[2].status === 200) {
+          setGS13Contents(
+            yaml.load(gs13Result, { schema: yaml.CORE_SCHEMA }),
+          );
+        }
       }
     });
   }
 
   const header = (
+    //GS13 EDIT
     <Section>
-      <h1>Bubberstation 13</h1>
+      <h1>Gain Station 13</h1>
       <p>
         <b>Thanks to: </b>
-        /tg/station 13, Effigy, Stellar Haven, Baystation 12, /vg/station,
+        Bubberstation, /tg/station 13, Effigy, Stellar Haven, Baystation 12, /vg/station,
         NTstation, CDK Station devs, FacepunchStation, GoonStation devs, the
         original Space Station 13 developers, and the countless others who have
         contributed to the game.
       </p>
       <p>
+        {'Our GitHub repository is available '}
+        <a href="https://github.com/sheepishgoat/GS13-Blubberstation">here</a>
+        .
+      </p>
+      <p>
+        {'You can also check out our upstream: '}
+        <a href="https://github.com/Bubberstation/Bubberstation">Bubberstation</a>
+      </p>
+      {/*<p>
         {'Current organization members can be found '}
         <a href="https://github.com/orgs/Bubberstation/people">here</a>
         {', recent GitHub contributors can be found '}
@@ -336,6 +426,8 @@ export const BubberChangelog = (props) => {
         {'You can also join our discord '}
         <a href="https://discord.com/invite/AvjrTqnqEx">here</a>!
       </p>
+      */}
+
       <DateDropdown
         dates={dates}
         selectedDate={selectedDate}
@@ -473,7 +565,7 @@ export const BubberChangelog = (props) => {
     <Window title="Changelog" width={730} height={700}>
       <Window.Content scrollable>
         {header}
-        <ChangelogList contents={contents} bubberContents={bubberContents} />
+        <ChangelogList contents={contents} bubberContents={bubberContents} gs13Contents = {gs13Contents}/>
         {footer}
       </Window.Content>
     </Window>

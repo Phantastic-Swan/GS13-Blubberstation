@@ -529,10 +529,17 @@ export function MainPage(props: MainPageProps) {
   const WGPreferences = {
     ...data.character_preferences.wg_prefs,
   };
+  const HelplessnessPreferences = {
+    ...data.character_preferences.helplessness_prefs,
+  };
+  const BlueberryPreferences = {
+    ...data.character_preferences.blueberry_prefs,
+  };
   const GSExaminePreferences = {
     ...data.character_preferences.gs13_examine_prefs,
   };
   // GS13 END EDIT
+
   // BUBBER EDIT ADDITION BEGIN: SWAPPABLE PREF MENUS
   enum PrefPage {
     Visual, // The visual parts
@@ -545,6 +552,8 @@ export function MainPage(props: MainPageProps) {
 
   let prefPageContents;
   let BFI_stages; // GS13 EDIT
+  let helplessness_contents; // GS13 EDIT
+  let blueberry_contents; // GS13 EDIT
   switch (currentPrefPage) {
     case PrefPage.Visual:
       prefPageContents = (
@@ -575,6 +584,15 @@ export function MainPage(props: MainPageProps) {
     // GS13 EDIT
     case PrefPage.WGprefs:
       prefPageContents = (
+        <Section>
+        <b>Weight gain preferences</b>
+        <Divider />
+        <BlockQuote>
+          These preferences will allow you to customize the ways in which you 
+          gain weight, as well as the speed at which you gain/lose it. Here 
+          you can also control whether you want to participate in more extreme 
+          aspects of gaining weight.
+        </BlockQuote>
         <PreferenceList
           randomizations={getRandomization(
             WGPreferences,
@@ -584,17 +602,10 @@ export function MainPage(props: MainPageProps) {
           preferences={WGPreferences}
           maxHeight="auto"
         />
+        </Section>
       );
       BFI_stages = (
         <Section>
-          <BlockQuote>
-            These preferences will allow you to customize how weight gain or
-            other expansion affects you, but make sure to customize it
-            responsibly! They might provide a serious disadvantage once they
-            trigger. If you're playing an important role, try to prioritize
-            roleplay over fetish content.
-          </BlockQuote>
-          <Divider />
           <b>Weight Stages (in BFI):</b>
           <br />
           <br />
@@ -612,9 +623,57 @@ export function MainPage(props: MainPageProps) {
           <br />
         </Section>
       );
+      helplessness_contents = (
+        <Section>
+        <b>Helplessness preferences</b>
+        <Divider />
+        <BlockQuote>
+          These preferences will allow you to customize how weight gain or
+          other expansion affects you, but make sure to customize it
+          responsibly! They might provide a serious disadvantage once they
+          trigger. If you're playing an important role, try to prioritize
+          roleplay over fetish content. 0 disables them.
+        </BlockQuote>
+        <PreferenceList
+          randomizations={getRandomization(
+            HelplessnessPreferences,
+            serverData,
+            randomBodyEnabled,
+          )}
+          preferences={HelplessnessPreferences}
+          maxHeight="auto"
+        />
+        </Section>
+      );
+      blueberry_contents = (
+        <Section>
+        <b>Blueberry preferences</b>
+        <Divider />
+        <BlockQuote>
+          These preferences will allow you to customize whether and how 
+          blueberry inflation mechanics will affect you.
+        </BlockQuote>
+        <PreferenceList
+          randomizations={getRandomization(
+            BlueberryPreferences,
+            serverData,
+            randomBodyEnabled,
+          )}
+          preferences={BlueberryPreferences}
+          maxHeight="auto"
+        />
+        </Section>
+      );
       break;
     case PrefPage.GSExaminePrefs:
       prefPageContents = (
+        <Section>
+        <BlockQuote>
+          These preferences will allow you to customize the various flavor 
+          texts displayed upon examination depending on your weight/muscle 
+          stage. These can be at most 300 characters long. Leaving them blank 
+          will make you use the default flavor texts.
+        </BlockQuote>
         <PreferenceList
           randomizations={getRandomization(
             GSExaminePreferences,
@@ -624,6 +683,7 @@ export function MainPage(props: MainPageProps) {
           preferences={GSExaminePreferences}
           maxHeight="auto"
         />
+        </Section>
       );
       break;
     // GS13 END EDIT
@@ -794,7 +854,7 @@ export function MainPage(props: MainPageProps) {
                   page={PrefPage.GSExaminePrefs}
                   setPage={setCurrentPrefPage}
                 >
-                  GS13 Examines
+                  Weight Examines
                 </PageButton>
               </Stack.Item>
               <Stack.Item grow={2}>
@@ -810,8 +870,10 @@ export function MainPage(props: MainPageProps) {
             <Stack vertical fill>
               <Stack.Item>{BFI_stages}</Stack.Item>
               <Stack.Item>{prefPageContents}</Stack.Item>
+              <Stack.Item>{helplessness_contents}</Stack.Item>
+              <Stack.Item>{blueberry_contents}</Stack.Item>
+              {/* GS13 END EDIT */}
             </Stack>
-            {/* GS13 END EDIT */}
           </Stack>
         </Stack.Item>
         {/* BUBBER EDIT CHANGE END: Swappable pref menus */}

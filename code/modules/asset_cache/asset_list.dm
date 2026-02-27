@@ -149,24 +149,28 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	item_filename = SANITIZE_FILENAME("[date].yml")
 	SSassets.transport.register_asset(item_filename, file("html/changelogs/archive/" + item_filename))
 	SSassets.transport.register_asset("bubber_[item_filename]", file("html/changelogs/bubber_archive/" + item_filename)) // BUBBER EDIT ADDITION: Changelog 2
+	SSassets.transport.register_asset("gs13_[item_filename]", file("html/changelogs/gs13_archive/" + item_filename))	// GS13 EDIT
 
 /datum/asset/changelog_item/send(client)
 	if (!item_filename)
 		return
 	// BUBBER EDIT CHANGE: Changelog 2: Original: . = SSassets.transport.send_assets(client, item_filename)
-	. = SSassets.transport.send_assets(client, list(item_filename, "bubber_[item_filename]"))
+	//. = SSassets.transport.send_assets(client, list(item_filename, "bubber_[item_filename]"))
+	. = SSassets.transport.send_assets(client, list(item_filename, "bubber_[item_filename]", "gs13_[item_filename]"))	// GS13 EDIT
 
 /datum/asset/changelog_item/get_url_mappings()
 	if (!item_filename)
 		return
 	. = list("[item_filename]" = SSassets.transport.get_asset_url(item_filename))
 	. += list("bubber_[item_filename]" = SSassets.transport.get_asset_url("bubber_[item_filename]")) // BUBBER EDIT ADDITION: Changelog 2
+	. += list("gs13_[item_filename]" = SSassets.transport.get_asset_url("gs13_[item_filename]"))	// GS13 EDIT
 
 /datum/asset/changelog_item/unregister()
 	if (!item_filename)
 		return
 	SSassets.transport.unregister_asset(item_filename)
 	SSassets.transport.unregister_asset("bubber_[item_filename]") // BUBBER EDIT ADDITION: Changelog 2
+	SSassets.transport.unregister_asset("gs13_[item_filename]")	// GS13 EDIT
 
 //Generates assets based on iconstates of a single icon
 /datum/asset/simple/icon_states

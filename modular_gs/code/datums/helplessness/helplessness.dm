@@ -47,26 +47,37 @@
 	override_quirk = TRAIT_HELPLESS_BIG_CHEEKS
 	preference = /datum/preference/numeric/helplessness/nearsighted
 	gain_message = "Your fat makes it difficult to see the world around you."
-	lose_message = "You are thin enough to see your environment again."
+	lose_message = "You are thin enough to see your environment better."
 
 /datum/helplessness/nearsighted/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
 	if (trigger_weight <= 0)
-		fatty.cure_nearsighted(HELPLESSNESS_TRAIT)
+		fatty.remove_fov_trait(TRAIT_VERY_LOW_FOV, FOV_270_DEGREES)
+		fatty.remove_fov_trait(TRAIT_LOW_FOV, FOV_180_DEGREES)
+		REMOVE_TRAIT(fatty, TRAIT_VERY_LOW_FOV, HELPLESSNESS_TRAIT)
+		REMOVE_TRAIT(fatty, TRAIT_LOW_FOV, HELPLESSNESS_TRAIT)
 		return FALSE
 
-	if (!fatty.is_nearsighted_from(HELPLESSNESS_TRAIT))
-		if (fatness >= trigger_weight)
+	if(fatness >= 2 * trigger_weight)
+		if(!HAS_TRAIT(fatty, TRAIT_VERY_LOW_FOV))
 			to_chat(fatty, span_warning(gain_message))
-			fatty.become_nearsighted(HELPLESSNESS_TRAIT)
-			return TRUE
-		return FALSE
-		
-	else if (fatness < trigger_weight)
-		to_chat(fatty, span_notice(lose_message))
-		fatty.cure_nearsighted(HELPLESSNESS_TRAIT)
-		return FALSE
-	
-	return TRUE
+			ADD_TRAIT(fatty, TRAIT_VERY_LOW_FOV, HELPLESSNESS_TRAIT)
+			REMOVE_TRAIT(fatty, TRAIT_LOW_FOV, HELPLESSNESS_TRAIT)
+			fatty.add_fov_trait(TRAIT_LOW_FOV, FOV_270_DEGREES)
+		return TRUE
+
+	if(fatness >= trigger_weight)
+		if(!HAS_TRAIT(fatty, TRAIT_LOW_FOV))
+			to_chat(fatty, span_warning(gain_message))
+			ADD_TRAIT(fatty, TRAIT_LOW_FOV, HELPLESSNESS_TRAIT)
+			REMOVE_TRAIT(fatty, TRAIT_VERY_LOW_FOV, HELPLESSNESS_TRAIT)
+			fatty.add_fov_trait(TRAIT_LOW_FOV, FOV_180_DEGREES)
+		return TRUE
+
+	fatty.remove_fov_trait(TRAIT_VERY_LOW_FOV, FOV_270_DEGREES)
+	fatty.remove_fov_trait(TRAIT_LOW_FOV, FOV_180_DEGREES)
+	REMOVE_TRAIT(fatty, TRAIT_VERY_LOW_FOV, HELPLESSNESS_TRAIT)
+	REMOVE_TRAIT(fatty, TRAIT_LOW_FOV, HELPLESSNESS_TRAIT)
+	return FALSE
 
 /datum/helplessness/hidden_face
 	helplessness_trait = TRAIT_DISFIGURED
@@ -124,7 +135,7 @@
 		return should_be_active
 	
 	var/obj/item/clothing/under/jumpsuit = fatty.w_uniform
-	if(istype(jumpsuit) && jumpsuit.modular_icon_location == null)
+	if(istype(jumpsuit))
 		to_chat(fatty, span_warning("[jumpsuit] can no longer contain your weight!"))
 		fatty.dropItemToGround(jumpsuit)
 	
@@ -222,3 +233,55 @@
 	preference = /datum/preference/numeric/helplessness/no_buckle
 	gain_message = "You feel like you've gotten too big to fit on anything."
 	lose_message = "You feel thin enough to sit on things again."
+
+/datum/helplessness/no_neck
+	helplessness_trait = TRAIT_NO_NECK
+	default_trigger_weight = FATNESS_LEVEL_BLOB
+	override_quirk = TRAIT_HELPLESS_THICK_NECK
+	preference = /datum/preference/numeric/helplessness/no_neck
+	gain_message = "You feel a tightness around your neck."
+	lose_message = "You no longer feel a tightness around your neck."
+
+/datum/helplessness/no_neck/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+	. = ..()
+	// the super function to this returns true if the helplessness mechanic is active, and false otherwise
+	var/should_be_active = .
+
+	if (!should_be_active)
+		return should_be_active
+	
+	var/obj/item/clothing/neck/neckwear = fatty.wear_neck
+	if(istype(neckwear))
+		to_chat(fatty, span_warning("[neckwear] can no longer fit around your neck!"))
+		fatty.dropItemToGround(neckwear)
+	
+	return should_be_active
+
+#define MAX_PRESSURE_DEBUFF 0.5
+/*
+/datum/helplessness/weak_lungs
+	helplessness_trait = TRAIT_WEAK_LUNGS
+	default_trigger_weight = FATNESS_LEVEL_MORBIDLY_OBESE	// It's called MORBIDLY obese for a reason
+	override_quirk = TRAIT_HELPLESS_WEAK_LUNGS
+	preference = /datum/preference/numeric/helplessness/weak_lungs
+	gain_message = "You feel a tightness around your neck."
+	lose_message = "You no longer feel a tightness around your neck."
+
+/datum/helplessness/weak_lungs/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+	. = ..()
+	var/should_be_active = .
+
+	if(!should_be_active)
+		return should_be_active
+	
+	var/obj/item/organ/lungs/holder_lungs = fatty.get_organ_slot(ORGAN_SLOT_LUNGS)
+	if (isnull(holder_lungs))
+		return FALSE
+	
+	var/pressure_debuff = (fatness - trigger_weight) / (2 * trigger_weight)	// 1 when fatness = 3x trigger weight
+	pressure_debuff = pressure_debuff * MAX_PRESSURE_DEBUFF		// scale it to be in range [0; MAX_PRESSURE_DEBUFF]
+	pressure_debuff = max(1 - pressure_debuff, MAX_PRESSURE_DEBUFF)		// and in result, we reach this cap when fatness = 3x trigger weight
+	holder_lungs.set_received_pressure_mult(pressure_debuff)
+
+*/
+#undef MAX_PRESSURE_DEBUFF

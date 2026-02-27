@@ -4,11 +4,10 @@
 		keep the crew alive, be prepared to do anything and everything or die \
 		horribly trying."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
-	department_head = list("CentCom")
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials and Space Law"
+	supervisors = "GATO officials and Space Law" //GS13 EDIT ORIGINAL:  "Nanotrasen officials and Space Law"
 	req_admin_notify = 1
 	minimal_player_age = 14
 	exp_requirements = 180
@@ -101,22 +100,25 @@
 
 	backpack_contents -= /obj/item/station_charter
 
+//GS13 EDIT
 	if(!l_hand)
-		l_hand = /obj/item/station_charter/banner
+		l_hand = /obj/item/station_charter
 	else if(!r_hand)
-		r_hand = /obj/item/station_charter/banner
+		r_hand = /obj/item/station_charter
 
-/datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visuals_only)
-	. = ..()
-	if(visuals_only || !special_charter)
-		return
+// /datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visuals_only)
+// 	. = ..()
+// 	if(visuals_only || !special_charter)
+// 		return
 
-	var/obj/item/station_charter/banner/celestial_charter = locate() in equipped.held_items
-	if(isnull(celestial_charter))
-		// failed to give out the unique charter, plop on the ground
-		celestial_charter = new(get_turf(equipped))
+// 	var/obj/item/station_charter/banner/celestial_charter = locate() in equipped.held_items
+// 	if(isnull(celestial_charter))
+// 		// failed to give out the unique charter, plop on the ground
+// 		celestial_charter = new(get_turf(equipped))
 
-	celestial_charter.name_type = special_charter
+// 	celestial_charter.name_type = special_charter
+
+//GS13 EDIT END
 
 /datum/outfit/job/captain/mod
 	name = "Captain (MODsuit)"

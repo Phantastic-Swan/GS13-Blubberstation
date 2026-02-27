@@ -58,6 +58,37 @@
 	icon = 'modular_gs/icons/obj/signs.dmi'
 	icon_state = "gato_sign_3"
 
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/gatofull_1, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/gatofull_2, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/gatofull_3, 32)
+
+/obj/effect/decal/gatofull_1
+	name = "GATO"
+	desc = "GATO - expand your horizons!"
+	icon = 'modular_gs/icons/obj/signs.dmi'
+	icon_state = "gato_sign_1"
+
+/obj/effect/decal/gatofull_1/NeverShouldHaveComeHere(turf/here_turf)
+	return (isgroundlessturf(here_turf) && !GET_TURF_BELOW(here_turf))
+
+/obj/effect/decal/gatofull_2
+	name = "GATO"
+	desc = "GATO - expand your horizons!"
+	icon = 'modular_gs/icons/obj/signs.dmi'
+	icon_state = "gato_sign_2"
+
+/obj/effect/decal/gatofull_2/NeverShouldHaveComeHere(turf/here_turf)
+	return (isgroundlessturf(here_turf) && !GET_TURF_BELOW(here_turf))
+
+/obj/effect/decal/gatofull_3
+	name = "GATO"
+	desc = "GATO - expand your horizons!"
+	icon = 'modular_gs/icons/obj/signs.dmi'
+	icon_state = "gato_sign_3"
+
+/obj/effect/decal/gatofull_3/NeverShouldHaveComeHere(turf/here_turf)
+	return (isgroundlessturf(here_turf) && !GET_TURF_BELOW(here_turf))
+
 /obj/effect/decal/big_gato //96x96 px sprite
 	name = "GATO"
 	desc = "Your employer! Probably."
@@ -149,6 +180,12 @@
 	icon = 'modular_gs/icons/obj/structure/billboard.dmi'
 	desc = "A billboard advertising GATO: A Better Tomorrow, Today."
 	icon_state = "billboard_gato"
+
+/obj/structure/billboard/helladonuts
+	name = "\improper Hella Nice Donuts"
+	icon = 'modular_gs/icons/obj/structure/billboard.dmi'
+	desc = "A billboard advertising a GATO Brand: Hella Nice Donuts - Lava-Baked Treats!"
+	icon_state = "billboard_hellanice"
 
 /obj/structure/billboard/nanotrasen/defaced
 	name = "defaced GATO billboard"

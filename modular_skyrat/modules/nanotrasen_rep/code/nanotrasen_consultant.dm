@@ -1,8 +1,7 @@
 /datum/job/nanotrasen_consultant
 	title = JOB_NT_REP
 	rpg_title = "Guild Adviser"
-	description = "Represent Nanotrasen on the station, argue with the HoS about why he can't just field execute people for petty theft, get drunk in your office."
-	department_head = list(JOB_CENTCOM)
+	description = "Represent GATO (or NT) on the station, argue with the HoS about why he can't just field execute people for petty theft, get drunk in your office." //GS13 EDIT
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
@@ -37,7 +36,7 @@
 		/obj/item/reagent_containers/cup/glass/bottle/champagne = 10
 	)
 
-	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
+	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | HEAD_OF_STAFF_JOB_FLAGS
 
 /datum/outfit/job/nanotrasen_consultant
 	name = "Nanotrasen Consultant"
@@ -64,7 +63,7 @@
 	messenger = /obj/item/storage/backpack/messenger
 
 	implants = list(/obj/item/implant/mindshield)
-	accessory = /obj/item/clothing/accessory/medal/gold/nanotrasen_consultant
+	accessory = /obj/item/clothing/accessory/bubber/acc_medal/neckpin/centcom
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/centcom)
 
@@ -112,8 +111,8 @@
 	greyscale_colors = "#017941#0060b8"
 
 /obj/item/storage/bag/garment/nanotrasen_consultant
-	name = "nanotrasen consultant's garment bag"
-	desc = "A bag for storing extra clothes and shoes. This one belongs to the Nanotrasen consultant."
+	name = "GATO consultant's garment bag" //GS13 EDIT Change Nanotrasen to GATO
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the GATO consultant." //GS13 EDIT Change Nanotrasen to GATO
 
 /obj/item/storage/bag/garment/nanotrasen_consultant/PopulateContents()
 	new /obj/item/clothing/shoes/sneakers/brown(src)
@@ -140,7 +139,7 @@
 	new /obj/item/clothing/head/hats/intern(src)
 
 /obj/structure/closet/secure_closet/nanotrasen_consultant
-	name = "nanotrasen consultant's locker"
+	name = "GATO consultant's locker" //GS13 EDIT Change Nanotrasen to GATO
 	req_access = list()
 	req_one_access = list(ACCESS_CENT_GENERAL)
 	icon_state = "cc"

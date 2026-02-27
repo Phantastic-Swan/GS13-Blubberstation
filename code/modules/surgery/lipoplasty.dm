@@ -23,8 +23,13 @@
 	)
 
 /datum/surgery/lipoplasty/can_start(mob/user, mob/living/carbon/target)
+	/* GS13 EDIT
 	if(!HAS_TRAIT_FROM(target, TRAIT_FAT, OBESITY) || target.nutrition < NUTRITION_LEVEL_WELL_FED)
 		return FALSE
+	*/
+	if(target.fatness_real <= FATNESS_LEVEL_FATTER || HAS_TRAIT(target, TRAIT_WEIGHT_LOSS_IMMUNE))
+		return FALSE
+	// GS13 END EDIT
 	return ..()
 
 
@@ -87,7 +92,10 @@
 		TOOL_SCREWDRIVER = 45,
 		TOOL_WIRECUTTER = 35,
 	)
-	time = 3.2 SECONDS
+	// GS13 EDIT
+	repeatable = TRUE
+	time = 4.5 SECONDS
+	// GS13 END EDIT
 	preop_sound = 'sound/items/handling/surgery/retractor1.ogg'
 	success_sound = 'sound/items/handling/surgery/retractor2.ogg'
 
@@ -120,10 +128,15 @@
 		span_notice("[user] extracts [target]'s fat!"),
 		span_notice("[user] extracts [target]'s fat!"),
 	)
-	target.overeatduration = 0 //patient is unfatted
-	var/removednutriment = target.nutrition
-	target.set_nutrition(NUTRITION_LEVEL_WELL_FED)
-	removednutriment -= NUTRITION_LEVEL_WELL_FED //whatever was removed goes into the meat
+	// GS13 EDIT
+	// target.overeatduration = 0 //patient is unfatted
+	// var/removednutriment = target.nutrition
+	// target.set_nutrition(NUTRITION_LEVEL_WELL_FED)
+	// removednutriment -= NUTRITION_LEVEL_WELL_FED //whatever was removed goes into the meat
+	var/removed_fat = target.adjust_fatness(-FATNESS_LEVEL_FATTER, FATTENING_TYPE_WEIGHT_LOSS, TRUE)
+	if(removed_fat < FATNESS_LEVEL_FATTER)
+		return ..()
+	// GS13 END EDIT
 	var/mob/living/carbon/human/human = target
 	var/typeofmeat = /obj/item/food/meat/slab/human
 
@@ -138,6 +151,6 @@
 		newmeat.desc = "Extremely fatty tissue taken from a patient."
 		newmeat.subjectname = human.real_name
 		newmeat.subjectjob = human.job
-		newmeat.reagents.add_reagent (/datum/reagent/consumable/nutriment, (removednutriment / 15)) //To balance with nutriment_factor of nutriment
+		// newmeat.reagents.add_reagent (/datum/reagent/consumable/nutriment, (removednutriment / 15)) //To balance with nutriment_factor of nutriment	// GS13 EDIT
 		newmeat.forceMove(target.loc)
 	return ..()

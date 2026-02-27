@@ -81,6 +81,7 @@
 
 /obj/structure/closet/crate/secure/centcom
 	name = "secure centcom crate"
+	icon = 'modular_gs/icons/obj/storage/crates.dmi'	// GS13 EDIT
 	icon_state = "centcom_secure"
 	base_icon_state = "centcom_secure"
 

@@ -54,7 +54,7 @@
 /obj/item/ammo_casing/energy/fattening/cannon
 	name = "one-shot fattening weapon lens"
 	select_name = "fatten"
-	e_cost = 100
+	e_cost = 1000
 	projectile_type = /obj/projectile/beam/fattening/cannon
 
 /obj/projectile/beam/fattening/cannon
@@ -111,7 +111,7 @@
 /obj/item/ammo_casing/energy/fattening/cannon_weak
 	name = "one-shot fattening weapon lens"
 	select_name = "fatten"
-	e_cost = 300
+	e_cost = 2500
 	projectile_type = /obj/projectile/beam/fattening/cannon_weak
 
 /obj/projectile/beam/fattening/cannon_weak
@@ -136,6 +136,6 @@
 		var/mob/living/carbon/carbon_target = target
 		if (carbon_target.micro_calorite_poisoning >= 1)
 			if (carbon_target.adjust_calorite_poisoning(-0.01 * fat_added))
-				carbon_target.adjust_perma(1 * fat_added, FATTENING_TYPE_MAGIC, TRUE)
+				carbon_target.adjust_perma(1 * fat_added, FATTENING_TYPE_WEAPON, TRUE)
 
 	return .

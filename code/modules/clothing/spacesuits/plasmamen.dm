@@ -59,11 +59,11 @@
 	if (!istype(tool, /obj/item/extinguisher_refill))
 		return
 
-	if (extinguishes_left == 5)
+	if (extinguishes_left == initial(extinguishes_left))
 		to_chat(user, span_notice("The inbuilt extinguisher is full."))
 		return ITEM_INTERACT_BLOCKING
 
-	extinguishes_left = 5
+	extinguishes_left = initial(extinguishes_left)
 	to_chat(user, span_notice("You refill the suit's built-in extinguisher, using up the cartridge."))
 	check_fire_state()
 	qdel(tool)
@@ -123,8 +123,8 @@
 	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/item/clothing/head/helmet/space/plasmaman/click_alt(mob/user)
-	if(user.can_perform_action(src))
-		adjust_visor(user)
+	adjust_visor(user)
+	return CLICK_ACTION_SUCCESS
 
 /obj/item/clothing/head/helmet/space/plasmaman/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_welding_screen))
@@ -454,6 +454,8 @@
 	name = "CentCom commander plasma envirosuit helmet"
 	desc = "A special containment helmet designed for the Higher Central Command Staff. Not many of these exist, as CentCom does not usually employ plasmamen to higher staff positions due to their complications."
 	icon_state = "commander_envirohelm"
+	icon = 'modular_gs/icons/obj/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
+	worn_icon = 'modular_gs/icons/mob/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
 	inhand_icon_state = null
 	armor_type = /datum/armor/hats_centhat/plasmaman
 
@@ -466,12 +468,16 @@
 	name = "CentCom official plasma envirosuit helmet"
 	desc = "A special containment helmet designed for CentCom Staff. They sure do love their green."
 	icon_state = "official_envirohelm"
+	icon = 'modular_gs/icons/obj/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
+	worn_icon = 'modular_gs/icons/mob/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
 	inhand_icon_state = null
 
 /obj/item/clothing/head/helmet/space/plasmaman/centcom_intern
 	name = "CentCom intern plasma envirosuit helmet"
 	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
 	icon_state = "intern_envirohelm"
+	icon = 'modular_gs/icons/obj/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
+	worn_icon = 'modular_gs/icons/mob/clothing/head/plasmaman_hats.dmi'	// GS13 EDIT
 	inhand_icon_state = null
 
 /obj/item/clothing/head/helmet/space/plasmaman/syndie

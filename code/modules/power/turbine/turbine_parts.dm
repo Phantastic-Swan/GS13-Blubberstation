@@ -118,11 +118,11 @@
 /obj/item/turbine_parts/stator/get_tier_upgrades()
 	switch(current_tier)
 		if(TURBINE_PART_TIER_ONE)
-			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/mineral/titanium, TURBINE_UPGRADE_AMOUNT = 15)
+			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/plasteel, TURBINE_UPGRADE_AMOUNT = 15)	// GS13 EDIT changes required mats for the turbine, original: /obj/item/stack/sheet/mineral/titanium
 		if(TURBINE_PART_TIER_TWO)
-			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/mineral/metal_hydrogen, TURBINE_UPGRADE_AMOUNT = 15)
+			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/mineral/titanium, TURBINE_UPGRADE_AMOUNT = 15) // GS13 EDIT changes required mats for the turbine, original: /obj/item/stack/sheet/mineral/titanium
 		if(TURBINE_PART_TIER_THREE)
-			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/mineral/zaukerite, TURBINE_UPGRADE_AMOUNT = 10)
+			return list(TURBINE_UPGRADE_PART = /obj/item/stack/sheet/mineral/metal_hydrogen, TURBINE_UPGRADE_AMOUNT = 10) // GS13 EDIT changes required mats for the turbine, original: /obj/item/stack/sheet/mineral/zaukerite
 
 #undef TURBINE_UPGRADE_PART
 #undef TURBINE_UPGRADE_AMOUNT

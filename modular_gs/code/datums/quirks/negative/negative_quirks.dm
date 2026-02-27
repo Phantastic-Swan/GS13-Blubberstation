@@ -3,7 +3,7 @@
 	desc = "Your legs can't carry the heaviest of weights. You will become much slower when fat."
 	icon = "fa-weight-hanging"
 	medical_record_text = "Patients legs cannot carry heavy weights well."
-	value = -1
+	value = -4
 	gain_text = span_notice("You feel your legs tremble under your weight")
 	lose_text = span_notice("Your legs seem to have gotten stronger")
 	quirk_flags = 0
@@ -19,7 +19,7 @@
 	desc = "Your legs can't carry the heaviest of weights. At 2540 BFI you will become unable to move. WARNING! PICKING THIS QUIRK WILL MAKE YOU IMMOBILE REGARDLESS OF YOUR IMMOBILITY PREFERENCE!"
 	icon = "fa-weight-scale"
 	medical_record_text = "Patients legs cannot carry heavy weights at all."
-	value = -6
+	value = -7
 	gain_text = span_notice("You feel your legs tremble under your weight")
 	lose_text = span_notice("Your legs seem to have gotten stronger")
 	quirk_flags = 0
@@ -40,7 +40,7 @@
 
 /datum/quirk/helplessness/big_cheeks
 	name = "Big cheeks"
-	desc = "Your cheeks seem to bloat up exceptionally with weight, reducing your visibility. At 3440 BFI you will become nearsighted and your face will be hidden. WARNING! PICKING THIS QUIRK WILL MAKE YOU NEARSIGHTED AND HIDE YOUR FACE REGARDLESS OF YOUR NEARSIGHTEDNESS/HIDDEN FACE PREFERENCE!"
+	desc = "Your cheeks seem to bloat up exceptionally with weight, reducing your visibility. At 3440 BFI your visibility will dimminish and your face will be hidden. WARNING! PICKING THIS QUIRK WILL MAKE YOU NEARSIGHTED AND HIDE YOUR FACE REGARDLESS OF YOUR NEARSIGHTEDNESS/HIDDEN FACE PREFERENCE!"
 	icon = "fa-glasses"
 	medical_record_text = "Patients cheeks seem to accumulate significant amount of adipose, leading to worse eyesight at higher weights."
 	value = -4
@@ -144,6 +144,30 @@
 	erp_quirk = FALSE		// this is a lie, however we do it because we want it always on
 	mob_trait = TRAIT_HELPLESS_STUCKAGE
 
+/datum/quirk/helplessness/thick_neck
+	name = "Thick neck"
+	desc = "Your neck is really thick. At 3440 BFI, you will be unable to wear anything around it. WARNING! PICKING THIS QUIRK WILL MAKE YOU UNABLE TO PUT ITEMS AROUND YOUR NECK REGARDLESS OF YOUR THICK NECK PREFERENCE!"
+	medical_record_text = "Patient has a very thick neck."
+	value = -1
+	gain_text = span_notice("You feel a tightness around your neck")
+	lose_text = span_notice("You no longer feel a tightness around your neck")
+	quirk_flags = 0
+	erp_quirk = 0
+	mob_trait = TRAIT_HELPLESS_THICK_NECK
+
+/*
+/datum/quirk/helplessness/weak_lungs
+	name = "Weak lungs"
+	desc = "Having this much mass naturally means you require more oxygen to breathe. Starting at 840 BFI, you will progressively require more air to breathe safely. WARNING! PICKING THIS QUIRK WILL MAKE YOU STRUGGLE TO BREATHE REGARDLESS OF YOUR WEAK LUNGS PREFERENCE! THIS MAY KILL YOU!"
+	medical_record_text = "Patients weight causes them to require more oxygen to breathe."
+	value = -4
+	gain_text = span_notice("You feel a tightness around your neck")
+	lose_text = span_notice("You no longer feel a tightness around your neck")
+	quirk_flags = 0
+	erp_quirk = 0
+	mob_trait = TRAIT_HELPLESS_WEAK_LUNGS
+*/
+
 /datum/quirk/permaberry
 	name = "Permaberry"
 	desc = "For whichever reason, your body began producing blueberry juice and has not ever stopped. You produce juice over time and produce even more the longer you stay around."
@@ -160,3 +184,4 @@
 /datum/quirk/permaberry/process(seconds_per_tick)
 	quirk_holder.reagents.add_reagent(/datum/reagent/blueberry_juice, (0.01 + min(0.49, (time_passed / 14693))) * seconds_per_tick)
 	time_passed += seconds_per_tick
+

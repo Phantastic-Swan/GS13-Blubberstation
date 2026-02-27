@@ -9,16 +9,15 @@
 	track_data = /datum/storyteller_data/tracks/fragile
 
 	tag_multipliers = list(
-		TAG_COMBAT = 0.5,
-		TAG_DESTRUCTIVE = 0.1,
-		TAG_CHAOTIC = 0.1
+		TAG_COMBAT = 0.3,
+		TAG_DESTRUCTIVE = 0.2,
+		TAG_CHAOTIC = 0.2
 	)
-	storyteller_type = STORYTELLER_TYPE_CALM //GS edit: originally STORYTELLER_TYPE_ALWAYS_AVAILABLE
-	population_min = 60 //GS EDIT
-	
+	storyteller_type = STORYTELLER_TYPE_ALWAYS_AVAILABLE
+
 /datum/storyteller_data/tracks/fragile
 	threshold_mundane = 1200
 	threshold_moderate = 1800
 	threshold_major = 10000
 	threshold_crewset = 3000
-	threshold_ghostset = 8000
+	threshold_ghostset = 6800

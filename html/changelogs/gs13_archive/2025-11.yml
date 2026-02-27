@@ -1,0 +1,128 @@
+2025-11-30:
+  EllaOW:
+  - rscadd: Added the ability for plants and bees to produce lipoifier, micro-calorite,
+      weak lipoifier, macernic and galbanic through their respective genome modification
+      pathways.
+  - rscadd: Added Adipolipus plants to codebase with a 20% lipo gene.
+  - balance: disabled bluespace anomalies and prevented revenants from spawning based
+      on corpse values.
+  - bugfix: fixed nukies being able to spawn when antags are disabled.
+  - config: supermatter surge now requires 10 people (was 0), energetic flux now requires
+      5 people (was 1), pyroclastic anomaly now requires 8 people (was 1).
+  - refactor: standardized code between config and examplestoryteller.dm files. config
+      now has a set value of 60 for all event tracks, which is multiplied by the value
+      in the storyteller files to create a rough equivalence of about 1 minute per
+      1 value in the storyteller file.
+  - config: major events now have a minimum of 10 players to run (down from 15) to
+      allow for major events with slightly lower thresholds to still run. This does
+      not affect events that had minimum populations greater than or equal to 15 already.
+  - rscadd: New GS type narrator which cannot spawn antags
+  - qol: made the GS narrator the default narrator and removed the ability for other
+      narrators to be voted on (increased minpop to 60 which we never reach)
+  - balance: Changed minimum popcount for events to spawn (most mega destructive events
+      like mega meteor shower and directional sandstorm have at least 15/20+ or even
+      higher pop requirement)
+  - bugfix: fixed old storyteller config throwing errors during setup from outdated
+      variables
+  - code_imp: fixed incorrect code not correctly referencing event paths by having
+      the code refer to the event name
+  - code_imp: Added a unique GS narrator type define
+  - config: decreased the popcount event time variables to account for smaller playerbase
+      (result is that a lower pop doesn't result in a huge decrease of event amounts)
+  Swan:
+  - rscadd: ports over our posters, they can now be admin spawned or placed by an
+      admin. Some might even spawn naturally?
+  - rscadd: ports over large donut boxes and their crate
+  - rscadd: galbanic addiction/overdose no longer removes nutrition, only increases
+      hunger
+  - bugfix: fixes dual tone cargo suit not being in the cargodrobe
+  - bugfix: fixes the bluespace belt interface
+  - image: gatoified donut boxes
+  - image: slightly changes dual tone cargo suits color
+  - map: adjusted atmos on box, making it more pleasant to work with
+  - code_imp: adds an `adjust_hunger` proc to make setting fatness reduction for items
+      easier
+  - code_imp: moves the main dual tone jumpsuit defines to a new file to declutter
+      the modular_items file
+  - rscadd: makes it so my donator item doesn't just... burn into ash...
+  - bugfix: fixes stuffed belly sprites disappearing when wearing the dual tone suit
+  - bugfix: HOPEFULLY FIXES PERSISTENT WEIGHT THIS TIME GOD
+  - bugfix: fixes calorite slimes not working when spawned in by admins
+  - rscadd: control menu to the Bluespace belt, allowing the user to control the %
+      of their fat they wish to hide/show. It can also be accessed by another player
+      through the strip menu. It can also be accessed through alt click when you're
+      wearing it.
+  - rscadd: ports the metal cruncher trait, and makes calorite edible
+  - rscadd: ports lipolicide tolerance
+  - balance: lowers micro calorite metabolisation rate further
+  - balance: drastically increases the amount of calorite found in the mines
+  - bugfix: fixes some runtime related to calorite floors
+  - bugfix: fixes a lot of our beaker presets being broken
+  - bugfix: fixes a typo in the WG prefs screen
+  - code_imp: adds 2 new procs for weight gain modifiers for clearing a single, or
+      all sources
+  - code_imp: moves the location of the mealdor resupply pack from `rebase_packs.dm`
+      to `packs.dm`, and removes the old file since it was the only item in it.
+  - rscadd: Yeen and protogen plushies, as well as re-adds the LGO and kota plushes
+      to the loadout screen
+  - rscadd: changed the way fullness_reduction works,
+  - bugfix: fixes treadmills not being rotatable with a wrench, and disappearing when
+      their panel was open
+  - bugfix: fixes humogatitos missing their textures when opened and not having cigarettes
+      inside. Also changes their sprite to the new one made by Clumpy
+  - rscadd: Adds the CFC ai skin
+  - rscadd: Adds 2 law boards with feeder laws, one antagonistic and other more neutral.
+  - rscadd: Adds micro calorite reagent. It is obtained by grinding calorite alongside
+      lipoifier, obtaining 0.5u per sheet of calorite grinded. Normally, it provides
+      a +0.3 increase to weight gain rate and a -0.3 decrease to weight loss rate.
+      It also decreases fullness and is very slow to metabolize. It has a 100u overdose,
+      which adds BFI to the player (around 9 BFI per tick (3/5 of lipoifier)), as
+      well as increases the WG/L rate modifier to 0.9.
+  - rscadd: AL-T ray reverser now flips the value of weight loss rate on each hit.
+      Getting hit once results in weight loss rate being set to negative, resulting
+      in weight loss. Getting hit again reverses that effect, with any further hits
+      repeating this process.
+  - rscadd: due to a coding change that will be described later, calorite slimes maximum
+      increase to weight gain and loss values has been lowered to 2
+  - rscadd: munchies weed now reduce fullness without reducing nutrition, allowing
+      for better simulation of hunger. this fullness system is currently pretty underbaked,
+      but it should work for now as a suitable replacement until I come up with a
+      better solution.
+  - rscadd: changes the way modifying weight gain and loss rate through in-game means
+      works. They will now be tracked separately from the value set in prefs, meaning
+      that changing it won't override any modifiers a player may have obtained during
+      the course of the round. They do not carry over between rounds.
+  - bugfix: calorite can be printed from autolathes
+  - bugfix: single side reflectors were applying the fattening effect meant for calorite
+      reflectors. They no longer do it.
+  - code_imp: adjusted the way weight gain/loss rate modifiers work. They are now
+      tracked in a list containing key value pairs, with the key being the name of
+      the source while the value being the additive change to be applied to the final
+      WG/L rate. The values in the list are uncapped, however they are capped to a
+      range of [-2, 2] when applying them for fatness adjustment calculations.
+  - code_imp: added many procs to handle the WG/L rate modifier lists
+  - code_imp: added a variable for flipping the sign on WG/L rate, one var for each.
+  - code_imp: added procs to calculate the final WG/L rate applied to a mob, taking
+      into consideration the value set in prefs, the flips and modifiers.
+  - rscadd: ports fullness alert and fullness description text
+  - rscadd: allows cargo to buy pipe scrubbers
+  - rscadd: gulp cups
+  - rscadd: civilian GATO dual tone suit
+  - qol: prevents lipoifium from working at very low concetrations
+  - bugfix: hopefully finally fixed persistent weight JESUS CHRIST
+  - bugfix: apparently the sounds of chairs breaking from someone's fat ass were broken.
+      This should fix it
+  - rscadd: Primitive Bluespace Belt is now available in the loadout screen
+  - code_imp: refactors helplessness mechanics - they are now based on a `/datum/helplessness`
+      which stores the main logic, as well as many subtypes of it which store values
+      and unique interactions. If something changed gameplay wise, report it for it
+      is a bug.
+  SeepingVisage:
+  - bugfix: you can now print calovoltaic generator modules and hydraulic assistance
+      modules
+  - balance: the mod exoskeleton is cheaper
+  - refactor: burp code
+  - rscadd: belch
+  - rscadd: fart
+  - rscadd: playsound_prefed()
+  - rscadd: preferences to enable/disable certain noises

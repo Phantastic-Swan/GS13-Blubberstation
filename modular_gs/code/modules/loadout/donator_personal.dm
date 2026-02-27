@@ -1,13 +1,66 @@
 
-/datum/loadout_item/neck/gatobadge_employee //these are available only to admins with CC-related characters
+/datum/loadout_item/accessory/medal/gatobadge_employee //these are available only to players who are CC employees (CC itself, not just GATO)
 	name = "GATO Badge - Employee"
 	item_path = /obj/item/clothing/accessory/medal/gato_badge/employee
-	ckeywhitelist = list("sonoida")
+	ckeywhitelist = list(
+						"sonoida",
+						"gamerguy14948",
+						)
 
-/datum/loadout_item/neck/gatobadge_middleman //these are available to players who were granted permission to have their characters to CC
+/datum/loadout_item/accessory/medal/gatobadge_middleman //these are available to players who were granted permission to have their characters be tied to CC
 	name = "GATO Badge - Correspondent"
 	item_path = /obj/item/clothing/accessory/medal/gato_badge/middleman
-	ckeywhitelist = list("johnjimjim", "sonoida", "JohnJimJim", "JOHNJIMJIM", "johnjimjim")
+	ckeywhitelist = list(
+						"johnjimjim",
+						"sonoida",
+						)
+
+/datum/loadout_item/accessory/medal/contributor_badge //badge for contributors - spriters, mods, admins and anyone helping out
+	name = "Contributor Badge"
+	item_path = /obj/item/clothing/accessory/medal/gato_badge/contributor
+	ckeywhitelist = list(
+						"sonoida",
+						"absolutelyfree",
+						"thecreepydolphin",
+						"almaniak",
+						"furbuster555",
+						"paraillegal",
+						"racoonie",
+						"gdaws",
+						"yeeny",
+						"zinthl",
+						"glasscannon",
+						"gamerguy14948",
+						"pointnshoot",
+						"clumball",
+						"pavvo",
+						"kibkubibikiuioub",
+						"hottokeeeki",
+						"cyberwarrior341",
+						"reoiteavali",
+						"dynajoule",
+						"nullspace_industries",
+						"silveenom",
+						"killmewitha22",
+						)
+
+/datum/loadout_item/accessory/medal/coder_badge //badge for coders who worked on the codebase at least a few times
+	name = "Coder Badge"
+	item_path = /obj/item/clothing/accessory/medal/gato_badge/coder
+	ckeywhitelist = list(
+						"sonoida",
+						"absolutelyfree",
+						"paraillegal",
+						"almaniak",
+						"dynajoule",
+						"alphas0",
+						"belaya",
+						"sapphroqueer",
+						"croccodoggo",
+						"psq95",
+						"reoiteavali",
+						)
+
 
 // /datum/loadout_item/suit/halsey_overcoat
 // 	name = "Halsey's Commander Overcoat"

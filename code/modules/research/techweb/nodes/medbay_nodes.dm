@@ -7,7 +7,6 @@
 		"operating",
 		"medicalbed",
 		"defibmountdefault",
-		"defibrillator",
 		"surgical_drapes",
 		"scalpel",
 		"retractor",
@@ -33,6 +32,8 @@
 		"jerrycan",
 		"reflex_hammer",
 		"blood_scanner",
+		"primitive_bluespace_belt",		// GS13 EDIT: makes the primitive bluespace belt unlocked on round start
+		"suit_sensor",
 	)
 	experiments_to_unlock = list(
 		/datum/experiment/autopsy/human,
@@ -79,7 +80,6 @@
 		"healthanalyzer_advanced",
 		"mod_health_analyzer",
 		"crewpinpointer",
-		"defibrillator_compact",
 		"defibmount",
 		"medicalbed_emergency",
 		"piercesyringe",

@@ -20,3 +20,6 @@
 
 #define FATNESS_FROM_VORE 0.8
 #define BASE_WEIGHT_VALUE 140
+
+/// for interaction datums, defines an interaction which can ONLY be performed on ourselves
+#define INTERACTION_ONLY_SELF "only_self"

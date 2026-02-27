@@ -101,3 +101,23 @@ export const erp_status_pref_inflation: FeatureChoiced = {
   name: 'ERP Inflation Status',
   component: FeatureDropdownInput,
 };
+
+export const breast_produce: FeatureChoiced = {
+  name: 'Breast produce',
+  component: FeatureDropdownInput,
+}
+
+export const max_belly_size: FeatureNumeric = {
+  name: 'Belly max size',
+  component: FeatureNumberInput,
+};
+
+export const max_breast_size: FeatureNumeric = {
+  name: 'Breasts max size',
+  component: FeatureNumberInput,
+};
+
+export const max_butt_size: FeatureNumeric = {
+  name: 'Butt max size',
+  component: FeatureNumberInput,
+};

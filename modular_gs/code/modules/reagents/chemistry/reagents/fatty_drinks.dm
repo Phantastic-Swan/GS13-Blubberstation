@@ -88,7 +88,7 @@
 	var/need_mob_update
 	need_mob_update = M.SetSleeping(0)
 	M.adjust_bodytemperature(5 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, 0, M.get_body_temp_normal())
-	if(M.getBruteLoss() && SPT_PROB(10, seconds_per_tick))
+	if(M.get_brute_loss() && SPT_PROB(10, seconds_per_tick))
 		need_mob_update += M.heal_bodypart_damage(brute = 1 * REM * seconds_per_tick, burn = 0, updating_health = FALSE)
 	if(M && M?.client?.prefs?.read_preference(/datum/preference/toggle/weight_gain_food)) // GS13
 		M.nutrition += 15 * REAGENTS_METABOLISM
@@ -116,8 +116,8 @@
 	M.adjust_drowsiness(-4 SECONDS * REM * seconds_per_tick)
 	M.adjust_jitter(-6 SECONDS * REM * seconds_per_tick)
 	M.AdjustSleeping(-20, FALSE)
-	if(M.getToxLoss() && prob(20))
-		M.adjustToxLoss(-1, 0)
+	if(M.get_tox_loss() && prob(20))
+		M.adjust_tox_loss(-1, 0)
 	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(M && M?.client?.prefs?.read_preference(/datum/preference/toggle/weight_gain_food)) // GS13
 		M.nutrition += 15 * REAGENTS_METABOLISM

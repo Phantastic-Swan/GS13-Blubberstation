@@ -8,6 +8,8 @@
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/fancy/large_donut_box,
 					/obj/item/storage/fancy/large_donut_box)
+	crate_name = "large donut boxes crate"
+	crate_type = /obj/structure/closet/crate
 
 /*
 /datum/supply_pack/organic/strangeseeds

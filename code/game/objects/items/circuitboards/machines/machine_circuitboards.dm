@@ -570,6 +570,7 @@
 	req_components = list(/datum/stock_part/matter_bin = 1)
 	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
 		/obj/machinery/smartfridge/food = "food",
+		/obj/machinery/smartfridge/hotbar = "hotbar",	// GS13 EDIT: adds the hotbar
 		/obj/machinery/smartfridge/drinks = "drinks",
 		/obj/machinery/smartfridge/extract = "slimes",
 		/obj/machinery/smartfridge/petri = "petri",
@@ -1379,13 +1380,6 @@
 	name = "\improper Departmental Techfab - Service"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE
 	build_path = /obj/machinery/rnd/production/techfab/department/service
-
-/obj/item/circuitboard/machine/vendatray
-	name = "Vend-A-Tray"
-	greyscale_colors = CIRCUIT_COLOR_SERVICE
-	build_path = /obj/structure/displaycase/forsale
-	req_components = list(
-		/datum/stock_part/card_reader = 1)
 
 /obj/item/circuitboard/machine/fishing_portal_generator
 	name = "Fishing Portal Generator"

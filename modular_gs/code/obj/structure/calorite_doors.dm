@@ -3,6 +3,7 @@
 	icon = 'modular_gs/icons/obj/structure/calorite_door.dmi'
 	icon_state = "calorite"
 	sheetType = /obj/item/stack/sheet/mineral/calorite
+	sheetAmount = 5 //how much it takes to construct us.
 	max_integrity = 200
 	light_range = 1
 	// Sets it open by default

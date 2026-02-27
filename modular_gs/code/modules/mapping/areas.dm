@@ -24,28 +24,19 @@
 
 
 //lavaland xenoarch areas - seperate multi-Z level
+/area/lavaland/underground/xenoarch //this is what we'll use for all of non-outpost areas for xenoarch, as it has no storms
+	name = "Xenoarch Caves"
+	icon = 'modular_gs/icons/turf/areas.dmi'
+	icon_state = "xenogen"
+	always_unpowered = FALSE
+
 /area/xenoarch/lavaland
 	icon = 'modular_gs/icons/turf/areas.dmi'
 	icon_state = "xenogen"
 	default_gravity = STANDARD_GRAVITY
 
-/area/xenoarch/lavaland/outside
-	icon_state = "yellow"
-	default_gravity = STANDARD_GRAVITY
-	outdoors = TRUE
-	flags_1 = NONE
-	area_flags = VALID_TERRITORY | UNIQUE_AREA | FLORA_ALLOWED
-	sound_environment = SOUND_AREA_LAVALAND
-	ambient_buzz = 'sound/ambience/lavaland/magma.ogg'
-	always_unpowered = TRUE
-	power_environ = FALSE
-	power_equip = FALSE
-	power_light = FALSE
-	requires_power = TRUE
-	ambience_index = AMBIENCE_MINING
-	area_flags = VALID_TERRITORY | UNIQUE_AREA
 
-
+//xenoarch main outpost areas
 /area/xenoarch/lavaland/arch
 	name = "Xenoarchaeology"
 	icon_state = "xenoarch"
@@ -102,30 +93,46 @@
 	name = "Xenoarchaeology Public Area"
 	icon_state = "xenobot"
 
-/area/xenoarch/lavaland/calorite_temple
+/area/xenoarch/lavaland/lowerlevel
+	name = "Xenoarchaeology Lower Level Ruins"
+	icon_state = "xenoarch"
+
+/area/xenoarch/lavaland/public/powered //used primarily for quantum pads
+	name = "Xenoarchaeology Public Area"
+	icon_state = "xenobot"
+	power_light = TRUE
+	power_equip = TRUE
+	power_environ = TRUE
+	requires_power = FALSE
+//xenoarch main outpost areas end
+
+/area/lavaland/underground/xenoarch/calorite_temple
 	name = "Calorite Temple"
 	icon_state = "caloritetemple"
 	power_light = TRUE
 
-/area/xenoarch/lavaland/outside/caloriteresearch_powered
+/area/lavaland/underground/xenoarch/caloriteresearch
 	name = "Research Facility Ruins"
 	icon_state = "caloriteresearch"
 	power_light = TRUE
+	power_equip = TRUE
+	power_environ = TRUE
+	requires_power = FALSE
 
-/area/xenoarch/lavaland/outside/caloriteresearch_unpowered
-	name = "Research Facility Ruins"
-	icon_state = "caloriteresearch"
+/area/lavaland/underground/xenoarch/caloriteresearch/unpowered
 	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
 
-/area/xenoarch/lavaland/outside/donut_factory
+/area/lavaland/underground/xenoarch/donut_factory
 	name = "GATO Donut Factory"
 	icon_state = "donutfactory"
 
-/area/xenoarch/lavaland/outside/candy_outpost
+/area/lavaland/underground/xenoarch/candy_outpost
 	name = "Candyland Survey Post"
 	icon_state = "candyoutpost"
 
-/area/xenoarch/lavaland/outside/candyland
+/area/lavaland/underground/xenoarch/candyland
 	name = "Candyland"
 	icon_state = "candyland"
 	power_light = TRUE

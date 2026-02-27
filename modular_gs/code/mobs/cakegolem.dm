@@ -36,7 +36,7 @@
 	if(stat)
 		return
 	if(health < maxHealth)
-		adjustBruteLoss(-5) //Fast life regen
+		adjust_brute_loss(-5) //Fast life regen
 	for(var/obj/item/food/donut/D in range(1, src)) //Frosts nearby donuts!
 		if(!D.is_decorated)
 			D.decorate_donut()

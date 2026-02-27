@@ -3,12 +3,6 @@
 #define PAPER_FUEL 5
 #define MAX_FUEL 3000
 
-/datum/supply_pack/goody/fat_incense
-	name = "Bloat censer"
-	desc = "A recreational bloat censer. Put some wood or paper in, light it up and breathe deep. GATO is not responsible for being yelled at by Atmospheric Technicians."
-	cost = 500
-	contains = list(/obj/item/fat_incense)
-
 /obj/item/fat_incense
 	name = "bloat censer"
 	desc = "A vessel for incense. Add some wood and light it up to make it release a relaxing cloud."

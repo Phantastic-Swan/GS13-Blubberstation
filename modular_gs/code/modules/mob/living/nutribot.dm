@@ -238,7 +238,7 @@
 		if((last_newpatient_speak + 300) < world.time) //Don't spam these messages!
 			var/list/messagevoice = list("Hey, [H.name]! Hold on, I'm coming." = 'sound/voice/medbot/coming.ogg',"Wait [H.name]! I want to help!" = 'sound/voice/medbot/help.ogg')
 			var/message = pick(messagevoice)
-			if(prob(2) && ISINRANGE_EX(H.getFireLoss(), 0, 20))
+			if(prob(2) && ISINRANGE_EX(H.get_fire_loss(), 0, 20))
 				message = "Notices your minor burns*OwO what's this?"
 				messagevoice[message] = 'sound/voice/medbot/owo.ogg'
 			speak(message)

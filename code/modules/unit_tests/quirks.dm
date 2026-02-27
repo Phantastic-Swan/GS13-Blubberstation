@@ -13,7 +13,8 @@
 		if (isnull(icon))
 			TEST_FAIL("[quirk_type] has no icon!")
 			continue
-		/* GS13 EDIT - Skip this test for now.
+
+		/* GS13 EDIT Skip this test.
 		if (icon in used_icons)
 			TEST_FAIL("[icon] used in both [quirk_type] and [used_icons[icon]]!")
 			continue

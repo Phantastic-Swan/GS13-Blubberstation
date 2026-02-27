@@ -92,8 +92,8 @@
 	if(!ishuman(owner))
 		return
 	owner.adjust_fatness(get_fatness_bonus(owner) + amount, FATTENING_TYPE_CHEM)
-	owner.adjustBruteLoss(-(1 + (get_fatness_bonus(owner)/2)), updating_health = FALSE, required_bodytype = affected_bodytype)
-	owner.adjustFireLoss(-((1 + get_fatness_bonus(owner))/2), updating_health = FALSE, required_bodytype = affected_bodytype)
+	owner.adjust_brute_loss(-(1 + (get_fatness_bonus(owner)/2)), updating_health = FALSE, required_bodytype = affected_bodytype)
+	owner.adjust_fire_loss(-((1 + get_fatness_bonus(owner))/2), updating_health = FALSE, required_bodytype = affected_bodytype)
 	to_chat(owner, "<span class='notice'>That felt nice...</span>")
 
 /obj/item/hand_item/kisser/on_offer_taken(mob/living/carbon/offerer, mob/living/carbon/taker)

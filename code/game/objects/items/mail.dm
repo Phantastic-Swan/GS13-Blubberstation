@@ -252,9 +252,11 @@
 /obj/structure/closet/crate/mail
 	name = "mail crate"
 	desc = "A certified post crate from CentCom."
+	icon = 'modular_gs/icons/obj/storage/crates.dmi'	// GS13 EDIT
 	icon_state = "mail"
 	base_icon_state = "mail"
 	can_install_electronics = FALSE
+	lid_icon = 'modular_gs/icons/obj/storage/crates.dmi'	// GS13 EDIT
 	lid_icon_state = "maillid"
 	lid_w = -26
 	lid_z = 2

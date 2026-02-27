@@ -28,11 +28,17 @@ SUBSYSTEM_DEF(title)
 
 /datum/controller/subsystem/title/Initialize()
 	var/dat
-	if(!fexists("[global.config.directory]/bubbers/bubbers_title.txt"))
+	// GS13 EDIT - pinkifies the main menu
+	// if(!fexists("[global.config.directory]/bubbers/bubbers_title.txt"))
+	if(!fexists("[global.config.directory]/gs13/title_style.html"))
+	// GS13 END EDIT
 		to_chat(world, span_boldwarning("CRITICAL ERROR: Unable to read bubbers_title.txt, reverting to backup title html, please check your server config and ensure this file exists."))
 		dat = DEFAULT_TITLE_HTML
 	else
-		dat = file2text("[global.config.directory]/bubbers/bubbers_title.txt")
+		// GS13 EDIT
+		// dat = file2text("[global.config.directory]/bubbers/bubbers_title.txt")
+		dat = file2text("[global.config.directory]/gs13/title_style.html")
+		// GS13 END EDIT
 
 	title_html = dat
 

@@ -19,7 +19,7 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_x = 8;
 	pixel_y = 8
 	},
@@ -42,15 +42,15 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
 /turf/open/floor/carpet/green,
 /area/station/command/heads_quarters/nt_rep)
 "e" = (
 /obj/machinery/fax{
-	fax_name = "Nanotrasen Consultant's Office";
-	name = "Nanotrasen Consultant's Fax Machine"
+	fax_name = "GATO Consultant's Office";
+	name = "GATO Consultant's Fax Machine"
 	},
 /obj/structure/table/wood,
 /turf/open/floor/wood,
@@ -145,7 +145,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "nt_rep_priv"
 	},
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
 /turf/open/floor/wood,

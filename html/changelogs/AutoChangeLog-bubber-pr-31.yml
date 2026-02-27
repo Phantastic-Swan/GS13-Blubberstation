@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "ports the dual tone jumpsuit, with a variant available for (almost?) all roles. They are available in your jobs clothes vendor (engivend, atmosvend, lawdrobe etc) or garment bag."
-  - rscadd: "white dual tone jumpsuit in the loadout menu. There is a bug where the icon is just the zipper, however upon selecting it it will display properly on your character. The suit can be recolored to anything you want, but you will not keep the armor values associated with the job these colors belong to.\n/🆑"

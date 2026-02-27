@@ -419,10 +419,6 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/department/medical)
-"JY" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/grass,
-/area/station/asteroid)
 "KG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/blobstart,
@@ -1465,7 +1461,7 @@ Pu
 Pu
 gZ
 hQ
-JY
+wP
 wP
 wP
 LV

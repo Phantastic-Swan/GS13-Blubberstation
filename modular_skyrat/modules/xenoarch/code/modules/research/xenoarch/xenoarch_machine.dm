@@ -149,7 +149,8 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	var/turf/src_turf = get_turf(src)
-	var/choice = tgui_input_list(user, "Choose which reward you would like!", "Reward Choice", list("Lavaland Chest (150)", "Anomalous Crystal (150)", "Bepis Tech (100)"))
+
+	var/choice = tgui_input_list(user, "Choose which reward you would like!", "Reward Choice", list("Lavaland Chest (151)", "Anomalous Crystal (150)", "Bepis Tech (100)", "GATO Products")) //GS13 EDIT - More Xenoarch Rewards	var/choice = tgui_input_list(user, "Choose which reward you would like!", "Reward Choice", list("Lavaland Chest (150)", "Anomalous Crystal (150)", "Bepis Tech (100)"))
 	if(!choice)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -179,6 +180,12 @@
 
 			current_research -= 100
 			new /obj/item/disk/design_disk/bepis/remove_tech(src_turf)
+
+		//GS13 EDIT START
+		if("GATO Products")
+			gato_rewards(user)
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		//GS13 EDIT END
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

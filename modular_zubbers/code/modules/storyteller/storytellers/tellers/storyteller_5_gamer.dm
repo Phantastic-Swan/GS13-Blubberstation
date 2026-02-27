@@ -11,7 +11,7 @@
 		TAG_DESTRUCTIVE = 0.7,
 		TAG_CHAOTIC = 1.3
 	)
-	population_min = 60 //GS EDIT
+	population_min = 35
 	antag_divisor = 5
 	storyteller_type = STORYTELLER_TYPE_INTENSE
 
@@ -19,3 +19,5 @@
 	threshold_moderate = 1300
 	threshold_major = 4000
 	threshold_ghostset = 6000
+	threshold_crewset = 2000
+	threshold_ghostset = 4800

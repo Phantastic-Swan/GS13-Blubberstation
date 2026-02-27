@@ -146,13 +146,13 @@
 		unbuckle_mob(H)
 		H.throw_at(throw_target, 2, 3)
 		H.Knockdown(100)
-		H.adjustStaminaLoss(40)
+		H.adjust_stamina_loss(40)
 		if(isliving(M))
 			var/mob/living/D = M
 			throw_target = get_edge_target_turf(D, pick(GLOB.cardinals))
 			D.throw_at(throw_target, 2, 3)
 			D.Knockdown(80)
-			D.adjustStaminaLoss(35)
+			D.adjust_stamina_loss(35)
 			visible_message("<span class='danger'>[src] crashes into [M], sending [H] and [D] flying!</span>")
 		else
 			visible_message("<span class='danger'>[src] crashes into [M], sending [H] flying!</span>")

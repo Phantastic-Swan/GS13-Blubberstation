@@ -43,7 +43,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	//SKYRAT EDIT ADDITION END
 	//BUBBER EDIT ADDITION BEGIN
 	list(/datum/quirk/featherweight, /datum/quirk/oversized),
-	//list(/datum/quirk/overweight, /datum/quirk/obese), GS13 EDIT
+	//GS13 EDIT REMOVE OVERWEIGHT list(/datum/quirk/overweight, /datum/quirk/obese),
 	list(/datum/quirk/dominant_aura, /datum/quirk/well_trained),
 	list(/datum/quirk/equipping/entombed, /datum/quirk/equipping/seamless_clothes),
 	list(/datum/quirk/equipping/entombed, /datum/quirk/badback),

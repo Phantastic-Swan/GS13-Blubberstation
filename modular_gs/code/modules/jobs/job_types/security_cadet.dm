@@ -31,7 +31,7 @@
 	threat = 2
 
 	family_heirlooms = list(
-		/obj/item/book/manual/gato_spacelaw
+		/obj/item/book/manual/wiki/security_space_law
 	)
 
 	mail_goodies = list(

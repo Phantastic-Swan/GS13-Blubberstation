@@ -2154,7 +2154,6 @@
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "JV" = (
-/obj/machinery/camera/autoname/directional/east,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -2253,6 +2252,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/science)
+"MA" = (
+/obj/machinery/camera/autoname/directional/east,
+/turf/open/floor/plating,
+/area/station/commons/storage/primary)
 "ME" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -8490,7 +8493,7 @@ by
 dB
 dx
 dl
-dl
+MA
 gg
 JV
 zY

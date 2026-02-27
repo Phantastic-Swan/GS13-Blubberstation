@@ -57,13 +57,13 @@
 	minimal_access = list(
 		ACCESS_CAPTAIN, ACCESS_BRIG_ENTRANCE, ACCESS_COMMAND, ACCESS_CONSTRUCTION, ACCESS_DETECTIVE, ACCESS_ENGINEERING,
 		ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS, ACCESS_MEDICAL, ACCESS_RC_ANNOUNCE, ACCESS_SCIENCE, ACCESS_WEAPONS,
-		ACCESS_BRIG, ACCESS_CARGO, ACCESS_COURT, ACCESS_SECURITY, ACCESS_HOP
+		ACCESS_BRIG, ACCESS_CARGO, ACCESS_COURT, ACCESS_SECURITY, ACCESS_HOP, ACCESS_TELEPORTER, ACCESS_EVA, ACCESS_BUDGET
 	)
 	minimal_wildcard_access = list()
 	template_access = list(ACCESS_CAPTAIN)
 
 /datum/id_trim/job/nanotrasen_consultant
-	assignment = "Nanotrasen Consultant"
+	assignment = "GATO Consultant" //GS13 EDIT Change Nanotrasen to GATO
 	trim_state = "trim_centcom"
 	department_color = COLOR_GREEN
 	subdepartment_color = COLOR_GREEN

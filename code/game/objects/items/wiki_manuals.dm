@@ -66,21 +66,21 @@
 	starting_title = "Engineering Textbook"
 	page_link = "Guide_to_engineering"
 
+//GS13 EDIT START - OUR VERSION OF SPACE LAW
 /obj/item/book/manual/wiki/security_space_law
 	name = "Space Law"
-	desc = "A set of Nanotrasen guidelines for keeping law and order on their space stations."
+	desc = "A set of GATO guidelines for keeping law and order on their space stations."
 	icon_state = "bookSpaceLaw"
-	starting_author = "Nanotrasen"
+	starting_author = "GATO"
 	starting_title = "Space Law"
-	page_link = "Space_Law"
-
-//BUBBER EDIT ADDITION BEGIN: READING SPACE LAW HAS A CHANCE TO TEACH YOU LEGALESE
-/obj/item/book/manual/wiki/security_space_law/attack_self(mob/user)
-	if(user.can_read(src) && prob(30))
-		to_chat(user, span_notice("As you inhale the book's contents, you feel more sophisticated. After reading Space Law just once, you feel like you are an expert in pretending you know Latin. You can now speak Legalese."))
-		user.grant_language(/datum/language/legalese, SPOKEN_LANGUAGE) //can speak but not understand
-	else return
-//BUBBER EDIT ADDITION END
+	starting_content = {"<html>
+		<body>
+		<h2>GATO Laws, SOPs and other:</h2>
+		<p>You start skimming through the manual...</p>
+		<br></br>
+		<link>(https://github.com/sheepishgoat/GS13-Blubberstation/wiki/GATO_Laws)</link>
+		</body>
+		</html>"}
 
 /obj/item/book/manual/wiki/security_space_law/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] pretends to read \the [src] intently... then promptly dies of laughter!"))
@@ -208,7 +208,7 @@
 			part.adjustBleedStacks(5)
 		H.gib_animation()
 		sleep(0.3 SECONDS)
-		H.adjustBruteLoss(1000) //to make the body super-bloody
+		H.adjust_brute_loss(1000) //to make the body super-bloody
 		// if we use gib() then the body gets deleted
 		H.spawn_gibs()
 		H.spill_organs(DROP_ALL_REMAINS)

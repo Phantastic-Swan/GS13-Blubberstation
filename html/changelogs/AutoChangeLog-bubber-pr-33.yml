@@ -1,8 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - code_imp: "makes the autotransfer vote default to continuing the round on tiebreak"
-  - code_imp: "allows the autotransfer vote to accept ghost votes"
-  - config: "allows ghosts to vote and start votes"
-  - config: "enables autotransfer"
-  - config: "removes the limit on autotransfer votes"

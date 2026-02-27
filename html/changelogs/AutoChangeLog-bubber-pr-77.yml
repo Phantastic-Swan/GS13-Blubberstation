@@ -1,7 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "makes it so my donator item doesn't just... burn into ash..."
-  - bugfix: "fixes stuffed belly sprites disappearing when wearing the dual tone suit"
-  - bugfix: "HOPEFULLY FIXES PERSISTENT WEIGHT THIS TIME GOD"
-  - bugfix: "fixes calorite slimes not working when spawned in by admins"

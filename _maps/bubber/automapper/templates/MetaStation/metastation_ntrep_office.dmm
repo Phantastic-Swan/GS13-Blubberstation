@@ -155,7 +155,7 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_y = 12;
 	pixel_x = 8
 	},
@@ -199,8 +199,8 @@
 	dir = 1
 	},
 /obj/machinery/fax{
-	fax_name = "Nanotrasen Consultant's Office";
-	name = "Nanotrasen Consultant's Fax Machine"
+	fax_name = "GATO Consultant's Office";
+	name = "GATO Consultant's Fax Machine"
 	},
 /obj/structure/table/wood,
 /obj/machinery/button/door/directional/west{
@@ -239,7 +239,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/cent_com/rep_door,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/wood,
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
 /turf/open/floor/carpet/green,
@@ -256,7 +256,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/effect/mapping_helpers/airlock/unres,
+/obj/effect/mapping_helpers/airlock/unres/delayed,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/nt_rep)
 "S" = (
@@ -276,7 +276,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 7
 	},
-/obj/effect/mapping_helpers/airlock/unres{
+/obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
 /turf/open/floor/wood,

@@ -1,49 +1,62 @@
-/datum/map_template/ruin/lavaland/snack_store //GS13
-	name = "Snack Store"
-	id = "snackstore"
-	description = "All your dreams about spending a night in a snack store finally came true! Though judging by your situation, you might spend a bit longer than just one night here..."
-	suffix = "lavaland_surface_snack_store.dmm"
+/datum/map_template/ruin/lavaland/berryshrine
+	name = "Blueberry Shrine"
+	id = "berryaltar"
+	description = "A medium-sized shrine temple, flooded with liquid and featuring a strange elevated altar."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_BerryAltar.dmm"
+	cost = 2
 	allow_duplicates = FALSE
-	cost = 0
 
-/datum/map_template/ruin/lavaland/calorite_altar //GS13
-	name = "Calorite Altar"
-	id = "caloritealtar"
-	description = "A mysterious fountain stands dormant amidst a small calorite shrine... What could it possibly offer?"
-	suffix = "lavaland_surface_caloritealtar.dmm"
-	allow_duplicates = TRUE
-	cost = 0
-
-
-/datum/map_template/ruin/lavaland/calorite_shrine //GS13
+/datum/map_template/ruin/lavaland/caloriteshrine
 	name = "Calorite Shrine"
 	id = "caloriteshrine"
-	description = "Somewhere on this planet, a gluttony deity is worshipped for food and life."
-	suffix = "lavaland_surface_caloriteshrine.dmm"
-	allow_duplicates = FALSE
-	cost = 0
-
-
-/datum/map_template/ruin/lavaland/blueberry_shrine //GS13
-	name = "Blueberry Shrine"
-	id = "blueberryshrine"
-	description = "A strange temple, littered with oddly round sculptures and peculiar blue stains."
-	suffix = "lavaland_surface_blueberryarea.dmm"
-	allow_duplicates = FALSE
-	cost = 0
-
-/datum/map_template/ruin/lavaland/cozy_cabin //HS13 (I think?)
-	name = "Cozy Cabin"
-	id = "cozycabin"
-	description = "A comfy lil cabin, amidst the barren hot landscape."
-	suffix = "lavaland_surface_cozy_cabin.dmm"
+	description = "A medium-sized calorite shrine, featuring no threats but a blockade for those who aren't fat enough."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_CaloriteShrine.dmm"
+	cost = 2
 	allow_duplicates = TRUE
-	cost = 0
 
-/datum/map_template/ruin/lavaland/cow_barn //GS13
+/datum/map_template/ruin/lavaland/caloriteshrine2
+	name = "Calorite Shrine 2"
+	id = "caloriteshrine2"
+	description = "A medium-sized calorite shrine, featuring numerous fattening magehands and a convenient supply of calorite."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_CaloriteShrine2.dmm"
+	cost = 2
+	allow_duplicates = TRUE
+
+/datum/map_template/ruin/lavaland/feederdenruin
+	name = "Remains of Feeder Den"
+	id = "feederdenruin"
+	description = "Remains of the infamous Feeder Den, struck down by GATO's BSA Division. It has been boobie trapped in an attempt of area denial."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_FeederDenRuin.dmm"
+	cost = 3
+	allow_duplicates = FALSE //wouldn't make sense lore wise
+
+/datum/map_template/ruin/lavaland/cowbarn
 	name = "Cow Barn"
 	id = "cowbarn"
-	description = "A strange barn, seemingly translocated in the middle of lavaland via a bluespace anomaly. What dark secret does it hold?"
-	suffix = "lavaland_surface_cow_barn.dmm"
+	description = "An ordinary looking barn for cattle... Or is it?"
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_CowBarn.dmm"
+	cost = 2
 	allow_duplicates = TRUE
-	cost = 0
+
+/datum/map_template/ruin/lavaland/candypocket
+	name = "Candy Pocket"
+	id = "candypocket"
+	description = "A pocket of candyland. This one is candy-themed."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_CandyPocket.dmm"
+	cost = 2
+	allow_duplicates = TRUE
+
+/datum/map_template/ruin/lavaland/chocopocket
+	name = "Choco Pocket"
+	id = "chocopocket"
+	description = "A pocket of candyland. This one is chocolate-themed."
+	prefix = "_maps/RandomRuins/LavaRuins/GS13/"
+	suffix = "Lavaland_Ruin_ChocoPocket.dmm"
+	cost = 2
+	allow_duplicates = TRUE

@@ -80,7 +80,7 @@
 	user.resting = TRUE
 	if(user:getStaminaLoss() < 100)
 		if (user.throw_at(target, slidedistance, slidespeed, spin = FALSE, diagonals_first = TRUE))
-			user:adjustStaminaLoss(stamina_cost) //reduce stamina loss by 0.3 per tick, 6 per 2 seconds
+			user:adjust_stamina_loss(stamina_cost) //reduce stamina loss by 0.3 per tick, 6 per 2 seconds
 			user.visible_message("<span class='warning'>[usr] slides forward!</span>")
 			user.resting = FALSE
 		else

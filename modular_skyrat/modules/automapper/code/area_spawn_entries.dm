@@ -25,10 +25,11 @@
 	desired_atom = /obj/structure/closet/secure_closet/blueshield
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
-/datum/area_spawn/command_drobe
-	target_areas = list(/area/station/command/meeting_room, /area/station/command/meeting_room/council, /area/station/command/bridge)
-	desired_atom = /obj/machinery/vending/access/command
-	mode = AREA_SPAWN_MODE_HUG_WALL
+//GS13 - commenting the placements of these: our maps already place them down
+// /datum/area_spawn/command_drobe
+// 	target_areas = list(/area/station/command/meeting_room, /area/station/command/meeting_room/council, /area/station/command/bridge)
+// 	desired_atom = /obj/machinery/vending/access/command
+// 	mode = AREA_SPAWN_MODE_HUG_WALL
 
 /datum/area_spawn/ammo_workbench
 	target_areas = list(/area/station/security/lockers, /area/station/security/office)
@@ -50,10 +51,11 @@
 	desired_atom = /obj/machinery/gbp_redemption
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
-/datum/area_spawn/bar_jukebox
-	target_areas = list(/area/station/commons/lounge, /area/station/service/bar/atrium, /area/station/service/bar)
-	desired_atom = /obj/machinery/jukebox/no_access
-	mode = AREA_SPAWN_MODE_OPEN
+//GS13 - removed this as a modular spawn - our maps already place these
+// /datum/area_spawn/bar_jukebox
+// 	target_areas = list(/area/station/commons/lounge, /area/station/service/bar/atrium, /area/station/service/bar)
+// 	desired_atom = /obj/machinery/jukebox/no_access
+// 	mode = AREA_SPAWN_MODE_OPEN
 
 // Wall mounts. Use sparingly as walls are prime real estate
 /datum/area_spawn/posialert_robotics

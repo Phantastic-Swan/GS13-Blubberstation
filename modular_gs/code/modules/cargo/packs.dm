@@ -86,3 +86,14 @@
 	crate_name = "sop books crate"
 
 */
+/datum/supply_pack/goody/fat_incense
+	name = "Bloat censer"
+	desc = "A recreational bloat censer. Put some wood or paper in, light it up and breathe deep. GATO is not responsible for being yelled at by Atmospheric Technicians."
+	cost = 500
+	contains = list(/obj/item/fat_incense)
+
+/datum/supply_pack/goody/holo_wheelchair
+	name = "Hardlight Wheelchair Emitter"
+	desc = "Popular in GS13, this emitter is able to project a hardlight wheelchair for an user to sit in."
+	cost = 150
+	contains = list(/obj/item/holosign_creator/hardlight_wheelchair)

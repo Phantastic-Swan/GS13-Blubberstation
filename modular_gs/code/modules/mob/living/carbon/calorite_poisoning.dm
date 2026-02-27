@@ -10,6 +10,9 @@
 	micro_calorite_poisoning = clamp(micro_calorite_poisoning, 0, 100)
 
 	if (micro_calorite_poisoning < 0.1)	// sanity to make sure we aren't applying stupid effects for very low doses
+		remove_weight_gain_modifier(CALORITE_POISONING)
+		remove_weight_loss_modifier(CALORITE_POISONING)
+		remove_movespeed_modifier(/datum/movespeed_modifier/calorite_poisoning)
 		return
 
 	var/calorite_poisoning = micro_calorite_poisoning / 100	// we assume 100 micro calorite poisoning is 100%, so we divide by 100 to get the percentage value
@@ -29,7 +32,7 @@
 	set_weight_gain_modifier(CALORITE_POISONING, calorite_poisoning)
 	set_weight_loss_modifier(CALORITE_POISONING, -calorite_poisoning)
 
-	adjust_hunger(calorite_poisoning * 5)
+	adjust_hunger(calorite_poisoning * 2.5)
 
 	if (calorite_poisoning > 0.3)
 		if (prob(5))

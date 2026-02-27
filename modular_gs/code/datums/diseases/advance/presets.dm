@@ -12,6 +12,11 @@
 	desc = "A small bottle. Contains weight gain virus in synthblood medium."
 	spawned_disease = /datum/disease/advance/weight_gain
 
+/obj/item/reagent_containers/glass/bottle/berry_virus
+	name = "Berry virus bottle"
+	desc = "A small bottle. Contains the blueberry virus in synthblood medium."
+	spawned_disease = /datum/disease/advance/berry_virus
+
 
 // Berry virus - GS13
 /datum/disease/advance/berry_virus

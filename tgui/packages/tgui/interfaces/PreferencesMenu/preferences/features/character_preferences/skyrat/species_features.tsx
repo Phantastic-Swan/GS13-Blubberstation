@@ -143,7 +143,7 @@ export const eye_emissives: FeatureToggle = {
 };
 
 export const mutant_colors_color: Feature<string[]> = {
-  name: 'Mutant Colors',
+  name: 'Body Colors',  // GS13 EDIT changes mutant colors name to body colors
   component: FeatureTriColorInput,
 };
 
@@ -269,6 +269,18 @@ export const ears_emissive: Feature<boolean[]> = {
   name: 'Ears Emissives',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
+};
+
+export const quad_eyes: FeatureToggle = {
+  name: 'Quad Eyes',
+  description:
+    'Gives the character four eyes, may have some oddities with custom eyes (Snail, moth, shadekin, akula, etc...) - ( ** v ** )',
+  component: CheckboxInput,
+};
+
+export const quad_eyes_offset: Feature<number> = {
+  name: 'Quad Eyes Offset',
+  component: FeatureNumberInput,
 };
 
 export const wings_toggle: FeatureToggle = {

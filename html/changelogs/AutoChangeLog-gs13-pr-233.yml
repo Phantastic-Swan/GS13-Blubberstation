@@ -1,0 +1,7 @@
+author: "SamTellings"
+delete-after: True
+changes:
+  - rscadd: "Calorite Collar: A collar that makes the wearer gain weight faster (1.5x). It is under nutritech tools research. Also comes in a locked variant."
+  - rscadd: "Bluespace Collar Transmitter: A collar that can be linked to a Bluespace Collar Receiver (explained below). Anything that the wearer eats gets transported to the wearer of the receiver. Works with food, beaker reagents, and the feeding tube. Is unlocked with nutritech tools. You can right click it to unlink it. Comes in locked and unlocked variant."
+  - rscadd: "Bluespace Collar Receiver: A collar that will receive all food and reagents eaten, drunk, and pumped into by feeding tube from linked bluespace collar transmitters. The Receiver once a transmitter is linked to it, it cannot be unlinked except via the transmitter collar. Will ignore fullness. Is unlocked with nutritech tools. Comes in locked and unlocked variant."
+  - rscadd: "Both collars use new art made by Clumpy."

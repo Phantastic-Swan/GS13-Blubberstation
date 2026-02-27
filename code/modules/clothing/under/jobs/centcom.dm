@@ -7,6 +7,8 @@
 	name = "\improper CentCom commander's suit"
 	desc = "It's a suit worn by CentCom's highest-tier Commanders."
 	icon_state = "centcom"
+	lefthand_file = 'modular_gs/icons/mob/inhands/items_inhand_left.dmi'	// GS13 EDIT changes inhand icons
+	righthand_file = 'modular_gs/icons/mob/inhands/items_inhand_right.dmi'	// GS13 EDIT changes inhand icons
 	inhand_icon_state = "dg_suit"
 
 /obj/item/clothing/under/rank/centcom/official

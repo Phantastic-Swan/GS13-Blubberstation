@@ -1,9 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - code_imp: "changes the pathway of some items in the wand of gluttony. Still not implemented since it's broken and no time."
-  - rscadd: "Ports chocolate slimes"
-  - rscadd: "Ports creambeasts"
-  - rscadd: "Ports mage hands"
-  - rscadd: "ports treadmill"
-  - map: "added xenoarch/demone/donut factory areas - basically all of our areas from cit"

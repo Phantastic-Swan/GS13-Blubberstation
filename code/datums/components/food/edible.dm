@@ -39,11 +39,11 @@ Behavior that's still missing from this component that original food items had t
 	///Last time we checked for food likes
 	var/last_check_time
 	///Assoc list of sources and their foodtypes
-	var/list/foodtypes_by_source = list()
+	var/list/foodtypes_by_source
 	///Assoc list of sources and their food flags
-	var/list/food_flags_by_source = list()
+	var/list/food_flags_by_source
 	///Assoc list of sources and their junkiness
-	var/list/junkiness_by_source = list()
+	var/list/junkiness_by_source
 
 /datum/component/edible/Initialize(
 	list/initial_reagents,
@@ -93,10 +93,6 @@ Behavior that's still missing from this component that original food items had t
 		RegisterSignal(parent, COMSIG_ITEM_ATTACK, PROC_REF(UseFromHand))
 		RegisterSignal(parent, COMSIG_ITEM_USED_AS_INGREDIENT, PROC_REF(used_to_customize))
 
-		var/obj/item/item = parent
-		if(!item.grind_results)
-			item.grind_results = list() //If this doesn't already exist, add it as an empty list. This is needed for the grinder to accept it.
-
 	else if(isturf(parent) || isstructure(parent))
 		RegisterSignal(parent, COMSIG_ATOM_ATTACK_HAND, PROC_REF(TryToEatIt))
 
@@ -145,16 +141,16 @@ Behavior that's still missing from this component that original food items had t
 
 	var/recalculate = FALSE
 	if(!isnull(foodtypes))
-		if(foodtypes_by_source[source]) //foodtypes being overriden
+		if(LAZYACCESS(foodtypes_by_source, source)) //foodtypes being overriden
 			recalculate = TRUE
-		foodtypes_by_source[source] = foodtypes
+		LAZYSET(foodtypes_by_source, source, foodtypes)
 	if(!isnull(food_flags))
-		if(food_flags_by_source[source]) //food_flags being overriden
+		if(LAZYACCESS(food_flags_by_source, source)) //food_flags being overridden
 			recalculate = TRUE
-		food_flags_by_source[source] = food_flags
+		LAZYSET(food_flags_by_source, source, food_flags)
 	if(!isnull(junkiness))
-		src.junkiness += junkiness - junkiness_by_source[source]
-		junkiness_by_source[source] = junkiness
+		src.junkiness += junkiness - LAZYACCESS(junkiness_by_source, source)
+		LAZYSET(junkiness_by_source, source, junkiness)
 
 	if(recalculate)
 		recalculate_food_flags()
@@ -194,10 +190,10 @@ Behavior that's still missing from this component that original food items had t
 
 /datum/component/edible/on_source_remove(source)
 	//rebuild the foodtypes and food_flags bitfields without the removed source
-	foodtypes_by_source -= source
-	food_flags_by_source -= source
-	junkiness -= junkiness_by_source[source]
-	junkiness_by_source -= source
+	LAZYREMOVE(foodtypes_by_source, source)
+	LAZYREMOVE(food_flags_by_source, source)
+	junkiness -= LAZYACCESS(junkiness_by_source, source)
+	LAZYREMOVE(junkiness_by_source, source)
 	recalculate_food_flags()
 	return ..()
 
@@ -205,8 +201,8 @@ Behavior that's still missing from this component that original food items had t
 	foodtypes = NONE
 	food_flags = NONE
 	for(var/source_key in foodtypes_by_source)
-		foodtypes |= foodtypes_by_source[source_key]
-		food_flags |= food_flags_by_source[source_key]
+		foodtypes |= LAZYACCESS(foodtypes_by_source, source_key)
+		food_flags |= LAZYACCESS(food_flags_by_source, source_key)
 	if(foodtypes & GORE)
 		ADD_TRAIT(parent, TRAIT_VALID_DNA_INFUSION, REF(src))
 	else
@@ -287,7 +283,7 @@ Behavior that's still missing from this component that original food items had t
 			else
 				examine_list += span_notice("[owner] was bitten multiple times!")
 
-	if(GLOB.Debug2)
+	if(GLOB.debugging_enabled)
 		examine_list += span_notice("Reagent purities:")
 		for(var/datum/reagent/reagent as anything in owner.reagents.reagent_list)
 			examine_list += span_notice("- [reagent.name] [reagent.volume]u: [round(reagent.purity * 100)]% pure")
@@ -362,7 +358,7 @@ Behavior that's still missing from this component that original food items had t
 	return TRUE
 
 /// Normal time to forcefeed someone something
-#define EAT_TIME_FORCE_FEED (2 SECONDS)		// GS13 EDIT makes force feeding faster
+#define EAT_TIME_FORCE_FEED (2 SECONDS)		// GS13 EDIT makes force feeding faster Original : 3
 /// Multiplier for eat time if the eater has TRAIT_VORACIOUS
 #define EAT_TIME_VORACIOUS_MULT 0.65 // voracious folk eat 35% faster
 /// Multiplier for how much longer it takes a voracious folk to eat while full
@@ -396,6 +392,11 @@ Behavior that's still missing from this component that original food items had t
 		// else
 		// 	time_to_eat *= (fullness / NUTRITION_LEVEL_FAT) * EAT_TIME_VORACIOUS_FULL_MULT // takes longer to eat the more well fed you are
 		// GS13 END EDIT
+
+	// GS13 EDIT
+	var/mob/living/carbon/human/human_eater = eater // human eater, not human eater.
+	var/obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter/bs_collar_trans = human_eater.wear_neck
+	// GS13 END EDIT
 	if(eater == feeder)//If you're eating it yourself.
 		if(eat_time > 0 && !do_after(feeder, time_to_eat, eater, timed_action_flags = food_flags & FOOD_FINGER_FOOD ? IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE : NONE)) //Gotta pass the minimal eat time
 			return
@@ -407,10 +408,15 @@ Behavior that's still missing from this component that original food items had t
 		var/message_to_consumer = ""
 		var/message_to_blind_consumer = ""
 
-		if(junkiness && eater.satiety < -150 && eater.nutrition > NUTRITION_LEVEL_STARVING + 50 && !HAS_TRAIT(eater, TRAIT_VORACIOUS) && !HAS_TRAIT(eater, TRAIT_GLUTTON))
+		//GS13 EDIT- Bluespace collar addition
+		if (istype(bs_collar_trans, /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter) && bs_collar_trans.islinked())
+			message_to_consumer = span_notice("You effortlessly [eatverb] \the [parent], feeling as if you haven't eaten anything at all.")
+			message_to_nearby_audience = span_notice("[eater] effortlessly [eatverb]s \the [parent].")
+		//GS13 END EDIT
+		else if(junkiness && eater.satiety < -150 && eater.nutrition > NUTRITION_LEVEL_STARVING + 50 && !HAS_TRAIT(eater, TRAIT_VORACIOUS) && !HAS_TRAIT(eater, TRAIT_GLUTTON)) //GS13 EDIT - Bluespace collar added else
 			to_chat(eater, span_warning("You don't feel like eating any more junk food at the moment!"))
 			return
-		else if(fullness > (1800 * (1 + eater.overeatduration / (4000 SECONDS)))) // The more you eat - the more you can eat //GS13 EDIT EAT MORE
+		else if(fullness > (1800 * (1 + eater.overeatduration / (4000 SECONDS)))) // The more you eat - the more you can eat //GS13 EDIT EAT MORE (replaces 600 with 1800)
 			if(HAS_TRAIT(eater, TRAIT_VORACIOUS) || HAS_TRAIT(eater, TRAIT_GLUTTON))
 				message_to_nearby_audience = span_notice("[eater] voraciously forces \the [parent] down [eater.p_their()] throat.")
 				message_to_consumer = span_notice("You voraciously force \the [parent] down your throat.")
@@ -448,7 +454,8 @@ Behavior that's still missing from this component that original food items had t
 		if(isbrain(eater))
 			to_chat(feeder, span_warning("[eater] doesn't seem to have a mouth!"))
 			return
-		if(fullness <= (1800 * (1 + eater.overeatduration / (4000 SECONDS))) || HAS_TRAIT(eater, TRAIT_VORACIOUS))	// GS13 EDIT - increases max fullness for feeding others
+		// if(fullness <= (600 * (1 + eater.overeatduration / (2000 SECONDS))) || HAS_TRAIT(eater, TRAIT_VORACIOUS))	// GS13 EDIT original for the change below
+		if(fullness <= (1800 * (1 + eater.overeatduration / (4000 SECONDS))) || HAS_TRAIT(eater, TRAIT_VORACIOUS))	// GS13 EDIT makes it so feeding others has the same eating limit as feeding ourselves.
 			eater.visible_message(
 				span_danger("[feeder] attempts to [eater.get_bodypart(BODY_ZONE_HEAD) ? "feed [eater] [parent]." : "stuff [parent] down [eater]'s throat hole! Gross."]"),
 				span_userdanger("[feeder] attempts to [eater.get_bodypart(BODY_ZONE_HEAD) ? "feed you [parent]." : "stuff [parent] down your throat hole! Gross."]")
@@ -475,10 +482,11 @@ Behavior that's still missing from this component that original food items had t
 		if(eater.is_blind())
 			to_chat(eater, span_userdanger("You're forced to eat something!"))
 
-	TakeBite(eater, feeder)
+	if (!(istype(bs_collar_trans, /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter) && bs_collar_trans.transpose_edible(src, eater, feeder))) //GS13 EDIT - Bluespace collar
+		TakeBite(eater, feeder)
 
 	//If we're not force-feeding and there's an eat delay, try take another bite
-	if(eat_time > 0)	// GS13 edit - makes it so feeding others can be queued
+	if(eat_time > 0)	// GS13 edit - makes it so feeding others can be queued. Original:	if(eater == feeder && eat_time > 0)
 		INVOKE_ASYNC(src, PROC_REF(TryToEat), eater, feeder)
 
 #undef EAT_TIME_FORCE_FEED
@@ -498,6 +506,7 @@ Behavior that's still missing from this component that original food items had t
 	playsound(eater.loc,'sound/items/eatfood.ogg', rand(10,50), TRUE)
 	if(!owner.reagents.total_volume)
 		return
+	SEND_SIGNAL(eater, COMSIG_LIVING_EAT_FOOD, owner)
 	var/sig_return = SEND_SIGNAL(parent, COMSIG_FOOD_EATEN, eater, feeder, bitecount, bite_consumption)
 	if(sig_return & DESTROY_FOOD)
 		qdel(owner)
@@ -741,6 +750,8 @@ Behavior that's still missing from this component that original food items had t
 ///Ability to feed food to puppers
 /datum/component/edible/proc/on_entered(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
+	if(QDELETED(parent))
+		return
 	SEND_SIGNAL(parent, COMSIG_FOOD_CROSSED, arrived, bitecount)
 
 ///Response to being used to customize something

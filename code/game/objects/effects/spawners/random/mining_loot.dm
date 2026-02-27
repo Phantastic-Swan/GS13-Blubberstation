@@ -24,6 +24,12 @@
 		/obj/item/book/granter/action/spell/summonitem = 1,
 		/obj/item/book_of_babel = 1,
 		/obj/item/clothing/neck/necklace/memento_mori = 1,
+		//GS13 EDIT - NEW LOOT
+		/obj/item/gavelhammer/fattening = 1,
+		/obj/item/melee/curator_whip/fattening = 1,
+		/obj/item/clothing/neck/necklace/memento_mori/calori/sprinkled = 1,
+		/obj/item/grenade/chem_grenade/fatmix = 1,
+		//GS13 EDIT END
 	)
 
 /obj/effect/spawner/random/mining_loot/demonic

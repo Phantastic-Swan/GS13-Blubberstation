@@ -149,6 +149,15 @@ Always compile, always use that verb, and always make sure that it works for wha
 	ZTRAIT_LAVA_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
+//GS13 EDIT
+#define ZTRAITS_LAVALAND_XENOARCH list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_NOPARALLAX = TRUE, \
+	ZTRAIT_ASHSTORM = FALSE, \
+	ZTRAIT_LAVA_RUINS = FALSE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
+//GS13 EDIT END
 ///Z level traits for Away Missions
 #define ZTRAITS_AWAY list(ZTRAIT_AWAY = TRUE)
 ///Z level traits for Secret Away Missions
@@ -251,6 +260,7 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define AWAYSTART_SNOWCABIN "AWAYSTART_SNOWCABIN"
 #define AWAYSTART_SNOWDIN "AWAYSTART_SNOWDIN"
 #define AWAYSTART_UNDERGROUND "AWAYSTART_UNDERGROUND"
+#define AWAYSTART_HERETIC "AWAYSTART_HERETIC"
 
 // Minetypes for maps
 #define MINETYPE_NONE "none"

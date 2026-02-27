@@ -8,12 +8,14 @@
 	density = TRUE
 	req_access = list(ACCESS_KITCHEN)
 	var/processing = FALSE
-	var/start_at = NUTRITION_LEVEL_WELL_FED
-	var/stop_at = NUTRITION_LEVEL_STARVING
+	// GS13 EDIT
+	var/start_at = FATNESS_LEVEL_FATTER
+	var/stop_at = FATNESS_LEVEL_FATTER
 	var/free_exit = TRUE //set to false to prevent people from exiting before being completely stripped of fat
-	var/bite_size = 7.5 //amount of nutrients we take per second
+	var/bite_size = 25 //amount of nutrients we take per second
+	// GS13 END EDIT
 	var/nutrients //amount of nutrients we got build up
-	var/nutrient_to_meat = 90 //one slab of meat gives about 52 nutrition
+	var/nutrient_to_meat = 175 //one slab of meat gives about 52 nutrition	// GS13 EDIT
 	var/datum/looping_sound/microwave/soundloop //100% stolen from microwaves
 	var/breakout_time = 600
 
@@ -24,7 +26,11 @@
 	"Being overweight or obese puts you at an increased risk of chronic diseases, such as cardiovascular diseases, metabolic syndrome, type 2 diabetes and some types of cancers.", \
 	"Not all fats are bad. A certain amount of fat is an essential part of a healthy balanced diet. " , \
 	"Saturated fat should form no more than 11% of your daily calories.", \
-	"Unsaturated fat, that is monounsaturated fats, polyunsaturated fats and omega-3 fatty acids, is found in plant foods and fish." \
+	// GS13 EDIT
+	"Unsaturated fat, that is monounsaturated fats, polyunsaturated fats and omega-3 fatty acids, is found in plant foods and fish.", \
+	"Did you know the average BFI of a GS13 worker is over 800?", \
+	"GATO offers product discounts for employees below specified BFI ranges.", \
+	// GS13 END EDIT
 	)
 
 /obj/machinery/fat_sucker/Initialize(mapload)
@@ -139,11 +145,14 @@
 		return
 
 	var/mob/living/carbon/C = occupant
-	if(C.nutrition <= stop_at)
+	if(C.fatness_real <= stop_at)	// GS13 EDIT
 		open_machine()
 		playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, FALSE)
 		return
-	C.adjust_nutrition(-bite_size * seconds_per_tick)
+	// GS13 EDIT
+	// C.adjust_nutrition(-bite_size * seconds_per_tick)
+	C.adjust_fatness(-bite_size * seconds_per_tick, FATTENING_TYPE_WEIGHT_LOSS, TRUE)
+	// GS13 END EDIT
 	nutrients += bite_size * seconds_per_tick
 
 	if(next_fact <= 0)
@@ -159,7 +168,7 @@
 		return
 	if(iscarbon(occupant))
 		var/mob/living/carbon/C = occupant
-		if(C.nutrition > start_at)
+		if(C.fatness_real > start_at)	// GS13 EDIT
 			processing = TRUE
 			soundloop.start()
 			update_appearance()

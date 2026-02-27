@@ -45,18 +45,17 @@
 	category = list(RND_CATEGORY_WEAPONS)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
-/*
 //nutritech tools
 /datum/design/calorite_collar
 	name = "Calorite Collar"
 	desc = "A collar that amplifies caloric intake of the wearer."
 	id = "calorite_collar"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT *0.5, /datum/material/calorite = SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT *0.5, /datum/material/calorite = SHEET_MATERIAL_AMOUNT * 3)
 	construction_time = 75
-	build_path = /obj/item/clothing/neck/petcollar/calorite
+	build_path = /obj/item/clothing/neck/human_petcollar/calorite
 	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL)
-	departmental_flags = DEPARTMENT_BITFLAG_ALL
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design/bluespace_collar_receiver
 	name = "Bluespace collar receiver"
@@ -65,9 +64,9 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT *0.5, /datum/material/calorite = SHEET_MATERIAL_AMOUNT *1.25, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT * 0.125)
 	construction_time = 75
-	build_path = /obj/item/clothing/neck/petcollar/locked/bluespace_collar_receiver
+	build_path = /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_receiver
 	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL)
-	departmental_flags = DEPARTMENT_BITFLAG_ALL
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design/bluespace_collar_transmitter
 	name = "Bluespace collar transmitter"
@@ -76,9 +75,11 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT *0.5, /datum/material/calorite = SHEET_MATERIAL_AMOUNT *0.5, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT *0.25)
 	construction_time = 75
-	build_path = /obj/item/clothing/neck/petcollar/locked/bluespace_collar_transmitter
+	build_path = /obj/item/clothing/neck/human_petcollar/locked/bluespace_collar_transmitter
 	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL)
-	departmental_flags = DEPARTMENT_BITFLAG_ALL
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_ENGINEERING
+
+/*
 
 /datum/design/cyberimp_nutriment_turbo
 	name = "Nutriment Pump Implant TURBO"
@@ -103,27 +104,6 @@
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 */
 
-/datum/design/bluespace_belt
-	name = "Bluespace Belt"
-	desc = "A belt made using bluespace technology. The power of space and time, used to hide the fact you are fat."
-	id = "bluespace_belt"
-	build_type = PROTOLATHE
-	construction_time = 100
-	materials = list(/datum/material/silver = SHEET_MATERIAL_AMOUNT * 2, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT, )
-	build_path = /obj/item/bluespace_belt
-	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
-
-/datum/design/primitive_bluespace_belt
-	name = "Primitive Bluespace Belt"
-	desc = "A primitive belt made using bluespace technology. The power of space and time, used to hide the fact you are fat. This one requires cells to continue operating, and may suffer from random failures."
-	id = "primitive_bluespace_belt"
-	build_type = PROTOLATHE
-	construction_time = 100
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2, /datum/material/silver = SHEET_MATERIAL_AMOUNT, )
-	build_path = /obj/item/bluespace_belt/primitive
-	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/cookie_synthesizer
 	name = "Cookie Synthesizer"

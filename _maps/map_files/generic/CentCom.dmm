@@ -1055,7 +1055,7 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -1697,7 +1697,7 @@
 	id = "tdomeflash";
 	name = "Thunderdome Flash"
 	},
-/turf/open/floor/circuit/green,
+/turf/closed/wall,
 /area/centcom/tdome/arena)
 "fc" = (
 /obj/effect/turf_decal/delivery,
@@ -3473,7 +3473,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/wood,
 /turf/open/floor/iron/grimy,
 /area/centcom/central_command_areas/courtroom)
@@ -4832,6 +4832,13 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/centcom/central_command_areas/admin)
+"oA" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/ferry)
 "oB" = (
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/vending/wardrobe/cent_wardrobe,
@@ -5050,7 +5057,7 @@
 	pixel_x = -2;
 	pixel_y = 12
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_y = 7
 	},
 /obj/structure/table/reinforced,
@@ -5401,7 +5408,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -5984,9 +5991,6 @@
 	dir = 4
 	},
 /obj/structure/table/glass,
-/obj/item/implanter/krav_maga{
-	pixel_x = 3
-	},
 /obj/item/implanter/mindshield{
 	pixel_y = 5;
 	pixel_x = 3
@@ -7811,6 +7815,21 @@
 /obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
+"xJ" = (
+/obj/effect/landmark/thunderdome/two,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/light_emitter/thunderdome,
+/obj/machinery/camera/directional/north{
+	c_tag = "Red Team";
+	network = list("thunder");
+	pixel_x = 11;
+	pixel_y = -9;
+	resistance_flags = 64
+	},
+/turf/open/floor/iron,
+/area/centcom/tdome/arena)
 "xM" = (
 /obj/structure/filingcabinet,
 /obj/effect/turf_decal/siding/wood{
@@ -8135,7 +8154,7 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/stamp{
+/obj/item/stamp/granted{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -8517,19 +8536,6 @@
 	dir = 1
 	},
 /area/centcom/central_command_areas/admin)
-"zO" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Red Team";
-	network = list("thunder");
-	pixel_x = 11;
-	pixel_y = -9;
-	resistance_flags = 64
-	},
-/obj/effect/landmark/thunderdome/two,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/effect/light_emitter/thunderdome,
-/turf/open/floor/iron,
-/area/centcom/tdome/arena)
 "zQ" = (
 /obj/structure/chair/stool/bar{
 	dir = 1
@@ -9241,7 +9247,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/wood,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -9511,7 +9517,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -10035,6 +10041,13 @@
 /obj/structure/table,
 /turf/open/floor/iron/freezer,
 /area/centcom/central_command_areas/admin)
+"Ep" = (
+/obj/effect/light_emitter/thunderdome,
+/obj/machinery/camera/motion/thunderdome{
+	pixel_x = 10
+	},
+/turf/open/floor/iron,
+/area/centcom/tdome/arena)
 "Eq" = (
 /obj/structure/chair/stool/bar/directional/east,
 /obj/effect/decal/cleanable/dirt,
@@ -10526,13 +10539,6 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/centcom/central_command_areas/admin)
-"FQ" = (
-/obj/structure/sign/warning/secure_area/directional/east,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/centcom/central_command_areas/ferry)
 "FR" = (
 /obj/effect/light_emitter/podbay,
 /turf/open/floor/iron,
@@ -10862,11 +10868,6 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/access/all/admin/captain,
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/ferry)
-"GQ" = (
-/obj/machinery/status_display/evac,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
 /area/centcom/central_command_areas/ferry)
 "GR" = (
 /obj/effect/decal/big_gato,
@@ -11585,12 +11586,6 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/centcom/central_command_areas/admin)
-"Jq" = (
-/obj/machinery/camera/motion/thunderdome{
-	pixel_x = 10
-	},
-/turf/open/floor/circuit/green,
-/area/centcom/tdome/arena)
 "Js" = (
 /obj/structure/table/wood,
 /obj/item/clipboard{
@@ -13022,6 +13017,21 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"NT" = (
+/obj/effect/landmark/thunderdome/one,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/light_emitter/thunderdome,
+/obj/machinery/camera/directional/north{
+	c_tag = "Green Team";
+	network = list("thunder");
+	pixel_x = 12;
+	pixel_y = -10;
+	resistance_flags = 64
+	},
+/turf/open/floor/iron,
+/area/centcom/tdome/arena)
 "NU" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom"
@@ -13101,7 +13111,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -13900,7 +13910,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/reinforced,
 /obj/machinery/status_display/ai/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -14420,19 +14430,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/courtroom)
-"RQ" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Green Team";
-	network = list("thunder");
-	pixel_x = 12;
-	pixel_y = -10;
-	resistance_flags = 64
-	},
-/obj/effect/landmark/thunderdome/one,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/effect/light_emitter/thunderdome,
-/turf/open/floor/iron,
-/area/centcom/tdome/arena)
 "RR" = (
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -16038,15 +16035,6 @@
 "WR" = (
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/briefing)
-"WS" = (
-/obj/effect/turf_decal/siding/wideplating_new/dark{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/dark/diagonal_edge,
-/obj/effect/turf_decal/tile/bar/diagonal_centre,
-/obj/machinery/light/directional/north,
-/turf/open/floor/iron/dark/diagonal,
-/area/centcom/central_command_areas/admin)
 "WT" = (
 /obj/machinery/newscaster{
 	pixel_y = 32
@@ -16409,6 +16397,7 @@
 	},
 /obj/effect/turf_decal/tile/dark/diagonal_edge,
 /obj/effect/turf_decal/tile/bar/diagonal_centre,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/diagonal,
 /area/centcom/central_command_areas/admin)
 "Yc" = (
@@ -17046,7 +17035,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/stamp,
+/obj/item/stamp/granted,
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -51463,7 +51452,7 @@ QG
 Hz
 Hz
 iJ
-GQ
+oe
 aa
 aa
 aa
@@ -52230,7 +52219,7 @@ st
 tr
 um
 mD
-vD
+oA
 uO
 uO
 uO
@@ -52758,7 +52747,7 @@ vE
 Xm
 Xm
 gB
-FQ
+wt
 wt
 wt
 ZB
@@ -52785,7 +52774,7 @@ dm
 Yd
 Nf
 Yb
-WS
+Yp
 Yp
 Yp
 Yp
@@ -57415,9 +57404,9 @@ OO
 VT
 BY
 QC
-bR
+xJ
 HK
-zO
+HK
 HK
 HK
 pb
@@ -60245,10 +60234,10 @@ Ef
 NY
 NY
 fb
-Jq
+Ji
 NY
 NY
-Ef
+Ep
 uE
 mE
 qk
@@ -63069,9 +63058,9 @@ ym
 TV
 fg
 QC
-dj
+NT
 Mf
-RQ
+Mf
 Mf
 Mf
 Zi

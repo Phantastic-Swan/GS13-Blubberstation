@@ -369,9 +369,12 @@
 /turf/open/floor/engine,
 /area/ruin/syndicate_lava_base/engineering)
 "dQ" = (
-/obj/structure/sign/warning/secure_area,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ruin/syndicate_lava_base/testlab)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/warning/secure_area/directional/west,
+/turf/open/floor/iron/white/side{
+	dir = 1
+	},
+/area/ruin/syndicate_lava_base/main)
 "dV" = (
 /obj/machinery/atmospherics/miner/plasma,
 /turf/open/floor/engine/plasma,
@@ -666,7 +669,6 @@
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/chemistry)
 "fx" = (
-/obj/structure/sign/warning/secure_area,
 /obj/machinery/porta_turret/syndicate{
 	dir = 9
 	},
@@ -774,6 +776,8 @@
 "gg" = (
 /obj/structure/sign/warning/fire/directional/north,
 /obj/structure/sign/warning/xeno_mining/directional/south,
+/obj/structure/sign/warning/secure_area/directional/northeast,
+/obj/structure/sign/warning/secure_area/directional/southeast,
 /turf/open/floor/plating,
 /area/ruin/syndicate_lava_base/cargo)
 "gh" = (
@@ -809,10 +813,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/bar)
-"gO" = (
-/obj/structure/sign/departments/cargo,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ruin/syndicate_lava_base/cargo)
 "gP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/brown{
@@ -1099,10 +1099,6 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/ruin/syndicate_lava_base/main)
-"iq" = (
-/obj/structure/sign/warning/secure_area,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/syndicate_lava_base/main)
 "iF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -1864,10 +1860,11 @@
 "oD" = (
 /obj/structure/sign/warning/xeno_mining/directional/west,
 /obj/structure/sign/warning/fire/directional/east,
+/obj/structure/sign/warning/secure_area/directional/southwest,
+/obj/structure/sign/warning/secure_area/directional/southeast,
 /turf/open/floor/plating,
 /area/ruin/syndicate_lava_base/arrivals)
 "oF" = (
-/obj/structure/sign/warning/secure_area,
 /obj/machinery/porta_turret/syndicate{
 	dir = 9
 	},
@@ -1899,6 +1896,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
 /obj/machinery/airalarm/directional/south,
+/obj/structure/sign/warning/secure_area/directional/west,
 /turf/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/main)
 "pk" = (
@@ -2167,10 +2165,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/cargo)
-"sB" = (
-/obj/structure/sign/warning/secure_area,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ruin/syndicate_lava_base/cargo)
 "sH" = (
 /obj/machinery/door/airlock/virology/glass{
 	name = "Monkey Pen"
@@ -2394,7 +2388,6 @@
 	ailock = 1;
 	control_area = "/area/ruin/syndicate_lava_base/main";
 	dir = 1;
-	icon_state = "control_kill";
 	lethal = 1;
 	name = "Base turret controls";
 	pixel_y = 30;
@@ -3277,6 +3270,7 @@
 	},
 /obj/machinery/duct,
 /obj/machinery/light/small/directional/north,
+/obj/structure/sign/departments/cargo/directional/east,
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/main)
 "Iv" = (
@@ -3651,10 +3645,6 @@
 	},
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/engineering)
-"Oj" = (
-/obj/structure/sign/warning/secure_area,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ruin/syndicate_lava_base/arrivals)
 "Oq" = (
 /obj/effect/spawner/random/vending/colavend{
 	hacked = 1
@@ -4242,6 +4232,7 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/sign/warning/secure_area/directional/west,
 /turf/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/main)
 "WA" = (
@@ -5327,7 +5318,7 @@ Vb
 mT
 mT
 mT
-Oj
+mT
 ab
 ab
 ab
@@ -5651,7 +5642,7 @@ pa
 pa
 pa
 ae
-dQ
+ae
 TD
 hd
 hy
@@ -5701,7 +5692,7 @@ ae
 ae
 ae
 oP
-fH
+dQ
 IX
 yA
 hz
@@ -6252,14 +6243,14 @@ SQ
 Iw
 dy
 dy
-gO
+dy
 Tb
 hC
 dy
 ha
-iq
+ha
 eZ
-iq
+ha
 ha
 ha
 yG
@@ -6650,7 +6641,7 @@ ab
 ab
 ab
 ab
-sB
+dy
 gh
 fx
 si

@@ -101,10 +101,7 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "s" = (
-/obj/effect/mapping_helpers/apc/cell_10k,
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
-/obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron,
 /area/station/common/cryopods)
 "w" = (
@@ -185,8 +182,12 @@
 "L" = (
 /obj/structure/ladder,
 /obj/structure/sign/poster/contraband/random/directional/west,
+/obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron,
 /area/station/common/cryopods)
+"N" = (
+/turf/open/floor/iron,
+/area/station/commons/dorms)
 "O" = (
 /obj/structure/flora/bush/flowers_pp{
 	name = "skyyblossoms"
@@ -218,6 +219,9 @@
 "S" = (
 /turf/closed/wall,
 /area/station/common/cryopods)
+"T" = (
+/turf/template_noop,
+/area/template_noop)
 "W" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -238,18 +242,27 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/storage/tech)
 "Z" = (
+/obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron,
 /area/station/common/cryopods)
 
 (1,1,1) = {"
+T
+T
+T
+T
+N
+T
+"}
+(2,1,1) = {"
 i
 r
 l
 S
-S
 b
+S
 "}
-(2,1,1) = {"
+(3,1,1) = {"
 z
 O
 W
@@ -257,7 +270,7 @@ L
 s
 Z
 "}
-(3,1,1) = {"
+(4,1,1) = {"
 H
 E
 W
@@ -265,7 +278,7 @@ C
 K
 G
 "}
-(4,1,1) = {"
+(5,1,1) = {"
 J
 O
 W
@@ -273,7 +286,7 @@ F
 j
 o
 "}
-(5,1,1) = {"
+(6,1,1) = {"
 J
 g
 W
@@ -281,7 +294,7 @@ F
 R
 o
 "}
-(6,1,1) = {"
+(7,1,1) = {"
 X
 h
 a
@@ -289,7 +302,7 @@ P
 j
 o
 "}
-(7,1,1) = {"
+(8,1,1) = {"
 f
 d
 S
@@ -297,7 +310,7 @@ n
 k
 D
 "}
-(8,1,1) = {"
+(9,1,1) = {"
 q
 Q
 A

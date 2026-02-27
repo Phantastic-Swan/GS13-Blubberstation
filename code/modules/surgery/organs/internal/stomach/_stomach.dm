@@ -39,7 +39,7 @@
 	/// Whether the stomach's been repaired with surgery and can be fixed again or not
 	var/operated = FALSE
 	/// List of all atoms within the stomach
-	var/list/atom/movable/stomach_contents = list()
+	var/list/atom/movable/stomach_contents
 	/// Have we been cut open with a scalpel? If so, how much damage from it we still have from it and can be recovered with a cauterizing tool.
 	/// All healing goes towards recovering this.
 	var/cut_open_damage = 0
@@ -53,7 +53,7 @@
 		reagents.flags |= REAGENT_HOLDER_ALIVE
 
 /obj/item/organ/stomach/Destroy()
-	QDEL_LIST(stomach_contents)
+	QDEL_LAZYLIST(stomach_contents)
 	return ..()
 
 /obj/item/organ/stomach/on_life(seconds_per_tick, times_fired)
@@ -133,14 +133,12 @@
 		to_chat(body, span_warning("Your stomach reels in pain as you're incapable of holding down all that food!"))
 
 /obj/item/organ/stomach/proc/handle_hunger(mob/living/carbon/human/human, seconds_per_tick, times_fired)
-	//	GS13 Edit - NOHUNGER now skips JUST the nutrition decrease over time and satiety not all hunger code.
-	//	Species who can eat but are not subject to hunger can still gain from food
-	//if(HAS_TRAIT(human, TRAIT_NOHUNGER))
-	//	return //hunger is for BABIES
+	/* GS13 EDIT - NOHUNGER now skips just the nutrition decrease over time and satiety, not all hunger code.
+	if(HAS_TRAIT(human, TRAIT_NOHUNGER))
+		return //hunger is for BABIES
 
 	//The fucking TRAIT_FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
-	//GS13 edit - we don't add/remove fatness based on a simple overeatduration, this conflicts with our own sysems
-	/*if(HAS_TRAIT_FROM(human, TRAIT_FAT, OBESITY))//I share your pain, past coder.
+	if(HAS_TRAIT_FROM(human, TRAIT_FAT, OBESITY))//I share your pain, past coder.
 		if(human.overeatduration < (200 SECONDS))
 			to_chat(human, span_notice("You feel fit again!"))
 			human.remove_traits(list(TRAIT_FAT, TRAIT_OFF_BALANCE_TACKLER), OBESITY)
@@ -148,12 +146,11 @@
 	else
 		if(human.overeatduration >= (200 SECONDS))
 			to_chat(human, span_danger("You suddenly feel blubbery!"))
-			human.add_traits(list(TRAIT_FAT, TRAIT_OFF_BALANCE_TACKLER), OBESITY)*/
-	//end GS13 edit
+			human.add_traits(list(TRAIT_FAT, TRAIT_OFF_BALANCE_TACKLER), OBESITY)
 
-	//GS13 Edit - No hunger see edit at the top of the proc
+	*/
 	// nutrition decrease and satiety
-	if (human.nutrition > 0 && human.stat != DEAD && !HAS_TRAIT(human, TRAIT_NOHUNGER)) //GS13 EDIT - ORIGINAL : if (human.nutrition > 0 && human.stat != DEAD)
+	if (human.nutrition > 0 && human.stat != DEAD && !HAS_TRAIT(human, TRAIT_NOHUNGER)) //GS13 EDIT - ORIGINAL :	if (human.nutrition > 0 && human.stat != DEAD)
 		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
 		if(human.mob_mood && human.mob_mood.sanity > SANITY_DISTURBED)
@@ -205,13 +202,10 @@
 		var/nutritionThatBecomesFat = max((nutrition - NUTRITION_LEVEL_FULL)*(fatConversionRate / 100),1)
 		human.adjust_nutrition(-nutritionThatBecomesFat, TRUE) // Force adjust_nutrition to happen ignoring TRAIT_NOHUNGER
 		human.adjust_fatness(nutritionThatBecomesFat, FATTENING_TYPE_FOOD)
-	//GS13 EDIT END
 
-	//GS13 EDIT Handle Weight gain
 	handle_weight_gain(human)
-
-	// GS13 EDIT handle fullness reduction
 	human.fullness_reduction()
+	//GS13 EDIT END
 
 	//Hunger slowdown for if mood isn't enabled
 	if(CONFIG_GET(flag/disable_human_mood))
@@ -236,19 +230,19 @@
 /obj/item/organ/stomach/proc/consume_thing(atom/movable/thing)
 	RegisterSignal(thing, COMSIG_MOVABLE_MOVED, PROC_REF(content_moved))
 	RegisterSignal(thing, COMSIG_QDELETING, PROC_REF(content_deleted))
-	stomach_contents += thing
+	LAZYADD(stomach_contents, thing)
 	thing.forceMove(owner || src) // We assert that if we have no owner, we will not be nullspaced
 	return TRUE
 
 /obj/item/organ/stomach/proc/content_deleted(atom/movable/source)
 	SIGNAL_HANDLER
-	stomach_contents -= source
+	LAZYREMOVE(stomach_contents, source)
 
 /obj/item/organ/stomach/proc/content_moved(atom/movable/source)
 	SIGNAL_HANDLER
 	if(source.loc == src || source.loc == owner) // not in us? out da list then
 		return
-	stomach_contents -= source
+	LAZYREMOVE(stomach_contents, source)
 	UnregisterSignal(source, list(COMSIG_MOVABLE_MOVED, COMSIG_QDELETING))
 
 /obj/item/organ/stomach/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
@@ -269,7 +263,7 @@
 		var/total_chance = chance
 		// If min_amount is set, make sure that we vomit at least some of our contents
 		if (min_amount)
-			total_chance += 100 / (length(stomach_contents) + 1 - min_amount)
+			total_chance += 100 / (LAZYLEN(stomach_contents) + 1 - min_amount)
 		if (!prob(total_chance))
 			continue
 		nugget.forceMove(drop_loc)
@@ -292,7 +286,7 @@
 	if (!owner || SSmobs.times_fired % 3 != 0)
 		return
 
-	if (!length(stomach_contents))
+	if (!LAZYLEN(stomach_contents))
 		return
 
 	var/obj/item/bodypart/chest/chest = owner.get_bodypart(zone)
@@ -326,7 +320,7 @@
 			if (chest && !chest.cavity_item && as_item.w_class <= WEIGHT_CLASS_NORMAL)
 				// Oopsie!
 				chest.cavity_item = as_item
-				stomach_contents -= as_item
+				LAZYREMOVE(stomach_contents, as_item)
 				continue
 
 			owner.apply_damage(as_item.w_class * (as_item.sharpness ? 2 : 1), BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND,
@@ -354,7 +348,7 @@
 	if (isliving(nomnom)) // NO VORE ALLOWED
 		return 0
 	// Yeah maybe don't, if something edible ended up here it should either handle itself or not be digested
-	if (IsEdible(nomnom))
+	if (IS_EDIBLE(nomnom))
 		return 0
 	if (HAS_TRAIT(owner, TRAIT_STRONG_STOMACH))
 		return 10
@@ -433,7 +427,7 @@
 /// If damage is high enough, we may end up vomiting out whatever we had stored
 /obj/item/organ/stomach/proc/on_punched(datum/source, mob/living/carbon/human/attacker, damage, attack_type, obj/item/bodypart/affecting, final_armor_block, kicking, limb_sharpness)
 	SIGNAL_HANDLER
-	if (!length(stomach_contents) || damage < 9 || final_armor_block || kicking)
+	if (!LAZYLEN(stomach_contents) || damage < 9 || final_armor_block || kicking)
 		return
 	if (owner.vomit(MOB_VOMIT_MESSAGE | MOB_VOMIT_FORCE))
 		// Since we vomited with a force flag, we should've vomited out at least one item
@@ -543,7 +537,7 @@
 /obj/item/organ/stomach/cybernetic/tier2/stomach_acid_power(atom/movable/nomnom)
 	if (isliving(nomnom))
 		return 0
-	if (IsEdible(nomnom))
+	if (IS_EDIBLE(nomnom))
 		return 0
 	return 20
 
@@ -556,10 +550,10 @@
 	emp_vulnerability = 20
 	metabolism_efficiency = 0.1
 
-/obj/item/organ/stomach/cybernetic/tier2/stomach_acid_power(atom/movable/nomnom)
+/obj/item/organ/stomach/cybernetic/tier3/stomach_acid_power(atom/movable/nomnom)
 	if (isliving(nomnom))
 		return 0
-	if (IsEdible(nomnom))
+	if (IS_EDIBLE(nomnom))
 		return 0
 	return 35
 

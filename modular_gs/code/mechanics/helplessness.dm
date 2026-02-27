@@ -106,6 +106,9 @@
 		to_chat(H, "<span class='warning'>You are too fat to wear [I].</span>")
 		return FALSE
 
+	if(HAS_TRAIT(H, TRAIT_NO_NECK) && slot == ITEM_SLOT_NECK)
+		to_chat(H, "<span class='warning'>You are too fat to wear [I].</span>")
+		return FALSE
 
 	return ..()
 

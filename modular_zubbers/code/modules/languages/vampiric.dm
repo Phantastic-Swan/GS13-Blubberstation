@@ -19,4 +19,4 @@
 
 	icon_state = "bloodsucker"
 	icon = 'modular_zubbers/icons/misc/language.dmi'
-	secret = TRUE
+	secret = FALSE	// GS13 EDIT, original: TRUE

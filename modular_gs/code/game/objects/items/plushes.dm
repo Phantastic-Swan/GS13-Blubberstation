@@ -164,3 +164,48 @@
 	pred_plush = TRUE
 	prey_plush = TRUE
 
+/obj/item/toy/plush/gs13/marina
+	name = "Visage of the Moron"
+	desc = "Prepare all your senses (yes, all of them!) for a new level of nonsense!  Cuddle them, squeeze them, soak them in milk!  The Moronic Visage will keep you company whether you want too or not"
+	icon_state = "marina"
+	stuffed_icon_state = "marina_stuffed"
+	can_eat_food = TRUE
+	pred_plush = TRUE
+	prey_plush = TRUE
+
+/obj/item/toy/plush/gs13/isaac_hyper
+	name = "Weird Dragon Thingy Plush"
+	desc = "It looks like this was someones first time making a toy, and it's shoddily made. There is a lot of heart put into it, so much that it feels warm when you hug it! But that could be the uranium..."
+	icon_state = "isaac_hyper"
+	can_eat_food = TRUE
+
+/obj/item/toy/plush/gs13/mako
+	name = "Makoling plush"
+	desc = "Soda cans not included. She liters enough as is..."
+	icon_state = "mako"
+
+/obj/item/toy/plush/gs13/swan
+	name = "Swan plush"
+	desc = "An adorable plushie of everyone's beloved waterbird. It seems angry; either at it's holder not going to sleep at a reasonable hour, or them not reporting problems in the right places."
+	icon_state = "swan"
+	var/brim = FALSE
+
+/obj/item/toy/plush/gs13/swan/cowboy
+	name = "Cowboy Swan plush"
+	icon_state = "swan-brim"
+	brim = TRUE
+
+/obj/item/toy/plush/gs13/swan/examine(mob/user)
+	. = ..()
+	. += span_notice("You can alt-click it to toggle the brim.")
+
+/obj/item/toy/plush/gs13/swan/click_alt(mob/user)
+	if (brim)
+		name = "Swan plush"
+		icon_state = "swan"
+		brim = FALSE
+	else
+		name = "Cowboy Swan plush"
+		icon_state = "swan-brim"
+		brim = TRUE
+	return TRUE

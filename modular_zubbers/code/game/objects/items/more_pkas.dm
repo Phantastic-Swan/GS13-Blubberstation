@@ -227,7 +227,14 @@
 							/area/lavaland/surface/outdoors/unexplored,
 							/area/lavaland/surface/outdoors/explored,
 							/area/ocean/generated,
-							/area/ruin/
+							/area/ruin/,
+							//gs13 edit
+							/area/lavaland/underground,
+							/area/lavaland/underground/xenoarch/candyland,
+							/area/lavaland/underground/xenoarch/caloriteresearch,
+							/area/lavaland/underground/xenoarch/calorite_temple,
+							/area/lavaland/underground/xenoarch/donut_factory
+							//gs13 edit end
 						)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)

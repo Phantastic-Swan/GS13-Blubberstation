@@ -100,3 +100,7 @@
 
 /// Generates a mob faction for the passed owner, used by stabilized pink extracts
 #define FACTION_PINK_EXTRACT(owner) "pink_[owner]"
+
+//GS13 FACTIONS EDIT
+#define FACTION_FEEDER "feeder" //for any sort of fattening mobs
+//GS13 EDIT END

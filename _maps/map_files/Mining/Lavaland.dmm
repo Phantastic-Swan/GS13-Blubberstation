@@ -60,6 +60,13 @@
 /obj/structure/sign/poster/official/random/directional/west,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"an" = (
+/obj/structure/lattice/catwalk/mining,
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "ao" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -202,6 +209,19 @@
 /obj/item/pen,
 /obj/effect/turf_decal/siding/yellow,
 /turf/open/floor/carpet/royalblue,
+/area/mine/living_quarters)
+"bo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/brown/filled/line,
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/dark/corner{
+	dir = 8
+	},
+/turf/open/floor/iron,
 /area/mine/living_quarters)
 "bt" = (
 /obj/structure/disposalpipe/segment{
@@ -1607,6 +1627,11 @@
 /obj/item/flashlight/lantern/on,
 /turf/open/misc/hay/lavaland,
 /area/mine/lobby/raptor)
+"in" = (
+/obj/structure/railing/corner,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/mine/living_quarters)
 "io" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2805,6 +2830,8 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/brown/filled/line,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/dark,
 /turf/open/floor/iron,
 /area/mine/living_quarters)
 "nv" = (
@@ -3582,6 +3609,10 @@
 	},
 /turf/closed/wall,
 /area/mine/production)
+"rM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating/lavaland_atmos,
+/area/mine/living_quarters)
 "rO" = (
 /obj/structure/stone_tile/block{
 	dir = 1
@@ -4218,12 +4249,35 @@
 	},
 /turf/open/misc/hay/lavaland,
 /area/mine/lobby/raptor)
+"vs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/dark,
+/turf/open/floor/iron,
+/area/mine/living_quarters)
 "vu" = (
 /obj/structure/bed/medical/emergency,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /turf/open/floor/iron/white,
 /area/mine/medical)
+"vv" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 9
+	},
+/obj/effect/turf_decal/trimline/purple/mid_joiner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/purple/mid_joiner{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/neutral/warning,
+/obj/effect/turf_decal/trimline/neutral/mid_joiner,
+/turf/open/floor/iron/dark/textured_large,
+/area/mine/living_quarters)
 "vA" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/rack,
@@ -5463,6 +5517,20 @@
 	dir = 4
 	},
 /area/mine/laborcamp)
+"Dw" = (
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 5
+	},
+/obj/effect/turf_decal/trimline/purple/mid_joiner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/purple/mid_joiner{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/neutral/warning,
+/obj/effect/turf_decal/trimline/neutral/mid_joiner,
+/turf/open/floor/iron/dark/textured_large,
+/area/mine/living_quarters)
 "Dx" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/disposalpipe/segment{
@@ -5666,6 +5734,15 @@
 	dir = 1
 	},
 /area/mine/production)
+"EO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/effect/turf_decal/siding/wideplating_new/dark/corner,
+/obj/effect/turf_decal/siding/dark/corner,
+/turf/open/floor/iron,
+/area/mine/living_quarters)
 "EP" = (
 /obj/structure/railing{
 	dir = 4
@@ -9225,6 +9302,8 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/effect/turf_decal/trimline/brown/filled/line,
+/obj/effect/turf_decal/siding/wideplating_new/dark,
+/obj/effect/turf_decal/siding/dark,
 /turf/open/floor/iron,
 /area/mine/living_quarters)
 "Yr" = (
@@ -9240,6 +9319,27 @@
 	},
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp/security)
+"Yt" = (
+/obj/machinery/quantumpad{
+	map_pad_id = "lavaland_outpost";
+	map_pad_link_id = "xenoarch2";
+	mapped_quantum_pads = list("station","xenoarch");
+	name = "To Xenoarch"
+	},
+/obj/structure/sign/warning/secure_area/directional/south{
+	name = "To Xenoarcheology"
+	},
+/obj/effect/turf_decal/trimline/purple/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/purple/mid_joiner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/neutral/warning,
+/obj/effect/turf_decal/trimline/neutral/mid_joiner,
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/dark/textured_large,
+/area/mine/living_quarters)
 "Yv" = (
 /obj/structure/table,
 /obj/item/paper,
@@ -43883,15 +43983,15 @@ pU
 cW
 cW
 cW
-cW
+iu
 cW
 BT
 iu
 kI
 cC
 iu
-PK
-pU
+BP
+BP
 pU
 pU
 aj
@@ -44147,8 +44247,8 @@ ho
 va
 sq
 ho
-ol
-pU
+BP
+PK
 pU
 aj
 aj
@@ -44402,10 +44502,10 @@ di
 tF
 ho
 yH
-KW
+EO
 ho
-ol
-pU
+rM
+fK
 aj
 aj
 aj
@@ -44659,10 +44759,10 @@ di
 tF
 ho
 yH
-KW
+vs
+vv
 ho
-ol
-aj
+Ny
 aj
 aj
 pU
@@ -44917,9 +45017,9 @@ di
 ho
 Qx
 Yq
-ho
+Yt
+iu
 Ny
-aj
 aj
 aj
 pU
@@ -45174,9 +45274,9 @@ Nc
 iu
 RB
 nt
+Dw
 ho
 Ny
-aj
 aj
 aj
 pU
@@ -45430,10 +45530,10 @@ nm
 iY
 nm
 Zx
-nt
+bo
 ho
-Ny
-aj
+in
+an
 aj
 pU
 pU

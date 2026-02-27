@@ -150,19 +150,27 @@
 	reaction_flags 		= REACTION_CLEAR_RETAIN
 
 //Effects
-/datum/reagent/fermi_slim/on_mob_life(mob/living/carbon/M)
-	if(!iscarbon(M))
+/datum/reagent/fermi_slim/on_mob_life(mob/living/carbon/fatty)
+	if(!iscarbon(fatty))
 		return..()
-	M.adjust_fatness(-50, FATTENING_TYPE_WEIGHT_LOSS)
-	M.adjust_perma(-5, FATTENING_TYPE_WEIGHT_LOSS)
+	var/weight_loss_modifier = 5
+	if (HAS_TRAIT(fatty, TRAIT_MACERINIC_TOLERANCE))
+		weight_loss_modifier = 1
+	fatty.adjust_fatness(-10 * weight_loss_modifier, FATTENING_TYPE_WEIGHT_LOSS)
+	fatty.adjust_perma(-1 * weight_loss_modifier, FATTENING_TYPE_WEIGHT_LOSS)
 	..()
 	. = 1
 
-/datum/reagent/fermi_slim/overdose_process(mob/living/M)
-	if(!iscarbon(M))
-		return..()
-	var/mob/living/carbon/C = M
-	C.fullness = max(0, C.fullness-5)
-	C.nutrition = max(0, C.nutrition-5)
-	C.weight_loss_rate = min(5, C.weight_loss_rate+0.01)
+/datum/reagent/fermi_slim/overdose_process(mob/living/living_mob)
+	if(!iscarbon(living_mob))
+		return ..()
+	
+	var/mob/living/carbon/fatty = living_mob
+		
+	if (HAS_TRAIT(fatty, TRAIT_MACERINIC_TOLERANCE))
+		return ..()
+	
+	fatty.fullness = max(0, fatty.fullness-5)
+	fatty.nutrition = max(0, fatty.nutrition-5)
+	fatty.weight_loss_rate = min(5, fatty.weight_loss_rate+0.01)
 	..()

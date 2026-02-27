@@ -22,33 +22,6 @@
 	color = "#ffffff"
 	item_chair = ""
 
-/obj/structure/chair/sofachair/GetArmrest()
-	return mutable_appearance('modular_gs/icons/obj/chairs.dmi', "sofachair_armrest")
-
-/obj/structure/chair/sofachair/Destroy()
-	QDEL_NULL(armrest)
-	return ..()
-
-/obj/structure/chair/sofachair/post_buckle_mob(mob/living/M)
-	. = ..()
-	update_armrest()
-
-/obj/structure/chair/sofachair/update_armrest()
-	if(has_buckled_mobs())
-		add_overlay(armrest)
-	else
-		cut_overlay(armrest)
-
-/obj/structure/chair/sofachair/post_unbuckle_mob()
-	. = ..()
-	update_armrest()
-
-/obj/structure/chair/sofachair/Initialize(mapload)
-
-	armrest = GetArmrest()
-	armrest.layer = ABOVE_MOB_LAYER
-	return ..()
-
 /* uhoh - we are going to have to port over items from hyper.
 /obj/structure/rack/shelf
 	name = "shelving"

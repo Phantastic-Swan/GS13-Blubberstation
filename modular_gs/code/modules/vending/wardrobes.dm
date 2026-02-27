@@ -56,9 +56,19 @@
 	)
 
 /obj/machinery/vending/wardrobe/robo_wardrobe
-	gs_products = list(
-		/obj/item/clothing/under/color/grey/science = 3,
-		/obj/item/clothing/under/color/dual_tone/science/roboticist = 3,
+	// gs_products = list(
+	// 	/obj/item/clothing/under/color/grey/science = 3,
+	// 	/obj/item/clothing/under/color/dual_tone/science/roboticist = 3,
+	// )
+	gs_product_categories = list(
+		list(
+			"name" = "Clothing",
+			"icon" = FA_ICON_SHIRT,
+			"products" = list(
+				/obj/item/clothing/under/color/grey/science = 3,
+				/obj/item/clothing/under/color/dual_tone/science/roboticist = 3,
+				),
+			),
 	)
 
 /obj/machinery/vending/wardrobe/science_wardrobe

@@ -5,7 +5,7 @@
 
 	if(incapacitated)
 		return
-	switch(alert("Would you like to enter cryo? This will ghost you. Remember to AHELP before cryoing out of important roles, even with no admins online.",,"Yes.","No."))
+	switch(alert("Would you like to enter cryo? This will ghost you. You may return to the round. Remember to return any important gear, especially if you're playing an important role (Command etc).",,"Yes.","No.")) //GS13 EDIT Original: switch(alert("Would you like to enter cryo? This will ghost you. Remember to AHELP before cryoing out of important roles, even with no admins online.",,"Yes.","No."))
 		if("Yes.")
 			src.ghostize(FALSE)
 			var/announce_rank = "Artificial Intelligence,"

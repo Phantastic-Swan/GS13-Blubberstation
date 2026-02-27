@@ -45,14 +45,15 @@
 
 /obj/item/organ/genital/butt/set_size(size)
 	genital_size = max(size, set_genital_size)
-	genital_size = min(genital_size, MAX_BUTT_SIZE)
+	genital_size = min(genital_size, max_genital_size, MAX_BUTT_SIZE)
 	update_sprite_suffix()
 
 
 /obj/item/organ/genital/butt/build_from_dna(datum/dna/DNA, associated_key)
 	uses_skin_color = DNA.features["butt_uses_skincolor"]
-	set_size(DNA.features["butt_size"])
 	set_genital_size = DNA.features["butt_size"]
+	max_genital_size = DNA.features["max_butt_size"]
+	set_size(DNA.features["butt_size"])
 
 	return ..()
 
@@ -98,14 +99,15 @@
 	
 	
 	genital_size = max(size, set_genital_size)
-	genital_size = min(genital_size, MAX_BELLY_SIZE)
+	genital_size = min(genital_size, max_genital_size, MAX_BELLY_SIZE)
 	update_sprite_suffix()
 
 
 /obj/item/organ/genital/belly/build_from_dna(datum/dna/DNA, associated_key)
 	uses_skin_color = DNA.features["belly_uses_skincolor"]
-	set_size(DNA.features["belly_size"])
 	set_genital_size = DNA.features["belly_size"]
+	max_genital_size = DNA.features["max_belly_size"]
+	set_size(DNA.features["belly_size"])
 
 	return ..()
 
@@ -147,8 +149,41 @@
 // The Tig Bitties.
 /obj/item/organ/genital/breasts/set_size(size)
 	genital_size = max(size, set_genital_size)		// mmmmmmm, they're getting so big~
-	genital_size = min(genital_size, MAX_BREASTS_SIZE)
+	genital_size = min(genital_size, max_genital_size, MAX_BREASTS_SIZE)
+	var/breasts_capacity = 1
+	switch(genital_type)
+		if("pair")
+			breasts_capacity = 2
+		if("quad")
+			breasts_capacity = 2.5
+		if("sextuple")
+			breasts_capacity = 3
+	internal_fluid_maximum = genital_size * breasts_capacity * 60
+	if(internal_fluid_maximum > 3500)
+		internal_fluid_maximum = 3500
+	reagents.maximum_volume = internal_fluid_maximum
+	var/volume_to_remove = max(0, reagents.total_volume - reagents.maximum_volume)
+	reagents.remove_reagent(internal_fluid_datum, volume_to_remove)
 	update_sprite_suffix()
+
+/obj/item/organ/genital/breasts/on_life(seconds_per_tick, times_fired)
+	. = ..()
+	if(!lactates)
+		return
+	
+	var/mob/living/carbon/human/affected_human = owner
+	if(owner.stat >= DEAD || !owner.client?.prefs?.read_preference(/datum/preference/toggle/erp) || !istype(affected_human))
+		return
+	
+	if(reagents.total_volume >= reagents.maximum_volume)
+		return
+
+	// var/regen = ((owner.nutrition / (NUTRITION_LEVEL_WELL_FED / NUTRITION_MULTIPLIER)) / NUTRITION_MULTIPLIER) * (reagents.maximum_volume / BREASTS_MULTIPLIER) * BASE_MULTIPLIER
+	var/regen = reagents.maximum_volume * 0.05 * seconds_per_tick
+	var/free_space = reagents.maximum_volume - reagents.total_volume
+	if(regen > free_space)
+		regen = free_space // so we aren't draining nutrition for milk that isn't actually being generated
+	reagents.add_reagent(internal_fluid_datum, regen)
 
 /datum/sprite_accessory/genital/breasts/alt_GS13/pair
 	name = "Pair (Alt GS13)"
