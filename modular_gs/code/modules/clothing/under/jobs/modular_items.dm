@@ -292,3 +292,4 @@
 	desc = "some desc"
 	greyscale_colors = "#004B8F"
 	modular_icon_location = 'modular_gs/icons/mob/modclothes/bikini.dmi'
+	body_parts_covered = 0
