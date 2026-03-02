@@ -5,6 +5,36 @@
   - image: made GT crates/locked crates/mail crates sprites
   - image: made centcom hat sprites
   - image: re-skinned centdrobe
+  Evillew:
+  - map: (Xenoarch) Made Telepads permanently powered
+  - map: (Xenoarch) Fixed some wrongly placed decals in various locations
+  - map: (Xenoarch) Began adding a lower level to the ruined calorite outpost
+  - map: (Xenoarch) Replaced wind turbines in the outpost with RTGs
+  - map: (Xenoarch) Added cavern levels below the deadly labirynth
+  - map: (Xenoarch) More detailing to The Calorite Temple
+  - map: (Xenoarch) General detailing of various maps, just smaller details overall
+  - map: smaller visual tweaks for other maps, like fixing misplaced decals, GATOifying
+      things or prettying up some stations
+  - map: fixed missing cargo stamps on maps
+  - map: reworking the sec/engie area in Biodome (that weird wooden one)
+  - map: small tweaks on NebulaStation, mostly working on the bar
+  - qol: cleaned up some of the files, such as accessories and statues .dmis
+  - qol: fixed cryo/clockout messages that mention you need to contact an admin
+  - rscadd: added some kink loot into lavaland tendril chest loot pool
+  - rscadd: added presets for fattening grenades
+  - rscadd: added kink item options into OPFOR and uplink menus
+  - rscadd: 'added new accessories: coder and contributor medals, given to those who
+      contributed to the codebase (CKEY locked)'
+  - rscadd: 'added a new calorite statue: calorite pillar (added it to some maps as
+      well) (sprites by @cowlicke )'
+  - rscadd: added a fat taur variant
+  - bugfix: changed Nanotrasen Consultant role into GATO ver
+  - bugfix: fixed fatoray cannons having 100 shots worth of energy (the strong fatoray
+      cannon has 10 now, while weak has 5)
+  - bugfix: added AI controllers to feeder/fattener mobs (thus they are now functional
+      and will attack on their own)
+  - image: made mootant snouts a bit lighter
+  - balance: 'changed radstorms: added radstorm shielding to the bar and dorms'
   FFSoul64:
   - map: Nebula Gatofication
   - code_imp: Added MAPPING_DIRECTIONAL_HELPERS to GATO Posters so checks wouldn't
@@ -18,33 +48,78 @@
   - bugfix: fixes heretical hunt bitrunning domain crashing the server
   - rscadd: modular items are no longer exempt from the jumpsuit bursting pref
   - qol: re-organizes the Weight gain preferences menu so it'd be easier to use
-  Evillew:
-  - map: (Xenoarch) Made Telepads permanently powered
-  - map: (Xenoarch) Fixed some wrongly placed decals in various locations
-  - map: (Xenoarch) Began adding a lower level to the ruined calorite outpost
-  - map: (Xenoarch) Replaced wind turbines in the outpost with RTGs
-  - map: (Xenoarch) Added cavern levels below the deadly labirynth
-  - map: (Xenoarch) More detailing to The Calorite Temple
-  - map: (Xenoarch) General detailing of various maps, just smaller details overall
-  - map: smaller visual tweaks for other maps, like fixing misplaced decals, 
-      GATOifying things or prettying up some stations
-  - map: fixed missing cargo stamps on maps
-  - map: reworking the sec/engie area in Biodome (that weird wooden one)
-  - map: small tweaks on NebulaStation, mostly working on the bar
-  - qol: cleaned up some of the files, such as accessories and statues .dmis
-  - qol: fixed cryo/clockout messages that mention you need to contact an admin
-  - rscadd: added some kink loot into lavaland tendril chest loot pool
-  - rscadd: added presets for fattening grenades
-  - rscadd: added kink item options into OPFOR and uplink menus
-  - rscadd: 'added new accessories: coder and contributor medals, given to those 
-      who contributed to the codebase (CKEY locked)'
-  - rscadd: 'added a new calorite statue: calorite pillar (added it to some maps 
-      as well) (sprites by @cowlicke )'
-  - rscadd: added a fat taur variant
-  - bugfix: changed Nanotrasen Consultant role into GATO ver
-  - bugfix: fixed fatoray cannons having 100 shots worth of energy (the strong 
-      fatoray cannon has 10 now, while weak has 5)
-  - bugfix: added AI controllers to feeder/fattener mobs (thus they are now 
-      functional and will attack on their own)
-  - image: made mootant snouts a bit lighter
-  - balance: 'changed radstorms: added radstorm shielding to the bar and dorms'
+2026-02-28:
+  Bylion64:
+  - rscadd: Added new voicebarks from Deltarune, Atlyss and Donuts For Deerteeth
+  SamTellings:
+  - rscadd: 'Calorite Collar: A collar that makes the wearer gain weight faster (1.5x).
+      It is under nutritech tools research. Also comes in a locked variant.'
+  - rscadd: 'Bluespace Collar Transmitter: A collar that can be linked to a Bluespace
+      Collar Receiver (explained below). Anything that the wearer eats gets transported
+      to the wearer of the receiver. Works with food, beaker reagents, and the feeding
+      tube. Is unlocked with nutritech tools. You can right click it to unlink it.
+      Comes in locked and unlocked variant.'
+  - rscadd: 'Bluespace Collar Receiver: A collar that will receive all food and reagents
+      eaten, drunk, and pumped into by feeding tube from linked bluespace collar transmitters.
+      The Receiver once a transmitter is linked to it, it cannot be unlinked except
+      via the transmitter collar. Will ignore fullness. Is unlocked with nutritech
+      tools. Comes in locked and unlocked variant.'
+  - rscadd: Both collars use new art made by Clumpy.
+  SeepingVisage:
+  - balance: canes and crutches now help you move around while overweight
+  Swan:
+  - rscadd: nitrogen is now consumed alongside oxygen when breathing. You don't need
+      nitrogen to breathe, but this should prevent it from slowly filling up the room
+      and causing players to suffocate
+  - bugfix: fixes CC/contributor/coder badges not showing up in inventory
+  - rscadd: adds the mobility exoskeleton MOD suit to the loadout menu
+  - rscadd: MOD status readout now displays weight
+  - rscadd: Loader MOD starts with the hydraulic assistance module
+  - bugfix: fixes SAD adding starting fatness upon use
+  - bugfix: fixes robo drobe not having modular clothing
+  - bugfix: fixes feeding someone else having different fullness limit than feeding
+      ourselves
+  - bugfix: fixes feeder mobs attacking simple animals
+  - balance: lowers the cost of upgrades for the turbine stator part. It now requires
+      the same materials as other parts, but more of them.
+  - qol: makes it so that working out takes WL rate into account
+  - bugfix: allows xenoarch to spawn on planetside maps
+  - bugfix: fixes GATO signs near the tram tracks on tramstation getting hit by the
+      tram
+  - bugfix: fixes the crushing gravity effect around the grav gen not going away when
+      it goes offline
+  - rscadd: gatoifies the main menu
+  - rscdel: removes the swap server and internet routing relay option from the topbar
+  evilew:
+  - map: 'added the Blueberry Shrine lavaland ruin: doesn''t have any interesting
+      loot atm, but might as well add it'
+  - rscadd: made a proper variant of calorite with vulcanic turf
+  - map: fixed some guaranteed calorite ore spawns having an asteroid turf rather
+      than vulcanic turfs
+  - map: removed Xenoarch Digger machine from the outpost (it was OP to have it at
+      start)
+  - bugfix: new belchtrap sprite by @cowlamari
+  - bugfix: new donut factory sign by @cowlamari
+  - map: added aforementioned sign to Xenoarch donut factory (along with more donuts!!)
+  - map: 'new lavaland ruin: Blueberry Shrine. Harmless shrine, doesn''t have any
+      loot sadly.'
+  - map: 'new lavaland ruin: Calorite Shrine 1. Harmless, but requires you to have
+      at least 2000 BFI if you want to get the loot'
+  - map: 'new lavaland ruin: Calorite Shrine 2. Has several magehands, moderate loot
+      (mostly a bunch of calorite).'
+  - map: 'new lavaland ruin: Ruins of the Feeder Den. Has a few fatoray turrets as
+      well as several low-explosive mines. Has some loot, mostly fattywank related
+      one'
+  - map: 'new lavaland ruin: Candy Pocket. A pocket of candyland, doesn''t have much
+      loot besides snacks. Has a few candy feeder mobs. Candy themed'
+  - map: 'new lavaland ruin: Choco Pocket. A pocket of candyland, doesn''t have much
+      loot besides snacks. Has a few candy feeder mobs. Chocolate themed'
+  - map: GATOified Ourobos
+  - map: did several github issues related to Persistence consoles, Persistence atmos,
+      solar deployment and icebox lathe windows
+  - rscadd: added more lore notes related to expansion content (placed them accordingly
+      as well)
+  sheepishgoat:
+  - code_imp: merges upstream code for february
+  - rscadd: added back in the handheld transmogrifier item as the handheld transmogrifier
+      soulcatcher, available through the dorms vendor and loadout.

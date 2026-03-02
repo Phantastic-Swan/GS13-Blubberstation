@@ -1,4 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - bugfix: "fixes CC/contributor/coder badges not showing up in inventory"

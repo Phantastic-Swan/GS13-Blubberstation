@@ -270,6 +270,9 @@
 		.["loss_oxy"] = mod.wearer?.get_oxy_loss() || 0
 		.["body_temperature"] = mod.wearer?.bodytemperature || 0
 		.["nutrition"] = mod.wearer?.nutrition || 0
+		// GS13 EDIT
+		.["fatness"] = mod.wearer?.fatness || 0
+		// GS13 END EDIT
 	if(display_dna)
 		.["dna_unique_identity"] = mod.wearer ? md5(mod.wearer.dna.unique_identity) : null
 		.["dna_unique_enzymes"] = mod.wearer?.dna.unique_enzymes

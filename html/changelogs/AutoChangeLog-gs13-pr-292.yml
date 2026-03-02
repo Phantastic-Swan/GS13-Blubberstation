@@ -1,6 +1,0 @@
-author: "Phantastic-Swan"
-delete-after: True
-changes:
-  - bugfix: "allows xenoarch to spawn on planetside maps"
-  - bugfix: "fixes GATO signs near the tram tracks on tramstation getting hit by the tram"
-  - bugfix: "fixes the crushing gravity effect around the grav gen not going away when it goes offline"

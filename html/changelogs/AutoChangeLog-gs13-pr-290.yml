@@ -1,9 +1,0 @@
-author: "Phantastic-Swan"
-delete-after: True
-changes:
-  - bugfix: "fixes SAD adding starting fatness upon use"
-  - bugfix: "fixes robo drobe not having modular clothing"
-  - bugfix: "fixes feeding someone else having different fullness limit than feeding ourselves"
-  - bugfix: "fixes feeder mobs attacking simple animals"
-  - balance: "lowers the cost of upgrades for the turbine stator part. It now requires the same materials as other parts, but more of them."
-  - qol: "makes it so that working out takes WL rate into account"

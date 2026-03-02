@@ -83,6 +83,7 @@ type ModuleCustomStatus = {
   shift_id: string;
   body_temperature: number;
   nutrition: number;
+  fatness: number;  // GS13 EDIT
   dna_unique_identity: string;
   dna_unique_enzymes: string;
   viruses: VirusData[];
@@ -537,6 +538,7 @@ const UserStatusSection = (props) => {
     background_radiation_level,
     body_temperature,
     nutrition,
+    fatness, // GS13 EDIT
     dna_unique_identity,
     dna_unique_enzymes,
     viruses,
@@ -640,6 +642,13 @@ const UserStatusSection = (props) => {
             {`${active ? Math.round(nutrition) : 0}`}
           </LabeledList.Item>
         )}
+        {/* GS13 EDIT */}
+        {fatness !== undefined && (
+          <LabeledList.Item label="Fatness Level">
+            {`${active ? Math.round(fatness) : 0} BFI`}
+          </LabeledList.Item>
+        )}
+        {/* GS13 END EDIT */}
         <LabeledList.Item label="Name">{user_name}</LabeledList.Item>
         <LabeledList.Item label="Assignment">
           {user_assignment}

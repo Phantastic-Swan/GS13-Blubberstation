@@ -126,6 +126,7 @@
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/paper_dispenser,
 		/obj/item/mod/module/stamp,
+		/obj/item/mod/module/hydraulic_movement,	// GS13 EDIT
 	)
 	default_pins = list(
 		/obj/item/mod/module/clamp/loader,

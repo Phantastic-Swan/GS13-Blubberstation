@@ -1,4 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "nitrogen is now consumed alongside oxygen when breathing. You don't need nitrogen to breathe, but this should prevent it from slowly filling up the room and causing players to suffocate"
