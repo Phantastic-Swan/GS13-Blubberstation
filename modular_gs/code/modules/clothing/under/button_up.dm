@@ -22,7 +22,7 @@
 			var/obj/item/organ/genital/breasts/breasts = organ
 			var/color = breasts.bodypart_overlay.draw_color
 
-			mod_overlay = mutable_appearance(modular_icon_location, (modular_icon + "-" + num2text(3)), -(modular_layer))
+			mod_overlay = mutable_appearance(modular_icon_location, (modular_icon + "-4"), -(modular_layer))
 			mod_overlay.color = color
 			mod_overlays += mod_overlay
 			U.overlays_standing[modular_layer] =  mod_overlay
