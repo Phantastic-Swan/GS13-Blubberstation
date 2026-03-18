@@ -811,9 +811,9 @@ GLOBAL_LIST_INIT(human_heights_to_offsets, list(
 #define EARS_LAYER 28 // GS13 EDIT original: 22
 /// Layer for neck apperal that should appear below the suit slot (like neckties)
 #define LOW_NECK_LAYER 27 // GS13 EDIT original: 21
-#define MODULAR_BELLY_LAYER		3		//GS13 Edit - Modular Clothes Layer
-#define MODULAR_BREASTS_LAYER	2		//GS13 Edit - Modular Clothes Layer
-#define MODULAR_BUTT_LAYER		1		//GS13 Edit - Modular Clothes Layer
+#define MODULAR_BELLY_LAYER		26		//GS13 Edit - Modular Clothes Layer
+#define MODULAR_BREASTS_LAYER	25		//GS13 Edit - Modular Clothes Layer
+#define MODULAR_BUTT_LAYER		24		//GS13 Edit - Modular Clothes Layer
 /// Suit layer (armor, coats, etc.)
 #define SUIT_LAYER 23	// GS13, original: 20
 /// Glasses layer
