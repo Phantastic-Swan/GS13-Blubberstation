@@ -7184,6 +7184,7 @@
 #include "modular_gs\code\obj\weapons\fatoray.dm"
 #include "modular_gs\code\obj\weapons\fattening_batons.dm"
 #include "modular_gs\code\obj\weapons\feeder_ebow.dm"
+#include "modular_gs\code\obj\weapons\sizeray.dm"
 #include "modular_gs\code\structures\chair.dm"
 #include "modular_gs\code\structures\sink.dm"
 #include "modular_gs\code\structures\trapped_items.dm"
