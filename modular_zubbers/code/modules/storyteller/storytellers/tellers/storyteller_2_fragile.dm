@@ -15,9 +15,12 @@
 	)
 	storyteller_type = STORYTELLER_TYPE_ALWAYS_AVAILABLE
 
+// GS13 EDIT
+// original values: 1200, 1800, 10000, 3000, 6800
 /datum/storyteller_data/tracks/fragile
-	threshold_mundane = 1200
-	threshold_moderate = 1800
-	threshold_major = 10000
-	threshold_crewset = 3000
-	threshold_ghostset = 6800
+	threshold_mundane = 60
+	threshold_moderate = 120
+	threshold_major = 360
+	threshold_crewset = 1200
+	threshold_ghostset = 600
+// GS13 END EDIT

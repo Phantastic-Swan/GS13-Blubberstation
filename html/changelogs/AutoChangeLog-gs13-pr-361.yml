@@ -1,0 +1,5 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "the storyteller should be more aggresive with it's event spawning"
+  - rscadd: "automatic storyteller votes, which fire mid round to decide which storyteller should be picked"

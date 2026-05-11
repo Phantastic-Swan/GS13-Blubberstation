@@ -1,0 +1,4 @@
+author: "Icepick200"
+delete-after: True
+changes:
+  - rscadd: "Added the Genetic Mutation quirk, allowing you to get ONE roundstart gene from a list."

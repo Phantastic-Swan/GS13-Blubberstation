@@ -96,8 +96,8 @@
 		to_chat(owner, span_warning("Your guts [pick("swell up to", "gurgle into", "expand into", "plump up into", "grow eagerly into", "fatten up into", "distend into")] a larger midsection."))
 	else if (size < old_size)
 		to_chat(owner, span_warning("Your guts [pick("shrink down to", "decrease into", "wobble down into", "diminish into", "deflate into", "contracts into")] a smaller midsection."))
-	
-	
+
+
 	genital_size = max(size, set_genital_size)
 	genital_size = min(genital_size, max_genital_size, MAX_BELLY_SIZE)
 	update_sprite_suffix()
@@ -170,11 +170,11 @@
 	. = ..()
 	if(!lactates)
 		return
-	
+
 	var/mob/living/carbon/human/affected_human = owner
 	if(owner.stat >= DEAD || !owner.client?.prefs?.read_preference(/datum/preference/toggle/erp) || !istype(affected_human))
 		return
-	
+
 	if(reagents.total_volume >= reagents.maximum_volume)
 		return
 
@@ -188,4 +188,9 @@
 /datum/sprite_accessory/genital/breasts/alt_GS13/pair
 	name = "Pair (Alt GS13)"
 	icon = 'modular_gs/icons/obj/genitals/breasts_onmob.dmi'
+	icon_state = "pair"
+
+/datum/sprite_accessory/genital/breasts/alt_GS13/pair_smooth //smoother variant, no nipples
+	name = "Pair (Alt GS13, No Nipples)"
+	icon = 'modular_gs/icons/obj/genitals/breasts_smooth_onmob.dmi'
 	icon_state = "pair"

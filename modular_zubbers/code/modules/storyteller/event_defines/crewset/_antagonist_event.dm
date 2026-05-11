@@ -70,8 +70,6 @@
 	. = ..()
 	if(!.)
 		return
-	return FALSE //GS13 edit: returns false without any evaluation until we are sure we want antags in place. This prevents nukies without editing core files.
-	/*
 	var/crew_antag_time_maximum = CONFIG_GET(number/disallow_crew_antags_time_threshold)
 	if(crew_antag_time_maximum >= 0)
 		if( (world.time-SSticker.round_start_time) >= (crew_antag_time_maximum MINUTES))
@@ -83,7 +81,6 @@
 	var/list/candidates = get_candidates()
 	if(candidates.len < get_minimum_candidates())
 		return FALSE
-	*/
 
 /datum/round_event_control/antagonist/proc/get_minimum_candidates()
 	return minimum_candidate_base

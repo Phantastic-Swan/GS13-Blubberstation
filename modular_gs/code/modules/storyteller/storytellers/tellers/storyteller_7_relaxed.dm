@@ -23,7 +23,7 @@
 //each of these are multiplied by 60 (current config value for GS13) during storyteller cap calculations, making the values below roughly equal to minutes per event type
 /datum/storyteller_data/tracks/relaxed
 	threshold_mundane = 30
-	threshold_moderate = 55
-	threshold_major = 85
+	threshold_moderate = 60
+	threshold_major = 90
 	threshold_crewset = 999999999
 	threshold_ghostset = 999999999

@@ -1,0 +1,9 @@
+## Enables auto storyteller vote system
+AUTOSTORYTELLER
+
+## autovote initial delay (deciseconds in real time) before first automatic storyteller vote call (default 120 minutes)
+## Set to 0 to disable the subsystem altogether.
+VOTE_AUTOSTORYTELLER_INITIAL 72000
+
+## autovote delay (deciseconds in real time) before sequential automatic storyteller votes are called (default 30 minutes)
+VOTE_AUTOSTORYTELLER_INTERVAL 36000
