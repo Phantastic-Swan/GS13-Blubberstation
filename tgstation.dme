@@ -564,6 +564,7 @@
 #include "code\__DEFINES\~~gs_defines\atmospherics.dm"
 #include "code\__DEFINES\~~gs_defines\colors.dm"
 #include "code\__DEFINES\~~gs_defines\combat.dm"
+#include "code\__DEFINES\~~gs_defines\construction.dm"
 #include "code\__DEFINES\~~gs_defines\declarations.dm"
 #include "code\__DEFINES\~~gs_defines\DNA.dm"
 #include "code\__DEFINES\~~gs_defines\effective_weight_skip_tags.dm"

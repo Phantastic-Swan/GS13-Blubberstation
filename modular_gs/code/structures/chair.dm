@@ -62,3 +62,11 @@
 
 /obj/structure/chair/beanbag/black
 	color = "#404040"
+
+/obj/structure/chair/greyscale/pizza
+	name = "pizza chair"
+
+/obj/structure/chair/greyscale/pizza/Initialize(mapload)
+	. = ..()
+	var/list/materials = list(/datum/material/pizza = 100)
+	set_custom_materials(materials)

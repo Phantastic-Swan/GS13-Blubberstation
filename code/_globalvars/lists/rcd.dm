@@ -37,6 +37,14 @@ GLOBAL_LIST_INIT(rcd_designs, list(
 			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/rack),
 			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/bed),
 		),
+		// GS13 EDIT
+		"Pizza" = list(
+			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/platform/pizza),
+			list(RCD_DESIGN_MODE = RCD_TURF, RCD_DESIGN_PATH = /turf/closed/wall/material/pizza),
+			list(RCD_DESIGN_MODE = RCD_AIRLOCK, RCD_DESIGN_PATH = /obj/machinery/door/airlock/material/pizza),
+			list(RCD_DESIGN_MODE = RCD_AIRLOCK, RCD_DESIGN_PATH = /obj/machinery/door/airlock/material/pizza/glass),
+			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/chair/greyscale/pizza),
+		), // GS13 END EDIT
 	),
 
 	//2ND ROOT CATEGORY[construction_mode = RCD_AIRLOCK is implied,"icon=closed"]

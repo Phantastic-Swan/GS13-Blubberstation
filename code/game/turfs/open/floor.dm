@@ -251,6 +251,7 @@
 				/obj/structure/table = list("delay" = 2 SECONDS, "cost" = 8),
 				/obj/structure/bed = list("delay" = 2.5 SECONDS, "cost" = 8),
 				/obj/structure/rack = list("delay" = 2.5 SECONDS, "cost" = 4),
+				/obj/structure/platform/pizza = list("delay" = 1 SECONDS, "cost" = 4),	// GS13 EDIT Pizzuh rcd
 			)
 
 			var/list/design_data = structure_costs[the_rcd.rcd_design_path]

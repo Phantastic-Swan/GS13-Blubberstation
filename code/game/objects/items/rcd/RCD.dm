@@ -92,6 +92,10 @@
 			. += /obj/item/rcd_upgrade/anti_interrupt::name
 		if(construction_upgrades & RCD_UPGRADE_NO_FREQUENT_USE_COOLDOWN)
 			. += /obj/item/rcd_upgrade/cooling::name
+		// GS13 EDIT pizza upgrade
+		if(construction_upgrades & RCD_UPGRADE_PIZZA)
+			. += /obj/item/rcd_upgrade/pizza::name
+		// GS13 END EDIT
 
 /obj/item/construction/rcd/Destroy()
 	QDEL_NULL(airlock_electronics)
@@ -358,6 +362,10 @@
 			continue
 		if(sub_category == "Furniture" && !(construction_upgrades & RCD_UPGRADE_FURNISHING))
 			continue
+		// GS13 EDIT pizzuh rcd
+		if(sub_category == "Pizza" && !(construction_upgrades & RCD_UPGRADE_PIZZA))
+			continue
+		// GS13 END EDIT
 
 		var/list/designs = list() //initialize all designs under this category
 		for(var/list/design as anything in target_category)
@@ -416,6 +424,10 @@
 			if(category == "Furniture" && !(construction_upgrades & RCD_UPGRADE_FURNISHING))
 				return TRUE
 
+			// GS13 EDIT pizzuh rcd
+			if(category == "Pizza" && !(construction_upgrades & RCD_UPGRADE_PIZZA))
+				return TRUE
+			// GS13 END EDIT
 			//use UI params to set variables
 			var/list/design = category[index]
 			if(design == null) //not a valid design

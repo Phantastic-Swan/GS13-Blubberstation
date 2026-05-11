@@ -544,6 +544,17 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("23x19 canvas", /obj/item/canvas/twentythree_nineteen, 4, crafting_flags = NONE, category = CAT_ENTERTAINMENT), \
 	new/datum/stack_recipe("23x23 canvas", /obj/item/canvas/twentythree_twentythree, 5, crafting_flags = NONE, category = CAT_ENTERTAINMENT), \
 	new/datum/stack_recipe("pillow", /obj/item/pillow, 3, category = CAT_FURNITURE), \
+	// GS13 EDIT beanbag chairs
+	new/datum/stack_recipe_list("beanbag chairs", list(
+		new /datum/stack_recipe("beanbag chair", /obj/structure/chair/beanbag, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("GATO beanbag chair", /obj/structure/chair/beanbag/gato, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("red beanbag chair", /obj/structure/chair/beanbag/red, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("blue beanbag chair", /obj/structure/chair/beanbag/blue, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("green beanbag chair", /obj/structure/chair/beanbag/green, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("purple beanbag chair", /obj/structure/chair/beanbag/purple, 5, category = CAT_FURNITURE),
+		new /datum/stack_recipe("black beanbag chair", /obj/structure/chair/beanbag/black, 5, category = CAT_FURNITURE),
+		)),	\
+	// GS13 END EDIT
 	))
 
 /obj/item/stack/sheet/cloth
