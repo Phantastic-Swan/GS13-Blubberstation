@@ -28,7 +28,9 @@
 	icon_state = "blueberrypile"
 	filling_color = "#5d00c7"
 	foodtypes = FRUIT
-	juice_typepath = /datum/reagent/consumable/berryjuice
 	tastes = list("blueberry" = 1)
 	distill_reagent = null
 	wine_power = 50
+
+/obj/item/food/grown/berries/blueberry/juice_typepath()
+	return /datum/reagent/consumable/berryjuice

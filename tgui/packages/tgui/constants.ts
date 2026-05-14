@@ -332,6 +332,13 @@ const GASES = [
     label: 'Lipoifium',
     color: 'yellow',
   },
+  {
+    id: 'galbanium',
+    path: '/datum/gas/galbanium',
+    name: 'Galbanium',
+    label: 'Galbanium',
+    color: 'red',
+  },
   // GS13 END CHANGE
 ] as const;
 

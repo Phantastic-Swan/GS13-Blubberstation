@@ -316,8 +316,8 @@
 	var/datum/reagents/tmp_holder = new/datum/reagents(100)
 	tmp_holder.add_reagent(/datum/reagent/consumable/lipoifier, 10)
 
-	var/datum/effect_system/fluid_spread/smoke/chem/smoke = new
-	smoke.set_up(7, holder = src, location = get_turf(user), carry = tmp_holder)
+	var/datum/effect_system/fluid_spread/smoke/chem/smoke = new(range = 7, holder = src, location = get_turf(user), carry = tmp_holder)
+	// smoke.set_up(7, holder = src, location = get_turf(user), carry = tmp_holder)
 	smoke.start(log = TRUE)
 	..()
 

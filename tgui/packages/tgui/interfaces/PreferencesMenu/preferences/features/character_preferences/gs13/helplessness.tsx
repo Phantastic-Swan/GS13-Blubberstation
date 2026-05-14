@@ -1,9 +1,6 @@
 import {
-  CheckboxInput,
   type Feature,
   FeatureNumberInput,
-  type FeatureNumeric,
-  type FeatureToggle,
 } from '../../base';
 
 export const no_movement: Feature<number> = {

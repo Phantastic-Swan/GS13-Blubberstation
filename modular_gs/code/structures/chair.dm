@@ -37,9 +37,18 @@
 	icon_state = "beanbag"
 	color = "#ffffff"
 	anchored = FALSE
+	custom_materials = null
 	buildstacktype = /obj/item/stack/sheet/cloth
 	buildstackamount = 5
 	item_chair = null
+
+/obj/structure/chair/beanbag/wrench_act_secondary(mob/living/user, obj/item/weapon)
+	return
+
+/obj/structure/chair/beanbag/wirecutter_act_secondary(mob/living/user, obj/item/tool)
+	tool.play_tool_sound(src)
+	deconstruct(disassembled = TRUE)
+	return TRUE
 
 /obj/structure/chair/beanbag/gato
 	name = "GATO beanbag chair"

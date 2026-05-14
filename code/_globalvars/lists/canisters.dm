@@ -27,5 +27,6 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 		GAS_ANTINOBLIUM = /obj/machinery/portable_atmospherics/canister/antinoblium,
 		GAS_HALON = /obj/machinery/portable_atmospherics/canister/halon,
 		GAS_FAT = /obj/machinery/portable_atmospherics/canister/lipoifium,	// GS13 EDIT
+		GAS_PERMAFAT = /obj/machinery/portable_atmospherics/canister/galbanium,	// GS13 EDIT
 		GAS_GOBLIN = /obj/machinery/portable_atmospherics/canister/goblin //BUBBER EDIT
 	))

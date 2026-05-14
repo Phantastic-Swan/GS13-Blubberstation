@@ -1,0 +1,6 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "Adds milk melons"
+  - bugfix: "fixes beanbag chairs not being craftable from cloth"
+  - bugfix: "fixes beanbag chairs requiring a wrench to deconstruct. They will now require wirecutters."

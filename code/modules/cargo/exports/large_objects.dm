@@ -138,7 +138,8 @@
 		/datum/gas/helium,
 		/datum/gas/antinoblium,
 		/datum/gas/halon,
-		/datum/gas/lipoifium,	// GS13 CHANGE
+		/datum/gas/lipoifium,	// GS13 EDIT
+		/datum/gas/galbanium,	// GS13 EDIT
 		/datum/gas/goblin //BUBBERSTATION CHANGE
 	)
 

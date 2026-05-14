@@ -1,0 +1,5 @@
+author: "Swan"
+delete-after: True
+changes:
+  - code_imp: "merges with upstream"
+  - bugfix: "fixes the forensic scanners"

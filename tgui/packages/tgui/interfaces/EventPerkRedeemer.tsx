@@ -3,7 +3,6 @@ import { Section, Table, Stack, Tooltip, Box, Button, } from 'tgui-core/componen
 
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
-import type {JSX} from 'react'
 
 type Data = {
     available_perks: Perk[];
@@ -34,14 +33,16 @@ type ckeyProp = {
 
 const ItemEntry = (item: item) => {
     return(
-        item.name + ", x" + item.amount + ", "
+        // item.name + ", x" + item.amount + ", "
+        `${item.name}, x${item.amount}, `
     );
 };
 
 const CkeyList = (ckeyProp: ckeyProp) => {
     const { ckey } = ckeyProp;
     return(
-        ckey + ", "
+        // ckey + ", "
+        `${ckey}, `
     );
 };
 

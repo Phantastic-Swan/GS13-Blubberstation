@@ -3680,7 +3680,7 @@
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp)
 "aWu" = (
-/obj/structure/barricade/wooden/snowed,
+/obj/structure/barricade/wooden/crude/snow,
 /obj/machinery/light/small/red/directional/north,
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
@@ -9648,7 +9648,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
-/obj/effect/spawner/random/structure/barricade,
+/obj/effect/spawner/random/structure/barricade/crude,
 /turf/open/floor/plating,
 /area/station/commons/vacant_room/office)
 "cyH" = (
@@ -11131,7 +11131,7 @@
 /area/station/security/prison/rec)
 "cTz" = (
 /obj/machinery/door/airlock/maintenance,
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 4
@@ -12333,7 +12333,7 @@
 	},
 /area/station/science/ordnance/office)
 "djH" = (
-/obj/item/stack/sheet/animalhide/lizard{
+/obj/item/stack/sheet/animalhide/carbon/lizard{
 	desc = "Landssslidessss, the landssslidesss...";
 	name = "Tanks-The-Floor"
 	},
@@ -21515,9 +21515,9 @@
 	},
 /obj/structure/table,
 /obj/item/coin/silver,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
 /obj/item/clipboard,
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
@@ -23765,15 +23765,15 @@
 	},
 /obj/item/stock_parts/power_store/cell/high,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/item/computer_disk/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/computer_disk/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/computer_disk/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = 4;
 	pixel_y = 3
 	},
@@ -24525,12 +24525,12 @@
 /area/station/engineering/storage_shared)
 "gEy" = (
 /obj/structure/table,
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance{
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance{
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = 7;
 	pixel_y = 2
 	},
@@ -30338,7 +30338,7 @@
 /area/station/service/chapel)
 "ili" = (
 /obj/machinery/door/airlock/maintenance,
-/obj/effect/spawner/random/structure/barricade,
+/obj/effect/spawner/random/structure/barricade/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "iln" = (
@@ -34851,7 +34851,7 @@
 /area/station/maintenance/space_hut/cabin)
 "jBc" = (
 /obj/machinery/dna_infuser,
-/obj/item/infuser_book,
+/obj/item/tgui_book/manual/infuser,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
@@ -38140,7 +38140,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "kuR" = (
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
 /turf/open/floor/plating,
@@ -42473,9 +42473,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/barricade/wooden{
-	name = "wooden barricade (CLOSED)"
-	},
+/obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "lCY" = (
@@ -58595,7 +58593,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/break_room)
 "pXe" = (
-/obj/item/stack/sheet/animalhide/monkey,
+/obj/item/stack/sheet/animalhide/carbon/monkey,
 /obj/effect/decal/cleanable/blood,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
@@ -63248,8 +63246,8 @@
 /area/station/medical/virology)
 "rjt" = (
 /obj/structure/table/glass,
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
+/obj/item/disk/computer/medical,
+/obj/item/disk/computer/medical,
 /obj/machinery/status_display/evac/directional/north,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/dark,
@@ -68597,7 +68595,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/service/kitchen,
 /obj/effect/mapping_helpers/airlock/access/any/service/hydroponics,
-/obj/structure/barricade/wooden/snowed,
+/obj/structure/barricade/wooden/crude/snow,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)
 "sGH" = (
@@ -73450,10 +73448,10 @@
 /area/station/service/theater)
 "tZw" = (
 /obj/structure/table,
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = -2
 	},
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = 2;
 	pixel_y = 8
 	},
@@ -76904,7 +76902,7 @@
 /area/station/commons/dorms/laundry)
 "vah" = (
 /obj/machinery/door/airlock/maintenance,
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
 /obj/effect/mapping_helpers/airlock/unres{
@@ -79330,14 +79328,14 @@
 /area/station/medical/break_room)
 "vIg" = (
 /obj/structure/table,
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = 7;
 	pixel_y = 2
 	},
-/obj/item/computer_disk{
+/obj/item/disk/computer{
 	pixel_x = -2
 	},
-/obj/item/computer_disk/ordnance{
+/obj/item/disk/computer/ordnance{
 	pixel_x = -5;
 	pixel_y = 6
 	},
@@ -82466,7 +82464,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance,
-/obj/effect/spawner/random/structure/barricade,
+/obj/effect/spawner/random/structure/barricade/crude,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)

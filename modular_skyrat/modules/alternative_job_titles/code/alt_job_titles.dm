@@ -411,6 +411,7 @@
 		"Psychiatrist",
 		"Therapist",
 		"Shrink",
+		"Anger Management",
 		"Dietician", //GS13 ADDITION - PSYCHOLOGIST DIETICIAN ROLE FLAVORING
 	)
 

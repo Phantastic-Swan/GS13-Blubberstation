@@ -271,8 +271,8 @@ GLOBAL_LIST_INIT(blueberry_about_to_blow_flavour, list(
 	the_turf.add_liquid(/datum/reagent/blueberry_juice, liquid_to_spill, FALSE, 312)
 	reagents.remove_reagent(/datum/reagent/blueberry_juice, liquid_to_spill)
 	// Spawn the smoke as an explosion splash effect
-	var/datum/effect_system/fluid_spread/smoke/blueberry/smoke = new
-	smoke.set_up(splash_range, holder = src, location = src)
+	var/datum/effect_system/fluid_spread/smoke/blueberry/smoke = new(range = splash_range, holder = src, location = src)
+	// smoke.set_up(splash_range, holder = src, location = src)
 	smoke.start()
 	playsound(loc, BLUEBBERY_BURST_SOUND, BLUEBERRY_INFLATION_VOLUME * 1.5, 1, 1, 1.2, ignore_walls = TRUE)
 	qdel(smoke)
