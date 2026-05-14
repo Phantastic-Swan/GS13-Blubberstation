@@ -93,6 +93,11 @@ const ALTERNATE_ACTIONS: Record<string, AlternateAction> = {
     icon: 'ribbon',
     text: 'Strip accessory',
   },
+
+  adjust_bridle: {
+    icon: 'mask',
+    text: 'Adjust bridle',
+  },
   // GS13 EDIT - bluespace belt adjustment on other
   bluespace_belt_adjustment:{
     icon: "microchip",

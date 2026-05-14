@@ -23,12 +23,14 @@
 
 /obj/item/soap/gato
 	desc = "A heavy duty bar of GATO brand soap. Smells like raspberries"
-	grind_results = list(/datum/reagent/consumable/berryjuice = 10, /datum/reagent/lye = 10)
 	icon = 'modular_gs/icons/obj/items_and_weapons.dmi'
 	icon_state = "soapgt"
 	worn_icon_state = "soapgt"
 	cleanspeed = 2.8 SECONDS
 	uses = 300
+
+/obj/item/soap/gato/grind_results()
+	return list(/datum/reagent/consumable/berryjuice = 10, /datum/reagent/lye = 10)
 
 /obj/item/toy/cards/deck/gato
 	desc = "A deck of GATO-branded space-grade playing cards."

@@ -17,10 +17,12 @@ GLOBAL_LIST_INIT(calorite_glass_recipes, list ( \
 	singular_name = "calorite glass sheet"
 	resistance_flags = ACID_PROOF
 	armor_type = /datum/armor/sheet_glass
-	grind_results = list(/datum/reagent/silicon = 20, /datum/reagent/consumable/lipoifier = 2)
 	mats_per_unit = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT, /datum/material/glass = (SHEET_MATERIAL_AMOUNT / 2))
 	merge_type = /obj/item/stack/sheet/calorite_glass
 	material_type = /datum/material/alloy/calorite_glass
+
+/obj/item/stack/sheet/calorite_glass/grind_results()
+	return list(/datum/reagent/silicon = 20, /datum/reagent/consumable/lipoifier = 2)
 
 /obj/item/stack/sheet/calorite_glass/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
 	AddComponent(\

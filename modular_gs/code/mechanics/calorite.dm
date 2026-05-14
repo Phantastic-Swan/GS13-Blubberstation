@@ -71,11 +71,13 @@
 	icon = 'modular_gs/icons/obj/stack_objects.dmi'
 	icon_state = "sheet-calorite"
 	singular_name = "calorite sheet"
-	grind_results = list(/datum/reagent/consumable/lipoifier = 2, /datum/reagent/micro_calorite = 1)
 	mats_per_unit = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/calorite
 	material_type = /datum/material/calorite
 	walltype = /turf/closed/wall/mineral/calorite
+
+/obj/item/stack/sheet/mineral/calorite/grind_results()
+	return list(/datum/reagent/consumable/lipoifier = 2, /datum/reagent/micro_calorite = 1)
 
 /obj/item/stack/sheet/mineral/calorite/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)
 	AddComponent(\

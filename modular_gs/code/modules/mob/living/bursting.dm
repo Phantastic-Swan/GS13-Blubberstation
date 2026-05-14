@@ -324,8 +324,8 @@
 				return
 
 			if (BURSTING_PREF_SAFE to BURSTING_PREF_CRIT)
-				var/datum/effect_system/fluid_spread/smoke/burst_smoke/bursting_smoke = new
-				bursting_smoke.set_up(2, holder = src, location = src)
+				var/datum/effect_system/fluid_spread/smoke/burst_smoke/bursting_smoke = new(range = 2, holder = src, location = src)
+				// bursting_smoke.set_up(2, holder = src, location = src)
 				bursting_smoke.start()
 
 				//Clear reagents from the stomach and blood

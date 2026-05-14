@@ -31,7 +31,7 @@
 /obj/item/clothing/neck/human_petcollar/calorite
 	name = "calorite collar"
 	desc = "A modified pet collar infused with calorite, magnifying the caloric impact of any food the wearer eats"
-	weight_gain_rate_modifier = 1.5
+	weight_gain_rate_modifier = 0.5
 	modular_icon_location = 'modular_gs/icons/mob/clothing/cal_collar.dmi'
 	greyscale_colors = "#303030"			// I like this
 	icon = 'modular_gs/icons/mob/clothing/cal_collar.dmi'
@@ -45,7 +45,7 @@
 /obj/item/clothing/neck/human_petcollar/locked/calorite
 	name = "locked calorite collar"
 	desc = "A modified locked collar infused with calorite, magnifying the caloric impact of any food the wearer eats"
-	weight_gain_rate_modifier = 1.5
+	weight_gain_rate_modifier = 0.5
 	modular_icon_location = 'modular_gs/icons/mob/clothing/cal_collar.dmi'
 	greyscale_colors = "#303030"			// I like this
 	icon = 'modular_gs/icons/mob/clothing/cal_collar.dmi'
