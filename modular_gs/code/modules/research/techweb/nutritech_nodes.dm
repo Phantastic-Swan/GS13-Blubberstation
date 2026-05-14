@@ -21,6 +21,7 @@
 		"bluespace_collar_receiver",
 		"bluespace_collar_transmitter",
 		"blueberry_field_collar",
+		"pizza_rcd_upgrade",
 		)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	required_items_to_unlock = list(

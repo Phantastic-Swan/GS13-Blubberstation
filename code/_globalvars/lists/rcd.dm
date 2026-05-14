@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(rcd_designs, list(
 		// GS13 EDIT
 		"Pizza" = list(
 			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/platform/pizza),
-			list(RCD_DESIGN_MODE = RCD_TURF, RCD_DESIGN_PATH = /turf/closed/wall/material/pizza),
+			// list(RCD_DESIGN_MODE = RCD_TURF, RCD_DESIGN_PATH = /turf/closed/wall/material/pizza),	// these are fucken BROKEN FOR NOW
 			list(RCD_DESIGN_MODE = RCD_AIRLOCK, RCD_DESIGN_PATH = /obj/machinery/door/airlock/material/pizza),
 			list(RCD_DESIGN_MODE = RCD_AIRLOCK, RCD_DESIGN_PATH = /obj/machinery/door/airlock/material/pizza/glass),
 			list(RCD_DESIGN_MODE = RCD_STRUCTURE, RCD_DESIGN_PATH = /obj/structure/chair/greyscale/pizza),

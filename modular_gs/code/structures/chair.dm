@@ -22,14 +22,6 @@
 	color = "#ffffff"
 	item_chair = ""
 
-/* uhoh - we are going to have to port over items from hyper.
-/obj/structure/rack/shelf
-	name = "shelving"
-	desc = "Some nice metal shelves."
-	icon = 'hyperstation/icons/obj/objects.dmi'
-	icon_state = "shelf"
-*/
-
 /obj/structure/chair/beanbag
 	name = "beanbag chair"
 	desc = "A comfy beanbag chair. Almost as soft as your fat ass."
@@ -71,9 +63,6 @@
 
 /obj/structure/chair/beanbag/black
 	color = "#404040"
-
-/obj/structure/chair/greyscale/pizza
-	name = "pizza chair"
 
 /obj/structure/chair/greyscale/pizza/Initialize(mapload)
 	. = ..()

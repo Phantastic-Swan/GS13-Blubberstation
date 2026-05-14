@@ -163,3 +163,16 @@
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3)
 	construction_time = 100
 	category = list(RND_CATEGORY_MECHFAB_CYBORG_MODULES)
+
+/datum/design/rcd_upgrade/pizza
+	name = "RCD pizza upgrade"
+	desc = "Allows the RCD to produce items made out of... pizza?"
+	id = "pizza_rcd_upgrade"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass =SHEET_MATERIAL_AMOUNT*1.25, /datum/material/silver =HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/titanium =SHEET_MATERIAL_AMOUNT)
+	build_path = /obj/item/rcd_upgrade/pizza
+	category = list(
+		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_ENGINEERING_ADVANCED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+

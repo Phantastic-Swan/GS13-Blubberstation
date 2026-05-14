@@ -8,11 +8,3 @@
 	name = "pizza RCD"
 	construction_upgrades = RCD_UPGRADE_PIZZA
 	matter = 160
-
-// /turf/closed/wall/material/pizza
-// 	name = "pizza wall"
-
-/turf/closed/wall/material/pizza/Initialize(mapload)
-	. = ..()
-	var/list/materials = list(/datum/material/pizza = 200)
-	set_custom_materials(materials)
