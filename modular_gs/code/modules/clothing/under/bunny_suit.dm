@@ -5,17 +5,15 @@
 	modular_icon_location = 'modular_gs/icons/mob/modclothes/bunny_suit.dmi'
 	greyscale_colors = "#FFFFFF#FFFFFF#FFFFFF"
 
-	icon = 'modular_gs/icons/obj/clothing/modclothes/bunny_suit.dmi'
-	icon_state = "bunny_suit_preview"
-	worn_icon_state = "bunny_suit"
-	worn_icon_digi = 'modular_gs/icons/mob/modclothes/bunny_suit_digi.dmi'
-	worn_icon_taur_snake = 'modular_gs/icons/mob/modclothes/bunny_suit_taur_snake.dmi'
+	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon_state = "/obj/item/clothing/under/dual_tone/bunny_suit"
+	worn_icon = 'modular_gs/icons/mob/modclothes/dual_tone_suit_worn.dmi'
 	post_init_icon_state = "bunny_suit"		// but why does it have to be this way
 
 	greyscale_config = /datum/greyscale_config/bunny_suit
 	greyscale_config_worn = /datum/greyscale_config/bunny_suit/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/bunny_suit/worn/digi
-	greyscale_config_worn_taur_snake = /datum/greyscale_config/bunny_suit/worn/taur/snake
+	greyscale_config_worn_taur_snake = /datum/greyscale_config/bunny_suit/worn/taur_snake
 
 /datum/greyscale_config/bunny_suit
 	name = "Bunny Suit"
@@ -24,13 +22,13 @@
 
 /datum/greyscale_config/bunny_suit/worn
 	name = "Bunny Suit (Worn)"
-	icon_file = 'modular_gs/icons/mob/modclothes/bunny_suit.dmi'
+	icon_file = 'modular_gs/icons/mob/modclothes/bunny_suit_worn.dmi'
 
 /datum/greyscale_config/bunny_suit/worn/digi
 	name = "Bunny Suit (Worn)(Digi)"
 	icon_file = 'modular_gs/icons/mob/modclothes/bunny_suit_digi.dmi'
 
-/datum/greyscale_config/bunny_suit/worn/taur/snake
+/datum/greyscale_config/bunny_suit/worn/taur_snake
 	name = "Bunny Suit (Worn)(Taur)(Snake)"
 	icon_file = 'modular_gs/icons/mob/modclothes/bunny_suit_taur_snake.dmi'
 

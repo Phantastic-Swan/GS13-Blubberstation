@@ -13,8 +13,6 @@
 
 	if (HAS_TRAIT(fatty, override_quirk))
 		trigger_weight = default_trigger_weight
-		if (HAS_TRAIT(fatty, TRAIT_STRONGLEGS))
-			trigger_weight = FATNESS_LEVEL_BLOB
 		if (HAS_TRAIT(fatty, TRAIT_WEAKLEGS))
 			trigger_weight = FATNESS_LEVEL_BARELYMOBILE
 
@@ -28,15 +26,15 @@
 	gain_message = "Your newfound weight has made it hard to manipulate objects."
 	lose_message = "You feel like you have lost enough weight to recover your dexterity."
 
-/datum/helplessness/nearsighted
-	helplessness_trait = null	// nearsighted isn't a trait the same way others are
+/datum/helplessness/low_fov
+	helplessness_trait = null
 	default_trigger_weight = FATNESS_LEVEL_BLOB
 	override_quirk = TRAIT_HELPLESS_BIG_CHEEKS
-	preference = /datum/preference/numeric/helplessness/nearsighted
+	preference = /datum/preference/numeric/helplessness/low_fov
 	gain_message = "Your fat makes it difficult to see the world around you."
 	lose_message = "You are thin enough to see your environment better."
 
-/datum/helplessness/nearsighted/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+/datum/helplessness/low_fov/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
 	if(fatness >= 2 * trigger_weight)
 		if(!HAS_TRAIT(fatty, TRAIT_VERY_LOW_FOV))
 			to_chat(fatty, span_warning(gain_message))
@@ -56,12 +54,30 @@
 
 	return FALSE
 
-/datum/helplessness/nearsighted/disable_helplessness(mob/living/carbon/human/fatty)
+/datum/helplessness/low_fov/disable_helplessness(mob/living/carbon/human/fatty)
 	fatty.remove_fov_trait(TRAIT_VERY_LOW_FOV, FOV_270_DEGREES)
 	fatty.remove_fov_trait(TRAIT_LOW_FOV, FOV_180_DEGREES)
 	REMOVE_TRAIT(fatty, TRAIT_VERY_LOW_FOV, HELPLESSNESS_TRAIT)
 	REMOVE_TRAIT(fatty, TRAIT_LOW_FOV, HELPLESSNESS_TRAIT)
 	return TRUE
+
+/datum/helplessness/nearsighted
+	helplessness_trait = TRAIT_NEARSIGHTED
+	default_trigger_weight = FATNESS_LEVEL_BLOB
+	override_quirk = TRAIT_HELPLESS_NEARSIGHTED
+	preference = /datum/preference/numeric/helplessness/nearsighted
+	gain_message = "Your fat makes it difficult to see the world around you."
+	lose_message = "You are thin enough to see your environment better."
+
+/datum/helplessness/nearsighted/apply_helplessness(mob/living/carbon/human/fatty, trigger_weight, fatness)
+	. = ..()
+	if (.)
+		fatty.become_nearsighted(HELPLESSNESS_TRAIT)
+
+/datum/helplessness/nearsighted/disable_helplessness(mob/living/carbon/human/fatty)
+	. = ..()
+	if (.)
+		fatty.cure_nearsighted(HELPLESSNESS_TRAIT)
 
 /datum/helplessness/hidden_face
 	helplessness_trait = TRAIT_DISFIGURED

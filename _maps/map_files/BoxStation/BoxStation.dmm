@@ -82804,7 +82804,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/effect/spawner/random/vending/colavend,
+/obj/machinery/vending/starshine,
 /turf/open/floor/iron/dark/side,
 /area/station/commons/fitness)
 "xhN" = (

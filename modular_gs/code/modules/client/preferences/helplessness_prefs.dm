@@ -24,6 +24,11 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "nearsighted"
 
+/datum/preference/numeric/helplessness/low_fov
+	category = HELPLESSNESS_PREFERENCES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "low_fov"
+
 /datum/preference/numeric/helplessness/hidden_face
 	category = HELPLESSNESS_PREFERENCES
 	savefile_identifier = PREFERENCE_CHARACTER

@@ -1,0 +1,66 @@
+2026-07-16:
+  Icepick200:
+  - rscadd: Added a helpless pref for waddling
+  - rscadd: Added buildable tiny fans.
+  - rscadd: Added lisping as a free quirk.
+  - rscadd: Added a modular bunny suit
+  - rscadd: Added the ability to speak in red text.
+  Swan:
+  - sound: the announcer now welcomes you to GS13
+  - bugfix: fixes Teshari bellies disappearing when using the "belly uses skin tone"
+      option
+  - code_imp: merges with upstream
+  - map: heavily restricts access to some xenoarch areas
+  - map: removes a lot of high value items from xenoarch
+2026-07-31:
+  Icepick200:
+  - rscadd: Added looking into the distance by Alt Right-Clicking. We can finally
+      use our eyes.
+  Swan:
+  - balance: Adds a persistent powerator money modifier, which affects how much money
+      it makes when it is over or under used.
+  - rscdel: Removes the GS storyteller
+  - balance: increases the maximum slowdown from weight
+  - balance: nerfs the strong legs trait (it costs more and makes you resist slowness
+      less), buffs the weak legs trait (it gives you more points and slows you down
+      less). The strong legs quirk is also incompatible with the very weak legs quirk.
+  - bugfix: fixed weight sprites not updating when the stomach is missing
+  - code_imp: refactors fatness
+  - rscadd: Adds calorite to ore vents
+  - balance: The knockdown duration on the burp trap in xenoarch is now much shorter.
+      Also, them, alongside the fattening traps, are now a LOT less durable
+  - bugfix: Fixes calorite not showing up on the mining scanner (again)
+  - rscadd: Re-adds nearsightedness as a helplessness mechanic, now separate from
+      the FOV one
+  - balance: Nutricious boost quirk has been nerfed. It no longer triggers with nutriment,
+      and the speed boost values from lipo and galbanic were lowered.
+  - bugfix: Fixes dual tone suits not showing their color in the loadout menu
+  - qol: Getting stuck in doors will now occur on the airlocks tile, rather than in
+      front of it
+  - bugfix: Instant storyteller vote now takes the current population into account
+      when picking storytellers to include in the vote
+  - bugfix: fixes the adipoelectric generator in xenoarch not being connected to the
+      grid at round start
+  - bugfix: Fixes the Expose/hide genital menu interaction with modular clothing
+  - rscadd: Adds a new "fatty alert" event, which simply triggers a fake blob event.
+      It's funny, trust me.
+  - bugfix: Fixes size collars integration with XWG. Also fixes XWG not being disabled
+      when you disable the pref
+  - bugfix: Fixes GT bot printing the typepath, rather than the name of the storyteller
+      to the discord chat
+  - bugfix: fixes how XWG interacts with micro and macro characters
+  evilew:
+  - rscadd: added Nefarious Calorite Pen to Waistline Saboteur vendor
+  - qol: 'more areas have 600% sprite size uncapped: xenoarch (gym, construction,
+      lower level, maints, outside, ruins), space hotel, maintenance, persistance
+      outpost'
+  - balance: made Adipoluri much more potent and made it available in Cargo Goodies
+  - bugfix: fixed Calorite Pen's doubling stab notif & clicking breaking sprites
+  - map: 'GATOified following maps: Ouroboros, Pubby, Biodome'
+  - map: 'various Xenoarch tweaks: rebalanced access (removed some access requirement
+      or made them multi-department), added a small prison cell beneath the sec outpost,
+      added a new secret room & secret loot, small cosmetic fixes, added water piping,
+      added area icons'
+  - rscadd: added silver and plasteel to material starter crates, rebalanced some
+      items
+  - rscadd: Pet Owner can now select lizards
