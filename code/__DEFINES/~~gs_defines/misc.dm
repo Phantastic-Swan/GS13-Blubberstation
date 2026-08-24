@@ -16,6 +16,8 @@
 
 /// How much fatness do we gain per each unit of nutrition over the `NUTRITION_LEVEL_FULL` threshold.
 #define NUTRITION_TO_FAT_RATIO	1
+/// The percentage of nutrition over the `NUTRITION_LEVEL_FULL` threshold that gets considered for WG calculations.
+#define NUTRITION_CONVERSION_EFFICIENCY	0.85
 
 #define FATNESS_TO_WEIGHT_RATIO 0.125
 #define MUSCLE_TO_WEIGHT_RATIO 0.25 // Muscle is heavier than fat.

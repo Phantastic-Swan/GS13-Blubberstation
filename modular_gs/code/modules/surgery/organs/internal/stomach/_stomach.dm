@@ -1,6 +1,6 @@
 /obj/item/organ/stomach/proc/handle_gaining_weight(mob/living/carbon/human/human, nutrition)
 	if(nutrition > NUTRITION_LEVEL_FULL)
-		var/nutrition_that_becomes_fat = nutrition - NUTRITION_LEVEL_FULL
+		var/nutrition_that_becomes_fat = (nutrition - NUTRITION_LEVEL_FULL) * NUTRITION_CONVERSION_EFFICIENCY
 		human.adjust_nutrition(-nutrition_that_becomes_fat, TRUE) // Force adjust_nutrition to happen ignoring TRAIT_NOHUNGER
 		human.adjust_fatness(nutrition_that_becomes_fat * NUTRITION_TO_FAT_RATIO, FATTENING_TYPE_FOOD)
 	
