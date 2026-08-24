@@ -17,15 +17,16 @@
 /// How much fatness do we gain per each unit of nutrition over the `NUTRITION_LEVEL_FULL` threshold.
 #define NUTRITION_TO_FAT_RATIO	1
 
-#define FATNESS_TO_WEIGHT_RATIO 0.25
-#define MUSCLE_TO_WEIGHT_RATIO 0.5 // Muscle is heavier than fat.
+#define FATNESS_TO_WEIGHT_RATIO 0.125
+#define MUSCLE_TO_WEIGHT_RATIO 0.25 // Muscle is heavier than fat.
 #define POUNDS_TO_KG_RAITO 0.454 // This isn't exact, but we don't want super long numbers.
 
 #define MUSCLE_TO_FATNESS_RATIO 2
 #define MUSCLE_TO_FATNESS_RATIO_VORE 5
 
 #define FATNESS_FROM_VORE 0.8
-#define BASE_WEIGHT_VALUE 140
+/// default weight for a 100% scale mob at 0 BFI/BMI. IRL, 20 BMI is 147.46764870282246, so we round it to the nearest integer
+#define BASE_WEIGHT_VALUE 147
 
 #define VORE_TRANSFER_PERMAFAT 0.2
 #define VORE_TRANSFER_CALORITE_POISONING 0.1
