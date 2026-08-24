@@ -29,8 +29,8 @@
 		else
 			to_chat(M, "<span class='warning'><i>[pick("You feel your body churn...", "You feel heavier...", "You hear an ominous gurgle from your belly...", "You feel bulkier...")]</i></span>")
 			if(A.totalStageSpeed() >= 12) //get chunkier quicker
-				M.adjust_fatness(70, FATTENING_TYPE_VIRUS)
+				M.adjust_fatness(75, FATTENING_TYPE_VIRUS)
 			else if(A.totalStageSpeed() >= 7)
-				M.adjust_fatness(40, FATTENING_TYPE_VIRUS)
+				M.adjust_fatness(50, FATTENING_TYPE_VIRUS)
 			else
-				M.adjust_fatness(15, FATTENING_TYPE_VIRUS)
+				M.adjust_fatness(25, FATTENING_TYPE_VIRUS)

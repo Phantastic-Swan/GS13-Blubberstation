@@ -7,12 +7,15 @@
 #define FATTENING_TYPE_MAGIC "magic"
 #define FATTENING_TYPE_VIRUS "virus"
 #define FATTENING_TYPE_NANITES "nanites"
-#define FATTENING_TYPE_ATMOS "atmos"	// yeah I'm taking the name atmos instead of gasses, because fuck you I'm not calling my pref "inflation type gas", some people will get confused, if you wanna do inflation just call it that lol
+#define FATTENING_TYPE_ATMOS "atmos"
 #define FATTENING_TYPE_RADIATIONS "radiations"
 #define FATTENING_TYPE_MOBS "mobs"
 #define FATTENING_TYPE_WEIGHT_LOSS "weight_loss"
 /// This ignores prefs, please only use this for admin stuff or when you have a VERY good reason.
 #define FATTENING_TYPE_ALMIGHTY "almighty"
+
+/// How much fatness do we gain per each unit of nutrition over the `NUTRITION_LEVEL_FULL` threshold.
+#define NUTRITION_TO_FAT_RATIO	1
 
 #define FATNESS_TO_WEIGHT_RATIO 0.25
 #define MUSCLE_TO_WEIGHT_RATIO 0.5 // Muscle is heavier than fat.

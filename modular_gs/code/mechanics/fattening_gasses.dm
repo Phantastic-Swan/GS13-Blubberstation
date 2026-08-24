@@ -18,7 +18,7 @@
 		else
 			fatness_to_add *= 1.1	// because fat you, that's why
 
-	breather.adjust_fatness(fatness_to_add + 5, FATTENING_TYPE_ATMOS) // +5, so that we always get some decent BFI in
+	breather.adjust_fatness(fatness_to_add, FATTENING_TYPE_ATMOS)
 
 /obj/item/organ/lungs/proc/consume_galbanium(mob/living/carbon/breather, datum/gas_mixture/breath, galbanium_pp, old_galbanium_pp)
 	var/total_moles = breath.total_moles()
