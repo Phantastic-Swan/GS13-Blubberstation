@@ -6,7 +6,6 @@
 /obj/item/organ/lungs/proc/consume_lipoifium(mob/living/carbon/breather, datum/gas_mixture/breath, lipoifium_pp, old_lipoifium_pp)
 	var/total_moles = breath.total_moles()
 	var/lipoifium_moles = breathe_gas_volume(breath, /datum/gas/lipoifium)
-	var/lipoifium_ratio = lipoifium_moles / total_moles
 
 	if (lipoifium_pp < 0.1)	// less than 0.1 KPa of lipo
 		return
