@@ -15,7 +15,7 @@
 #define FATTENING_TYPE_ALMIGHTY "almighty"
 
 /// The percentage of nutrition over the `NUTRITION_LEVEL_FULL` threshold that gets considered for WG calculations.
-#define NUTRITION_CONVERSION_EFFICIENCY	0.85
+#define NUTRITION_CONVERSION_EFFICIENCY	0.5
 /// How much BFI do we gain per each unit of nutrition turned into fat
 #define NUTRITION_TO_FAT_RATIO	0.8
 
