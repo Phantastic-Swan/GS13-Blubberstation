@@ -1,8 +1,3 @@
-/obj/item/organ/lungs/Initialize(mapload)
-	. = ..()
-	add_gas_reaction(/datum/gas/lipoifium, while_present = PROC_REF(consume_lipoifium))
-	add_gas_reaction(/datum/gas/galbanium, while_present = PROC_REF(consume_galbanium))
-
 /obj/item/organ/lungs/proc/consume_lipoifium(mob/living/carbon/breather, datum/gas_mixture/breath, lipoifium_pp, old_lipoifium_pp)
 	var/lipoifium_moles = breathe_gas_volume(breath, /datum/gas/lipoifium)
 
