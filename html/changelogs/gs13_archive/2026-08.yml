@@ -48,3 +48,6 @@
   Swan:
   - rscadd: Ports the HEF-T Scale from WG13
   - code_imp: turns scale behavior into a component, which can be applied onto ANYTHING.
+2026-08-25:
+  Swan:
+  - rscadd: Adds the GATO birthday holiday, which starts on the second of august.
