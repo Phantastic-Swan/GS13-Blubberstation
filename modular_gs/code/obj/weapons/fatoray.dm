@@ -105,7 +105,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
 	icon_state = "cannon_ray"
 	///How much fat is added to the target mob?
-	fat_added = 350
+	fat_added = 400
 
 ///////////////////////////////////////
 //////PROJECTILE MECHANICS/////////////
