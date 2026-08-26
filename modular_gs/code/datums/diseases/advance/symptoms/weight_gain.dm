@@ -16,7 +16,6 @@
 		"Stage Speed 12" = "Increases the rate of cell replication further"
 	)
 
-
 /datum/symptom/weight_gain/Activate(datum/disease/advance/advanced_disease)
 	if(!..())
 		return
