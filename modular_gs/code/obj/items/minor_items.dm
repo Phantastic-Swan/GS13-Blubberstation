@@ -58,6 +58,16 @@
 	name = "macerinic compound beaker"
 	list_reagents = list(/datum/reagent/fermi_slim = 50)
 
+/obj/item/reagent_containers/cup/bottle/weight_gain_virus
+	name = "Weight gain virus culture bottle"
+	desc = "A small bottle. Contains WG culture virus in synthblood medium."
+	spawned_disease = /datum/disease/advance/weight_gain
+
+/obj/item/reagent_containers/cup/bottle/berry_virus
+	name = "Berry virus culture bottle"
+	desc = "A small bottle. Contains berry culture virus in synthblood medium."
+	spawned_disease = /datum/disease/advance/berry
+
 /*
 //evil fucking donut
 

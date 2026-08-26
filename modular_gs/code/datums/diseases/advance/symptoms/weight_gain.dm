@@ -7,9 +7,10 @@
 	transmittable = -2
 	level = 6
 	severity = 3
-	base_message_chance = 75
-	symptom_delay_min = 15
-	symptom_delay_max = 45
+	base_message_chance = 10
+	// don't delay it so calcs are easy
+	symptom_delay_min = 0
+	symptom_delay_max = 0
 	threshold_descs = list(
 		"Stage Speed 7" = "Increases the rate of cell replication.",
 		"Stage Speed 12" = "Increases the rate of cell replication further"
@@ -29,8 +30,8 @@
 		else
 			to_chat(host, "<span class='warning'><i>[pick("You feel your body churn...", "You feel heavier...", "You hear an ominous gurgle from your belly...", "You feel bulkier...")]</i></span>")
 			if(advanced_disease.totalStageSpeed() >= 12) //get chunkier quicker
-				host.adjust_fatness(75, FATTENING_TYPE_VIRUS)
+				host.adjust_fatness(10, FATTENING_TYPE_VIRUS)
 			else if(advanced_disease.totalStageSpeed() >= 7)
-				host.adjust_fatness(50, FATTENING_TYPE_VIRUS)
+				host.adjust_fatness(4, FATTENING_TYPE_VIRUS)
 			else
-				host.adjust_fatness(25, FATTENING_TYPE_VIRUS)
+				host.adjust_fatness(2, FATTENING_TYPE_VIRUS)
