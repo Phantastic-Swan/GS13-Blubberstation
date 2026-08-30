@@ -277,7 +277,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fat_weapons.dmi'
 	icon_state = "calorite_whip"
 	damtype = FAT
-	force = 40
+	force = 25
 
 /obj/item/melee/curator_whip/permafattening
 	name = "Galbanic Whip"
@@ -285,7 +285,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fat_weapons.dmi'
 	icon_state = "galbanic_whip"
 	damtype = PERMA_FAT
-	force = 30
+	force = 20
 
 /obj/item/gavelhammer/fattening
 	name = "Calorite Hammer"

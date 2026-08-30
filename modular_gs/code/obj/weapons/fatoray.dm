@@ -58,7 +58,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
 	icon_state = "cannon_ray"
 	///How much fat is added to the target mob?
-	fat_added = 700
+	fat_added = 800
 
 ////////////////////////////////////////////////////////////////////
 ////////FATORAYS THAT CAN BE MADE BY LATHES OR RESEARCHED///////////
