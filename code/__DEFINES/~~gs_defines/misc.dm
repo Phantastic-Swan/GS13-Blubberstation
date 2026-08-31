@@ -29,8 +29,14 @@
 #define MUSCLE_TO_FATNESS_RATIO_VORE 5
 
 #define FATNESS_FROM_VORE 0.8
-/// default weight for a 100% scale mob at 0 BFI/BMI. IRL, 20 BMI is 147.46764870282246, so we round it to the nearest integer
+/// default weight in lbs for a 100% scale mob at 0 BFI/BMI. IRL, 20 BMI is 147.46764870282246, so we round it to the nearest integer
 #define BASE_WEIGHT_VALUE 147
+/// default height in feet for a 100% scale mob
+#define BASE_HEIGHT 6
+/// how much lb is one kg
+#define LB_TO_KG 0.453592
+/// how much feet is one meter
+#define FEET_TO_METER 0.3048
 
 #define VORE_TRANSFER_PERMAFAT 0.2
 #define VORE_TRANSFER_CALORITE_POISONING 0.1
