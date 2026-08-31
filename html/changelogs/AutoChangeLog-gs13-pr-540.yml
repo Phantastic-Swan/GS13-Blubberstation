@@ -1,0 +1,4 @@
+author: "Swan"
+delete-after: True
+changes:
+  - qol: "makes it so transfer votes are forced open when a person hasn't voted"
