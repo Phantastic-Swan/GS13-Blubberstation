@@ -277,7 +277,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fat_weapons.dmi'
 	icon_state = "calorite_whip"
 	damtype = FAT
-	force = 100
+	force = 25
 
 /obj/item/melee/curator_whip/permafattening
 	name = "Galbanic Whip"
@@ -285,7 +285,7 @@
 	icon = 'modular_gs/icons/obj/weapons/fat_weapons.dmi'
 	icon_state = "galbanic_whip"
 	damtype = PERMA_FAT
-	force = 75
+	force = 25
 
 /obj/item/gavelhammer/fattening
 	name = "Calorite Hammer"
@@ -295,8 +295,8 @@
 	// righthand_file = 'modular_gs/icons/mob/inhands/melee_righthand_64.dmi'
 	icon_state = "calorite_hammer"
 	damtype = FAT
-	throwforce = 100
-	force = 150
+	throwforce = 25
+	force = 30
 
 /obj/item/gavelhammer/permafattening
 	name = "Galbanic Hammer"
@@ -305,7 +305,7 @@
 	icon_state = "galbanic_hammer"
 	damtype = PERMA_FAT
 	throwforce = 25
-	force = 50
+	force = 30
 
 
 //i'm ngl these don't work :/ (putting in the sprites just in case)
