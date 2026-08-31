@@ -1,4 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - bugfix: "Fixes the grey modular jumpsuit belly sprites not working on belly types other than round and default GS."

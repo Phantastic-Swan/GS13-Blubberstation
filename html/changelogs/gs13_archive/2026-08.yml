@@ -57,3 +57,7 @@
 2026-08-30:
   Swan:
   - rscadd: Adds the old space carps that can't teleport
+2026-08-31:
+  Swan:
+  - bugfix: Fixes the grey modular jumpsuit belly sprites not working on belly types
+      other than round and default GS.
