@@ -61,7 +61,7 @@ def parse_defines(repo_root: Path) -> dict:
 
     pending: list[tuple[str, str]] = []
     seen_names: set[str] = set(defines)
-    dm_files = sorted(f for d in (repo_root / 'code', repo_root / 'modular_skyrat', repo_root / 'modular_zubbers') if d.is_dir() for f in d.rglob('*.dm')) # BUBBER EDIT - ORIGINAL:  defines_dir = repo_root / 'code'
+    dm_files = sorted(f for d in (repo_root / 'code', repo_root / 'modular_skyrat', repo_root / 'modular_zubbers', repo_root / 'modular_gs') if d.is_dir() for f in d.rglob('*.dm')) # GS13 EDIT: adds modular_gs support # BUBBER EDIT - ORIGINAL:  defines_dir = repo_root / 'code'
     for fpath in dm_files: # BUBBER EDIT - ORIGINAL: for fpath in sorted(defines_dir.rglob('*.dm')):
         for line in fpath.read_text(encoding='utf-8', errors='ignore').splitlines():
             line = line.strip()
@@ -263,6 +263,9 @@ def main() -> int:
 
     code_dirs = [
         repo_root / 'code',
+        # GS13 EDIT
+        repo_root / 'modular_gs',
+        # GS13 END EDIT
         # BUBBER EDIT BEGIN
         repo_root / 'modular_skyrat',
         repo_root / 'modular_zubbers'

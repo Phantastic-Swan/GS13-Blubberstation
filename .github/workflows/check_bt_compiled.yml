@@ -11,6 +11,9 @@ on:
       - "modular_skyrat/**/*.bt.json"
       - "modular_zubbers/**/*.bt.json"
       # BUBBER EDIT END
+      # GS13 EDIT
+      - "modular_gs/**/*.bt.json"
+      # GS13 END EDIT
       - "tools/build_bt.py"
 
 jobs:

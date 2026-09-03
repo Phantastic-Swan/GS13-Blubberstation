@@ -185,6 +185,7 @@ export const BehaviorTreeCompilerTarget = new Juke.Target({
     'code/**/*.bt.json',
     'code/__DEFINES/**/*.dm',
     'modular_skyrat/**/*.bt.json', 'modular_zubbers/**/*.bt.json', // BUBBER EDIT ADD
+    'modular_gs/**/*.bt.json',  // GS13 EDIT
     'tools/build_bt.py',
   ],
   outputs: () => {

@@ -33,6 +33,7 @@
 											"type": "leaf",
 											"behavior": "/datum/bt_node/ai_behavior/basic_melee_attack",
 											"vars": {
+												"time_between_perform": 10,
 												"target_key": "BB_CURRENT_TARGET",
 												"hiding_location_key": "BB_CURRENT_TARGET_HIDING_LOCATION"
 											}
