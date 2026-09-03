@@ -2069,7 +2069,7 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "aMc" = (
@@ -3468,7 +3468,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/maintenance/aft)
 "bpg" = (
@@ -4311,7 +4311,7 @@
 	})
 "bHI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/department/bridge)
 "bHO" = (
@@ -4705,7 +4705,7 @@
 /area/station/commons/storage/tools)
 "bQn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/light/built{
 	dir = 4;
 	icon_state = "tube-empty"
@@ -4970,7 +4970,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "bUs" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /turf/open/floor/plating,
 /area/station/engineering/atmospherics_engine{
@@ -5832,7 +5832,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/starboard)
 "chd" = (
-/obj/effect/spawner/lootdrop/keg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/abandon_cafeteria)
 "chp" = (
@@ -7337,7 +7337,7 @@
 /turf/open/floor/iron,
 /area/station/security/office)
 "cKj" = (
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
 	},
@@ -8167,7 +8167,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/service/janitor)
 "dcM" = (
@@ -8779,7 +8779,7 @@
 /turf/open/floor/iron,
 /area/station/medical/medbay/central)
 "dls" = (
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/plating,
 /area/station/engineering/storage)
 "dlS" = (
@@ -11718,7 +11718,7 @@
 /area/station/ai/satellite/service)
 "emc" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/medical,
+/obj/effect/spawner/random/techstorage/medical_all,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "emB" = (
@@ -15359,7 +15359,7 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "fGG" = (
@@ -15878,7 +15878,7 @@
 /obj/item/multitool,
 /obj/item/clothing/suit/hazardvest,
 /obj/item/clothing/gloves/color/fyellow,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/camera{
 	c_tag = "Auxiliary Tool Storage"
 	},
@@ -16366,7 +16366,7 @@
 	dir = 1
 	},
 /obj/structure/closet/crate,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "fYi" = (
@@ -16561,7 +16561,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/chapel/office)
 "gbP" = (
@@ -18129,7 +18129,7 @@
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
 /area/station/maintenance/aft/greater)
@@ -18862,7 +18862,7 @@
 /area/station/service/hydroponics)
 "gRS" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/service,
+/obj/effect/spawner/random/techstorage/service_all,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "gSc" = (
@@ -19691,7 +19691,7 @@
 /area/station/hallway/primary/central)
 "hgp" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/engineering,
+/obj/effect/spawner/random/techstorage/engineering_all,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	name = "scrubbers pipe"
 	},
@@ -22298,7 +22298,7 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "ikK" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
@@ -23441,7 +23441,7 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/station/engineering/atmos)
 "iHx" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "iHG" = (
@@ -25846,7 +25846,7 @@
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "jzR" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
 "jzT" = (
@@ -26218,7 +26218,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "jGL" = (
@@ -31135,7 +31135,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -34394,7 +34394,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/structure/trash_pile,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
@@ -35552,7 +35552,7 @@
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron,
 /area/station/maintenance/aft/greater)
 "ncD" = (
@@ -39478,7 +39478,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10;
 	name = "scrubbers pipe"
@@ -40384,7 +40384,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "oSV" = (
@@ -41328,7 +41328,7 @@
 /area/station/engineering/main)
 "ppy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer1,
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "pqq" = (
@@ -41514,7 +41514,7 @@
 /turf/open/floor/engine,
 /area/station/maintenance/disposal/incinerator)
 "puu" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "puy" = (
@@ -42903,7 +42903,7 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/item/storage/toolbox/emergency,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/iron,
@@ -43508,7 +43508,7 @@
 /area/station/maintenance/abandon_cafeteria)
 "qgX" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/tcomms,
+/obj/effect/spawner/random/techstorage/tcomms_all,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
 	},
@@ -43912,7 +43912,7 @@
 /turf/open/floor/wood,
 /area/station/maintenance/abandon_cafeteria)
 "qqS" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
@@ -45084,8 +45084,8 @@
 /obj/item/ai_module/core/full/custom,
 /obj/item/ai_module/core/freeformcore,
 /obj/item/ai_module/core/full/asimov,
-/obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/effect/spawner/lootdrop/aimodule_neutral,
+/obj/effect/spawner/random/aimodule/harmless,
+/obj/effect/spawner/random/aimodule/neutral,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Chamber - Starboard";
 	dir = 1;
@@ -45342,7 +45342,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "qSc" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
@@ -45846,7 +45846,7 @@
 /area/icemoon/surface/outdoors)
 "rbT" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/AI,
+/obj/effect/spawner/random/techstorage/ai_all,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "rcf" = (
@@ -48101,7 +48101,7 @@
 	})
 "rWa" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/rnd,
+/obj/effect/spawner/random/techstorage/rnd_all,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4;
 	name = "air supply pipe"
@@ -49241,7 +49241,7 @@
 	name = "Supermatter Engine"
 	})
 "stq" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
@@ -50576,7 +50576,7 @@
 /area/station/science/server)
 "sPL" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/command,
+/obj/effect/spawner/random/techstorage/command_all,
 /obj/effect/landmark/blobstart,
 /obj/machinery/light/small,
 /turf/open/floor/plating,
@@ -51464,7 +51464,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "tjl" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/engine/vacuum,
 /area/icemoon/surface/outdoors)
 "tjr" = (
@@ -51800,7 +51800,7 @@
 /area/station/hallway/primary/aft)
 "tpw" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "tpy" = (
@@ -52543,7 +52543,7 @@
 /obj/item/ai_module/zeroth/oneHuman,
 /obj/item/ai_module/supplied/protectStation,
 /obj/item/ai_module/supplied/oxygen,
-/obj/effect/spawner/lootdrop/aimodule_harmful,
+/obj/effect/spawner/random/aimodule/harmful,
 /turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "tFz" = (
@@ -53390,7 +53390,7 @@
 /area/station/hallway/primary/port)
 "tVM" = (
 /obj/structure/bed,
-/obj/effect/spawner/lootdrop/bedsheet,
+/obj/effect/spawner/random/bedsheet,
 /turf/open/floor/carpet,
 /area/station/maintenance/aft/greater)
 "tWj" = (
@@ -53858,7 +53858,7 @@
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9;
 	name = "scrubbers pipe"
@@ -54499,7 +54499,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "uqt" = (
-/obj/effect/spawner/lootdrop/bedsheet,
+/obj/effect/spawner/random/bedsheet,
 /obj/structure/bed,
 /turf/open/floor/wood,
 /area/icemoon/surface/outdoors)
@@ -55116,7 +55116,7 @@
 "uAy" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/donut_box,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /turf/open/floor/carpet/royalblue,
@@ -55721,7 +55721,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/power/apc{
 	areastring = "/area/station/command/eva";
 	dir = 1;
@@ -55996,7 +55996,7 @@
 	})
 "uSo" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/RnD_secure,
+/obj/effect/spawner/random/techstorage/rnd_secure_all,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "uSx" = (
@@ -57800,10 +57800,10 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/armory_contraband{
+/obj/effect/spawner/random/contraband/armory{
 	loot = list(/obj/item/gun/ballistic/automatic/pistol=5,/obj/item/gun/ballistic/shotgun/automatic/combat=5,/obj/item/gun/ballistic/revolver/mateba,/obj/item/gun/ballistic/automatic/pistol/deagle,/obj/item/storage/box/syndie_kit/throwing_weapons=3)
 	},
-/obj/effect/spawner/lootdrop/maintenance{
+/obj/effect/spawner/random/maintenance{
 	lootcount = 3;
 	name = "3maintenance loot spawner"
 	},
@@ -59754,7 +59754,7 @@
 /turf/open/floor/mineral/crimsonstone_floor,
 /area/icemoon/underground/explored)
 "wio" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1;
 	name = "north facing firelock"
@@ -62522,7 +62522,7 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "xmq" = (
@@ -64314,7 +64314,7 @@
 /area/station/hallway/primary/central)
 "xXL" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/security,
+/obj/effect/spawner/random/techstorage/security_all,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "xXS" = (
@@ -64892,7 +64892,7 @@
 /area/station/service/kitchen)
 "yko" = (
 /obj/structure/table/wood,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/item/gavelblock,
 /turf/open/floor/wood,
 /area/station/security/courtroom)
