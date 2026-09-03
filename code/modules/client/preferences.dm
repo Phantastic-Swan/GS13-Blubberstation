@@ -195,6 +195,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	data["positive_quirk_count"] = GetPositiveQuirkCount()
 	//SKYRAT EDIT END
 
+	data["master_erp_enabled"] = read_preference(/datum/preference/toggle/master_erp_preferences) // GS13 EDIT
 	data["character_preferences"] = compile_character_preferences(user)
 
 	data["active_slot"] = default_slot

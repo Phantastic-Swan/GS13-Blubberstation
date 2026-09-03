@@ -586,15 +586,24 @@ export function MainPage(props: MainPageProps) {
       break;
     case PrefPage.Visual:
       prefPageContents = (
-        <PreferenceList
-          randomizations={getRandomization(
-            contextualPreferences,
-            serverData,
-            randomBodyEnabled,
+        // GS13 EDIT adds ERP master switch warning
+        <>
+          {!data.master_erp_enabled && (
+            <NoticeBox>
+              Some character creation features are hidden due to your ERP settings. Check the ERP tab in the game settings.
+            </NoticeBox>
           )}
-          preferences={contextualPreferences}
-          maxHeight="auto"
-        />
+          <PreferenceList
+            randomizations={getRandomization(
+              contextualPreferences,
+              serverData,
+              randomBodyEnabled,
+            )}
+            preferences={contextualPreferences}
+            maxHeight="auto"
+          />
+        </>
+        // GS13 END EDIT
       );
       break;
     case PrefPage.Lore:
