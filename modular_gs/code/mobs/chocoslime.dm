@@ -1,28 +1,32 @@
 
 /datum/ai_controller/basic_controller/feedermob
 	blackboard = list(
-		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic/feedermob,
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/feedermob,
 		BB_TARGET_MINIMUM_STAT = UNCONSCIOUS,
 		BB_EMOTE_KEY = "glunk",
 		BB_EMOTE_CHANCE = 40,
 	)
 
+	behavior_tree_json = "modular_gs/code/mobs/feeder_mob.bt.json"
+
 	ai_traits = DEFAULT_AI_FLAGS | STOP_MOVING_WHEN_PULLED
 	ai_movement = /datum/ai_movement/basic_avoidance
-	idle_behavior = /datum/idle_behavior/idle_random_walk
+	// idle_behavior = /datum/idle_behavior/idle_random_walk
 
-	planning_subtrees = list(
-		/datum/ai_planning_subtree/escape_captivity,
-		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree,
-	)
+	// planning_subtrees = list(
+	// 	/datum/ai_planning_subtree/escape_captivity,
+	// 	/datum/ai_planning_subtree/simple_find_target,
+	// 	/datum/ai_planning_subtree/basic_melee_attack_subtree,
+	// )
 
-/datum/targeting_strategy/basic/feedermob/can_attack(mob/living/living_mob, atom/the_target, vision_range)
-	. = ..()
-	if isanimal_or_basicmob(the_target)
+/datum/targeting_strategy/feedermob/is_valid_target(mob/living/living_mob, atom/target, vision_range, datum/ai_controller/controller = null)
+	if isanimal_or_basicmob(target)
 		return FALSE
 	
-	return .
+	if(!..())
+		return FALSE
+	
+	return ishuman(target)
 
 /mob/living/simple_animal/hostile/feed
 	var/food_per_feeding = 5

@@ -16,9 +16,10 @@
 	rgb_code = COLOR_SLIME_CALORITE
 
 /mob/living/basic/slime/calorite
+	name = "Calorite slime"
 	icon = 'modular_gs/icons/mob/slimes.dmi'
 	icon_state = "calorite-baby"
-	ai_controller = /datum/ai_controller/basic_controller/slime/calorite
+	// ai_controller = /datum/ai_controller/basic_controller/slime/calorite
 	slime_type = /datum/slime_type/calorite
 	melee_damage_lower = 0
 	melee_damage_upper = 0
@@ -149,31 +150,40 @@
 
 
 //Slight change to AI so it will immediately begin feeding on humans
-/datum/ai_controller/basic_controller/slime/calorite
-	planning_subtrees = list(
-		/datum/ai_planning_subtree/escape_captivity,
-		/datum/ai_planning_subtree/change_slime_face,
-		/datum/ai_planning_subtree/use_mob_ability/evolve,
-		/datum/ai_planning_subtree/use_mob_ability/reproduce,
-		/datum/ai_planning_subtree/pet_planning,
-		/datum/ai_planning_subtree/target_retaliate,
-		/datum/ai_planning_subtree/find_and_hunt_target/find_slime_food/calorite,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree/slime,
-		/datum/ai_planning_subtree/random_speech/slime,
-	)
+// /datum/ai_controller/basic_controller/slime/calorite
+	// behavior_tree_json = "modular_gs/code/modules/mob/living/basic/ai/calorite_slime.bt.json"
+	// behavior_tree_json = "code/modules/mob/living/basic/slime/ai/slime.bt.json"
+	// planning_subtrees = list(
+	// 	/datum/ai_planning_subtree/escape_captivity,
+	// 	/datum/ai_planning_subtree/change_slime_face,
+	// 	/datum/ai_planning_subtree/use_mob_ability/evolve,
+	// 	/datum/ai_planning_subtree/use_mob_ability/reproduce,
+	// 	/datum/ai_planning_subtree/pet_planning,
+	// 	/datum/ai_planning_subtree/target_retaliate,
+	// 	/datum/ai_planning_subtree/find_and_hunt_target/find_slime_food/calorite,
+	// 	/datum/ai_planning_subtree/basic_melee_attack_subtree/slime,
+	// 	/datum/ai_planning_subtree/random_speech/slime,
+	// )
+
+// /datum/targeting_strategy/slime_food/is_valid_target(mob/living/living_mob, atom/target, vision_range, datum/ai_controller/controller = null)
+// 	if(!ishuman(target))
+// 		return ..()
+
+// 	if(hunter.can_feed_on(target, check_adjacent = FALSE))
+// 		hunter.start_feeding(hunted)
 
 //New behavior when interacting with humans
-/datum/ai_planning_subtree/find_and_hunt_target/find_slime_food/calorite
-	hunting_behavior = /datum/ai_behavior/hunt_target/interact_with_target/slime/calorite
+// /datum/ai_planning_subtree/find_and_hunt_target/find_slime_food/calorite
+// 	hunting_behavior = /datum/ai_behavior/hunt_target/interact_with_target/slime/calorite
 
-//Immediately begin feeding on valid human targets
-/datum/ai_behavior/hunt_target/interact_with_target/slime/calorite/target_caught(mob/living/basic/slime/hunter, mob/living/hunted)
-	if(ishuman(hunted))
-		if(hunter.can_feed_on(hunted))
-			hunter.start_feeding(hunted)
-		return
+// //Immediately begin feeding on valid human targets
+// /datum/ai_behavior/hunt_target/interact_with_target/slime/calorite/target_caught(mob/living/basic/slime/hunter, mob/living/hunted)
+// 	if(ishuman(hunted))
+// 		if(hunter.can_feed_on(hunted))
+// 			hunter.start_feeding(hunted)
+// 		return
 
-	. = ..()
+// 	. = ..()
 
 /atom/movable/screen/alert/status_effect/slime_leech/calorite
 	name = "Calorite Slime Feeding"
