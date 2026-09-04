@@ -1,3 +1,7 @@
 2026-09-01:
   Swan:
   - qol: makes it so transfer votes are forced open when a person hasn't voted
+2026-09-04:
+  Alkali:
+  - rscadd: Small warning to the Character Menu Visuals tab when ERP preferences are
+      not on
