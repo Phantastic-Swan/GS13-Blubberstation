@@ -1007,15 +1007,15 @@
 "arx" = (
 /obj/structure/table,
 /obj/machinery/computer/security/telescreen/rd,
-/obj/item/cartridge/signal/toxins{
+/obj/item/disk/computer/ordnance{
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/cartridge/signal/toxins{
+/obj/item/disk/computer/ordnance{
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/cartridge/signal/toxins,
+/obj/item/disk/computer/ordnance,
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
@@ -3807,7 +3807,7 @@
 /obj/structure/table,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
-/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/gloves/latex,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = -24
@@ -7907,15 +7907,12 @@
 	icon_state = "1-4"
 	},
 /obj/structure/table/glass,
-/obj/item/cartridge/chemistry{
-	pixel_y = 2
-	},
-/obj/item/cartridge/medical,
-/obj/item/cartridge/medical{
+/obj/item/disk/computer/medical,
+/obj/item/disk/computer/medical{
 	pixel_x = -2;
 	pixel_y = 6
 	},
-/obj/item/cartridge/medical{
+/obj/item/disk/computer/medical{
 	pixel_x = 6;
 	pixel_y = 3
 	},
@@ -8183,7 +8180,7 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/clothing/mask/cigarette/cigar,
+/obj/item/cigarette/cigar,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/captain)
 "dcZ" = (
@@ -10868,7 +10865,7 @@
 /area/station/engineering/atmos)
 "dXv" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4;
 	name = "scrubbers pipe"
@@ -10883,7 +10880,7 @@
 /obj/structure/table/glass,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/healthanalyzer,
-/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/gloves/latex,
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
@@ -13020,15 +13017,15 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown,
-/obj/item/cartridge/quartermaster{
+/obj/item/disk/computer/quartermaster{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/cartridge/quartermaster{
+/obj/item/disk/computer/quartermaster{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/cartridge/quartermaster{
+/obj/item/disk/computer/quartermaster{
 	pixel_x = 6;
 	pixel_y = 5
 	},
@@ -14058,7 +14055,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "fhX" = (
@@ -14553,7 +14550,7 @@
 	name = "GATO-brand toy AI";
 	pixel_y = 6
 	},
-/obj/item/clothing/head/collectable/HoS{
+/obj/item/clothing/head/collectable/hos{
 	name = "novelty HoS hat"
 	},
 /obj/item/toy/gun,
@@ -15652,7 +15649,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
-/obj/item/clothing/head/bearpelt,
+/obj/item/clothing/head/pelt/black,
 /obj/machinery/power/apc{
 	areastring = "/area/station/command/vault";
 	name = "Vault APC";
@@ -15807,7 +15804,7 @@
 	name = "prisoner headset";
 	prison_radio = 1
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "fNP" = (
@@ -20872,7 +20869,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/computer)
 "hIN" = (
@@ -21261,10 +21258,10 @@
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = 32
 	},
-/obj/item/book/manual/gato_spacelaw,
-/obj/item/book/manual/gato_spacelaw,
-/obj/item/book/manual/gato_spacelaw,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "hQL" = (
@@ -21519,7 +21516,7 @@
 /area/station/hallway/primary/port)
 "hUG" = (
 /obj/structure/table/wood,
-/obj/item/export/bottle/champagne{
+/obj/item/reagent_containers/cup/glass/bottle/champagne{
 	pixel_y = 12;
 	pixel_x = -8
 	},
@@ -21855,7 +21852,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/gun/syringe/dart,
+/obj/item/gun/syringe,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "ibi" = (
@@ -23744,8 +23741,8 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/effect/turf_decal/delivery,
@@ -23993,7 +23990,7 @@
 	pixel_y = 29
 	},
 /obj/structure/bed/double,
-/obj/item/bedsheet/double_red,
+/obj/item/bedsheet/red/double,
 /turf/open/floor/carpet/red,
 /area/station/commons/dorms)
 "iRy" = (
@@ -24833,7 +24830,7 @@
 /area/station/security/office)
 "jjC" = (
 /obj/structure/table,
-/obj/item/export/bottle/wine{
+/obj/item/reagent_containers/cup/glass/bottle/wine{
 	pixel_x = 9;
 	pixel_y = 16
 	},
@@ -24841,7 +24838,7 @@
 	pixel_x = -8;
 	pixel_y = -5
 	},
-/obj/item/export/bottle/champagne{
+/obj/item/reagent_containers/cup/glass/bottle/champagne{
 	pixel_x = 2;
 	pixel_y = 0
 	},
@@ -26257,7 +26254,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/gun/syringe/dart,
+/obj/item/gun/syringe,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "jHM" = (
@@ -27013,7 +27010,7 @@
 /obj/machinery/door/firedoor/border_only{
 	name = "south facing firelock"
 	},
-/obj/item/card/id/captains_spare,
+/obj/item/card/id/advanced/gold/captains_spare,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "jVn" = (
@@ -27165,7 +27162,7 @@
 	},
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/taperecorder,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9;
 	name = "air supply pipe"
@@ -27189,7 +27186,7 @@
 "jYq" = (
 /obj/structure/table/wood,
 /obj/item/pen/red,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
 	},
@@ -29508,7 +29505,7 @@
 /area/station/maintenance/aft/greater)
 "kPk" = (
 /obj/structure/table/wood,
-/obj/item/paicard,
+/obj/item/pai_card,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
 	},
@@ -33611,7 +33608,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow,
-/obj/item/kirbyplants/dead,
+/obj/item/kirbyplants/random/dead,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "mrY" = (
@@ -33944,7 +33941,7 @@
 	pixel_x = -7;
 	pixel_y = 1
 	},
-/obj/item/book/manual/gato_spacelaw{
+/obj/item/book/manual/wiki/security_space_law{
 	pixel_x = 8
 	},
 /turf/open/floor/wood,
@@ -35352,7 +35349,7 @@
 /area/icemoon/underground/explored)
 "mZz" = (
 /obj/structure/table/wood,
-/obj/item/export/bottle/wine{
+/obj/item/reagent_containers/cup/glass/bottle/wine{
 	pixel_y = 10;
 	pixel_x = -8
 	},
@@ -37828,7 +37825,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/fancy/donut_box,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/item/book/lorebooks/welcome_to_gato{
 	pixel_y = 8;
 	pixel_x = 8
@@ -38728,7 +38725,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "olc" = (
-/obj/item/pickaxe/plasteel,
+/obj/item/pickaxe,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "olf" = (
@@ -39200,7 +39197,7 @@
 	freerange = 1;
 	name = "Station Intercom (Command)"
 	},
-/obj/item/book/manual/command_SOP,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/meeting_room)
 "ovJ" = (
@@ -39612,7 +39609,7 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass{
 	pixel_x = 8
 	},
-/obj/item/export/bottle/whiskey{
+/obj/item/reagent_containers/cup/glass/bottle/whiskey{
 	pixel_y = 12;
 	pixel_x = -10
 	},
@@ -39975,7 +39972,7 @@
 	name = "prisoner headset";
 	prison_radio = 1
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "oMy" = (
@@ -42472,7 +42469,7 @@
 /area/station/service/bar)
 "pOd" = (
 /obj/structure/table/wood,
-/obj/item/paicard{
+/obj/item/pai_card{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
 	name = "Nanotrasen-brand personal AI device exhibit"
 	},
@@ -43179,11 +43176,11 @@
 /obj/structure/table,
 /obj/item/clothing/glasses/welding,
 /obj/item/multitool,
-/obj/item/clothing/head/welding{
+/obj/item/clothing/head/utility/welding{
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/clothing/head/welding{
+/obj/item/clothing/head/utility/welding{
 	pixel_x = -5;
 	pixel_y = 3
 	},
@@ -43676,7 +43673,7 @@
 /turf/open/floor/carpet/green,
 /area/station/service/library)
 "qli" = (
-/obj/item/clothing/mask/cigarette/cigar{
+/obj/item/cigarette/cigar{
 	pixel_x = 6
 	},
 /obj/structure/table/glass,
@@ -45664,7 +45661,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "qXm" = (
 /obj/structure/table,
-/obj/item/export/bottle/whiskey{
+/obj/item/reagent_containers/cup/glass/bottle/whiskey{
 	pixel_x = -7;
 	pixel_y = 50
 	},
@@ -46310,7 +46307,7 @@
 /area/station/tcommsat/server)
 "rlj" = (
 /obj/structure/table,
-/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/gloves/latex,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/suit/apron/surgical,
 /obj/effect/turf_decal/stripes{
@@ -46939,8 +46936,8 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/effect/turf_decal/delivery,
@@ -48140,8 +48137,8 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
-/obj/item/clothing/suit/hooded/wintercoat/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
+/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/effect/turf_decal/delivery,
@@ -48315,7 +48312,7 @@
 /area/station/security/office)
 "saz" = (
 /obj/structure/table,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/structure/sign/painting/library{
 	pixel_y = 32
 	},
@@ -48949,7 +48946,7 @@
 	name = "prisoner headset";
 	prison_radio = 1
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "smH" = (
@@ -49045,7 +49042,7 @@
 /area/station/hallway/primary/central)
 "soq" = (
 /obj/structure/table,
-/obj/item/paicard{
+/obj/item/pai_card{
 	pixel_x = 4
 	},
 /obj/item/taperecorder{
@@ -49474,11 +49471,11 @@
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/clothing/head/welding{
+/obj/item/clothing/head/utility/welding{
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/welding{
+/obj/item/clothing/head/utility/welding{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -49878,8 +49875,8 @@
 /area/station/security/armory)
 "sFl" = (
 /obj/structure/table,
-/obj/item/cartridge/signal/toxins,
-/obj/item/paicard{
+/obj/item/disk/computer/ordnance,
+/obj/item/pai_card{
 	pixel_x = 4
 	},
 /obj/machinery/light/small{
@@ -50824,7 +50821,7 @@
 /area/station/science/explab)
 "sUh" = (
 /obj/structure/table/wood/poker,
-/obj/item/clothing/mask/cigarette/cigar/havana,
+/obj/item/cigarette/cigar/havana,
 /turf/open/floor/carpet,
 /area/station/service/bar)
 "sUj" = (
@@ -51867,7 +51864,7 @@
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/book/manual/gato_spacelaw{
+/obj/item/book/manual/wiki/security_space_law{
 	pixel_x = 8
 	},
 /turf/open/floor/iron/dark,
@@ -52540,8 +52537,8 @@
 	},
 /obj/structure/table,
 /obj/item/ai_module/reset/purge,
-/obj/item/ai_module/zeroth/oneHuman,
-/obj/item/ai_module/supplied/protectStation,
+/obj/item/ai_module/zeroth/onehuman,
+/obj/item/ai_module/supplied/protect_station,
 /obj/item/ai_module/supplied/oxygen,
 /obj/effect/spawner/random/aimodule/harmful,
 /turf/open/floor/circuit,
@@ -53629,12 +53626,12 @@
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/clothing/head/helmet/riot{
+/obj/item/clothing/head/helmet/toggleable/riot{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/clothing/head/helmet/riot,
-/obj/item/clothing/head/helmet/riot{
+/obj/item/clothing/head/helmet/toggleable/riot,
+/obj/item/clothing/head/helmet/toggleable/riot{
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -53673,7 +53670,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/chair/sofa/left,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4;
 	name = "scrubbers pipe"
@@ -54198,7 +54195,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/chair/sofa/left,
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
 	},
@@ -54817,7 +54814,7 @@
 "uvO" = (
 /obj/structure/table,
 /obj/item/storage/box/lights/mixed,
-/obj/item/clothing/head/welding{
+/obj/item/clothing/head/utility/welding{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -56142,7 +56139,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -31
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/item/book/lorebooks/welcome_to_gato{
 	pixel_y = 8;
 	pixel_x = 8
@@ -56157,7 +56154,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/item/book/manual/gato_spacelaw,
+/obj/item/book/manual/wiki/security_space_law,
 /obj/structure/table,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -58780,7 +58777,7 @@
 	pixel_y = 29
 	},
 /obj/structure/bed/double,
-/obj/item/bedsheet/double_blue,
+/obj/item/bedsheet/blue/double,
 /turf/open/floor/carpet/royalblue,
 /area/station/commons/dorms)
 "vPH" = (
@@ -59176,7 +59173,6 @@
 /area/station/commons/fitness)
 "vYH" = (
 /obj/structure/table/reinforced,
-/obj/item/clothing/head/that,
 /obj/machinery/door/firedoor/border_only{
 	dir = 8;
 	name = "west facing firelock"
@@ -59996,7 +59992,6 @@
 "wnD" = (
 /obj/structure/table/wood,
 /obj/item/taperecorder,
-/obj/item/cartridge/lawyer,
 /obj/item/clothing/glasses/sunglasses/big{
 	pixel_x = 3;
 	pixel_y = 3
@@ -61639,19 +61634,19 @@
 	},
 /obj/structure/table/reinforced,
 /mob/living/basic/parrot/poly,
-/obj/item/cartridge/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/obj/item/cartridge/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/obj/item/cartridge/engineering{
+/obj/item/disk/computer/engineering{
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/obj/item/cartridge/atmos,
+/obj/item/disk/computer/engineering,
 /obj/machinery/button/door{
 	desc = "A remote control-switch for secure storage.";
 	id = "ceprivacy";
@@ -62934,7 +62929,7 @@
 /obj/structure/closet/secure_closet/bar{
 	req_access_txt = "25"
 	},
-/obj/item/gun/ballistic/revolver/doublebarrel,
+/obj/item/gun/ballistic/revolver,
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/clothing/under/suit/waiter,
