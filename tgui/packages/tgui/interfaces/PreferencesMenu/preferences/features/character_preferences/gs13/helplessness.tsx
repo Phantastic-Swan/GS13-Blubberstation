@@ -47,7 +47,7 @@ export const immobile_arms: Feature<number> = {
 
 export const clothing_jumpsuit: Feature<number> = {
   name: 'Jumpsuit bursting',
-  description: 'At what weight does your jumpsuit burst? 0 disables this.',
+  description: 'At what weight does your jumpsuit burst? 0 disables this. NOTE: this setting is not an excuse to go around naked.',
   component: FeatureNumberInput,
 };
 

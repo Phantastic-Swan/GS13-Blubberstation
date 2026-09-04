@@ -74,6 +74,7 @@
 	erp_quirk = FALSE		// this is a lie, however we do it because we want it always on
 	mob_trait = TRAIT_HELPLESS_IMMOBILE_ARMS
 
+/* bad idea to make it a quirk
 /datum/quirk/helplessness/clothing
 	name = "Tight clothes"
 	desc = "Your clothing never seems to fit you right. At 1840, your clothing will start to burst. WARNING! PICKING THIS QUIRK WILL MAKE YOU BURST OUT OF CLOTHES REGARDLESS OF YOUR CLOTHES BURSTING PREFERENCE!"
@@ -85,6 +86,7 @@
 	quirk_flags = 0
 	erp_quirk = FALSE		// this is a lie, however we do it because we want it always on
 	mob_trait = TRAIT_HELPLESS_CLOTHING
+*/
 
 /datum/quirk/helplessness/belts
 	name = "Wide waist"
