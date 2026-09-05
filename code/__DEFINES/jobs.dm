@@ -132,7 +132,7 @@
 #define JOB_CENTCOM_PRIVATE_SECURITY "Private Security Force"
 // SKYRAT EDIT ADDITION START
 #define JOB_BLUESHIELD "Blueshield"
-#define JOB_NT_REP "Nanotrasen Consultant"
+#define JOB_NT_REP "GATO Consultant"	// GS13 EDIT: original: Nanotrasen Consultant
 // Nanotrasen Naval Command jobs
 #define JOB_NAVAL_ENSIGN "Ensign"
 #define JOB_NAVAL_LIEUTENANT "Lieutenant"
