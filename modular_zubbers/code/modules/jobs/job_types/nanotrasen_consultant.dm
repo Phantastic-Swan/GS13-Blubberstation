@@ -131,7 +131,7 @@
 	icon_state = "/obj/item/modular_computer/pda/nanotrasen_consultant"
 	inserted_disk = /obj/item/disk/computer/command/captain
 	inserted_item = /obj/item/pen/fountain/pink	// GS13 EDIT, original: /obj/item/pen/fountain/green
-	greyscale_colors = "#c54fa1#1a1a20"	// GS13 EDIT, original: #017941#0060b8
+	greyscale_colors = "#ee2cb4#1a1a20#1a1a20"	// GS13 EDIT, original: #017941#0060b8
 	starting_programs = list(
 		/datum/computer_file/program/records/security,
 		/datum/computer_file/program/crew_manifest,

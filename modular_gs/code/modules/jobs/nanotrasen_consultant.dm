@@ -8,3 +8,6 @@
 	icon_state = "pen-fountain-nt"
 	colour = "#c54fa1"
 	custom_materials = list(/datum/material/gold = SMALL_MATERIAL_AMOUNT*7.5)
+
+/obj/item/modular_computer/pda/nanotrasen_consultant
+	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
