@@ -7538,6 +7538,7 @@
 #include "modular_gs\code\modules\nifs\nifs.dm"
 #include "modular_gs\code\modules\nifs\nifsofts.dm"
 #include "modular_gs\code\modules\overwrites\research.dm"
+#include "modular_gs\code\modules\paperwork\paperwork.dm"
 #include "modular_gs\code\modules\power\powerator.dm"
 #include "modular_gs\code\modules\power\smes.dm"
 #include "modular_gs\code\modules\projectiles\projectile.dm"

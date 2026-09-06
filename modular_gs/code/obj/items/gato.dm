@@ -208,6 +208,3 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/gatofull_3, 32)
 
 /obj/machinery/requests_console
 	icon = 'modular_gs/icons/obj/machines/wallmounts.dmi'
-
-/obj/item/folder
-	icon = 'modular_gs/icons/obj/service/bureaucracy.dmi'
