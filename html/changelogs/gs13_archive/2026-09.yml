@@ -9,3 +9,6 @@
   evilew:
   - map: 'improved the Hotel Nexus map: mostly just visual tweaks but also reworked
       the sauna area, added a small casino, added waterducts'
+2026-09-07:
+  Swan:
+  - rscadd: Re-enables departamental budget cards being useable at paystands
