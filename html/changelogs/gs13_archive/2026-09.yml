@@ -12,3 +12,8 @@
 2026-09-07:
   Swan:
   - rscadd: Re-enables departamental budget cards being useable at paystands
+2026-09-08:
+  Swan:
+  - rscadd: Scales now show the players BMI value (the real life one)
+  - balance: 'Changed the rate at which weight is gained. For more info, check PR
+      #538'

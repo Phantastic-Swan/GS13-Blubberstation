@@ -1,5 +1,0 @@
-author: "Swan"
-delete-after: True
-changes:
-  - rscadd: "Scales now show the players BMI value (the real life one)"
-  - balance: "Changed the rate at which weight is gained. For more info, check PR #538"
