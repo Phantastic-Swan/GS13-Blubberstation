@@ -20384,9 +20384,6 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "fYw" = (
-/obj/machinery/computer/upload/borg{
-	dir = 8
-	},
 /obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
@@ -27043,10 +27040,8 @@
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/tram/mid)
 "ixC" = (
-/obj/machinery/computer/upload/ai{
-	dir = 8
-	},
 /obj/machinery/status_display/evac/directional/east,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
 "ixK" = (
