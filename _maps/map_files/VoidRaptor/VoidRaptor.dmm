@@ -2679,9 +2679,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "aNg" = (
-/obj/machinery/computer/upload/ai{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/blue/filled/end{
 	dir = 8
 	},
@@ -49777,13 +49774,11 @@
 /turf/open/floor/iron/smooth,
 /area/station/engineering/power_room)
 "nUJ" = (
-/obj/machinery/computer/upload/borg{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/blue/filled/end{
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/vault,
 /area/station/ai/upload/chamber)
 "nUN" = (

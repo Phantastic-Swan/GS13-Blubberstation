@@ -16346,6 +16346,7 @@
 "ftl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "fts" = (
@@ -26035,9 +26036,6 @@
 /turf/closed/wall/rust,
 /area/station/service/kitchen)
 "ioK" = (
-/obj/machinery/computer/upload/borg{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
@@ -75829,13 +75827,6 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/hallway/secondary/exit/departure_lounge)
-"ycd" = (
-/obj/machinery/computer/upload/ai{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/dark,
-/area/station/ai/upload/chamber)
 "ych" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -111033,7 +111024,7 @@ reT
 lLl
 wDh
 ssg
-ycd
+ioK
 slo
 iqk
 skM

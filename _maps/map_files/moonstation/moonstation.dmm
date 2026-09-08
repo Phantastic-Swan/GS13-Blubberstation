@@ -15472,10 +15472,6 @@
 /turf/open/floor/iron/large,
 /area/station/engineering/atmos/hallway)
 "ekQ" = (
-/obj/machinery/computer/upload/borg{
-	dir = 1;
-	pixel_y = -4
-	},
 /obj/machinery/door/window/brigdoor/left/directional/north{
 	req_access = list("ai_upload")
 	},
@@ -81920,10 +81916,8 @@
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/qm)
 "vXv" = (
-/obj/machinery/computer/upload/ai{
-	pixel_y = -7
-	},
 /obj/structure/window/reinforced/spawner/directional/north,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
 "vXy" = (

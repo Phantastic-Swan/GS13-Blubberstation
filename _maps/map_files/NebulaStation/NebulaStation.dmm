@@ -62263,9 +62263,6 @@
 /turf/open/floor/iron/white/textured_large,
 /area/station/engineering/break_room)
 "jke" = (
-/obj/machinery/computer/upload/borg{
-	dir = 4
-	},
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/south,
@@ -62274,6 +62271,7 @@
 	name = "Cyborg Upload Console Window";
 	req_access = list("ai_upload")
 	},
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/iron/dark/small,
 /area/station/ai/upload/chamber)
 "jkh" = (
@@ -116607,9 +116605,6 @@
 /turf/open/floor/iron/white,
 /area/station/science/lab)
 "rop" = (
-/obj/machinery/computer/upload/ai{
-	dir = 8
-	},
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/south,
@@ -116618,6 +116613,7 @@
 	name = "Upload Console Window";
 	req_access = list("ai_upload")
 	},
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/iron/dark/small,
 /area/station/ai/upload/chamber)
 "rot" = (
@@ -145864,7 +145860,7 @@
 /area/station/commons/dorms/laundry)
 "vFX" = (
 /obj/structure/table/glass,
-/obj/item/food/grown/rose{
+/obj/item/food/grown/flower/rose{
 	pixel_y = 8
 	},
 /turf/open/floor/iron/dark/herringbone,
