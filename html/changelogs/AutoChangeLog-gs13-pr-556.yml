@@ -1,0 +1,5 @@
+author: "Swan"
+delete-after: True
+changes:
+  - rscadd: "GATOifies the NT consultant, some mail, tickets, and a bunch'a other stuff"
+  - bugfix: "fixes the GATO flag being blank after taking it off the wall"
