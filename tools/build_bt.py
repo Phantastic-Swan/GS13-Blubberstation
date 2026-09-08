@@ -265,6 +265,9 @@ def main() -> int:
 
     code_dirs = [
         repo_root / 'code',
+        # GS13 EDIT
+        repo_root / 'modular_gs',
+        # GS13 END EDIT
         # BUBBER EDIT BEGIN
         repo_root / 'modular_skyrat',
         repo_root / 'modular_zubbers'
