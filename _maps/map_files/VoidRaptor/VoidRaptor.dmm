@@ -15156,6 +15156,7 @@
 /area/station/service/chapel)
 "erR" = (
 /obj/structure/table/wood,
+/obj/item/storage/photo_album/chapel,
 /turf/open/floor/carpet/black,
 /area/station/service/chapel/office)
 "erY" = (
@@ -85492,6 +85493,7 @@
 /obj/item/toy/cards/deck,
 /obj/machinery/light/warm/directional/south,
 /obj/machinery/firealarm/directional/south,
+/obj/item/storage/photo_album/prison,
 /turf/open/floor/wood,
 /area/station/security/prison/garden)
 "xNg" = (

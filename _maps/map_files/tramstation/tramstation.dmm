@@ -62276,6 +62276,7 @@
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/shaker,
 /obj/machinery/light/warm/directional/east,
+/obj/item/storage/photo_album/bar,
 /turf/open/floor/wood,
 /area/station/service/bar/backroom)
 "uyq" = (

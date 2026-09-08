@@ -8302,6 +8302,7 @@
 /obj/item/nullrod{
 	pixel_x = 7
 	},
+/obj/item/storage/photo_album/chapel,
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
 "aJU" = (
@@ -11128,6 +11129,7 @@
 	pixel_y = 5
 	},
 /obj/structure/window/spawner/directional/west,
+/obj/item/storage/photo_album/library,
 /turf/open/floor/wood,
 /area/station/service/library)
 "aTd" = (
@@ -12589,6 +12591,7 @@
 	pixel_x = 8
 	},
 /obj/structure/table/wood,
+/obj/item/storage/photo_album/bar,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "aXm" = (
@@ -82458,6 +82461,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/violet/visible/layer4,
 /turf/open/floor/plating,
 /area/station/security/execution/transfer)
+"xcy" = (
+/obj/structure/table/wood,
+/obj/item/storage/photo_album/prison,
+/turf/open/floor/wood,
+/area/station/security/prison)
 "xcR" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/dark{
@@ -109590,7 +109598,7 @@ dgj
 akJ
 acd
 hou
-jst
+xcy
 fbW
 rzh
 wJE

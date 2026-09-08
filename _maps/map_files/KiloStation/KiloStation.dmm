@@ -539,6 +539,7 @@
 /obj/structure/cable,
 /obj/item/pen/fountain,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/storage/photo_album/chapel,
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
 "agr" = (
@@ -15489,6 +15490,7 @@
 /area/station/hallway/primary/aft)
 "fhv" = (
 /obj/structure/table/wood,
+/obj/item/storage/photo_album/library,
 /turf/open/floor/wood/tile,
 /area/station/service/library)
 "fhw" = (
@@ -58316,6 +58318,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
+/obj/item/storage/photo_album/bar,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "sJD" = (

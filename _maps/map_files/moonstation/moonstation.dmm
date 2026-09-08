@@ -2830,7 +2830,6 @@
 /area/station/commons/fitness/locker_room)
 "aLc" = (
 /obj/structure/table/glass,
-/obj/item/storage/photo_album/cmo,
 /obj/item/toy/figure/cmo,
 /obj/item/camera,
 /turf/open/floor/carpet/cyan,
@@ -13946,7 +13945,6 @@
 /area/station/maintenance/gag_room)
 "dPK" = (
 /obj/structure/table/wood,
-/obj/item/storage/photo_album/hos,
 /obj/item/stamp/head/hos,
 /obj/structure/cable,
 /turf/open/floor/carpet,
@@ -27713,7 +27711,6 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/item/storage/photo_album/qm,
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/qm)
 "hzI" = (
@@ -55131,7 +55128,6 @@
 "oLl" = (
 /obj/structure/table/glass/plasmaglass,
 /obj/item/melee/roastingstick,
-/obj/item/storage/photo_album/ce,
 /obj/item/toy/figure/ce,
 /obj/item/storage/box/stickers/chief_engineer,
 /turf/open/floor/glass/reinforced/plasma,
@@ -63970,7 +63966,6 @@
 /obj/item/flashlight/lamp/green{
 	pixel_y = 3
 	},
-/obj/item/storage/photo_album/hop,
 /obj/structure/secure_safe/directional/east,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hop)
@@ -70076,7 +70071,6 @@
 /area/station/commons/lounge)
 "sMS" = (
 /obj/structure/table/wood,
-/obj/item/storage/photo_album/captain,
 /obj/item/stamp/head/captain,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/blue,
@@ -81627,7 +81621,6 @@
 /area/station/science/circuits)
 "vTF" = (
 /obj/structure/table,
-/obj/item/storage/photo_album/rd,
 /obj/item/stamp/head/rd,
 /obj/effect/turf_decal/tile/neutral/opposingcorners{
 	dir = 1
