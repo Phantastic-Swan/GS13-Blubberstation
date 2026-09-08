@@ -12775,7 +12775,6 @@
 /area/station/maintenance/night_club)
 "dxz" = (
 /obj/structure/table/wood/fancy/blue,
-/obj/item/ai_module/reset,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/spawner/round_default_module,
 /turf/open/floor/circuit/green,
@@ -48504,7 +48503,6 @@
 /area/station/science/lab)
 "mXb" = (
 /obj/structure/table/wood/fancy/red,
-/obj/item/ai_module/reset/purge,
 /obj/machinery/door/window/brigdoor/left/directional/west{
 	name = "High-Risk Modules";
 	req_access = list("captain");
@@ -55430,7 +55428,7 @@
 /area/station/medical/morgue)
 "oQq" = (
 /obj/structure/table/wood/fancy/red,
-/obj/item/ai_module/supplied/freeform,
+/obj/item/ai_module/law/supplied/freeform,
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
@@ -59753,19 +59751,19 @@
 /area/station/security/brig)
 "pWq" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 11
 	},
 /obj/effect/turf_decal/siding/wood/corner,
@@ -62172,7 +62170,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/sorting)
 "qBs" = (
-/obj/item/ai_module/toy_ai,
+/obj/item/ai_module/law/toy_ai,
 /obj/structure/grille/broken,
 /turf/open/floor/plating,
 /area/station/ai/satellite/chamber)
@@ -77673,7 +77671,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/lily,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
@@ -78637,14 +78635,14 @@
 /area/station/security/prison/workout)
 "vcK" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_y = 7
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/harebell,
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},

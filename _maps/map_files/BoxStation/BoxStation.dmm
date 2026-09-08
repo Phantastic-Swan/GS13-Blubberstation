@@ -14942,7 +14942,6 @@
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/spawner/random/aimodule/harmful,
-/obj/item/ai_module/reset/purge,
 /obj/machinery/door/window/right/directional/west{
 	name = "High-Risk Modules"
 	},
@@ -24327,7 +24326,6 @@
 "bEX" = (
 /obj/structure/table,
 /obj/item/aicard,
-/obj/item/ai_module/reset,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bEY" = (
@@ -45910,8 +45908,8 @@
 "gPR" = (
 /obj/structure/table/glass,
 /obj/item/book/bible,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/harebell,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "gPY" = (
@@ -48343,7 +48341,7 @@
 	},
 /obj/item/book/bible,
 /obj/item/clothing/under/misc/burial,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -3;
 	pixel_y = 4
 	},
@@ -49442,11 +49440,11 @@
 /obj/item/seeds/corn,
 /obj/item/seeds/cotton,
 /obj/item/seeds/potato/sweet,
-/obj/item/food/grown/poppy/geranium,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/geranium,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy/lily,
 /obj/item/food/grown/peas,
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/harebell,
 /obj/item/food/grown/garlic,
 /obj/item/food/grown/onion,
 /obj/item/grown/log,
@@ -61283,8 +61281,8 @@
 /area/station/hallway/primary/fore)
 "nGa" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 3;
 	pixel_x = 4
 	},
@@ -79824,8 +79822,8 @@
 /area/station/hallway/secondary/entry)
 "vRa" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -3;
 	pixel_y = 4
 	},

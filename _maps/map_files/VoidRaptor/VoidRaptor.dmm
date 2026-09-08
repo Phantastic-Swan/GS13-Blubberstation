@@ -3633,15 +3633,15 @@
 /area/station/maintenance/aft/greater)
 "bal" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/service/chapel)
 "bao" = (
@@ -10793,12 +10793,12 @@
 /area/station/security/checkpoint/science/research)
 "djg" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -41220,12 +41220,12 @@
 /area/station/cargo/miningdock)
 "lGa" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -47090,7 +47090,6 @@
 "nju" = (
 /obj/structure/rack,
 /obj/item/aicard/aitater,
-/obj/item/ai_module/reset,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/engineering/storage/tech)
@@ -52992,7 +52991,7 @@
 /area/station/hallway/primary/aft)
 "oRJ" = (
 /obj/structure/table,
-/obj/item/food/grown/poppy/geranium,
+/obj/item/food/grown/flower/poppy/geranium,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -59164,7 +59163,7 @@
 /area/station/maintenance/starboard/greater)
 "qwZ" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/lily,
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/carpet/black,
 /area/station/commons/dorms)
@@ -75357,11 +75356,7 @@
 /area/station/cargo/office)
 "uSZ" = (
 /obj/structure/table/wood/fancy/royalblack,
-/obj/item/ai_module/reset{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/ai_module/supplied/freeform,
+/obj/item/ai_module/law/supplied/freeform,
 /obj/item/radio/intercom/directional/east,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -84370,15 +84365,15 @@
 /area/station/hallway/primary/central/fore)
 "xvm" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/service/chapel/funeral)
 "xvp" = (
