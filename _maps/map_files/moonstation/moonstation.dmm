@@ -482,7 +482,7 @@
 "agp" = (
 /obj/machinery/computer/order_console/mining,
 /obj/machinery/camera/autoname/mine/directional/south,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "ags" = (
 /obj/effect/landmark/atmospheric_sanity/ignore_area,
@@ -1348,7 +1348,7 @@
 /area/station/maintenance/port/aft)
 "asp" = (
 /obj/structure/closet/crate,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "asy" = (
 /turf/open/floor/plating,
@@ -8372,10 +8372,10 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "cmV" = (
-/turf/closed/wall/mineral/titanium/survival/pod,
+/turf/closed/wall/mineral/plastitanium/survival,
 /area/station/cargo/miningfoundry/event_protected)
 "cmW" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -8761,7 +8761,7 @@
 "csX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "ctq" = (
 /obj/machinery/shower/directional/west,
@@ -12643,7 +12643,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "dvH" = (
 /obj/machinery/light/small/directional/east,
@@ -16739,7 +16739,7 @@
 /obj/machinery/light/small/directional/west,
 /obj/structure/closet/crate/bin,
 /obj/machinery/mining_weather_monitor/directional/west,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "eBC" = (
 /obj/effect/spawner/random/structure/chair_maintenance{
@@ -23455,7 +23455,7 @@
 /area/station/medical/pharmacy)
 "gpd" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "gph" = (
 /obj/structure/beebox,
@@ -23645,7 +23645,7 @@
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "gsk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -28996,7 +28996,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "hOv" = (
 /obj/machinery/light_switch/directional/north,
@@ -31114,7 +31114,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "itZ" = (
 /obj/machinery/shower/directional/north,
@@ -31922,7 +31922,7 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "iEW" = (
 /obj/structure/cable,
@@ -32228,7 +32228,7 @@
 	},
 /obj/item/clothing/mask/gas/explorer,
 /obj/item/mining_scanner,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "iIW" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -32574,7 +32574,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light/small/directional/east,
 /obj/machinery/suit_storage_unit/mining,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "iPk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -37450,7 +37450,7 @@
 /area/station/hallway/primary/central/fore)
 "kdq" = (
 /obj/structure/ore_box,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "kdE" = (
 /obj/machinery/door/airlock/security/glass{
@@ -39225,7 +39225,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "kAA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/general/visible{
@@ -43740,7 +43740,7 @@
 	},
 /obj/machinery/light/small/directional/east,
 /obj/structure/sign/warning/no_smoking/circle/directional/east,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "lJe" = (
 /obj/machinery/light/directional/north,
@@ -51253,7 +51253,7 @@
 /turf/open/floor/iron,
 /area/station/security/prison/workout)
 "nLt" = (
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "nLB" = (
 /obj/structure/stone_tile/surrounding_tile{
@@ -59711,7 +59711,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "pVT" = (
 /obj/structure/reflector/box/anchored{
@@ -62922,7 +62922,7 @@
 /obj/machinery/door/airlock/survival_pod{
 	name = "The Foundry"
 	},
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "qLE" = (
 /obj/structure/table,
@@ -65250,7 +65250,7 @@
 	},
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "rtL" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
@@ -65789,7 +65789,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "rBO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -66876,7 +66876,7 @@
 /obj/structure/ore_box,
 /obj/machinery/light/small/directional/east,
 /obj/machinery/camera/autoname/mine/directional/east,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "rRa" = (
 /turf/closed/wall/r_wall,
@@ -69033,7 +69033,7 @@
 /area/station/security/brig)
 "swM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "swO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
@@ -69958,7 +69958,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "sLk" = (
 /obj/machinery/disposal/bin,
@@ -70528,7 +70528,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "sSX" = (
 /obj/structure/cable,
@@ -72041,7 +72041,7 @@
 /obj/machinery/conveyor{
 	id = "mining"
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "toY" = (
 /obj/effect/turf_decal/vg_decals/numbers/three{
@@ -72807,7 +72807,7 @@
 "tyO" = (
 /obj/machinery/airalarm/directional/south,
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "tzp" = (
 /obj/effect/turf_decal/siding/dark/corner{
@@ -72945,7 +72945,7 @@
 /obj/item/radio/intercom/directional/west,
 /obj/structure/table,
 /obj/item/storage/toolbox/emergency,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "tAQ" = (
 /obj/effect/mapping_helpers/broken_floor,
@@ -75910,7 +75910,7 @@
 "uoy" = (
 /obj/effect/landmark/atmospheric_sanity/ignore_area,
 /obj/effect/spawner/random/engineering/tracking_beacon,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "uoD" = (
 /obj/effect/spawner/random/trash/hobo_squat,
@@ -77908,7 +77908,7 @@
 	},
 /obj/structure/railing,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "uSl" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
@@ -78693,7 +78693,7 @@
 	id = "mining";
 	dir = 4
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "vdK" = (
 /obj/structure/chair/comfy/black{
@@ -79406,7 +79406,7 @@
 	dir = 4
 	},
 /obj/item/wrench,
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "vnA" = (
 /obj/effect/turf_decal/tile/green,
@@ -80286,7 +80286,7 @@
 /area/station/hallway/secondary/command)
 "vAI" = (
 /obj/effect/turf_decal/mining,
-/turf/closed/wall/mineral/titanium/survival/pod,
+/turf/closed/wall/mineral/plastitanium/survival,
 /area/station/cargo/miningfoundry/event_protected)
 "vAL" = (
 /obj/item/kirbyplants/random,
@@ -82805,7 +82805,7 @@
 /obj/effect/turf_decal/loading_area{
 	dir = 8
 	},
-/turf/open/floor/pod,
+/turf/open/floor/mineral/plastitanium/pod,
 /area/station/cargo/miningfoundry/event_protected)
 "wjP" = (
 /obj/structure/cable,
@@ -85656,7 +85656,7 @@
 	},
 /area/station/hallway/secondary/command)
 "wYA" = (
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/cargo/miningfoundry/event_protected)
 "wYI" = (
 /obj/effect/mapping_helpers/mail_sorting/service/library,
