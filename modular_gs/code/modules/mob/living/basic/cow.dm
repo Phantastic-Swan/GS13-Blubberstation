@@ -4,6 +4,12 @@
 	gold_core_spawnable = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/cow/wisdom/wisest
 
+/datum/ai_controller/basic_controller/cow/wisdom/wisest
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/tip_reaction,
+		/datum/ai_planning_subtree/random_speech/cow/wisdom/wisest,
+	)
+
 /datum/ai_planning_subtree/random_speech/cow/wisdom/wisest/New()
 	. = ..()
 	speak = GLOB.wisdoms + list(
