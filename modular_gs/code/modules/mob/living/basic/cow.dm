@@ -4,6 +4,7 @@
 	gold_core_spawnable = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/cow/wisdom/wisest
 
+/* TODO: merge this with the new ai trees
 /datum/ai_controller/basic_controller/cow/wisdom/wisest
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/tip_reaction,
@@ -25,3 +26,4 @@
 		"Don't leave racoons alone in botany",
 		"Don't fall into pools of brown"
 	)
+*/

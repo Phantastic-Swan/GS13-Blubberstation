@@ -24937,10 +24937,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "kcu" = (
-/obj/structure/toilet{
-	contents = newlist(/obj/item/toy/snappop/phoenix);
-	dir = 4
-	},
+/obj/structure/toilet
 /obj/machinery/light/small{
 	dir = 1;
 	light_color = "#ffc1c1"
