@@ -2,7 +2,7 @@
 	name = "Vernn"
 	desc = "The wisest of the wisdom cows, proudly kept by the Research Director as an appreciation of it's vast knowledge"
 	gold_core_spawnable = FALSE
-	ai_controller = /datum/ai_controller/basic_controller/cow/wisdom/wisest
+	// ai_controller = /datum/ai_controller/basic_controller/cow/wisdom/wisest
 
 /* TODO: merge this with the new ai trees
 /datum/ai_controller/basic_controller/cow/wisdom/wisest
