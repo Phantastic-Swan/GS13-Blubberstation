@@ -98,8 +98,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "abT" = (
 /obj/structure/rack/shelf,
 /obj/item/toy/foamblade,
@@ -169,8 +168,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "adb" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -192,8 +190,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ads" = (
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/iron/white,
@@ -523,8 +520,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "akQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -843,8 +839,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "aqs" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1406,8 +1401,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "aBI" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -1498,8 +1492,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "aDL" = (
 /obj/machinery/modular_computer/preset/id{
 	dir = 4
@@ -2308,8 +2301,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "aXC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -2399,8 +2391,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "aYZ" = (
 /obj/machinery/power/shieldwallgen,
 /turf/open/floor/iron/dark,
@@ -3006,8 +2997,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "bnn" = (
 /obj/structure/flora/grass/brown,
 /turf/open/misc/asteroid/snow,
@@ -3145,8 +3135,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bsd" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
@@ -3174,8 +3163,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bsH" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -3211,8 +3199,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "btg" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2{
@@ -3326,15 +3313,13 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bvq" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bvD" = (
 /obj/structure/table,
 /obj/item/clothing/suit/apron/surgical,
@@ -3500,8 +3485,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "byV" = (
 /obj/machinery/light{
 	dir = 8
@@ -3798,8 +3782,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bHI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/effect/landmark/generic_maintenance_landmark,
@@ -3879,8 +3862,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bJy" = (
 /obj/machinery/quantumpad{
 	map_pad_id = "2";
@@ -3990,8 +3972,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bLl" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8;
@@ -4387,8 +4368,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "bUx" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -4988,8 +4968,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ceJ" = (
 /turf/open/floor/iron/white,
 /area/station/medical/outpost/one)
@@ -5501,8 +5480,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "cmR" = (
 /obj/machinery/camera{
 	c_tag = "Toxins Launch Hall 4";
@@ -6059,8 +6037,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "cAe" = (
 /obj/machinery/vending/clothing,
 /turf/open/floor/iron/grimy,
@@ -6340,8 +6317,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "cGa" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/chair/comfy/brown{
@@ -6779,8 +6755,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "cSx" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/medical/glass{
@@ -6981,8 +6956,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "cWm" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 24
@@ -7082,8 +7056,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "cXn" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -7764,8 +7737,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dkk" = (
 /obj/machinery/door/airlock/wood,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -7905,8 +7877,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dnJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -7923,8 +7894,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dnZ" = (
 /turf/open/floor/iron/dark,
 /area/station/science/server)
@@ -8145,8 +8115,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dsO" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -8709,8 +8678,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "dAV" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -8844,8 +8812,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dDw" = (
 /turf/open/floor/iron/freezer,
 /area/station/commons/locker)
@@ -9007,8 +8974,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dIn" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -9187,8 +9153,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dNL" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -9354,8 +9319,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dQU" = (
 /obj/effect/turf_decal/stripes,
 /obj/machinery/light/small{
@@ -9445,8 +9409,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "dSx" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -10348,8 +10311,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "ejo" = (
 /obj/structure/fireplace,
 /obj/item/stack/sheet/mineral/wood,
@@ -11749,8 +11711,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "eOv" = (
 /obj/structure/table/glass,
 /obj/item/stack/cable_coil,
@@ -11939,8 +11900,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "eRy" = (
 /obj/structure/cable,
 /obj/effect/landmark/event_spawn,
@@ -12220,8 +12180,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "eYQ" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -12247,8 +12206,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "eZz" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater,
 /obj/machinery/camera{
@@ -12750,8 +12708,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fkN" = (
 /obj/vehicle/ridden/atv/snowmobile,
 /obj/effect/turf_decal/bot,
@@ -13147,8 +13104,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fru" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -13541,8 +13497,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fAz" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -13912,8 +13867,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "fJm" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -13938,8 +13892,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fJA" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -13958,8 +13911,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fJE" = (
 /obj/structure/table,
 /obj/item/storage/box/bodybags,
@@ -14521,8 +14473,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "fTT" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8;
@@ -14953,8 +14904,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "gdR" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/electrical{
@@ -16128,8 +16078,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "gDN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -16340,8 +16289,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "gGk" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -16620,8 +16568,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "gKN" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Server Room";
@@ -16801,8 +16748,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "gPo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -17444,8 +17390,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hbA" = (
 /turf/open/floor/iron,
 /area/mine/eva)
@@ -17921,8 +17866,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hnq" = (
 /obj/machinery/computer/operating,
 /obj/machinery/light{
@@ -18158,8 +18102,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hrP" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 5
@@ -18172,8 +18115,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hsc" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -18929,8 +18871,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hOj" = (
 /obj/machinery/door/firedoor/border_only{
 	name = "south facing firelock"
@@ -19177,8 +19118,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "hSq" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -19874,8 +19814,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "igR" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -20051,8 +19990,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ims" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -20315,8 +20253,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "iqw" = (
 /turf/closed/wall/r_wall,
 /area/station/engineering/engine_smes)
@@ -20850,8 +20787,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "iCQ" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -21161,8 +21097,7 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/storage{
 	name = "Secure Storage"
-	}
-)
+	})
 "iJc" = (
 /obj/machinery/camera{
 	c_tag = "Surgery B";
@@ -21375,8 +21310,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "iNi" = (
 /obj/machinery/door/airlock/command{
 	name = "Captain's Quarters";
@@ -22021,8 +21955,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jcM" = (
 /obj/structure/chair/sofa/right{
 	dir = 4
@@ -22139,8 +22072,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jgi" = (
 /obj/machinery/blackbox_recorder,
 /obj/effect/turf_decal/stripes/end{
@@ -22502,8 +22434,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jmo" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -22566,8 +22497,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jnR" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8;
@@ -22956,8 +22886,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "juY" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
@@ -23098,8 +23027,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jyf" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/yellow{
@@ -23221,8 +23149,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "jzs" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
@@ -23255,8 +23182,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "jzO" = (
 /obj/machinery/camera{
 	c_tag = "Dorms Northeast";
@@ -23846,8 +23772,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "jLG" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -24314,8 +24239,7 @@
 /turf/closed/wall,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "jUZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
@@ -24716,10 +24640,7 @@
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "kcu" = (
-/obj/structure/toilet{
-	contents = newlist(/obj/item/toy/snappop/phoenix);
-	dir = 4
-	},
+/obj/structure/toilet,
 /obj/machinery/light/small{
 	dir = 1;
 	light_color = "#ffc1c1"
@@ -24786,8 +24707,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "kdW" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4;
@@ -24843,8 +24763,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "keF" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -25245,8 +25164,7 @@
 /turf/closed/wall,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "kmN" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -25710,8 +25628,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "kxE" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -26049,8 +25966,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "kDA" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -26159,8 +26075,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "kFS" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -26792,8 +26707,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "kVY" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -27006,8 +26920,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lcv" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 8
@@ -27041,8 +26954,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ldf" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -27440,8 +27352,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lkJ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -27638,8 +27549,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lok" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/visible/layer2{
 	dir = 8
@@ -27668,8 +27578,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "loz" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 1
@@ -27811,8 +27720,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lqV" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -28091,8 +27999,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "lyO" = (
 /obj/structure/cable,
 /obj/machinery/firealarm{
@@ -28523,8 +28430,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lHW" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 4;
@@ -28612,8 +28518,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lKF" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -28635,8 +28540,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lKQ" = (
 /obj/structure/chair{
 	dir = 4
@@ -28664,8 +28568,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "lLm" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -28861,8 +28764,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "lRq" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	name = "air supply pipe"
@@ -29978,8 +29880,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "mmY" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -30007,8 +29908,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "mnQ" = (
 /obj/machinery/airalarm{
 	pixel_y = 26
@@ -30193,8 +30093,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mrC" = (
 /turf/open/floor/iron/white,
 /area/station/medical/outpost/two)
@@ -30394,8 +30293,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mwu" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -31051,8 +30949,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mLw" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -31080,8 +30977,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mLK" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plating,
@@ -31287,8 +31183,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mQw" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -31314,8 +31209,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mRh" = (
 /turf/open/floor/plating,
 /area/station/maintenance/abandon_cafeteria)
@@ -31344,8 +31238,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mRB" = (
 /turf/open/floor/iron/freezer,
 /area/station/commons/dorms)
@@ -31608,8 +31501,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "mWK" = (
 /obj/structure/plasticflaps/opaque,
 /obj/machinery/navbeacon{
@@ -32468,8 +32360,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "nmi" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -32506,8 +32397,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "nof" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/iron,
@@ -32745,8 +32635,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ntS" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 1
@@ -32801,8 +32690,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "nvj" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -33537,8 +33425,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "nJq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/nitrogen_output{
 	dir = 8
@@ -33640,8 +33527,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "nLL" = (
 /obj/machinery/door/airlock{
 	name = "Service Hall";
@@ -33789,8 +33675,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "nQx" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -34073,8 +33958,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "nUQ" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8;
@@ -36163,8 +36047,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "oPX" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -36979,8 +36862,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pne" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8;
@@ -37050,8 +36932,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pod" = (
 /obj/structure/cable,
 /obj/machinery/airalarm/directional/west,
@@ -37064,8 +36945,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "poD" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
@@ -37220,8 +37100,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pso" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 5
@@ -37819,8 +37698,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pFL" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	name = "air supply pipe"
@@ -37892,8 +37770,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pGD" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -38017,8 +37894,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pJs" = (
 /obj/structure/cable,
 /obj/docking_port/stationary{
@@ -38095,8 +37971,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pLK" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Snow Airlock"
@@ -38392,8 +38267,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pTB" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -38622,8 +38496,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "pYC" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Mix to Waste"
@@ -39119,8 +38992,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qhB" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
@@ -39244,8 +39116,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "qkH" = (
 /obj/structure/fans/tiny,
 /obj/structure/mineral_door/wood,
@@ -39467,8 +39338,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qqV" = (
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/stripes/line{
@@ -40313,8 +40183,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "qIb" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/cup/glass/mug/britcup{
@@ -40546,8 +40415,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qMI" = (
 /obj/effect/landmark/start/cargo_technician,
 /obj/structure/disposalpipe/segment{
@@ -40685,8 +40553,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "qQt" = (
 /obj/item/beacon,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -40722,8 +40589,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qSi" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -40835,8 +40701,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qUw" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 9;
@@ -40973,8 +40838,7 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "qWy" = (
 /obj/machinery/iv_drip,
 /obj/effect/turf_decal/tile/blue{
@@ -41358,8 +41222,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rfN" = (
 /obj/machinery/conveyor{
 	id = "QMLoad"
@@ -41684,8 +41547,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rmH" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/reagent_containers/blood,
@@ -41858,8 +41720,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "roN" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 8
@@ -42210,8 +42071,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rwm" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
@@ -42455,8 +42315,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rCB" = (
 /obj/machinery/computer/dna_console,
 /obj/effect/turf_decal/tile/purple{
@@ -42915,8 +42774,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rOP" = (
 /obj/effect/turf_decal/bot_white/left,
 /turf/open/floor/iron/dark,
@@ -43214,8 +43072,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "rWa" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/rnd_all,
@@ -43324,8 +43181,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "rYw" = (
 /obj/structure/table/bronze,
 /obj/item/flashlight/lantern{
@@ -43612,8 +43468,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sgg" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/disposalpipe/segment,
@@ -44195,8 +44050,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ssF" = (
 /obj/structure/railing,
 /turf/open/openspace/icemoon,
@@ -44227,8 +44081,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "stq" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/misc/asteroid/snow,
@@ -44264,8 +44117,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "suf" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -44528,8 +44380,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "syI" = (
 /obj/effect/turf_decal/bot_white,
 /obj/effect/landmark/secequipment,
@@ -45017,8 +44868,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sII" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 4;
@@ -45063,8 +44913,7 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sKh" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -45279,8 +45128,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sNB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible/layer4{
@@ -45597,8 +45445,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sSA" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/item/radio/intercom{
@@ -45800,8 +45647,7 @@
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "sXE" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -46070,8 +45916,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "tcT" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -46105,8 +45950,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "tdM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -46706,8 +46550,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "tsC" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -47094,8 +46937,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "tCU" = (
 /obj/structure/sign/poster/contraband/space_up{
 	pixel_x = 0;
@@ -47337,8 +47179,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "tHq" = (
 /obj/machinery/door/airlock/public{
 	dir = 4;
@@ -47714,8 +47555,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "tNd" = (
 /obj/machinery/door/airlock/external{
 	name = "Escape Pod Two"
@@ -49287,8 +49127,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "uww" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -49409,8 +49248,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "uyD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -49678,8 +49516,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "uDX" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -50329,8 +50166,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "uSo" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/rnd_secure_all,
@@ -50618,8 +50454,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "uYp" = (
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable,
@@ -51647,8 +51482,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "vqY" = (
 /obj/structure/chair{
 	dir = 4
@@ -52116,8 +51950,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "vBy" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -52575,8 +52408,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "vKO" = (
 /obj/machinery/atmospherics/components/binary/valve{
 	dir = 4
@@ -53588,8 +53420,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "wgw" = (
 /obj/structure/cable,
 /obj/item/radio/intercom{
@@ -53664,8 +53495,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "whV" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -53800,8 +53630,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "wkS" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -53951,8 +53780,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "woC" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -54832,8 +54660,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "wHY" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -55127,8 +54954,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "wNN" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -55259,8 +55085,7 @@
 /turf/open/floor/iron/white,
 /area/station/engineering/break_room{
 	name = "Engineering Breakroom"
-	}
-)
+	})
 "wQs" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -55517,8 +55342,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "wWH" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
@@ -56718,8 +56542,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "xAe" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /obj/machinery/computer/atmos_control/plasma_tank{
@@ -56978,8 +56801,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "xFN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -57068,8 +56890,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "xHn" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -57137,8 +56958,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "xIH" = (
 /obj/machinery/button/door{
 	id = "Skynet_launch";
@@ -57826,8 +57646,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "xZA" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -57949,8 +57768,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
-	}
-)
+	})
 "ycy" = (
 /obj/structure/cable,
 /obj/item/radio/intercom{
