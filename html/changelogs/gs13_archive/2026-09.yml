@@ -1,3 +1,23 @@
 2026-09-01:
   Swan:
   - qol: makes it so transfer votes are forced open when a person hasn't voted
+2026-09-04:
+  Alkali:
+  - rscadd: Small warning to the Character Menu Visuals tab when ERP preferences are
+      not on
+2026-09-05:
+  evilew:
+  - map: 'improved the Hotel Nexus map: mostly just visual tweaks but also reworked
+      the sauna area, added a small casino, added waterducts'
+2026-09-07:
+  Swan:
+  - rscadd: Re-enables departamental budget cards being useable at paystands
+2026-09-08:
+  Swan:
+  - rscadd: Scales now show the players BMI value (the real life one)
+  - balance: 'Changed the rate at which weight is gained. For more info, check PR
+      #538'
+2026-09-09:
+  Swan:
+  - rscadd: GATOifies the NT consultant, some mail, tickets, and a bunch'a other stuff
+  - bugfix: fixes the GATO flag being blank after taking it off the wall

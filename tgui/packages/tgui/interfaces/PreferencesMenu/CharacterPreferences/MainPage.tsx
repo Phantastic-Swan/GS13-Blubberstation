@@ -586,15 +586,24 @@ export function MainPage(props: MainPageProps) {
       break;
     case PrefPage.Visual:
       prefPageContents = (
-        <PreferenceList
-          randomizations={getRandomization(
-            contextualPreferences,
-            serverData,
-            randomBodyEnabled,
+        // GS13 EDIT adds ERP master switch warning
+        <>
+          {!data.master_erp_enabled && (
+            <NoticeBox>
+              Some character creation features are hidden due to your ERP settings. Check the ERP tab in the game settings.
+            </NoticeBox>
           )}
-          preferences={contextualPreferences}
-          maxHeight="auto"
-        />
+          <PreferenceList
+            randomizations={getRandomization(
+              contextualPreferences,
+              serverData,
+              randomBodyEnabled,
+            )}
+            preferences={contextualPreferences}
+            maxHeight="auto"
+          />
+        </>
+        // GS13 END EDIT
       );
       break;
     case PrefPage.Lore:
@@ -671,15 +680,15 @@ export function MainPage(props: MainPageProps) {
           <br />
           <br />
           <LabeledList>
-            <LabeledList.Item label="Rounded">170</LabeledList.Item>
-            <LabeledList.Item label="Fat">250</LabeledList.Item>
-            <LabeledList.Item label="Very fat">330</LabeledList.Item>
-            <LabeledList.Item label="Obese">440</LabeledList.Item>
-            <LabeledList.Item label="Morbidly obese">840</LabeledList.Item>
-            <LabeledList.Item label="Extremely obese">1240</LabeledList.Item>
-            <LabeledList.Item label="Barely mobile">1840</LabeledList.Item>
-            <LabeledList.Item label="Immobile">2540</LabeledList.Item>
-            <LabeledList.Item label="Blob">3440</LabeledList.Item>
+            <LabeledList.Item label="Rounded">150</LabeledList.Item>
+            <LabeledList.Item label="Fat">300</LabeledList.Item>
+            <LabeledList.Item label="Very fat">450</LabeledList.Item>
+            <LabeledList.Item label="Obese">600</LabeledList.Item>
+            <LabeledList.Item label="Morbidly obese">890</LabeledList.Item>
+            <LabeledList.Item label="Extremely obese">1480</LabeledList.Item>
+            <LabeledList.Item label="Barely mobile">2100</LabeledList.Item>
+            <LabeledList.Item label="Immobile">2950</LabeledList.Item>
+            <LabeledList.Item label="Blob">4430</LabeledList.Item>
           </LabeledList>
           <br />
         </Section>

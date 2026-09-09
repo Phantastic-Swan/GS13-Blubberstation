@@ -240,6 +240,7 @@ export type PreferencesMenuData = {
   character_profiles: (string | null)[];
 
   character_preferences: CharacterPreferencesData;
+  master_erp_enabled: BooleanLike; // GS13 EDIT
 
   content_unlocked: BooleanLike;
 
