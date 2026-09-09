@@ -96,9 +96,7 @@
 	dir = 10
 	},
 /turf/open/floor/engine,
-/area/station/engineering/atmospherics_engine{
-	name = "Supermatter Engine"
-	})
+/area/station/engineering/atmospherics_engine)
 "abT" = (
 /obj/structure/rack/shelf,
 /obj/item/toy/foamblade,
