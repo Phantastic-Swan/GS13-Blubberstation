@@ -101,6 +101,8 @@
 		ws_text = dna?.features["ms_herculean"]
 		if(ws_text)
 			return ws_text
+		
+		return "\"Bodybuilder\" is a term that understates just how big [p_they()] [p_are()], possessing a body that people could only typically achieve through the use of performance enhancers."
 
 	if(muscle >= FATNESS_LEVEL_MORBIDLY_OBESE)
 		ws_text = dna?.features["ms_beefy"]
