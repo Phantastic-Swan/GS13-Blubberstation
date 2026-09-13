@@ -155,6 +155,7 @@
 	mod_overlay.color = sprite_color
 	mod_overlays += mod_overlay
 	user.overlays_standing[modular_layer] =  mod_overlay
+	user.apply_height(mod_overlay, ENTIRE_BODY)
 	user.apply_overlay(modular_layer)
 
 //General function to generate the right icon_state for belly modular sprites

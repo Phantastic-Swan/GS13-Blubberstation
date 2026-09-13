@@ -39,12 +39,14 @@
 	var/mutable_appearance/mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer))
 	mod_overlays += mod_overlay
 	user.overlays_standing[modular_layer] =  mod_overlay
+	user.apply_height(mod_overlay, ENTIRE_BODY)
 	user.apply_overlay(modular_layer)
 	for (var/i = 1, i < 4, i++)
 		mod_overlay = mutable_appearance(modular_icon_location, (modular_icon + "-" + num2text(i)), -(modular_layer))
 		mod_overlay.color = suit_colors[i]
 		mod_overlays += mod_overlay
 		user.overlays_standing[modular_layer] =  mod_overlay
+		user.apply_height(mod_overlay, ENTIRE_BODY)
 		user.apply_overlay(modular_layer)
 
 	var/obj/item/organ/genital/organ = user.get_organ_slot(organ_slot)
@@ -56,4 +58,5 @@
 	mod_overlay.color = color
 	mod_overlays += mod_overlay
 	user.overlays_standing[modular_layer] =  mod_overlay
+	user.apply_height(mod_overlay, ENTIRE_BODY)
 	user.apply_overlay(modular_layer)
