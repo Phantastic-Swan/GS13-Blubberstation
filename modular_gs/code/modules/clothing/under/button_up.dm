@@ -37,11 +37,8 @@
 /obj/item/clothing/under/dual_tone/button_up/add_modular_overlays(mob/living/carbon/user, modular_icon, modular_layer, sprite_color, organ_slot)
 	var/list/suit_colors = SSgreyscale.ParseColorString(greyscale_colors)
 	var/modular_icon_state
-	add_modular_overlay(user, modular_icon, modular_layer, "#FFFFFF")
-	for (var/i = 1, i < 4, i++)
-		modular_icon_state = modular_icon + "-" + num2text(i)
-		add_modular_overlay(user, modular_icon_state, modular_layer, suit_colors[i])
 	
+	add_modular_overlay(user, modular_icon, modular_layer, "#FFFFFF")
 	var/obj/item/organ/genital/organ = user.get_organ_slot(organ_slot)
 	var/color = organ.bodypart_overlay.draw_color
 	if (islist(color))
@@ -49,3 +46,7 @@
 	
 	modular_icon_state = (modular_icon + "-4")
 	add_modular_overlay(user, modular_icon_state, modular_layer, color)
+
+	for (var/i = 1, i < 4, i++)
+		modular_icon_state = modular_icon + "-" + num2text(i)
+		add_modular_overlay(user, modular_icon_state, modular_layer, suit_colors[i])
