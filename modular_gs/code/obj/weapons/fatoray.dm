@@ -1,5 +1,3 @@
-/////GS13 - fattening rayguns and ranged weapons
-
 ///The base fatoray
 /obj/item/gun/energy/fatoray
 	name = "Fatoray"
@@ -13,29 +11,7 @@
 	fire_sound = 'sound/items/weapons/plasma_cutter.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening)
 
-/obj/item/ammo_casing/energy/fattening
-	name = "fattening weapon lens"
-	select_name = "fatten"
-	projectile_type = /obj/projectile/beam/fattening
-	harmful = FALSE
-
-///The base projectile used by the fatoray
-/obj/projectile/beam/fattening
-	name = "fat energy"
-	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	icon_state = "ray"
-	ricochets_max = 50
-	ricochet_chance = 80
-	damage = 0
-	eyeblur = 0
-	damage_type = BURN
-	light_range = 2
-	light_color = LIGHT_COLOR_ORANGE
-	///How much fat is added to the target mob?
-	fat_added = 200
-
-////// Fatoray - cannon variant, strong but can be charged
-
+/// cannon variant, strong but can be charged
 /obj/item/gun/energy/fatoray/cannon
 	name = "Fatoray Cannon"
 	desc = "An energy gun that fattens up anyone it hits. This version functions as a glass cannon of some sorts."
@@ -43,22 +19,14 @@
 	recoil = 3
 	can_charge = TRUE
 	slowdown = 1
-	pin = /obj/item/firing_pin
 	weapon_weight = WEAPON_HEAVY
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening/cannon)
 
-/obj/item/ammo_casing/energy/fattening/cannon
-	name = "one-shot fattening weapon lens"
-	select_name = "fatten"
-	e_cost = 1000
-	projectile_type = /obj/projectile/beam/fattening/cannon
-
-/obj/projectile/beam/fattening/cannon
-	name = "fat energy"
-	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	icon_state = "cannon_ray"
-	///How much fat is added to the target mob?
-	fat_added = 800
+/obj/item/gun/energy/fatoray/stunning	// it's STUNNINGLY effective
+	name = "\improper GATO EG-1 Salamander"
+	desc = "An advanced energy gun that both stuns and fattens up its target."
+	icon_state = "immobilizer"
+	ammo_type = list(/obj/item/ammo_casing/energy/fattening/stun)
 
 ////////////////////////////////////////////////////////////////////
 ////////FATORAYS THAT CAN BE MADE BY LATHES OR RESEARCHED///////////
@@ -67,61 +35,28 @@
 ///Weaker version of fatoray
 /obj/item/gun/energy/fatoray/weak
 	name = "Basic Fatoray"
-	desc = "An energy gun that fattens up anyone it hits. This version is considerably weaker than its original counterpart, the technology behind it seemingly still not  perfected."
+	desc = "An energy gun that fattens up anyone it hits. This version is considerably weaker than its original counterpart, the technology behind it seemingly still not perfected."
 	icon_state = "fatoray_weak"
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening/weak)
-	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.3, /datum/material/calorite = SHEET_MATERIAL_AMOUNT * 0.5)
-
-/obj/item/ammo_casing/energy/fattening/weak
-	name = "budget fattening weapon lens"
-	select_name = "fatten"
-	projectile_type = /obj/projectile/beam/fattening/weak
-
-///The base projectile used by the fatoray
-/obj/projectile/beam/fattening/weak
-	name = "fat energy"
-	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	icon_state = "ray"
-	///How much fat is added to the target mob?
-	fat_added = 100
-
-///////////////////////////////////////////////////
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.4,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.3,
+		/datum/material/calorite = SHEET_MATERIAL_AMOUNT * 0.5
+		)
 
 ///Single shot glass cannon fatoray
 /obj/item/gun/energy/fatoray/cannon/weak
 	name = "Basic Fatoray Cannon"
 	icon_state = "fatoray_cannon_weak"
-	ammo_type = list(/obj/item/ammo_casing/energy/fattening/cannon_weak)
-	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.4, /datum/material/calorite = SHEET_MATERIAL_AMOUNT)
+	ammo_type = list(/obj/item/ammo_casing/energy/fattening/cannon/weak)
+	custom_materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.5,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.4,
+		/datum/material/calorite = SHEET_MATERIAL_AMOUNT
+		)
 
-/obj/item/ammo_casing/energy/fattening/cannon_weak
-	name = "one-shot fattening weapon lens"
-	select_name = "fatten"
-	e_cost = 1600
-	projectile_type = /obj/projectile/beam/fattening/cannon_weak
-
-/obj/projectile/beam/fattening/cannon_weak
-	name = "fat energy"
+/obj/item/gun/energy/e_gun/fattening
+	name = "\improper GATO EG-2 Matador"
+	desc = "A basic hybrid energy gun with two settings: disable and fatten."
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	icon_state = "cannon_ray"
-	///How much fat is added to the target mob?
-	fat_added = 400
-
-///////////////////////////////////////
-//////PROJECTILE MECHANICS/////////////
-///////////////////////////////////////
-
-
-/obj/projectile/beam/fattening/on_hit(atom/target, blocked, pierce_hit)
-	. = ..()
-
-	if (. == BULLET_ACT_BLOCK)
-		return .
-
-	if (iscarbon(target))
-		var/mob/living/carbon/carbon_target = target
-		if (carbon_target.micro_calorite_poisoning >= 1)
-			if (carbon_target.adjust_calorite_poisoning(-0.01 * fat_added))
-				carbon_target.adjust_perma(1 * fat_added, FATTENING_TYPE_WEAPON, TRUE)
-
-	return .
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/fattening)
