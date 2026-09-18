@@ -56,9 +56,9 @@
 
 /obj/item/gun/energy/e_gun/fattening
 	name = "\improper GATO EG-2 Matador"
-	desc = "A basic hybrid energy gun with two settings: disable and fatten."
+	desc = "A basic hybrid energy gun with two settings: fatten and disable."
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/fattening)
+	ammo_type = list(/obj/item/ammo_casing/energy/fattening, /obj/item/ammo_casing/energy/disabler)
 
 // #region AL-T-Rays
 
