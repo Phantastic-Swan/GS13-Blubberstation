@@ -59,6 +59,8 @@
 	desc = "A basic hybrid energy gun with two settings: fatten and disable."
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening, /obj/item/ammo_casing/energy/disabler)
+	lefthand_file = 'modular_gs/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'modular_gs/icons/mob/inhands/guns_righthand.dmi'
 
 // #region AL-T-Rays
 
