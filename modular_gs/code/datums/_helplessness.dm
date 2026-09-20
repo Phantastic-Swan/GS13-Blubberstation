@@ -50,7 +50,7 @@ GLOBAL_LIST_EMPTY_TYPED(helplessness_mechanics, /datum/helplessness)
 
 	var/effective_fatness = fatty.calculate_effective_fatness()
 
-	if (forced_weight && effective_fatness > forced_weight)
+	if (forced_weight && effective_fatness >= forced_weight)
 		return apply_helplessness(fatty, trigger_weight, effective_fatness)
 
 	if (trigger_weight <= 0)
