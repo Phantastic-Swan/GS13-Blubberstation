@@ -62,7 +62,7 @@ with open(file_reference, 'r') as file:
             continue
         # SKYRAT EDIT END
         # GS13 EDIT
-        elif line == "// GS13 EDIT"
+        elif line == "// GS13 EDIT":
             continue
         # GS13 END EDIT
 
