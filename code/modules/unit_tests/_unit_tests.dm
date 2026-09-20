@@ -376,7 +376,7 @@
 #include "wizard_loadout.dm"
 // GS13 EDIT
 #include "~gs\helplessness.dm"
-// GS13 EDIT END
+// GS13 END EDIT
 // SKYRAT EDIT START
 #include "~skyrat\automapper.dm"
 #include "~skyrat\digitigrade_sprites.dm"

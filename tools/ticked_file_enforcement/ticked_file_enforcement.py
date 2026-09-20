@@ -64,6 +64,8 @@ with open(file_reference, 'r') as file:
         # GS13 EDIT
         elif line == "// GS13 EDIT":
             continue
+        elif line == "// GS13 END EDIT":
+            continue
         # GS13 END EDIT
 
         lines.append(line)
