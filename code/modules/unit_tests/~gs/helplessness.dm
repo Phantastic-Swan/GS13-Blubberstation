@@ -1,5 +1,5 @@
 /**
- * Unit test for checking if helplessness mechanica have a pref and config set
+ * Unit test for checking if helplessness mechanics have a pref and a config set
  */
 /datum/unit_test/helplessness/Run()
 	for (var/datum/helplessness/helplessness_mechanic in GLOB.helplessness_mechanics)
