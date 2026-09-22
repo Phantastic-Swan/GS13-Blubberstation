@@ -16,8 +16,8 @@
 
 /// variant that actually does stamina damage
 /obj/projectile/beam/fattening/stun
-	fat_added = 100
-	damage = 25
+	fat_added = 150
+	damage = 30
 
 /obj/projectile/beam/fattening/weak
 	fat_added = 100

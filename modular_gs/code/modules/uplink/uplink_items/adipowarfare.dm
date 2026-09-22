@@ -75,16 +75,16 @@
 	cost = 1
 	cant_discount = TRUE
 
-/datum/uplink_item/adipowarfare/matador
-	name = /obj/item/gun/energy/e_gun/fattening::name
-	desc = /obj/item/gun/energy/e_gun/fattening::desc
-	item = /obj/item/gun/energy/e_gun/fattening
+/datum/uplink_item/adipowarfare/salamander
+	name = /obj/item/gun/energy/fatoray/stunning/antag::name
+	desc = /obj/item/gun/energy/fatoray/stunning/antag::desc
+	item = /obj/item/gun/energy/fatoray/stunning/antag
 	cost = 5
 
-/datum/uplink_item/adipowarfare/salamander
-	name = /obj/item/gun/energy/fatoray/stunning::name
-	desc = /obj/item/gun/energy/fatoray/stunning::desc
-	item = /obj/item/gun/energy/fatoray/stunning
+/datum/uplink_item/adipowarfare/matador
+	name = /obj/item/gun/energy/e_gun/fattening/antag::name
+	desc = /obj/item/gun/energy/e_gun/fattening/antag::desc
+	item = /obj/item/gun/energy/e_gun/fattening/antag
 	cost = 5
 
 //chems

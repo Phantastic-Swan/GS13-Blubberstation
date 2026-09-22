@@ -52,15 +52,25 @@
 	icon_state = "immobilizer"
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening/stun)
 
+/obj/item/gun/energy/fatoray/stunning/antag
+	name = "Syndicate upgraded EG-1 Salamander"
+	desc = "A CyberSun improved version of the GATO EG-1 Salamander. Its shots both stun and fatten up the target. It has a more powerful powercell installed compared to the original, providing greater ammo capacity."
+	cell_type = /obj/item/stock_parts/power_store/cell/upgraded
+
 // #endregion
 
 /obj/item/gun/energy/e_gun/fattening
 	name = "\improper GATO EG-2 Matador"
 	desc = "A basic hybrid energy gun with two settings: fatten and disable."
 	icon = 'modular_gs/icons/obj/weapons/fatoray.dmi'
-	ammo_type = list(/obj/item/ammo_casing/energy/fattening, /obj/item/ammo_casing/energy/disabler)
+	ammo_type = list(/obj/item/ammo_casing/energy/fattening/cheap, /obj/item/ammo_casing/energy/disabler)
 	lefthand_file = 'modular_gs/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'modular_gs/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/gun/energy/e_gun/fattening/antag
+	name = "Syndicate upgraded EG-2 Matador"
+	desc = "A CyberSun improved version of the GATO EG-2 Matador. It has two settings: fatten and disable. The CyberSun upgrades include fitting a larger powercell inside to provide greater ammo capacity."
+	cell_type = /obj/item/stock_parts/power_store/cell/upgraded
 
 // #region AL-T-Rays
 
