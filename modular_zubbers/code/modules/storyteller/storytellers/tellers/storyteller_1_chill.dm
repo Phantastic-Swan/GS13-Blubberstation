@@ -14,6 +14,7 @@
 	)
 	antag_divisor = 32
 	storyteller_type = STORYTELLER_TYPE_CALM
+	population_max = 10	// GS13 EDIT
 
 /datum/storyteller/chill/New()
 	track_data = new /datum/storyteller_data/tracks/chill

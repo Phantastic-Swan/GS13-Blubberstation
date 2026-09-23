@@ -14,6 +14,7 @@
 		TAG_CHAOTIC = 0.2
 	)
 	storyteller_type = STORYTELLER_TYPE_ALWAYS_AVAILABLE
+	population_max = 20	// GS13 EDIT
 
 /datum/storyteller/fragile/New()
 	track_data = new /datum/storyteller_data/tracks/fragile
