@@ -36,6 +36,16 @@
 	name = "Dual Tone Suit (Worn)(Taur)(Snake)"
 	icon_file = 'modular_gs/icons/mob/modclothes/dual_tone_suit_taur_snake.dmi'
 
+/datum/greyscale_config/modular
+	abstract_type = /datum/greyscale_config/modular
+
+/datum/greyscale_config/modular/breasts
+	abstract_type = /datum/greyscale_config/modular/breasts
+
+/datum/greyscale_config/modular/breasts/dual_tone_jumpsuit
+	name = "Dual tone suit breasts"
+	icon_file = 'modular_gs/icons/mob/modclothes/dual_tone_suit.dmi'
+
 /obj/item/clothing/under/dual_tone/add_modular_overlays(mob/living/carbon/user, modular_icon, modular_layer, sprite_color, organ_slot)
 	var/list/suit_colors = SSgreyscale.ParseColorString(greyscale_colors)
 	add_modular_overlay(user, modular_icon, modular_layer, "#FFFFFF")

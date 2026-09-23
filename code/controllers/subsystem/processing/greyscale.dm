@@ -15,7 +15,12 @@ PROCESSING_SUBSYSTEM_DEF(greyscale)
 		layer_types[initial(greyscale_layer.layer_type)] = greyscale_layer
 
 	for(var/greyscale_type in subtypesof(/datum/greyscale_config))
+		if (greyscale_type == greyscale_type::abstract_type)
+			continue
 		var/datum/greyscale_config/config = new greyscale_type()
+		if (config.abstract_type == config.type)
+			qdel(config)
+			continue
 		configurations["[greyscale_type]"] = config
 
 	// We do this after all the types have been loaded into the listing so reference layers don't care about init order
@@ -34,6 +39,9 @@ PROCESSING_SUBSYSTEM_DEF(greyscale)
 		var/datum/greyscale_config/config = configurations[greyscale_type]
 		config.CrossVerify()
 #ifdef USE_RUSTG_ICONFORGE_GAGS
+		if (istype(config, /datum/greyscale_config/modular))
+			job_ids += rustg_iconforge_load_modular_gags_config_async(greyscale_type, config.raw_json_string, config.string_icon_file)
+			continue
 		job_ids += rustg_iconforge_load_gags_config_async(greyscale_type, config.raw_json_string, config.string_icon_file)
 
 	UNTIL(jobs_completed(job_ids))

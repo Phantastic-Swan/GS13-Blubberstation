@@ -1,0 +1,20 @@
+{
+	"name": "belly_soft",
+	"max_size": "10",
+	"layers": [
+		{
+			"type": "icon_state",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"blend_mode": "overlay",
+			"color_ids": [2]
+		},
+		{
+			"type": "icon_state",
+			"blend_mode": "overlay"
+		}
+	]
+}
