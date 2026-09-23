@@ -662,9 +662,7 @@ export function MainPage(props: MainPageProps) {
         <Section>
           <b>Master Weight Gain Switch</b>
         <Divider />
-        <BlockQuote>
-          This setting is required for all other weight gain preferences to be active. Disabling it will act as if you disabled all methods of weight gain, while also NOT reseting the values of the individual settings. This setting is required to be on in order to gain weight. IMPORTANT: This setting is overriden by taking any helplessness quirks.
-        </BlockQuote>
+        This setting is required for all other weight gain preferences to be active. Disabling it will act as if you disabled all methods of weight gain, while also NOT reseting the values of the individual settings. This setting is required to be on in order to gain weight. IMPORTANT: This setting is overriden by taking any helplessness quirks.
         <PreferenceList
           randomizations={getRandomization(
             MasterFatnessPref,
