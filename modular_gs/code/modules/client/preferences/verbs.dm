@@ -2,10 +2,7 @@
 
 GAME_VERB(/mob/living/carbon, toggle_master_wg_pref, "Toggle Master WG Pref", "OOC")
 
-	if (isnull(client))
-		return
-
-	if(isnull(client.prefs))
+	if (isnull(client) || isnull(client.prefs))
 		return
 
 	var/datum/preferences/prefs = client.prefs
