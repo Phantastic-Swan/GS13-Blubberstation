@@ -72,6 +72,11 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/fattening/weak)
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.3, /datum/material/calorite = SHEET_MATERIAL_AMOUNT * 0.5)
 
+/obj/item/gun/energy/fatoray/weak/cyborg
+	name = "Cyborg Mounted Basic Fatoray"
+	can_charge = FALSE
+	use_cyborg_cell = TRUE
+
 /obj/item/ammo_casing/energy/fattening/weak
 	name = "budget fattening weapon lens"
 	select_name = "fatten"
