@@ -59,3 +59,10 @@
 2026-09-24:
   Swan:
   - rscadd: Adds the master WG pref
+2026-09-25:
+  evilew:
+  - map: 'Detailed out the GATO Fast Food map further: Fixed the errors, added extra
+      resources, made some things look better, added a book of tips for the workers
+      etc etc'
+  - map: Added the Food Truck whiteship, available for use in the Fast Food role
+  - map: GATO Fast Food map is guaranteed to spawn every round now
