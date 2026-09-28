@@ -24,7 +24,12 @@
 
 /obj/structure/scale/Initialize(mapload)
 	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(scale_break_check),
+		COMSIG_ATOM_EXITED = PROC_REF(on_scale_leave),
+	)
 	scale_component = AddComponent(/datum/component/weight_scale)
+	AddComponent(/datum/component/connect_loc_behalf, src, loc_connections)
 
 /obj/structure/scale/Destroy(force)
 	if(scale_component)
@@ -38,3 +43,36 @@
 
 /obj/structure/scale/ui_interact(mob/user)
 	scale_component.ui_interact(user)
+
+/obj/structure/scale/proc/scale_break_check(datum/source, mob/living/carbon/fatty)
+	SIGNAL_HANDLER
+
+	var/scale_breakage = 1000
+
+	if (fatty.calculate_weight_in_pounds() > scale_breakage)
+		playsound(loc, 'sound/effects/heavy_drop2.ogg', 50, 1)
+		fatty.visible_message(
+		span_notice("The scale shatters under the shear weight of [fatty]!"),
+		span_notice("As you step on the [src], it shatters, unable to hold your fatass!")
+		)
+		deconstruct()
+
+	RegisterSignal(fatty, COMSIG_FATNESS_CHANGED, PROC_REF(standing_weight_changed))
+
+/obj/structure/scale/proc/on_scale_leave(datum/source, mob/living/carbon/fatty)
+	SIGNAL_HANDLER
+	if (!isnull(fatty))
+		UnregisterSignal(fatty, COMSIG_FATNESS_CHANGED)
+
+/obj/structure/scale/proc/standing_weight_changed(mob/living/carbon/fatty, fatness)
+	SIGNAL_HANDLER
+
+	var/scale_breakage = 1000
+
+	if (fatty.calculate_weight_in_pounds() > scale_breakage)
+		playsound(loc, 'sound/effects/heavy_drop2.ogg', 50, 1)
+		fatty.visible_message(
+		span_notice("The scale shatters under the shear weight of [fatty]!"),
+		span_notice("You've grown to heavy for the scale, it breaks under your weight!")
+		)
+		deconstruct()
