@@ -46,7 +46,10 @@
 
 /obj/structure/scale/proc/scale_break_check(datum/source, mob/living/carbon/fatty)
 	SIGNAL_HANDLER
-
+	SIGNAL_HANDLER
+	if (!istype(fatty))
+		return
+	
 	var/scale_breakage = 1000
 
 	if (fatty.calculate_weight_in_pounds() > scale_breakage)
