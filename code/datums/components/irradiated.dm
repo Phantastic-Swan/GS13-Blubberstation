@@ -41,7 +41,7 @@
 		return
 
 	// GS13 EDIT - radfat mutation
-	if (ishuman(parent) && HAS_TRAIT(parent), TRAIT_RADRESONANCE)
+	if (ishuman(parent) && HAS_TRAIT(parent, TRAIT_RADRESONANCE))
 		var/mob/living/carbon/human/human_mob = parent
 		human_mob.adjust_fatness(RADIATION_IMMEDIATE_TOX_DAMAGE, FATTENING_TYPE_MUTATIONS)
 		qdel(src)
