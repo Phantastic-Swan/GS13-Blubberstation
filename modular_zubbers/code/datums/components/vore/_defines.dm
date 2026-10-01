@@ -1,5 +1,5 @@
 /// If you want to make everything as easy to test as possible, uncomment this for maximum permissiveness
-// #define VORE_DEBUG
+#define VORE_DEBUG	// GS13 EDIT - makes all mobs voreable
 /// Key used for versioning savefiles
 #define VORE_DB_REPO "bubber_vore"
 /// Value used for versioning savefiles
@@ -25,7 +25,7 @@
 /// If true, mobs with no player cannot be pred or prey
 #define REQUIRES_PLAYER CONFIG_GET(flag/vore_requires_player)
 /// Makes every mob spawn with a vore component, just for testing
-// #define VORE_TESTING_ALL_MOBS_ARE_VORE_MOBS
+#define VORE_TESTING_ALL_MOBS_ARE_VORE_MOBS	// GS13 EDIT - enables vore for all mobs
 /// Number of rolling backups bellies will keep
 #define BELLY_BACKUP_COUNT 5
 /// Maximum number of belly layout slots
