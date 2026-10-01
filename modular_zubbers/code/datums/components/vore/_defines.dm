@@ -1,5 +1,5 @@
 /// If you want to make everything as easy to test as possible, uncomment this for maximum permissiveness
-#define VORE_DEBUG	// GS13 EDIT - makes all mobs voreable
+// #define VORE_DEBUG
 /// Key used for versioning savefiles
 #define VORE_DB_REPO "bubber_vore"
 /// Value used for versioning savefiles
@@ -96,8 +96,11 @@
 /// This controls whether vore components are added on any mob Login for vore-enabled clients
 #ifndef VORE_DEBUG
 GLOBAL_LIST_INIT(vore_allowed_mob_types, typecacheof(list(
+	/* GS13 EDIT - makes all mobs voreable
 	/mob/living/carbon/human,
 	/mob/living/silicon/robot
+	*/
+	/mob/living,	// GS13 END EDIT
 )))
 #else
 // Vore debug mode: all mobs are fair game
