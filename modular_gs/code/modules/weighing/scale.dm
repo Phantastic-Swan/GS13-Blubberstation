@@ -2,6 +2,25 @@
 	/// Component responsible for scale behavior
 	var/datum/component/weight_scale/scale_component
 
+/obj/structure/scale/wrench_act_secondary(mob/living/user, obj/item/tool)
+	..()
+	tool.play_tool_sound(src)
+	deconstruct(disassembled = TRUE)
+	return TRUE
+
+/obj/structure/scale/atom_deconstruct(disassembled)
+	for(var/datum/material/mat as anything in custom_materials)
+		new mat.sheet_type(loc, FLOOR(custom_materials[mat] / SHEET_MATERIAL_AMOUNT, 1))
+
+/obj/structure/scale/Destroy(force)
+	if(scale_component)
+		QDEL_NULL(scale_component)
+
+	return ..()
+
+/obj/structure/scale/ui_interact(mob/user)
+	scale_component.ui_interact(user)
+
 /obj/structure/scale/breaking_scale
 	name = "weighing scale"
 	desc = "You can weigh yourself with this."
@@ -29,16 +48,6 @@
 		)
 		deconstruct()
 
-/obj/structure/scale/breaking_scale/wrench_act_secondary(mob/living/user, obj/item/tool)
-	..()
-	tool.play_tool_sound(src)
-	deconstruct(disassembled = TRUE)
-	return TRUE
-
-/obj/structure/scale/breaking_scale/atom_deconstruct(disassembled)
-	for(var/datum/material/mat as anything in custom_materials)
-		new mat.sheet_type(loc, FLOOR(custom_materials[mat] / SHEET_MATERIAL_AMOUNT, 1))
-
 /obj/structure/scale/breaking_scale/Initialize(mapload)
 	. = ..()
 	var/static/list/loc_connections = list(
@@ -48,18 +57,10 @@
 	scale_component = AddComponent(/datum/component/weight_scale)
 	AddComponent(/datum/component/connect_loc_behalf, src, loc_connections)
 
-/obj/structure/scale/breaking_scale/Destroy(force)
-	if(scale_component)
-		QDEL_NULL(scale_component)
-
-	return ..()
-
 /obj/structure/scale/breaking_scale/examine(mob/user)
 	. = ..()
 	. += span_notice("It's held together by a couple of <b>bolts</b>, it looks a bit flimsy")
 
-/obj/structure/scale/breaking_scale/ui_interact(mob/user)
-	scale_component.ui_interact(user)
 
 /obj/structure/scale/breaking_scale/proc/scale_break_check(datum/source, mob/living/carbon/fatty)
 	SIGNAL_HANDLER
@@ -93,15 +94,6 @@
 	/// Makes second tile of scale work
 	var/obj/structure/scale/plasteel/right/partner
 
-/obj/structure/scale/plasteel/wrench_act_secondary(mob/living/user, obj/item/tool)
-	..()
-	tool.play_tool_sound(src)
-	deconstruct(disassembled = TRUE)
-	return TRUE
-
-/obj/structure/scale/plasteel/atom_deconstruct(disassembled)
-	for(var/datum/material/mat as anything in custom_materials)
-		new mat.sheet_type(loc, FLOOR(custom_materials[mat] / SHEET_MATERIAL_AMOUNT, 1))
 
 /obj/structure/scale/plasteel/Initialize(mapload)
 	. = ..()
@@ -111,11 +103,6 @@
 	partner.right_half = src
 	partner.scale_component = scale_component
 
-/obj/structure/scale/plasteel/Destroy(force)
-	if(scale_component)
-		QDEL_NULL(scale_component)
-
-	return ..()
 
 /obj/structure/scale/plasteel/right
 	name = "large scale"
@@ -141,6 +128,4 @@
 	. = ..()
 	. += span_notice("It's held together by a couple of <b>bolts</b>, it looks quite sturdy.")
 
-/obj/structure/scale/plasteel/ui_interact(mob/user)
-	scale_component.ui_interact(user)
 
