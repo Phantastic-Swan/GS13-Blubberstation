@@ -99,9 +99,10 @@
 	. = ..()
 	scale_component = AddComponent(/datum/component/weight_scale)
 	///makes the right tile work
-	partner = new /obj/structure/scale/plasteel/right(get_step(src, EAST))
-	partner.right_half = src
-	partner.scale_component = scale_component
+	if (!istype(src, /obj/structure/scale/plasteel/right))
+		partner = new /obj/structure/scale/plasteel/right(get_step(src, EAST))
+		partner.right_half = src
+		partner.scale_component = scale_component
 
 
 /obj/structure/scale/plasteel/right
