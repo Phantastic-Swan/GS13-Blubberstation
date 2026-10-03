@@ -114,11 +114,10 @@ SUBSYSTEM_DEF(radiation)
 		return FALSE
 
 	// GS13 EDIT
-	if (ishuman(target))
-		if (HAS_TRAIT(target, TRAIT_RADRESONANCE))
-			var/mob/living/carbon/human/target_human = target
-			target_human.adjust_fatness(2 * wait, FATTENING_TYPE_MUTATIONS)
-			return FALSE
+	if (ishuman(target) && HAS_TRAIT(target, TRAIT_RADRESONANCE))
+		var/mob/living/carbon/human/target_human = target
+		target_human.adjust_fatness(2 * wait, FATTENING_TYPE_MUTATIONS)
+		return FALSE
 	// GS13 END EDIT
 	target.AddComponent(/datum/component/irradiated)
 	return TRUE

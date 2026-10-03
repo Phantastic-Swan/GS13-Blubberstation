@@ -27,13 +27,14 @@
 	REMOVE_TRAIT(owner, TRAIT_RADRESONANCE, "radfat_mutation")
 
 /datum/mutation/radfat/proc/get_light_level()
-	var/light_amount = 0
-	if(isturf(owner.loc)) //else, there's considered to be no light
-		var/turf/host_turf = owner.loc
-		light_amount = host_turf.get_lumcount()
-		if(light_amount >= SHADOW_SPECIES_LIGHT_THRESHOLD)
-			return light_amount
-	
+	if (!isturf(owner.loc))	//else, there's considered to be no light
+		return 0
+
+	var/turf/host_turf = owner.loc
+	var/light_amount = host_turf.get_lumcount()
+	if(light_amount >= SHADOW_SPECIES_LIGHT_THRESHOLD)
+		return light_amount
+
 	return 0
 
 /obj/item/dnainjector/antiradfat
