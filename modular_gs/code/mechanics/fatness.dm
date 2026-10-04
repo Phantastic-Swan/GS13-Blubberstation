@@ -195,6 +195,7 @@
 	calculate_fatness()
 
 	handle_fatness_speed_modifier()
+	handle_fatness()
 	handle_modular_items()
 
 	fullness_adjustment()
