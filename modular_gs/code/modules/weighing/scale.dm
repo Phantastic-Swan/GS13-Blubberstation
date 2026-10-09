@@ -1,6 +1,24 @@
 /obj/structure/scale
+	name = "weighing scale"
+	desc = "You can weigh yourself with this."
+	icon = 'modular_gs/icons/obj/scale.dmi'
+	icon_state = "scale"
+	anchored = TRUE
+	resistance_flags = NONE
+	max_integrity = 250
+	integrity_failure = 25
+	layer = OBJ_LAYER
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3)
 	/// Component responsible for scale behavior
 	var/datum/component/weight_scale/scale_component
+
+/obj/structure/scale/Initialize(mapload)
+	. = ..()
+	scale_component = AddComponent(/datum/component/weight_scale)
+
+/obj/structure/scale/examine(mob/user)
+	. = ..()
+	. += span_notice("It's held together by a couple of <b>bolts</b>.")
 
 /obj/structure/scale/wrench_act_secondary(mob/living/user, obj/item/tool)
 	..()
@@ -22,17 +40,7 @@
 	scale_component.ui_interact(user)
 
 /obj/structure/scale/breaking_scale
-	name = "weighing scale"
-	desc = "You can weigh yourself with this."
-	icon = 'modular_gs/icons/obj/scale.dmi'
-	icon_state = "scale"
-	anchored = TRUE
-	resistance_flags = NONE
-	max_integrity = 250
-	integrity_failure = 25
-	layer = OBJ_LAYER
-	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3)
-	/// Component responsible for scale behavior
+	/// weight **(IN POUNDS, NOT BFI!!!)** at which the scale breaks
 	var/scale_breakage = 1000
 
 /// makes it so code doesn't have to be reused
@@ -54,13 +62,11 @@
 		COMSIG_ATOM_ENTERED = PROC_REF(scale_break_check),
 		COMSIG_ATOM_EXITED = PROC_REF(on_scale_leave),
 	)
-	scale_component = AddComponent(/datum/component/weight_scale)
 	AddComponent(/datum/component/connect_loc_behalf, src, loc_connections)
 
 /obj/structure/scale/breaking_scale/examine(mob/user)
 	. = ..()
-	. += span_notice("It's held together by a couple of <b>bolts</b>, it looks a bit flimsy")
-
+	. += span_notice("It looks a bit flimsy")
 
 /obj/structure/scale/breaking_scale/proc/scale_break_check(datum/source, mob/living/carbon/fatty)
 	SIGNAL_HANDLER
@@ -79,7 +85,6 @@
 	check_if_break(fatty)
 
 ///A larger, plasteel scale that doesn't break and takes up two tiles
-
 /obj/structure/scale/plasteel
 	name = "large scale"
 	desc = "You can weigh yourself with this."
@@ -94,39 +99,23 @@
 	/// Makes second tile of scale work
 	var/obj/structure/scale/plasteel/right/partner
 
-
 /obj/structure/scale/plasteel/Initialize(mapload)
 	. = ..()
-	scale_component = AddComponent(/datum/component/weight_scale)
-	///makes the right tile work
+	// makes the right tile work
 	if (!istype(src, /obj/structure/scale/plasteel/right))
 		partner = new /obj/structure/scale/plasteel/right(get_step(src, EAST))
-		partner.right_half = src
-		partner.scale_component = scale_component
+		partner.partner = src
+		partner.scale_component.reassign_weighing_component(scale_component.weight_component)
 
-
-/obj/structure/scale/plasteel/right
-	name = "large scale"
-	desc = "You can weigh yourself with this."
-	icon = 'modular_gs/icons/obj/megascale.dmi'
-	icon_state = "scale"
-	anchored = TRUE
-	pixel_x = -16
-	pixel_y = 0
-	///creates a variable that allows the structure to be deleted if left half is destroyed
-	var/obj/structure/scale/plasteel/right_half
-
-/obj/structure/scale/plasteel/right/Initialize(mapload)
+/obj/structure/scale/plasteel/Destroy(force)
 	. = ..()
-	scale_component = AddComponent(/datum/component/weight_scale)
+	if (!istype(src, /obj/structure/scale/plasteel/right))
+		QDEL_NULL(partner)
 
-/obj/structure/scale/plasteel/right/Destroy(force)
-	if(right_half)
-		right_half.partner = null
-	return ..()
+/// exists only to provide tile detection on the tile next to the scale
+/obj/structure/scale/plasteel/right
+	invisibility = 101
 
 /obj/structure/scale/plasteel/examine(mob/user)
 	. = ..()
-	. += span_notice("It's held together by a couple of <b>bolts</b>, it looks quite sturdy.")
-
-
+	. += span_notice("It looks quite sturdy.")
