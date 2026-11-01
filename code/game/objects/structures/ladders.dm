@@ -263,6 +263,9 @@
 	if(istype(potential_spine))
 		misc_multiplier *= potential_spine.athletics_boost_multiplier
 
+	if (iscarbon(user))
+		var/mob/living/carbon/fatty = user
+		misc_multiplier *= fatty.get_climbing_slowdown_from_fatness()
 	var/final_travel_time = (travel_time - fitness_level) * misc_multiplier
 
 	if(do_after(user, final_travel_time, target = src, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))

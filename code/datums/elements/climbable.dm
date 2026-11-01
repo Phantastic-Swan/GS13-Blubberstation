@@ -88,6 +88,9 @@
 		adjusted_climb_time *= 1.5
 		adjusted_climb_stun *= 1.5
 	LAZYADDASSOCLIST(current_climbers, climbed_thing, user)
+	if (iscarbon(user))
+		var/mob/living/carbon/fatty = user
+		misc_multiplier *= fatty.get_climbing_slowdown_from_fatness()
 	if(do_after(user, adjusted_climb_time, climbed_thing))
 		if(QDELETED(climbed_thing)) //Checking if structure has been destroyed
 			return
