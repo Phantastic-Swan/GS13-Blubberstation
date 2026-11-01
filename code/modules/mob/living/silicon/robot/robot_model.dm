@@ -249,7 +249,10 @@
 	cyborg.model = new_model
 	cyborg.update_module_innate()
 	new_model.rebuild_modules()
-	cyborg.radio.recalculateChannels()
+	if (cyborg.deployed && cyborg.mainframe)
+		cyborg.real_name = "[cyborg.mainframe.real_name] [cyborg.designation] Shell-[cyborg.identifier]"
+	else
+		cyborg.radio.recalculateChannels()
 	cyborg.set_modularInterface_theme()
 	cyborg.diag_hud_set_health()
 	cyborg.diag_hud_set_status()
